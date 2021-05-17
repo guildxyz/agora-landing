@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* 
+@font-face {
+  font-family: 'Dystopian';
+  src: url('Dystopian-Light.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Dystopian';
+  src: url('Dystopian-Regular.ttf') format('truetype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Dystopian';
+  src: url('Dystopian-Bold.ttf') format('truetype');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Dystopian';
+  src: url('Dystopian-Black.ttf') format('truetype');
+  font-weight: 700;
+}
+ */
