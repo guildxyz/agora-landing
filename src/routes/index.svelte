@@ -1,8 +1,6 @@
 <script>
   import Button from '$lib/Button';
-  import TwitterLogo from 'phosphor-svelte/lib/TwitterLogo';
-  import TelegramLogo from 'phosphor-svelte/lib/TelegramLogo';
-  import GithubLogo from 'phosphor-svelte/lib/GithubLogo';
+  import SocialIcons from '$lib/SocialIcons.svelte';
   import ArrowRight from 'phosphor-svelte/lib/ArrowRight';
 </script>
 
@@ -16,15 +14,7 @@
         <p class="font-semibold tracking-tight md:text-lg font-display">Agora Space</p>
       </div>
       <div class="flex items-center lg:hidden">
-        <Button href="#" class="text-xl text-gray-900">
-          <TwitterLogo weight="bold" slot="icon" />
-        </Button>
-        <Button href="#" class="text-xl text-gray-900">
-          <TelegramLogo weight="bold" slot="icon" />
-        </Button>
-        <Button href="https://github.com/AgoraSpaceDAO" class="text-xl text-gray-900">
-          <GithubLogo weight="bold" slot="icon" />
-        </Button>
+        <SocialIcons buttonClasses="text-xl text-gray-900" />
       </div>
     </div>
     <div class="mt-4 lg:hidden">
@@ -33,7 +23,7 @@
           src="https://rotato.netlify.app/alpha-demo/movie-hevc.mov"
           type='video/mp4; codecs="hvc1"'
         /> -->
-        <source src="medusa.webm" type="video/webm" />
+        <source src="medusa.mp4" type="video/mp4" />
       </video>
     </div>
     <main class="pt-6 lg:pb-24 sm:pt-12 lg:my-auto">
@@ -48,29 +38,14 @@
           Create a unique space for your community with the power of blockchain and crypto.‌
         </p>
         <div class="flex items-center mt-8 lg:justify-between lg:mt-12">
-          <Button href="#" class="w-full text-white bg-blue-600 shadow lg:w-auto hover:bg-blue-700"
+          <Button
+            href="#"
+            class="w-full text-white shadow bg-primary-600 lg:w-auto hover:bg-primary-700"
             >Pitch deck
             <ArrowRight weight="bold" slot="icon" />
           </Button>
           <div class="flex-initial hidden gap-3 ml-3 lg:flex">
-            <Button
-              href="#"
-              class="text-xl text-gray-700 bg-white shadow lg:text-2xl hover:shadow-md"
-            >
-              <TwitterLogo weight="bold" slot="icon" />
-            </Button>
-            <Button
-              href="#"
-              class="text-xl text-gray-700 bg-white shadow lg:text-2xl hover:shadow-md"
-            >
-              <TelegramLogo weight="bold" slot="icon" />
-            </Button>
-            <Button
-              href="https://github.com/AgoraSpaceDAO"
-              class="text-xl text-gray-700 bg-white shadow lg:text-2xl hover:shadow-md"
-            >
-              <GithubLogo weight="bold" slot="icon" />
-            </Button>
+            <SocialIcons buttonClasses="text-xl text-gray-700 bg-white shadow lg:text-2xl" />
           </div>
         </div>
       </div>
@@ -80,7 +55,7 @@
     <div class="absolute flex flex-initial w-auto h-full">
       <img
         class="left-0 z-10 h-full shadow-xl rounded-2xl max-w-none"
-        src="screenshot.png"
+        src="/images/agora.png"
         alt="App screenshot"
       />
       <div class="pattern absolute w-1/2 h-1/3 left-[-80px] top-[-30px] xl:top-[-50px]" />

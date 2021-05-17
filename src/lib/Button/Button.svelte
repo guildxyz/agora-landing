@@ -6,7 +6,7 @@
 
   export let component = href === null ? Button : A;
 
-  $: hasIconOnly = $$slots.icon && !$$slots.default;
+  $: hasIconOnly = $$slots?.icon && !$$slots?.default;
 
   let baseClasses = 'flex items-center justify-center gap-3 border border-transparent';
   let defaultNormalClasses = 'px-8 py-3 text-base font-semibold rounded-2xl md:text-lg';
