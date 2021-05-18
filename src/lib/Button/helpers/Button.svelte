@@ -1,3 +1,3 @@
 <script></script>
 
-<button {...$$props}><slot /></button>
+<button on:click {...$$props}><slot /></button>

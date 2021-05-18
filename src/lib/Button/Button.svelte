@@ -3,6 +3,8 @@
   import Button from './helpers/Button.svelte';
 
   export let href = null;
+  let _class = null;
+  export { _class as class };
 
   export let component = href === null ? Button : A;
 
@@ -16,10 +18,10 @@
     ' ',
     hasIconOnly ? defaultIconOnlyClasses : defaultNormalClasses
   );
-  $: classes = defaultClasses.concat(' ', $$restProps.class);
+  $: classes = defaultClasses.concat(' ', _class);
 </script>
 
-<svelte:component this={component} {href} class={classes}>
+<svelte:component this={component} {href} class={classes} {...$$restProps} on:click>
   <slot />
   <slot name="icon" />
 </svelte:component>

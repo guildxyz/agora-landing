@@ -12,7 +12,7 @@ const config = {
   kit: {
     adapter: adapter(),
     target: '#svelte',
-    hydrate: false,
+    /* hydrate: false, */
     router: false
   }
 };
