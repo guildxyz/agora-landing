@@ -13,7 +13,7 @@
 >
   <div class="flex flex-col sm:h-auto">
     <div class="flex justify-between w-full lg:mt-8">
-      <div class="flex items-center gap-4">
+      <div class="flex items-center space-x-4">
         <img class="h-8" src="icon/logo.svg" alt="" />
         <p class="font-semibold tracking-tight md:text-lg font-display">Agora Space</p>
       </div>
@@ -23,9 +23,9 @@
     </div>
     <div class="mt-4 lg:hidden">
       <video autoplay loop muted playsinline class="mx-auto max-h-72">
-        <!-- prettier-ignore -->
-        <source src="medusa.mp4" type="video/mp4; codecs='hvc1'" />
         <source src="medusa.webm" type="video/webm" />
+        <!-- mp4 for browsers that don't support webm yet, like iOS Safari -->
+        <source src="medusa.mp4" type="video/mp4" />
       </video>
     </div>
     <main class="pt-6 lg:pb-24 sm:pt-12 lg:my-auto">

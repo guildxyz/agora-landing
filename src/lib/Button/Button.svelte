@@ -11,7 +11,7 @@
   $: hasIconOnly = $$slots?.icon && !$$slots?.default;
 
   let baseClasses =
-    'flex items-center justify-center gap-3 border border-transparent focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary-500 focus-visible:ring-opacity-50';
+    'flex items-center justify-center space-x-3 border border-transparent focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary-500 focus-visible:ring-opacity-50';
   let defaultNormalClasses = 'px-8 py-3 text-base font-semibold rounded-2xl md:text-lg';
   let defaultIconOnlyClasses = 'p-3 rounded-full hover:bg-gray-100';
 
@@ -23,6 +23,8 @@
 </script>
 
 <svelte:component this={component} {href} class={classes} {...$$restProps} on:click>
-  <slot />
+  {#if $$slots.default}
+    <span><slot /></span>
+  {/if}
   <slot name="icon" />
 </svelte:component>
