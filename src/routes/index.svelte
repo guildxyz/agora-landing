@@ -37,7 +37,7 @@
           <span class="block text-primary-600 xl:inline">communities</span>
         </h1>
         <p class="mt-5 font-semibold text-gray-500 sm:text-lg xl:text-xl lg:mx-0 lg:mt-8">
-          Create a unique space for your community with the power of blockchain and crypto.‌
+          A user-friendly way to create tokenized, private communities on multiple blockchains.
         </p>
         <div class="flex items-center mt-8 lg:justify-between lg:mt-12">
           <Button
