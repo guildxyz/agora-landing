@@ -1,8 +1,11 @@
 <script>
   import Button from '$lib/Button';
+  import PitchdeckModal from '$lib/PitchdeckModal.svelte';
   import HeroPresentation from '$lib/HeroPresentation.svelte';
   import SocialIcons from '$lib/SocialIcons.svelte';
-  import ArrowRight from 'phosphor-svelte/lib/ArrowRight';
+  import ArrowSquareIn from 'phosphor-svelte/lib/ArrowSquareIn';
+
+  let open = false;
 </script>
 
 <div
@@ -37,9 +40,11 @@
           Create a unique space for your community with the power of blockchain and crypto.‌
         </p>
         <div class="flex items-center mt-8 lg:justify-between lg:mt-12">
-          <Button class="w-full text-white shadow bg-primary-600 lg:w-auto hover:bg-primary-700"
+          <Button
+            class="w-full text-white shadow bg-primary-600 lg:w-auto hover:bg-primary-700"
+            on:click={() => (open = true)}
             >Pitch deck
-            <ArrowRight weight="bold" slot="icon" />
+            <ArrowSquareIn weight="bold" slot="icon" />
           </Button>
           <div class="flex-initial hidden gap-3 ml-3 lg:flex">
             <SocialIcons buttonClasses="text-xl text-gray-700 bg-white shadow lg:text-2xl" />
@@ -52,3 +57,4 @@
     <HeroPresentation />
   </div>
 </div>
+<PitchdeckModal bind:open />
