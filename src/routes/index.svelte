@@ -14,7 +14,7 @@
   <div class="flex flex-col sm:h-auto">
     <div class="flex justify-between w-full lg:mt-8">
       <div class="flex items-center space-x-4">
-        <img class="h-8" src="icon/logo.svg" alt="" />
+        <img class="h-8" src="icon/logo_150.png" alt="" />
         <p class="font-semibold tracking-tight md:text-lg font-display">Agora Space</p>
       </div>
       <div class="flex items-center lg:hidden">
