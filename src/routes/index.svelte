@@ -14,7 +14,7 @@
   <div class="flex flex-col sm:h-auto">
     <div class="flex justify-between w-full lg:mt-8">
       <div class="flex items-center space-x-4">
-        <img class="h-8" src="icon/logo_150.png" alt="" />
+        <img class="h-8" src="icon/32x32.png" alt="Agora Space logo" />
         <p class="font-semibold tracking-tight md:text-lg font-display">Agora Space</p>
       </div>
       <div class="flex items-center lg:hidden">
@@ -39,7 +39,7 @@
         <p class="mt-5 font-semibold text-gray-500 sm:text-lg xl:text-xl lg:mx-0 lg:mt-8">
           A user-friendly way to create tokenized, private communities on multiple blockchains.
         </p>
-        <div class="flex items-center mt-8 lg:justify-between lg:mt-12">
+        <div class="flex items-center my-8 lg:justify-between lg:mb-0 lg:mt-12">
           <Button
             class="w-full text-white shadow bg-primary-600 lg:w-auto hover:bg-primary-700"
             on:click={() => (open = true)}
