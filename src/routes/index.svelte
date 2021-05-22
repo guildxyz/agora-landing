@@ -3,7 +3,7 @@
   import PitchdeckModal from '$lib/PitchdeckModal.svelte';
   import HeroPresentation from '$lib/HeroPresentation.svelte';
   import SocialIcons from '$lib/SocialIcons.svelte';
-  import ArrowSquareIn from 'phosphor-svelte/lib/ArrowSquareIn';
+  import { ArrowRight, Cards } from 'phosphor-svelte';
 
   let open = false;
 </script>
@@ -17,7 +17,7 @@
         <img class="h-8" src="icon/32x32.png" alt="Agora Space logo" />
         <p class="font-semibold tracking-tight md:text-lg font-display">Agora Space</p>
       </div>
-      <div class="flex items-center lg:hidden">
+      <div class="flex items-center">
         <SocialIcons buttonClasses="text-xl text-gray-900" />
       </div>
     </div>
@@ -39,16 +39,22 @@
         <p class="mt-5 font-semibold text-gray-500 sm:text-lg xl:text-xl lg:mx-0 lg:mt-8">
           A user-friendly way to create tokenized, private communities on multiple blockchains.
         </p>
-        <div class="flex items-center my-8 lg:justify-between lg:mb-0 lg:mt-12">
+        <div class="items-center my-8 space-y-3 sm:flex sm:space-y-0 sm:space-x-4 lg:mb-0 lg:mt-12">
           <Button
             class="w-full text-white shadow bg-primary-600 lg:w-auto hover:bg-primary-700"
             on:click={() => (open = true)}
-            >Pitch deck
-            <ArrowSquareIn weight="bold" slot="icon" />
+          >
+            Pitch deck
+            <Cards weight="bold" slot="icon" />
           </Button>
-          <div class="flex-initial hidden gap-3 ml-3 lg:flex">
-            <SocialIcons buttonClasses="text-xl text-gray-700 bg-white shadow lg:text-2xl" />
-          </div>
+          <Button
+            href="https://cj2ttd5kqqx.typeform.com/to/X4bXPcE1"
+            target="_blank"
+            class="w-full text-primary-600 bg-primary-100 lg:w-auto hover:bg-primary-200"
+          >
+            Roll in
+            <ArrowRight weight="bold" slot="icon" />
+          </Button>
         </div>
       </div>
     </main>
