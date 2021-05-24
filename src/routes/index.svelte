@@ -37,7 +37,7 @@
           <span class="block text-primary-600 xl:inline">communities</span>
         </h1>
         <p class="mt-5 font-semibold text-gray-500 sm:text-lg xl:text-xl lg:mx-0 lg:mt-8">
-          A user-friendly way to create tokenized, private communities on multiple blockchains.
+          User-friendly way to create tokenized, private communities on multiple blockchains.
         </p>
         <div class="items-center my-8 space-y-3 sm:flex sm:space-y-0 sm:space-x-4 lg:mb-0 lg:mt-12">
           <Button
