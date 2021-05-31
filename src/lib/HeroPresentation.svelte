@@ -1,6 +1,5 @@
 <script>
   import { onDestroy } from 'svelte';
-  import { fade } from 'svelte/transition';
 
   const images = ['agora.png', 'caviar.png', 'ethane.png'];
 
@@ -16,34 +15,31 @@
   onDestroy(() => clearInterval(interval));
 </script>
 
-<!-- absolute so it's content's height will be set to the outer grid height,
+<div class="relative hidden lg:block">
+  <!-- absolute so it's content's height will be set to the outer grid height,
      and not vica versa
-     grid so we can 1/1 match content's size to the helper svg's size
      w-max so it's width will be it's content's width, not the wrapper grid -->
-<div class="absolute grid h-full w-max">
-  <!-- 4/3 aspect ratio empty svg (same as images) to set size -->
-  <svg viewBox="0 0 4 3" class="h-full" />
-  {#each images as image, i}
-    <img
-      transition:fade
-      class="absolute z-10 left-0 h-full transition duration-300	shadow-xl rounded-2xl hover:shadow-2xl {i ===
-      actImageIndex
-        ? 'opacity-100 '
-        : 'opacity-0 pointer-events-none'}"
-      src={`/images/${image}`}
-      alt="App screenshot"
+  <div class="absolute h-full w-max">
+    <!-- 4/3 aspect ratio empty svg (same as images) to set size -->
+    <svg viewBox="0 0 4 3" class="h-full" />
+    {#each images as image, i}
+      <img
+        class="absolute z-10 top-0 left-0 h-full transition duration-300 shadow-xl rounded-2xl hover:shadow-2xl {i ===
+        actImageIndex
+          ? 'opacity-100 '
+          : 'opacity-0 pointer-events-none'}"
+        src={`/images/${image}`}
+        alt="App screenshot"
+      />
+    {/each}
+    <div class="pattern absolute w-1/2 h-1/3 left-[-80px] top-[-30px] xl:top-[-50px]" />
+    <div
+      class="absolute w-2/3 h-3/4 right-[-80px] bottom-[-40px] xl:bottom-[-60px] bg-gray-100 rounded-3xl"
     />
-  {/each}
-  <div class="pattern absolute w-1/2 h-1/3 left-[-80px] top-[-30px] xl:top-[-50px]" />
-  <div
-    class="absolute w-2/3 h-3/4 right-[-80px] bottom-[-40px] xl:bottom-[-60px] bg-gray-100 rounded-3xl"
-  />
+  </div>
 </div>
 
 <style>
-  .grid > * {
-    grid-area: 1/1;
-  }
   img {
     /* fix downscale blurryness on Chrome & Safari */
     image-rendering: -webkit-optimize-contrast;

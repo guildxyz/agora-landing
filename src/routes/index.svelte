@@ -11,7 +11,7 @@
 <div
   class="grid gap-32 px-4 py-4 m-auto lg:p-16 xl:p-28 lg:grid-cols-[1fr,1fr] xl:grid-cols-[2fr,3fr] max-w-[1800px] h-full max-h-[1200px] sm:px-6"
 >
-  <div class="flex flex-col sm:h-auto">
+  <div class="flex flex-col justify-evenly lg:justify-start sm:h-auto">
     <div class="flex justify-between w-full lg:mt-8">
       <div class="flex items-center space-x-4">
         <img class="h-8" src="icon/32x32.png" alt="Agora Space logo" />
@@ -37,7 +37,7 @@
           <span class="block text-primary-600 xl:inline">communities</span>
         </h1>
         <p class="mt-5 font-semibold text-gray-500 sm:text-lg xl:text-xl lg:mx-0 lg:mt-8">
-          User-friendly way to create tokenized, private communities on multiple blockchains.
+          A social platform aggregator and management system for tokenized communities
         </p>
         <div class="items-center my-8 space-y-3 sm:flex sm:space-y-0 sm:space-x-4 lg:mb-0 lg:mt-12">
           <Button
@@ -59,8 +59,6 @@
       </div>
     </main>
   </div>
-  <div class="relative hidden lg:block">
-    <HeroPresentation />
-  </div>
+  <HeroPresentation />
 </div>
 <PitchdeckModal bind:open />
