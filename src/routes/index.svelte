@@ -2,7 +2,7 @@
   import Button from '$lib/Button';
   import PitchdeckModal from '$lib/PitchdeckModal.svelte';
   import HeroPresentation from '$lib/HeroPresentation.svelte';
-  import SocialIcons from '$lib/SocialIcons.svelte';
+  import SocialLinks from '$lib/SocialLinks.svelte';
   import { ArrowRight, Cards } from 'phosphor-svelte';
 
   let open = false;
@@ -18,7 +18,7 @@
         <p class="font-semibold tracking-tight md:text-lg font-display">Agora Space</p>
       </div>
       <div class="flex items-center">
-        <SocialIcons buttonClasses="text-xl text-gray-900" />
+        <SocialLinks buttonClasses="text-xl text-gray-900" />
       </div>
     </div>
     <div class="mt-4 lg:hidden">

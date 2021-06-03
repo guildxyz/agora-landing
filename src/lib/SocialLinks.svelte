@@ -10,7 +10,7 @@
 <Button href="https://twitter.com/AgoraSpaceDAO" target="_BLANK" class={buttonClasses}>
   <TwitterLogo weight="bold" slot="icon" />
 </Button>
-<Button href="https://discord.gg/3ga2Ah9a" target="_BLANK" class={buttonClasses}>
+<Button href="https://discord.gg/fxVCPtA8N5" target="_BLANK" class={buttonClasses}>
   <DiscordLogo weight="bold" slot="icon" />
 </Button>
 <Button href="https://github.com/AgoraSpaceDAO" target="_BLANK" class={buttonClasses}>
