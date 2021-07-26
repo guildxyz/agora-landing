@@ -18,7 +18,7 @@ module.exports = {
         'michelangelo-david': "url('/images/michelangelo-david.png')"
       },
       backgroundPosition: {
-        'hero-right-bottom': 'right -5vw bottom 10vh'
+        'hero-right-bottom': 'right -4vw bottom 10vh'
       }
     }
   },
