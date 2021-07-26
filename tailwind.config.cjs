@@ -11,8 +11,16 @@ module.exports = {
     extend: {
       colors: {
         primary: colors.indigo
+      },
+      backgroundImage: {
+        'circle-pattern': "url('/images/circle-pattern.png')",
+        'what-is-agora-space': "url('/images/what-is-agora-space-bg.png')",
+        'michelangelo-david': "url('/images/michelangelo-david.png')"
+      },
+      backgroundPosition: {
+        'hero-right-bottom': 'right -5vw bottom 10vh'
       }
     }
   },
-  plugins: []
+  plugins: [require('@tailwindcss/aspect-ratio')]
 };

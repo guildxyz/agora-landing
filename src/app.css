@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .button {
+    @apply flex items-center justify-center px-8 max-w-max h-14 text-white text-lg font-semibold rounded-2xl ring-0 focus:outline-none focus:ring-4 focus:ring-gray-300 hover:bg-opacity-90 transition;
+  }
+}
