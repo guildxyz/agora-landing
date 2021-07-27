@@ -8,9 +8,9 @@
   import Footer from '$lib/Footer.svelte';
 </script>
 
-<Roadmap />
 <Hero />
 <WhatIsAgora />
 <GreatThinkers />
 <WhoIsAgoraFor />
+<Roadmap />
 <Footer />

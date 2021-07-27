@@ -12,26 +12,31 @@
     class="absolute top-0 right-0 w-[50vw] h-[50vw] md:w-[25vw] md:h-[25vw] transform translate-x-1/2 -translate-y-3/4 bg-circle-pattern bg-no-repeat bg-cover"
   />
 
-  <div class="container mx-auto px-8 py-20 space-y-10 md:grid md:grid-cols-3 gap-16 text-center">
+  <div class="container mx-auto px-8 py-20 space-y-10 text-center">
     <h2
       class="col-span-3 text-[#E77FF0] text-4xl lg:text-6xl font-bold tracking-tight font-display uppercase"
     >
       Roadmap <span class="text-lg tracking-normal">2021</span>
     </h2>
-    <Step
-      title="Testing"
-      q="Q2"
-      content="Telegram & Discord management bot. Bridging chats between social platforms. Audited smart contracts."
-    />
-    <Step
-      title="Releasing"
-      q="Q3"
-      content="Aragon and Gnosis integration Agora Social Oracle layer Agora Space, the “App Store” of social tokens."
-    />
-    <Step
-      title="More tools"
-      q="Q4"
-      content="Integrating other token issuers Token admin dashboard Bridge a token between blockchains with full utility."
-    />
+
+    <div class="-mx-8 px-8 overflow-x-auto">
+      <div class="pr-8 w-max lg:w-full grid grid-cols-3 gap-16">
+        <Step
+          title="Testing"
+          q="Q2"
+          content="Telegram & Discord management bot. Bridging chats between social platforms. Audited smart contracts."
+        />
+        <Step
+          title="Releasing"
+          q="Q3"
+          content="Aragon and Gnosis integration Agora Social Oracle layer Agora Space, the “App Store” of social tokens."
+        />
+        <Step
+          title="More tools"
+          q="Q4"
+          content="Integrating other token issuers Token admin dashboard Bridge a token between blockchains with full utility."
+        />
+      </div>
+    </div>
   </div>
 </section>
