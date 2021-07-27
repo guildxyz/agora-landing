@@ -2,7 +2,7 @@
   import { ArrowRight } from 'phosphor-svelte';
 </script>
 
-<section id="join-or-create-a-community" class="relative bg-[#2E2093]">
+<section id="join-or-create-a-community" class="relative bg-[#2E2093] overflow-hidden">
   <!-- Background circles -->
   <div
     class="absolute bottom-0 left-0 w-[50vw] h-[50vw] md:w-[25vw] md:h-[25vw] transform -translate-x-1/4 translate-y-1/2 bg-circle-pattern bg-no-repeat bg-cover"
