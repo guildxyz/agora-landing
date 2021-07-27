@@ -9,7 +9,7 @@
   <nav
     class="relative hidden lg:flex justify-end space-x-12 text-[#FDF7FF] font-semibold text-lg font-display"
   >
-    <a href="/" class="hover:underline focus:outline-none focus:underline">Home</a>
+    <a href="/" class="hover:underline focus:outline-none focus:underline">Explore</a>
     <a href="/" class="hover:underline focus:outline-none focus:underline">Tools</a>
     <a href="/" class="hover:underline focus:outline-none focus:underline">About</a>
   </nav>

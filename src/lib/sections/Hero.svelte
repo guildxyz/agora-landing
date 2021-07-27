@@ -4,9 +4,9 @@
   import SocialLinks from '$lib/SocialLinks.svelte';
 </script>
 
-<section id="hero" class="relative md:h-screen">
+<section id="hero" class="relative xl:h-screen">
   <!-- Hero background -->
-  <div class="absolute hidden lg:flex flex-col lg:flex-row w-full h-full">
+  <div class="absolute hidden md:flex lg:flex-row w-full h-full">
     <div class="flex-grow bg-[#FDF7FF]" />
     <div class="flex-grow bg-[#2E2093] bg-circle-pattern bg-no-repeat bg-hero-right-bottom" />
   </div>
@@ -15,62 +15,68 @@
     <Header />
   </div>
 
-  <div class="relative lg:container mx-auto px-4 lg:px-8 grid grid-cols-5 lg:h-full">
+  <div
+    class="relative md:container mx-auto lg:px-8 grid md:grid-cols-5 md:h-1/2 lg:h-2/3 xl:h-full"
+  >
     <!-- Hero - left side -->
     <section
-      class="flex flex-col relative col-span-5 lg:col-span-3 -mx-4 lg:mx-0 pt-4 lg:pt-20 px-4 lg:px-0 bg-[#FDF7FF]"
+      class="flex flex-col relative md:col-span-3 -mx-4 md:mx-0 pt-4 lg:pt-20 px-4 lg:px-0 bg-[#FDF7FF]"
     >
+      <!-- Platon - large -->
+      <div class="hidden md:block absolute bottom-0 md:-right-2/3 w-full xl:w-[125%] h-auto">
+        <img src="/images/hero.png" alt="Platon" class="w-full" />
+      </div>
+
       <!-- Title / text -->
-      <div class="relative mt-16 lg:mt-28 pb-24 lg:pb-0 text-center lg:text-left">
-        <h2 class="mb-4 lg:mb-8 font-bold tracking-tight text-4xl md:text-6xl font-display">
-          Social token <br /><span class="block lg:inline text-[#2E2093]">toolkit</span> and oracle
+      <div class="mt-16 lg:mt-28 pb-32 md:pb-0 text-center md:text-left">
+        <h2 class="mb-4 lg:mb-8 font-bold tracking-tight text-4xl lg:text-6xl font-display">
+          Social token <br /><span class="text-[#2E2093]">toolkit</span>
+          <br class="inline md:hidden" />and oracle
         </h2>
 
-        <p class="mb-10 font-semibold text-lg md:text-2xl leading-tight md:leading-normal">
+        <p class="mb-4 lg:mb-10 font-semibold text-lg lg:text-2xl leading-tight md:leading-normal">
           Two-way social media integration <br />to the blockchain
         </p>
       </div>
 
-      <!-- Platon - large -->
-      <div class="hidden lg:block absolute bottom-0 lg:-right-2/3 w-[135%] h-auto">
-        <img src="/images/hero.png" alt="Platon" class="w-full" />
-      </div>
-
-      <!-- Platon - small & buttons - only on mobile - I'll need to play with this one... -->
-      <div
-        class="lg:hidden relative -mx-4 pt-40 pb-10 bg-[#2E2093] bg-circle-pattern bg-no-repeat bg-hero-right-bottom"
-      >
-        <div class="absolute bottom-0 w-auto transform -translate-x-1/4 h-[200vw] max-h-[60vh]">
-          <img src="/images/hero.png" alt="Platon" class="h-full w-auto max-w-[200%]" />
-        </div>
-
-        <!-- Buttons -->
-        <div class="relative flex flex-col items-center space-y-4">
-          <a href="/" class="button bg-[#3B2DA4] flex space-x-4">
-            <span>Join a community</span>
-            <SignIn weight="bold" size="1.2em" />
-          </a>
-          <a href="/" class="button bg-[#BA4CC4] flex space-x-4">
-            <span>Create a community</span>
-            <Users weight="bold" size="1.2em" />
-          </a>
-        </div>
-      </div>
-
       <!-- Buttons -->
-      <div class="hidden lg:flex flex-col space-y-4">
-        <a href="/" class="button bg-[#3B2DA4] flex space-x-4">
+      <div class="hidden md:flex flex-col space-y-2 lg:space-y-4 mb-8">
+        <a href="/" class="button small bg-[#3B2DA4] flex space-x-4">
           <span>Join a community</span>
           <SignIn weight="bold" size="1.2em" />
         </a>
-        <a href="/" class="button bg-[#BA4CC4] flex space-x-4">
+        <a href="/" class="button small bg-[#BA4CC4] flex space-x-4">
           <span>Create a community</span>
           <Users weight="bold" size="1.2em" />
         </a>
       </div>
 
-      <div class="hidden lg:flex mt-auto mb-20">
-        <SocialLinks buttonClasses="text-3xl text-gray-900" />
+      <!-- Social icons -->
+      <div class="hidden md:flex mt-auto mb-4 xl:mb-20">
+        <SocialLinks buttonClasses="text-2xl xl:text-3xl text-gray-900" />
+      </div>
+
+      <!-- Mobile - purple section -->
+      <div
+        class="md:hidden relative -mx-4 pb-10 h-[50vh] bg-[#2E2093] bg-circle-pattern bg-no-repeat bg-hero-right-bottom"
+      >
+        <img
+          src="/images/hero.png"
+          alt="Platon"
+          class="absolute left-0 -top-40 h-[75vh] object-cover object-bottom"
+        />
+
+        <!-- Buttons -->
+        <div class="relative flex flex-col justify-end items-center space-y-4 h-full">
+          <a href="/" class="button bg-[#3B2DA4] flex space-x-4">
+            <span>Join a community</span>
+            <SignIn weight="bold" size="1.2em" />
+          </a>
+          <a href="/" class="button bg-[#4F1D85] flex space-x-4">
+            <span>Create a community</span>
+            <Users weight="bold" size="1.2em" />
+          </a>
+        </div>
       </div>
     </section>
   </div>

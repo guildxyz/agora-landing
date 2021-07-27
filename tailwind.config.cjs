@@ -16,9 +16,6 @@ module.exports = {
         'circle-pattern': "url('/images/circle-pattern.png')",
         'what-is-agora-space': "url('/images/what-is-agora-space-bg.png')",
         'michelangelo-david': "url('/images/michelangelo-david.png')"
-      },
-      backgroundPosition: {
-        'hero-right-bottom': 'right -4vw bottom 10vh'
       }
     }
   },
