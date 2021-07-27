@@ -39,6 +39,7 @@
       </div>
     </div>
 
+    <!-- Right Side -->
     <div
       class="flex flex-col items-center justify-center space-y-4 relative lg:col-span-3 lg:min-h-full bg-[#FDF7FF] overflow-hidden"
     >

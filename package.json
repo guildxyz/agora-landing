@@ -9,7 +9,7 @@
     "format": "prettier --write --plugin-search-dir=. ."
   },
   "devDependencies": {
-    "@sveltejs/adapter-static": "^1.0.0-next.9",
+    "@sveltejs/adapter-static": "^1.0.0-next.13",
     "@sveltejs/kit": "next",
     "@typescript-eslint/eslint-plugin": "^4.19.0",
     "@typescript-eslint/parser": "^4.19.0",
@@ -22,8 +22,8 @@
     "postcss-load-config": "^3.0.1",
     "prettier": "~2.2.1",
     "prettier-plugin-svelte": "^2.2.0",
-    "svelte": "^3.34.0",
-    "svelte-preprocess": "^4.7.1",
+    "svelte": "^3.40.3",
+    "svelte-preprocess": "^4.7.4",
     "tailwindcss": "^2.1.1",
     "tslib": "^2.0.0",
     "typescript": "^4.0.0"
