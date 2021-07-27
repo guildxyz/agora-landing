@@ -15,9 +15,11 @@ module.exports = {
       backgroundImage: {
         'circle-pattern': "url('/images/circle-pattern.png')",
         'what-is-agora-space': "url('/images/what-is-agora-space-bg.png')",
+        'who-is-agora-space-for': "url('/images/who-is-agora-space-for-bg.png')",
+        'circle-r': "url('/svg/circle.svg')",
         'michelangelo-david': "url('/images/michelangelo-david.png')"
       }
     }
   },
-  plugins: [require('@tailwindcss/aspect-ratio')]
+  plugins: []
 };
