@@ -4,6 +4,7 @@
   import GreatThinkers from '$lib/sections/GreatThinkers';
   import WhoIsAgoraFor from '$lib/sections/WhoIsAgoraFor.svelte';
   import Roadmap from '$lib/sections/Roadmap';
+  import Cta from '$lib/sections/Cta.svelte';
 
   import Footer from '$lib/Footer.svelte';
 </script>
@@ -13,4 +14,5 @@
 <GreatThinkers />
 <WhoIsAgoraFor />
 <Roadmap />
+<Cta />
 <Footer />
