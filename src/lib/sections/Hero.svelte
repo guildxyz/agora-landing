@@ -1,6 +1,7 @@
 <script>
-  import Header from '$lib/Header.svelte';
+  import Header from '$lib/Header';
   import { SignIn, Users } from 'phosphor-svelte';
+  import Button from '$lib/Button';
   import SocialLinks from '$lib/SocialLinks.svelte';
 </script>
 
@@ -41,14 +42,15 @@
 
       <!-- Buttons -->
       <div class="hidden md:flex flex-col space-y-2 lg:space-y-4 mb-8">
-        <a href="/" class="button small bg-[#3B2DA4] flex space-x-4">
+        <Button href="/" class="w-max bg-[#3B2DA4] text-[#FDF7FF]">
           <span>Join a community</span>
-          <SignIn weight="bold" size="1.2em" />
-        </a>
-        <a href="/" class="button small bg-[#BA4CC4] flex space-x-4">
+          <SignIn slot="icon" weight="bold" size="1.2em" />
+        </Button>
+
+        <Button href="/" class="w-max bg-[#4F1D85] text-[#FDF7FF]">
           <span>Create a community</span>
-          <Users weight="bold" size="1.2em" />
-        </a>
+          <Users slot="icon" weight="bold" size="1.2em" />
+        </Button>
       </div>
 
       <!-- Social icons -->
@@ -68,14 +70,15 @@
 
         <!-- Buttons -->
         <div class="relative flex flex-col justify-end items-center space-y-4 h-full">
-          <a href="/" class="button bg-[#3B2DA4] flex space-x-4">
+          <Button href="/" class="w-max bg-[#3B2DA4] text-[#FDF7FF]">
             <span>Join a community</span>
-            <SignIn weight="bold" size="1.2em" />
-          </a>
-          <a href="/" class="button bg-[#4F1D85] flex space-x-4">
+            <SignIn slot="icon" weight="bold" size="1.2em" />
+          </Button>
+
+          <Button href="/" class="w-max bg-[#4F1D85] text-[#FDF7FF]">
             <span>Create a community</span>
-            <Users weight="bold" size="1.2em" />
-          </a>
+            <Users slot="icon" weight="bold" size="1.2em" />
+          </Button>
         </div>
       </div>
     </section>

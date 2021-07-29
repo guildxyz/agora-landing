@@ -15,4 +15,9 @@
     background-position: right -4vw bottom 4vh;
     background-size: 30vw;
   }
+
+  .bg-footer-mobile {
+    background-position-x: 25vw;
+    background-position-y: bottom;
+  }
 }
