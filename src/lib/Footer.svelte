@@ -11,7 +11,7 @@
   export let purple = false;
 </script>
 
-<footer class={purple ? 'bg-[#4F1D85]' : 'bg-[#FDF7FF]'}>
+<footer class={purple ? 'bg-agora-purple-bg' : 'bg-agora-white'}>
   <div class="container mx-auto">
     <div
       class="flex md:justify-end px-8 lg:px-24 py-10 lg:py-20 w-full bg-david-mirrored md:bg-david-default bg-footer-mobile md:bg-left-bottom bg-no-repeat bg-contain"
@@ -22,7 +22,7 @@
           <div class="flex flex-col">
             <h4
               class={`mb-4 font-bold tracking-tight text-2xl font-display ${
-                purple ? 'text-[#E77FF0]' : 'text-[#BA4CC4]'
+                purple ? 'text-agora-pink-text' : 'text-agora-pink-text-darker'
               }`}
             >
               Join the community
@@ -32,7 +32,9 @@
                 <a
                   href="/"
                   class={`flex items-center justify-center w-8 h-8 rounded-sm ${
-                    purple ? 'bg-[#FDF7FF] text-[#2E2093]' : 'bg-[#2E2093] text-[#FDF7FF]'
+                    purple
+                      ? 'bg-agora-white text-agora-blue-bg'
+                      : 'bg-agora-blue-bg text-agora-white'
                   }`}
                 >
                   <TwitterLogo size="1.2em" />
@@ -42,7 +44,9 @@
                 <a
                   href="/"
                   class={`flex items-center justify-center w-8 h-8 rounded-sm ${
-                    purple ? 'bg-[#FDF7FF] text-[#2E2093]' : 'bg-[#2E2093] text-[#FDF7FF]'
+                    purple
+                      ? 'bg-agora-white text-agora-blue-bg'
+                      : 'bg-agora-blue-bg text-agora-white'
                   }`}
                 >
                   <GithubLogo size="1.2em" />
@@ -52,7 +56,9 @@
                 <a
                   href="/"
                   class={`flex items-center justify-center w-8 h-8 rounded-sm ${
-                    purple ? 'bg-[#FDF7FF] text-[#2E2093]' : 'bg-[#2E2093] text-[#FDF7FF]'
+                    purple
+                      ? 'bg-agora-white text-agora-blue-bg'
+                      : 'bg-agora-blue-bg text-agora-white'
                   }`}
                 >
                   <ArticleMedium size="1.2em" />
@@ -62,7 +68,9 @@
                 <a
                   href="/"
                   class={`flex items-center justify-center w-8 h-8 rounded-sm ${
-                    purple ? 'bg-[#FDF7FF] text-[#2E2093]' : 'bg-[#2E2093] text-[#FDF7FF]'
+                    purple
+                      ? 'bg-agora-white text-agora-blue-bg'
+                      : 'bg-agora-blue-bg text-agora-white'
                   }`}
                 >
                   <DiscordLogo size="1.2em" />
@@ -72,7 +80,9 @@
                 <a
                   href="/"
                   class={`flex items-center justify-center w-8 h-8 rounded-sm ${
-                    purple ? 'bg-[#FDF7FF] text-[#2E2093]' : 'bg-[#2E2093] text-[#FDF7FF]'
+                    purple
+                      ? 'bg-agora-white text-agora-blue-bg'
+                      : 'bg-agora-blue-bg text-agora-white'
                   }`}
                 >
                   <TelegramLogo size="1.2em" />
@@ -82,7 +92,9 @@
                 <a
                   href="/"
                   class={`flex items-center justify-center w-8 h-8 rounded-sm ${
-                    purple ? 'bg-[#FDF7FF] text-[#2E2093]' : 'bg-[#2E2093] text-[#FDF7FF]'
+                    purple
+                      ? 'bg-agora-white text-agora-blue-bg'
+                      : 'bg-agora-blue-bg text-agora-white'
                   }`}
                 >
                   <At size="1.2em" />
@@ -94,12 +106,14 @@
           <div class="flex flex-col">
             <h4
               class={`mb-4 font-bold tracking-tight text-2xl font-display ${
-                purple ? 'text-[#E77FF0]' : 'text-[#BA4CC4]'
+                purple ? 'text-agora-pink-text' : 'text-agora-pink-text-darker'
               }`}
             >
               Information
             </h4>
-            <ul class={`mb-12 font-medium text-lg ${purple ? 'text-[#FDF7FF]' : 'text-[#252525]'}`}>
+            <ul
+              class={`mb-12 font-medium text-lg ${purple ? 'text-agora-white' : 'text-agora-gray'}`}
+            >
               <li>
                 <a href="/">About</a>
               </li>
@@ -118,12 +132,14 @@
           <div class="hidden xl:flex flex-col">
             <h4
               class={`mb-4 font-bold tracking-tight text-2xl font-display ${
-                purple ? 'text-[#E77FF0]' : 'text-[#BA4CC4]'
+                purple ? 'text-agora-pink-text' : 'text-agora-pink-text-darker'
               }`}
             >
               Tools & Products
             </h4>
-            <ul class={`mb-12 font-medium text-lg ${purple ? 'text-[#FDF7FF]' : 'text-[#252525]'}`}>
+            <ul
+              class={`mb-12 font-medium text-lg ${purple ? 'text-agora-white' : 'text-agora-gray'}`}
+            >
               <li>
                 <a href="/">Community explorer</a>
               </li>
@@ -140,7 +156,7 @@
         <!-- Bottom links -->
         <div
           class={`flex flex-col md:flex-row lg:justify-evenly md:space-x-8 lg:space-x-16 lg:text-center font-extralight ${
-            purple ? 'text-[#FDF7FF]' : 'text-[#252525]'
+            purple ? 'text-agora-white' : 'text-agora-gray'
           }`}
         >
           <span class="mt-auto font-light">2021 Agora Space</span>

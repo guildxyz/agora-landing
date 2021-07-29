@@ -2,10 +2,10 @@
   import Quote from './components/Quote.svelte';
 </script>
 
-<section id="great-thinkers-are-with-us" class="relative bg-[#252525]">
+<section id="great-thinkers-are-with-us" class="relative bg-agora-gray">
   <div class="container mx-auto px-8 py-20 space-y-10 md:grid md:grid-cols-3 gap-16 text-center">
     <h2
-      class="col-span-3 mb-16 text-[#E77FF0] text-4xl lg:text-6xl font-bold tracking-tight font-display uppercase"
+      class="col-span-3 mb-16 text-agora-pink-text text-4xl lg:text-6xl font-bold tracking-tight font-display uppercase"
     >
       Great thinkers are with us
     </h2>

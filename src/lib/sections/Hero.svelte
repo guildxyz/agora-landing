@@ -8,8 +8,8 @@
 <section id="hero" class="relative xl:h-screen">
   <!-- Hero background -->
   <div class="absolute hidden md:flex lg:flex-row w-full h-full">
-    <div class="flex-grow bg-[#FDF7FF]" />
-    <div class="flex-grow bg-[#2E2093] bg-circle-pattern bg-no-repeat bg-hero-right-bottom" />
+    <div class="flex-grow bg-agora-white" />
+    <div class="flex-grow bg-agora-blue-bg bg-circle-pattern bg-no-repeat bg-hero-right-bottom" />
   </div>
 
   <div class="absolute left-0 right-0 top-0 z-50">
@@ -21,7 +21,7 @@
   >
     <!-- Hero - left side -->
     <section
-      class="flex flex-col relative md:col-span-3 -mx-4 md:mx-0 pt-4 lg:pt-20 px-4 lg:px-0 bg-[#FDF7FF]"
+      class="flex flex-col relative md:col-span-3 -mx-4 md:mx-0 pt-4 lg:pt-20 px-4 lg:px-0 bg-agora-white"
     >
       <!-- Platon - large -->
       <div class="hidden md:block absolute bottom-0 md:-right-2/3 w-full xl:w-[125%] h-auto">
@@ -31,7 +31,7 @@
       <!-- Title / text -->
       <div class="mt-16 lg:mt-28 pb-32 md:pb-0 text-center md:text-left">
         <h2 class="mb-4 lg:mb-8 font-bold tracking-tight text-4xl lg:text-6xl font-display">
-          Social token <br /><span class="text-[#2E2093]">toolkit</span>
+          Social token <br /><span class="text-agora-blue-bg">toolkit</span>
           <br class="inline md:hidden" />and oracle
         </h2>
 
@@ -42,12 +42,12 @@
 
       <!-- Buttons -->
       <div class="hidden md:flex flex-col space-y-2 lg:space-y-4 mb-8">
-        <Button href="/" class="w-max bg-[#3B2DA4] text-[#FDF7FF]">
+        <Button href="/" class="w-max bg-agora-blue-btn text-agora-white">
           <span>Join a community</span>
           <SignIn slot="icon" weight="bold" size="1.2em" />
         </Button>
 
-        <Button href="/" class="w-max bg-[#4F1D85] text-[#FDF7FF]">
+        <Button href="/" class="w-max bg-agora-purple-bg text-agora-white">
           <span>Create a community</span>
           <Users slot="icon" weight="bold" size="1.2em" />
         </Button>
@@ -60,7 +60,7 @@
 
       <!-- Mobile - purple section -->
       <div
-        class="md:hidden relative -mx-4 pb-10 h-[50vh] bg-[#2E2093] bg-circle-pattern bg-no-repeat bg-hero-right-bottom"
+        class="md:hidden relative -mx-4 pb-10 h-[50vh] bg-agora-blue-bg bg-circle-pattern bg-no-repeat bg-hero-right-bottom"
       >
         <img
           src="/images/hero.png"
@@ -70,12 +70,12 @@
 
         <!-- Buttons -->
         <div class="relative flex flex-col justify-end items-center space-y-4 h-full">
-          <Button href="/" class="w-max bg-[#3B2DA4] text-[#FDF7FF]">
+          <Button href="/" class="w-max bg-agora-blue-btn text-agora-white">
             <span>Join a community</span>
             <SignIn slot="icon" weight="bold" size="1.2em" />
           </Button>
 
-          <Button href="/" class="w-max bg-[#4F1D85] text-[#FDF7FF]">
+          <Button href="/" class="w-max bg-agora-purple-bg text-agora-white">
             <span>Create a community</span>
             <Users slot="icon" weight="bold" size="1.2em" />
           </Button>

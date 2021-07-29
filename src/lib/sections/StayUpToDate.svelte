@@ -3,14 +3,14 @@
   import { ArrowRight } from 'phosphor-svelte';
 </script>
 
-<section id="what-is-agora-space" class="relative bg-[#FDF7FF] overflow-hidden">
+<section id="what-is-agora-space" class="relative bg-agora-white overflow-hidden">
   <div class="container mx-auto grid lg:grid-cols-12 px-8">
     <!-- Text -->
     <div
       class="lg:col-span-5 flex flex-col items-center justify-center space-y-8 lg:px-20 py-20 text-center"
     >
       <h2
-        class="text-[#4F1D85] text-4xl xl:text-6xl font-bold tracking-tight font-display uppercase"
+        class="text-agora-purple-bg text-4xl xl:text-6xl font-bold tracking-tight font-display uppercase"
       >
         Stay up to date
       </h2>
@@ -19,7 +19,7 @@
         Join the Agora Space Discord server to see all the interesting news.
       </p>
 
-      <Button href="/" class="w-max bg-[#4F1D85] text-[#FDF7FF]">
+      <Button href="/" class="w-max bg-agora-purple-bg text-agora-white">
         <span>Join our community</span>
         <ArrowRight slot="icon" weight="bold" size="1.2em" />
       </Button>

@@ -1,4 +1,4 @@
-<section id="performance-based-creator-contracts" class="relative bg-[#252525] text-[#FDF7FF]">
+<section id="performance-based-creator-contracts" class="relative bg-agora-gray text-agora-white">
   <div class="container mx-auto py-20 px-8 grid lg:grid-cols-2 gap-16 lg:gap-0">
     <!-- Text -->
     <div class="flex flex-col items-start justify-center space-y-8 text-center lg:text-left">

@@ -1,15 +1,15 @@
 <section id="who-is-agora-space-for" class="relative">
   <!-- Background -->
   <div class="absolute hidden lg:flex w-full h-full">
-    <div class="bg-[#4F1D85] w-1/2" />
-    <div class="bg-[#FDF7FF] w-1/2" />
+    <div class="bg-agora-purple-bg w-1/2" />
+    <div class="bg-agora-white w-1/2" />
   </div>
 
   <!-- Left side -->
   <div
     class="relative lg:container mx-auto lg:grid lg:grid-cols-5 h-full overflow-hidden md:overflow-visible"
   >
-    <div class="relative lg:col-span-2 bg-[#4F1D85]">
+    <div class="relative lg:col-span-2 bg-agora-purple-bg">
       <!-- Background circle left -->
       <div
         class="absolute bottom-0 left-0 w-[50vw] h-[50vw] md:w-[25vw] md:h-[25vw] transform -translate-x-1/2 translate-y-1/2 bg-circle-pattern bg-no-repeat bg-cover"
@@ -17,7 +17,7 @@
 
       <!-- Content -->
       <div
-        class="relative flex flex-col items-center justify-center px-10 lg:px-20 py-10 h-full text-[#FDF7FF] text-center overflow-hidden"
+        class="relative flex flex-col items-center justify-center px-10 lg:px-20 py-10 h-full text-agora-white text-center overflow-hidden"
       >
         <!-- Background circle right -->
         <div
@@ -41,16 +41,16 @@
 
     <!-- Right Side -->
     <div
-      class="flex flex-col items-center justify-center space-y-4 relative lg:col-span-3 lg:min-h-full bg-[#FDF7FF] overflow-hidden"
+      class="flex flex-col items-center justify-center space-y-4 relative lg:col-span-3 lg:min-h-full bg-agora-white overflow-hidden"
     >
       <div
-        class="flex items-center justify-center -mt-8 w-52 h-52 text-[#FDF7FF] text-2xl font-bold tracking-tight font-display bg-circle-purple lg:bg-circle-dark bg-no-repeat bg-center bg-contain"
+        class="flex items-center justify-center -mt-8 w-52 h-52 text-agora-white text-2xl font-bold tracking-tight font-display bg-circle-purple lg:bg-circle-dark bg-no-repeat bg-center bg-contain"
       >
         DAOs
       </div>
 
       <div
-        class="flex items-center justify-center w-40 h-40 text-[#FDF7FF] text-2xl font-bold tracking-tight font-display bg-circle-purple lg:bg-circle-dark bg-no-repeat bg-center bg-contain"
+        class="flex items-center justify-center w-40 h-40 text-agora-white text-2xl font-bold tracking-tight font-display bg-circle-purple lg:bg-circle-dark bg-no-repeat bg-center bg-contain"
       >
         VCs
       </div>

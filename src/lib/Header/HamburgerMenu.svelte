@@ -9,7 +9,9 @@
 </script>
 
 <Button
-  class={`lg:hidden px-0 py-0 ${white ? 'text-[#FDF7FF]' : 'text-[#252525] md:text-[#FDF7FF]'}`}
+  class={`lg:hidden px-0 py-0 ${
+    white ? 'text-agora-white' : 'text-agora-gray md:text-agora-white'
+  }`}
   on:click={() => (show = true)}
 >
   <List size="1.5em" weight="bold" />
@@ -18,7 +20,7 @@
 {#if show}
   <div
     transition:fade={{ duration: 200 }}
-    class="fixed inset-0 bg-[#2E2093] text-[#FDF7FF] font-display font-semibold"
+    class="fixed inset-0 bg-agora-blue-bg text-agora-white font-display font-semibold"
   >
     <div class="flex justify-end p-4 mb-16">
       <Button class="p-2" on:click={() => (show = false)}>

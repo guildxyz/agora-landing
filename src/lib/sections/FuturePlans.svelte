@@ -1,8 +1,8 @@
 <section id="future-plans" class="relative">
   <!-- Background -->
   <div class="absolute hidden lg:flex w-full h-full">
-    <div class="bg-[#252525] w-1/2" />
-    <div class="bg-[#4F1D85] w-1/2" />
+    <div class="bg-agora-gray w-1/2" />
+    <div class="bg-agora-purple-bg w-1/2" />
   </div>
 
   <div
@@ -10,17 +10,17 @@
   >
     <!-- Left side -->
     <div
-      class="flex flex-col items-center justify-center space-y-8 relative lg:col-span-3 px-10 lg:px-20 xl:px-40 py-10 h-full bg-[#252525] text-[#FDF7FF] text-center"
+      class="flex flex-col items-center justify-center space-y-8 relative lg:col-span-3 px-10 lg:px-20 xl:px-40 py-10 h-full bg-agora-gray text-agora-white text-center"
     >
       <h2
-        class="mb-8 text-[#E77FF0] text-5xl xl:text-6xl font-bold tracking-tight font-display uppercase"
+        class="mb-8 text-agora-pink-text text-5xl xl:text-6xl font-bold tracking-tight font-display uppercase"
       >
         Future plans
       </h2>
 
       <section class="space-y-4">
         <h3
-          class="text-[#E77FF0] text-2xl lg:text-3xl xl:text-4xl font-bold tracking-tight font-display uppercase"
+          class="text-agora-pink-text text-2xl lg:text-3xl xl:text-4xl font-bold tracking-tight font-display uppercase"
         >
           Integration
         </h3>
@@ -44,7 +44,7 @@
 
       <section class="space-y-4">
         <h3
-          class="text-[#E77FF0] text-2xl lg:text-3xl xl:text-4xl font-bold tracking-tight font-display uppercase"
+          class="text-agora-pink-text text-2xl lg:text-3xl xl:text-4xl font-bold tracking-tight font-display uppercase"
         >
           Open-source toolkit
         </h3>
@@ -57,7 +57,7 @@
 
       <section class="space-y-4">
         <h3
-          class="text-[#E77FF0] text-2xl lg:text-3xl xl:text-4xl font-bold tracking-tight font-display uppercase"
+          class="text-agora-pink-text text-2xl lg:text-3xl xl:text-4xl font-bold tracking-tight font-display uppercase"
         >
           Market making
         </h3>
@@ -70,7 +70,7 @@
 
     <!-- Right Side -->
     <div
-      class="hidden lg:flex flex-col items-center justify-center lg:col-span-2 relative p-20 bg-[#4F1D85]"
+      class="hidden lg:flex flex-col items-center justify-center lg:col-span-2 relative p-20 bg-agora-purple-bg"
     >
       <img src="/images/future-plans.png" alt="Future plans" class="object-contain" />
     </div>

@@ -9,7 +9,7 @@
   <a
     href="/"
     class={`flex space-x-4 focus:outline-none focus-visible:border-b-2 focus-visible:border-gray-300 ${
-      whiteLogo ? 'text-[#FDF7FF]' : 'text-[#252525]'
+      whiteLogo ? 'text-agora-white' : 'text-agora-gray'
     }`}
   >
     <svg
@@ -37,7 +37,7 @@
 
   <!-- Menu -->
   <nav
-    class="relative hidden lg:flex justify-end space-x-12 text-[#FDF7FF] font-semibold text-lg font-display"
+    class="relative hidden lg:flex justify-end space-x-12 text-agora-white font-semibold text-lg font-display"
   >
     <a href="/explorer" class="hover:underline focus:outline-none focus:underline">Explorer</a>
     <a href="/tools" class="hover:underline focus:outline-none focus:underline">Tools</a>
