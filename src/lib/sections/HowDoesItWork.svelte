@@ -16,29 +16,33 @@
   </div>
 
   <div
-    class="relative lg:container mx-auto flex flex-col lg:grid lg:grid-cols-5 h-full overflow-hidden md:overflow-visible"
+    class="relative lg:container mx-auto flex flex-col lg:grid lg:grid-cols-6 xl:grid-cols-5 h-full overflow-hidden"
   >
     <!-- Left side -->
     <div
-      class="flex flex-col items-center justify-center space-y-8 relative lg:col-span-3 px-10 lg:px-20 xl:px-40 pt-24 lg:pt-40 pb-10 h-full bg-[#252525] text-[#FDF7FF] text-center"
+      class="flex flex-col items-center justify-start space-y-8 relative lg:col-span-3 pl-8 pr-10 lg:pr-20 xl:pr-40 pt-24 lg:pt-40 pb-10 h-full bg-[#252525] text-[#FDF7FF] text-center"
     >
-      Image
+      <img
+        src="/images/how-does-it-work.png"
+        alt="How does it work?"
+        class="mx-auto max-w-sm sm:max-w-md md:max-w-lg lg:max-w-full"
+      />
     </div>
 
     <!-- Right Side -->
     <div
-      class="flex flex-col items-start justify-center space-y-4 lg:col-span-2 relative px-20 pt-24 lg:pt-40 pb-10 lg:pb-20 bg-[#A34BAB] text-[#FDF7FF]"
+      class="flex flex-col items-start justify-center space-y-4 lg:col-span-3 xl:col-span-2 relative px-20 pt-24 lg:pt-40 pb-10 lg:pb-20 bg-[#A34BAB] text-[#FDF7FF]"
     >
-      <h2 class="mb-8 text-4xl xl:text-7xl font-bold tracking-tight font-display uppercase">
+      <h2 class="mb-8 text-4xl 2xl:text-7xl font-bold tracking-tight font-display uppercase">
         How does it work?
       </h2>
 
-      <p class="text-lg xl:text-xl">
+      <p class="text-lg 2xl:text-xl">
         Agora Space creates a bridge between social media and the blockchain with the help of the
         Agora Social Oracle layer while utilizing existing solutions.
       </p>
 
-      <p class="text-lg xl:text-xl">
+      <p class="text-lg 2xl:text-xl">
         We collect and utilize the best blockchain projects in our tools to make your DeFi
         experience smoother and more efficient. Browse our explorer for all social tokens existing
         on the blockchain or use our comprehensive toolkit. Integrate your social token on our admin

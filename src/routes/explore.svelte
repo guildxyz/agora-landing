@@ -1,1 +1,0 @@
-<div>Explore page</div>

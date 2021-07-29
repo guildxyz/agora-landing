@@ -39,11 +39,11 @@
   <nav
     class="relative hidden lg:flex justify-end space-x-12 text-[#FDF7FF] font-semibold text-lg font-display"
   >
-    <a href="/explore" class="hover:underline focus:outline-none focus:underline">Explore</a>
+    <a href="/explorer" class="hover:underline focus:outline-none focus:underline">Explorer</a>
     <a href="/tools" class="hover:underline focus:outline-none focus:underline">Tools</a>
     <a href="/about" class="hover:underline focus:outline-none focus:underline">About</a>
   </nav>
 
   <!-- Hamburger menu -->
-  <HamburgerMenu />
+  <HamburgerMenu white={whiteLogo} />
 </header>

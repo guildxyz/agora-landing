@@ -4,10 +4,14 @@
   import { X } from 'phosphor-svelte';
   import { fade } from 'svelte/transition';
 
+  export let white;
   let show = false;
 </script>
 
-<Button class="lg:hidden px-0 py-0 text-[#252525] md:text-[#FDF7FF]" on:click={() => (show = true)}>
+<Button
+  class={`lg:hidden px-0 py-0 ${white ? 'text-[#FDF7FF]' : 'text-[#252525] md:text-[#FDF7FF]'}`}
+  on:click={() => (show = true)}
+>
   <List size="1.5em" weight="bold" />
 </Button>
 
@@ -23,7 +27,7 @@
     </div>
 
     <nav class="flex flex-col items-center justify-center space-y-4 text-xl">
-      <a href="/explore" class="hover:underline focus:outline-none focus:underline">Explore</a>
+      <a href="/explorer" class="hover:underline focus:outline-none focus:underline">Explorer</a>
       <a href="/tools" class="hover:underline focus:outline-none focus:underline">Tools</a>
       <a href="/about" class="hover:underline focus:outline-none focus:underline">About</a>
     </nav>
