@@ -1,4 +1,5 @@
 <script>
+  import Button from '$lib/Button';
   import {
     TwitterLogo,
     GithubLogo,
@@ -29,76 +30,76 @@
             </h4>
             <ul class="flex space-x-2 mb-12 font-medium text-lg">
               <li>
-                <a
+                <Button
                   href="/"
-                  class={`flex items-center justify-center w-8 h-8 rounded-sm ${
+                  class={`px-0 w-8 h-8 rounded-none ${
                     purple
                       ? 'bg-agora-white text-agora-blue-bg'
                       : 'bg-agora-blue-bg text-agora-white'
                   }`}
                 >
                   <TwitterLogo size="1.2em" />
-                </a>
+                </Button>
               </li>
               <li>
-                <a
+                <Button
                   href="/"
-                  class={`flex items-center justify-center w-8 h-8 rounded-sm ${
+                  class={`px-0 w-8 h-8 rounded-none ${
                     purple
                       ? 'bg-agora-white text-agora-blue-bg'
                       : 'bg-agora-blue-bg text-agora-white'
                   }`}
                 >
                   <GithubLogo size="1.2em" />
-                </a>
+                </Button>
               </li>
               <li>
-                <a
+                <Button
                   href="/"
-                  class={`flex items-center justify-center w-8 h-8 rounded-sm ${
+                  class={`px-0 w-8 h-8 rounded-none ${
                     purple
                       ? 'bg-agora-white text-agora-blue-bg'
                       : 'bg-agora-blue-bg text-agora-white'
                   }`}
                 >
                   <ArticleMedium size="1.2em" />
-                </a>
+                </Button>
               </li>
               <li>
-                <a
+                <Button
                   href="/"
-                  class={`flex items-center justify-center w-8 h-8 rounded-sm ${
+                  class={`px-0 w-8 h-8 rounded-none ${
                     purple
                       ? 'bg-agora-white text-agora-blue-bg'
                       : 'bg-agora-blue-bg text-agora-white'
                   }`}
                 >
                   <DiscordLogo size="1.2em" />
-                </a>
+                </Button>
               </li>
               <li>
-                <a
+                <Button
                   href="/"
-                  class={`flex items-center justify-center w-8 h-8 rounded-sm ${
+                  class={`px-0 w-8 h-8 rounded-none ${
                     purple
                       ? 'bg-agora-white text-agora-blue-bg'
                       : 'bg-agora-blue-bg text-agora-white'
                   }`}
                 >
                   <TelegramLogo size="1.2em" />
-                </a>
+                </Button>
               </li>
               <li>
-                <a
+                <Button
                   href="/"
-                  class={`flex items-center justify-center w-8 h-8 rounded-sm ${
+                  class={`px-0 w-8 h-8 rounded-none ${
                     purple
                       ? 'bg-agora-white text-agora-blue-bg'
                       : 'bg-agora-blue-bg text-agora-white'
                   }`}
                 >
                   <At size="1.2em" />
-                </a>
+                </Button>
               </li>
             </ul>
           </div>
