@@ -25,16 +25,16 @@
           Integration
         </h3>
 
-        <p class="tfont-semibold text-lg xl:text-xl">
+        <p class="font-semibold text-lg xl:text-xl">
           Superfluid to Agora Social Oracle layer for performance-based fluid payments.
         </p>
 
-        <p class="tfont-semibold text-lg xl:text-xl">
+        <p class="font-semibold text-lg xl:text-xl">
           EAS to Agora Space for gamification, reputation and KYC. Rally.io for easy social token
           creation.
         </p>
 
-        <p class="tfont-semibold text-lg xl:text-xl">
+        <p class="font-semibold text-lg xl:text-xl">
           Colony.io for starting a new DAO. DoinGud to Agora Social Oracle for trustless, dynamic
           NFTs.
         </p>
@@ -49,7 +49,7 @@
           Open-source toolkit
         </h3>
 
-        <p class="tfont-semibold text-lg xl:text-xl">
+        <p class="font-semibold text-lg xl:text-xl">
           Agora space’s open-source toolkit will serve the developer community to allow faster
           growth of the space.
         </p>
@@ -62,7 +62,7 @@
           Market making
         </h3>
 
-        <p class="tfont-semibold text-lg xl:text-xl">
+        <p class="font-semibold text-lg xl:text-xl">
           We provide a decentralized marketplace and deep liquidity for your community tokens.
         </p>
       </section>
