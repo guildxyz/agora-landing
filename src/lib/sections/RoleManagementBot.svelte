@@ -20,7 +20,7 @@
   >
     <!-- Left side -->
     <div
-      class="flex flex-col items-start justify-center space-y-8 relative lg:col-span-3 xl:col-span-2 pl-8 pr-20 pt-24 lg:pt-40 pb-10 h-full bg-[#252525] lg:bg-[#4F1D85] text-[#FDF7FF]"
+      class="flex flex-col items-center lg:items-start justify-center space-y-8 relative lg:col-span-3 xl:col-span-2 px-8 lg:pr-20 pt-24 lg:pt-40 pb-10 h-full bg-[#252525] lg:bg-[#4F1D85] text-[#FDF7FF] text-center lg:text-left"
     >
       <h2 class="mb-8 text-4xl 2xl:text-7xl font-bold tracking-tight font-display uppercase">
         Role management bot
