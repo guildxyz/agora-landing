@@ -31,8 +31,8 @@
         class="absolute bottom-0 -right-1/2 md:right-0 w-[150vw] sm:w-[125vw] md:w-full xl:w-2/3"
       >
         <img
-          src="/images/zeus.png"
-          alt="Zeus"
+          src="/images/stay-up-to-date.png"
+          alt="Stay up to date"
           class="w-full h-full object-contain transform -translate-x-1/4 md:translate-x-0"
         />
       </div>

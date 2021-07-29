@@ -21,7 +21,7 @@
       </h2>
 
       <div class="relative md:px-8 lg:px-16">
-        <img src="/images/join-a-community.png" alt="Join a community" class="w-full rounded-xl" />
+        <img src="/images/community-explorer.png" alt="Join a community" class="w-full" />
 
         <a
           href="https://app.agora.space/"
@@ -40,11 +40,7 @@
       </h2>
 
       <div class="relative md:px-8 lg:px-16">
-        <img
-          src="/images/create-a-community.png"
-          alt="Create a community"
-          class="w-full rounded-xl"
-        />
+        <img src="/images/social-token-admin.png" alt="Create a community" class="w-full" />
       </div>
     </div>
   </div>
