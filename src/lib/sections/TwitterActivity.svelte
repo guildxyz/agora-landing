@@ -5,7 +5,7 @@
       <img
         src="/images/twitter-activity.png"
         alt="Gamification Of Twitter Activity"
-        class="mx-auto max-w-sm sm:max-w-md md:max-w-lg lg:max-w-full"
+        class="max-w-full"
       />
     </div>
 

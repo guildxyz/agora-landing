@@ -4,10 +4,10 @@
 
 <section id="the-team" class="relative bg-[#2E2093]">
   <div
-    class="container mx-auto px-8 py-20 space-y-10 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-16 text-center"
+    class="container mx-auto px-8 py-10 lg:py-20 space-y-10 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 md:gap-16 text-center"
   >
     <h2
-      class="col-span-2 sm:col-span-3 md:col-span-4 lg:col-span-6 mb-16 text-[#D45EDF] text-4xl lg:text-6xl font-bold tracking-tight font-display uppercase"
+      class="col-span-2 sm:col-span-3 md:col-span-4 lg:col-span-6 mb-4 lg:mb-8 text-[#D45EDF] text-4xl lg:text-6xl font-bold tracking-tight font-display uppercase"
     >
       The team
     </h2>

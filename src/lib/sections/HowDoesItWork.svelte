@@ -20,18 +20,14 @@
   >
     <!-- Left side -->
     <div
-      class="flex flex-col items-center justify-start space-y-8 relative lg:col-span-3 pl-8 pr-10 lg:pr-20 xl:pr-40 pt-24 lg:pt-40 pb-10 h-full bg-[#252525] text-[#FDF7FF] text-center"
+      class="flex flex-col items-center justify-start space-y-8 relative lg:col-span-3 px-8 lg:pr-20 xl:pr-40 pt-24 lg:pt-40 pb-10 h-full bg-[#252525] text-[#FDF7FF] text-center"
     >
-      <img
-        src="/images/how-does-it-work.png"
-        alt="How does it work?"
-        class="mx-auto max-w-sm sm:max-w-md md:max-w-lg lg:max-w-full"
-      />
+      <img src="/images/how-does-it-work.png" alt="How does it work?" class="max-w-full" />
     </div>
 
     <!-- Right Side -->
     <div
-      class="flex flex-col items-start justify-center space-y-4 lg:col-span-3 xl:col-span-2 relative px-20 pt-24 lg:pt-40 pb-10 lg:pb-20 bg-[#A34BAB] text-[#FDF7FF]"
+      class="flex flex-col items-start justify-center space-y-4 lg:col-span-3 xl:col-span-2 relative px-8 lg:px-20 pt-10 lg:pt-40 pb-10 lg:pb-20 bg-[#A34BAB] text-[#FDF7FF] text-center md:text-left"
     >
       <h2 class="mb-8 text-4xl 2xl:text-7xl font-bold tracking-tight font-display uppercase">
         How does it work?

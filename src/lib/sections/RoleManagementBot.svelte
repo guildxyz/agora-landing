@@ -43,11 +43,7 @@
     <div
       class="flex flex-col items-start justify-center space-y-4 lg:col-span-3 relative px-20 lg:pt-40 pb-10 lg:pb-20 pr-8 pl-10 lg:pl-20 xl:pl-40 bg-[#252525] text-[#FDF7FF]"
     >
-      <img
-        src="/images/how-does-it-work.png"
-        alt="How does it work?"
-        class="mx-auto max-w-sm sm:max-w-md md:max-w-lg lg:max-w-full"
-      />
+      <img src="/images/how-does-it-work.png" alt="How does it work?" class="max-w-full" />
     </div>
   </div>
 </section>
