@@ -28,7 +28,7 @@
           Who is <br />Agora Space <br />for?
         </h2>
 
-        <p class="hidden lg:inline-block font-semibold text-xl lg:text-2xl">
+        <p class="hidden lg:inline-block font-semibold text-xl">
           Those who want to make their community more efficient and rewarding
         </p>
 

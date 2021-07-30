@@ -11,7 +11,7 @@
     {title}<span class="absolute -top-3 -right-2 w-4 h-4 text-base font-semibold">{q}</span>
   </h3>
 
-  <p class="text-agora-white font-semibold text-xl">{content}</p>
+  <p class="text-agora-white font-semibold text-lg lg:text-xl">{content}</p>
 
   <div class="group-last:hidden absolute top-3/5 -right-20 w-20 h-0.5 bg-agora-white" />
 </div>

@@ -13,7 +13,7 @@
     <div
       class="order-1 lg:order-2 flex flex-col items-start justify-center space-y-8 text-center lg:text-left"
     >
-      <h2 class="w-full text-4xl 2xl:text-7xl font-bold tracking-tight font-display uppercase">
+      <h2 class="w-full text-4xl 2xl:text-6xl font-bold tracking-tight font-display uppercase">
         Gamification Of Twitter Activity
       </h2>
 

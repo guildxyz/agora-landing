@@ -25,7 +25,7 @@
     <div
       class="order-1 lg:order-2 lg:col-span-4 flex flex-col items-start justify-center space-y-8 text-center lg:text-left"
     >
-      <h2 class="mb-8 w-full text-4xl 2xl:text-7xl font-bold tracking-tight font-display uppercase">
+      <h2 class="w-full text-4xl 2xl:text-6xl font-bold tracking-tight font-display uppercase">
         Community explorer
       </h2>
 

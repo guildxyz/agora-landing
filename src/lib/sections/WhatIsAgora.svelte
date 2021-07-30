@@ -1,6 +1,6 @@
 <section id="what-is-agora-space" class="relative bg-agora-purple-bg">
   <div
-    class="flex justify-end container mx-auto px-8 pt-8 md:pt-20 xl:pt-40 pb-72 lg:pb-20 xl:pb-40 text-agora-white"
+    class="flex justify-end container mx-auto px-8 pt-8 md:pt-20 xl:pt-28 pb-72 lg:pb-28 text-agora-white"
   >
     <div
       class="absolute left-0 bottom-0 w-full md:w-1/2 lg:w-2/5 max-w-lg h-full bg-what-is-agora-space bg-contain bg-no-repeat bg-left-bottom"

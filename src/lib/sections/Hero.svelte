@@ -30,12 +30,14 @@
 
       <!-- Title / text -->
       <div class="mt-16 lg:mt-28 pb-32 md:pb-0 text-center md:text-left">
-        <h2 class="mb-4 lg:mb-8 font-bold tracking-tight text-4xl lg:text-6xl font-display">
+        <h2
+          class="mb-4 lg:mb-8 font-bold tracking-tight text-4xl lg:text-6xl xl:text-7xl font-display"
+        >
           Social token <br /><span class="text-agora-blue-bg">toolkit</span>
           <br class="inline md:hidden" />and oracle
         </h2>
 
-        <p class="mb-4 lg:mb-10 font-semibold text-lg lg:text-2xl leading-tight md:leading-normal">
+        <p class="mb-4 lg:mb-10 font-semibold text-lg lg:text-xl leading-tight md:leading-normal">
           Two-way social media integration <br />to the blockchain
         </p>
       </div>

@@ -15,7 +15,7 @@
         Stay up to date
       </h2>
 
-      <p class="font-semibold text-xl xl:text-2xl">
+      <p class="font-semibold text-lg xl:text-xl">
         Join the Agora Space Discord server to see all the interesting news.
       </p>
 
