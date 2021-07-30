@@ -48,7 +48,7 @@
         </Button>
 
         <Button href="/" class="w-max bg-agora-purple-bg text-agora-white">
-          <span>Create a community</span>
+          <span>Integrate your token</span>
           <Users slot="icon" weight="bold" size="1.2em" />
         </Button>
       </div>
@@ -76,7 +76,7 @@
           </Button>
 
           <Button href="/" class="w-max bg-agora-purple-bg text-agora-white">
-            <span>Create a community</span>
+            <span>Integrate your token</span>
             <Users slot="icon" weight="bold" size="1.2em" />
           </Button>
         </div>

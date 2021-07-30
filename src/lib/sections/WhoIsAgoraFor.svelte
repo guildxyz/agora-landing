@@ -29,7 +29,7 @@
         </h2>
 
         <p class="hidden lg:inline-block font-semibold text-xl lg:text-2xl">
-          Those who want to make their community more efficient and rewarding.
+          Those who want to make their community more efficient and rewarding
         </p>
 
         <p class="lg:hidden text-lg">
@@ -44,15 +44,15 @@
       class="flex flex-col items-center justify-center space-y-4 relative lg:col-span-3 lg:min-h-full bg-agora-white overflow-hidden"
     >
       <div
-        class="flex items-center justify-center -mt-8 w-52 h-52 text-agora-white text-2xl font-bold tracking-tight font-display bg-circle-purple lg:bg-circle-dark bg-no-repeat bg-center bg-contain"
+        class="flex items-center justify-center -mt-8 w-52 h-52 text-agora-white text-3xl font-bold font-display bg-circle-purple lg:bg-circle-dark bg-no-repeat bg-center bg-contain"
       >
-        DAOs
+        Creatives
       </div>
 
       <div
-        class="flex items-center justify-center w-40 h-40 text-agora-white text-2xl font-bold tracking-tight font-display bg-circle-purple lg:bg-circle-dark bg-no-repeat bg-center bg-contain"
+        class="flex items-center justify-center w-40 h-40 text-agora-white text-3xl font-bold font-display bg-circle-purple lg:bg-circle-dark bg-no-repeat bg-center bg-contain"
       >
-        VCs
+        DAOs
       </div>
 
       <div

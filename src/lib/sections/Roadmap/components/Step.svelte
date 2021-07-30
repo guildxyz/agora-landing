@@ -7,9 +7,7 @@
 <div
   class="group flex flex-col justify-center items-center space-y-8 relative px-8 py-16 max-w-xs lg:max-w-none border-2 border-agora-white bg-agora-blue-bg"
 >
-  <h3
-    class="relative text-agora-pink-text text-3xl font-bold tracking-tight font-display uppercase"
-  >
+  <h3 class="relative text-agora-pink-text text-3xl font-bold font-display">
     {title}<span class="absolute -top-3 -right-2 w-4 h-4 text-base font-semibold">{q}</span>
   </h3>
 

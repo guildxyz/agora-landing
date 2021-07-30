@@ -19,9 +19,7 @@
       </h2>
 
       <section class="space-y-4">
-        <h3
-          class="text-agora-pink-text text-2xl lg:text-3xl xl:text-4xl font-bold tracking-tight font-display uppercase"
-        >
+        <h3 class="text-agora-pink-text text-2xl lg:text-3xl xl:text-4xl font-bold font-display">
           Integration
         </h3>
 
@@ -43,9 +41,7 @@
       <img src="/images/future-plans.png" alt="Future plans" class="w-full max-w-xs lg:hidden" />
 
       <section class="space-y-4">
-        <h3
-          class="text-agora-pink-text text-2xl lg:text-3xl xl:text-4xl font-bold tracking-tight font-display uppercase"
-        >
+        <h3 class="text-agora-pink-text text-2xl lg:text-3xl xl:text-4xl font-bold font-display">
           Open-source toolkit
         </h3>
 
@@ -56,9 +52,7 @@
       </section>
 
       <section class="space-y-4">
-        <h3
-          class="text-agora-pink-text text-2xl lg:text-3xl xl:text-4xl font-bold tracking-tight font-display uppercase"
-        >
+        <h3 class="text-agora-pink-text text-2xl lg:text-3xl xl:text-4xl font-bold font-display">
           Market making
         </h3>
 
