@@ -1,3 +1,47 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  *::-webkit-scrollbar {
+    width: 8px;
+    height: 4px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+  }
+
+  *::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background: rgba(0, 0, 0, 0.4);
+  }
+
+  .light-scroll::-webkit-scrollbar-track {
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  .light-scroll::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  .button {
+    @apply flex items-center justify-center px-8 max-w-max h-14 text-white text-lg font-semibold rounded-2xl ring-0 focus:outline-none focus:ring-4 focus:ring-gray-300 hover:bg-opacity-90 transition;
+  }
+
+  .button.small {
+    @apply h-12 xl:h-14 text-base xl:text-lg;
+  }
+
+  .bg-hero-right-bottom {
+    background-position: right -4vw bottom 4vh;
+    background-size: 30vw;
+  }
+
+  .bg-footer-mobile {
+    background-position-x: 25vw;
+    background-position-y: bottom;
+  }
+}
