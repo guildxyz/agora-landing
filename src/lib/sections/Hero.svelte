@@ -55,7 +55,7 @@
 
       <!-- Social icons -->
       <div class="hidden md:flex mt-auto mb-4 xl:mb-20">
-        <SocialLinks buttonClasses="text-2xl xl:text-3xl text-gray-900" />
+        <SocialLinks buttonClasses="text-xl xl:text-2xl text-gray-900" />
       </div>
 
       <!-- Mobile - purple section -->

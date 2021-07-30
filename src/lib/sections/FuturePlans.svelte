@@ -10,53 +10,75 @@
   >
     <!-- Left side -->
     <div
-      class="flex flex-col items-center justify-center space-y-8 relative lg:col-span-3 px-8 lg:px-20 xl:px-40 py-10 h-full bg-agora-gray text-agora-white text-center"
+      class="flex flex-col items-center justify-center space-y-8 relative lg:col-span-3 px-8 lg:px-20 xl:px-40 py-10 lg:py-20 h-full bg-agora-gray text-agora-white text-center"
     >
       <h2
-        class="mb-8 text-agora-pink-text text-5xl xl:text-6xl font-bold tracking-tight font-display uppercase"
+        class="mb-4 text-agora-pink-text text-5xl xl:text-6xl font-bold tracking-tight font-display uppercase"
       >
         Future plans
       </h2>
 
       <section class="space-y-4">
-        <h3 class="text-agora-pink-text text-2xl lg:text-3xl xl:text-4xl font-bold font-display">
+        <h3 class="text-agora-pink-text text-xl lg:text-3xl xl:text-4xl font-bold font-display">
           Integration
         </h3>
 
-        <p class="font-semibold text-lg xl:text-xl">
-          Superfluid to Agora Social Oracle layer for performance-based fluid payments.
+        <p class="xl:text-lg">
+          <a
+            href="https://www.superfluid.finance/home"
+            target="_BLANK"
+            class="transition hover:text-agora-pink-text-darker">Superfluid</a
+          > to Agora Social Oracle layer for performance-based fluid payments.
         </p>
 
-        <p class="font-semibold text-lg xl:text-xl">
-          EAS to Agora Space for gamification, reputation and KYC. Rally.io for easy social token
-          creation.
+        <p class="xl:text-lg">
+          <a
+            href="https://eas.eth.link/"
+            target="_BLANK"
+            class="transition hover:text-agora-pink-text-darker">EAS</a
+          >
+          to Agora Space for gamification, reputation and KYC.
+          <a
+            href="https://tryroll.com/"
+            target="_BLANK"
+            class="transition hover:text-agora-pink-text-darker">Roll</a
+          > for easy social token creation.
         </p>
 
-        <p class="font-semibold text-lg xl:text-xl">
-          Colony.io for starting a new DAO. DoinGud to Agora Social Oracle for trustless, dynamic
-          NFTs.
+        <p class="xl:text-lg">
+          <a
+            href="https://colony.io/"
+            target="_BLANK"
+            class="transition hover:text-agora-pink-text-darker">Colony.io</a
+          >
+          for starting a new DAO.
+          <a
+            href="https://doingud.com/"
+            target="_BLANK"
+            class="transition hover:text-agora-pink-text-darker">DoinGud</a
+          > to Agora Social Oracle for trustless, dynamic NFTs.
         </p>
       </section>
 
       <img src="/images/future-plans.png" alt="Future plans" class="w-full max-w-xs lg:hidden" />
 
       <section class="space-y-4">
-        <h3 class="text-agora-pink-text text-2xl lg:text-3xl xl:text-4xl font-bold font-display">
+        <h3 class="text-agora-pink-text text-xl lg:text-3xl xl:text-4xl font-bold font-display">
           Open-source toolkit
         </h3>
 
-        <p class="font-semibold text-lg xl:text-xl">
+        <p class="xl:text-lg">
           Agora space’s open-source toolkit will serve the developer community to allow faster
           growth of the space.
         </p>
       </section>
 
       <section class="space-y-4">
-        <h3 class="text-agora-pink-text text-2xl lg:text-3xl xl:text-4xl font-bold font-display">
+        <h3 class="text-agora-pink-text text-xl lg:text-3xl xl:text-4xl font-bold font-display">
           Market making
         </h3>
 
-        <p class="font-semibold text-lg xl:text-xl">
+        <p class="xl:text-lg">
           We provide a decentralized marketplace and deep liquidity for your community tokens.
         </p>
       </section>
@@ -69,4 +91,48 @@
       <img src="/images/future-plans.png" alt="Future plans" class="object-contain" />
     </div>
   </div>
+
+  <!-- We'll need to generate resizible image map -->
+  <!-- <map name="image-map">
+    <area
+      target="_blank"
+      alt="Colony.io"
+      title="Colony.io"
+      href="https://colony.io/"
+      coords="81,267,62"
+      shape="circle"
+    />
+    <area
+      target="_blank"
+      alt="Superfluid"
+      title="Superfluid"
+      href="https://www.superfluid.finance/home"
+      coords="157,128,56"
+      shape="circle"
+    />
+    <area
+      target="_blank"
+      alt="Roll"
+      title="Roll"
+      href="https://tryroll.com/"
+      coords="307,73,63"
+      shape="circle"
+    />
+    <area
+      target="_blank"
+      alt="EAS"
+      title="EAS"
+      href="https://eas.eth.link/"
+      coords="462,136,59"
+      shape="circle"
+    />
+    <area
+      target=""
+      alt="DoinGud"
+      title="DoinGud"
+      href="https://doingud.com/"
+      coords="532,272,59"
+      shape="circle"
+    />
+  </map> -->
 </section>

@@ -11,8 +11,8 @@
   let mousePosition = spring(
     { x: 0, y: 0 },
     {
-      stiffness: 0.1,
-      damping: 0.25
+      stiffness: 0.2,
+      damping: 0.4
     }
   );
 </script>

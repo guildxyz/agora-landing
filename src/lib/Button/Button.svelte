@@ -12,7 +12,7 @@
 
   let baseClasses =
     'flex items-center justify-center space-x-3 border border-transparent focus:outline-none focus-visible:ring-4 focus-visible:ring-gray-200';
-  let defaultNormalClasses = 'px-8 py-3 text-base font-semibold rounded-2xl md:text-lg';
+  let defaultNormalClasses = 'px-6 py-3 text-base font-semibold rounded-2xl md:text-lg';
   let defaultIconOnlyClasses = 'p-3 rounded-full hover:bg-gray-100';
 
   $: defaultClasses = baseClasses.concat(
