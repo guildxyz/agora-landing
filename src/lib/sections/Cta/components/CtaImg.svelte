@@ -36,11 +36,13 @@
       <img src={image} alt="Join a community" class="w-full" />
     </a>
 
-    <Button
-      class="flex items-center justify-center absolute px-0 w-12 lg:w-14 h-12 lg:h-14 bg-agora-pink-text-darker text-agora-white rounded-full transform -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity"
-      style={`left: ${$mousePosition.x}px; top: ${$mousePosition.y}px`}
-    >
-      <ArrowRight size="1.5em" weight="bold" />
-    </Button>
+    <a href={url}>
+      <Button
+        class="flex items-center justify-center absolute px-0 w-12 lg:w-14 h-12 lg:h-14 bg-agora-pink-text-darker text-agora-white rounded-full transform -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity"
+        style={`left: ${$mousePosition.x}px; top: ${$mousePosition.y}px`}
+      >
+        <ArrowRight size="1.5em" weight="bold" />
+      </Button>
+    </a>
   </div>
 </div>

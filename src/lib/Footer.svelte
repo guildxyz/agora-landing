@@ -30,76 +30,76 @@
             </h4>
             <ul class="flex space-x-2 mb-12 font-medium text-lg">
               <li>
-                <Button
-                  href="/"
-                  class={`px-0 w-8 h-8 rounded-sm ${
+                <a
+                  href="https://twitter.com/AgoraSpaceDAO"
+                  class={`flex items-center justify-center w-8 h-8 rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-300 ${
                     purple
-                      ? 'bg-agora-white text-agora-blue-bg'
+                      ? 'bg-agora-white text-agora-blue-bg focus-visible:ring-opacity-50 '
                       : 'bg-agora-blue-bg text-agora-white'
                   }`}
                 >
-                  <TwitterLogo slot="icon" size="1.2em" />
-                </Button>
+                  <TwitterLogo size="1.2em" />
+                </a>
               </li>
               <li>
-                <Button
-                  href="/"
-                  class={`px-0 w-8 h-8 rounded-sm ${
+                <a
+                  href="https://github.com/AgoraSpaceDAO"
+                  class={`flex items-center justify-center w-8 h-8 rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-300 ${
                     purple
-                      ? 'bg-agora-white text-agora-blue-bg'
+                      ? 'bg-agora-white text-agora-blue-bg focus-visible:ring-opacity-50'
                       : 'bg-agora-blue-bg text-agora-white'
                   }`}
                 >
-                  <GithubLogo slot="icon" size="1.2em" />
-                </Button>
+                  <GithubLogo size="1.2em" />
+                </a>
               </li>
               <li>
-                <Button
+                <a
                   href="/"
-                  class={`px-0 w-8 h-8 rounded-sm ${
+                  class={`flex items-center justify-center w-8 h-8 rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-300 ${
                     purple
-                      ? 'bg-agora-white text-agora-blue-bg'
+                      ? 'bg-agora-white text-agora-blue-bg focus-visible:ring-opacity-50'
                       : 'bg-agora-blue-bg text-agora-white'
                   }`}
                 >
-                  <ArticleMedium slot="icon" size="1.2em" />
-                </Button>
+                  <ArticleMedium size="1.2em" />
+                </a>
               </li>
               <li>
-                <Button
-                  href="/"
-                  class={`px-0 w-8 h-8 rounded-sm ${
+                <a
+                  href="https://discord.gg/fxVCPtA8N5"
+                  class={`flex items-center justify-center w-8 h-8 rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-300 ${
                     purple
-                      ? 'bg-agora-white text-agora-blue-bg'
+                      ? 'bg-agora-white text-agora-blue-bg focus-visible:ring-opacity-50'
                       : 'bg-agora-blue-bg text-agora-white'
                   }`}
                 >
-                  <DiscordLogo slot="icon" size="1.2em" />
-                </Button>
+                  <DiscordLogo size="1.2em" />
+                </a>
               </li>
               <li>
-                <Button
+                <a
                   href="/"
-                  class={`px-0 w-8 h-8 rounded-sm ${
+                  class={`flex items-center justify-center w-8 h-8 rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-300 ${
                     purple
-                      ? 'bg-agora-white text-agora-blue-bg'
+                      ? 'bg-agora-white text-agora-blue-bg focus-visible:ring-opacity-50'
                       : 'bg-agora-blue-bg text-agora-white'
                   }`}
                 >
-                  <TelegramLogo slot="icon" size="1.2em" />
-                </Button>
+                  <TelegramLogo size="1.2em" />
+                </a>
               </li>
               <li>
-                <Button
+                <a
                   href="/"
-                  class={`px-0 w-8 h-8 rounded-sm ${
+                  class={`flex items-center justify-center w-8 h-8 rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-300 ${
                     purple
-                      ? 'bg-agora-white text-agora-blue-bg'
+                      ? 'bg-agora-white text-agora-blue-bg focus-visible:ring-opacity-50'
                       : 'bg-agora-blue-bg text-agora-white'
                   }`}
                 >
-                  <At slot="icon" size="1.2em" />
-                </Button>
+                  <At size="1.2em" />
+                </a>
               </li>
             </ul>
           </div>
