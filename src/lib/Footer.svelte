@@ -5,8 +5,7 @@
     GithubLogo,
     ArticleMedium,
     DiscordLogo,
-    TelegramLogo,
-    At
+    TelegramLogo
   } from 'phosphor-svelte';
 
   export let purple = false;
@@ -15,7 +14,7 @@
 <footer class={purple ? 'bg-agora-purple-bg' : 'bg-agora-white'}>
   <div class="container mx-auto">
     <div
-      class="flex md:justify-end px-8 lg:px-24 py-10 lg:py-20 w-full bg-david-mirrored md:bg-david-default bg-footer-mobile md:bg-left-bottom bg-no-repeat bg-contain"
+      class="flex md:justify-end px-8 lg:px-24 py-10 lg:pt-20 w-full bg-david-mirrored md:bg-david-default bg-footer-mobile md:bg-left-bottom bg-no-repeat bg-contain"
     >
       <div class="xl:w-3/5">
         <div class="flex flex-col md:flex-row justify-evenly md:space-x-16">
@@ -57,7 +56,7 @@
               </li>
               <li>
                 <a
-                  href="/"
+                  href="https://medium.com/@AgoraSpace"
                   class={`flex items-center justify-center w-8 h-8 rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-300 ${
                     purple
                       ? 'bg-agora-white text-agora-blue-bg focus-visible:ring-opacity-50'
@@ -94,19 +93,6 @@
                   <TelegramLogo size="1.2em" />
                 </a>
               </li>
-              <li>
-                <a
-                  href="/"
-                  class={`flex items-center justify-center w-8 h-8 rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-300 ${
-                    purple
-                      ? 'bg-agora-white text-agora-blue-bg focus-visible:ring-opacity-50'
-                      : 'bg-agora-blue-bg text-agora-white'
-                  }`}
-                >
-                  <span class="sr-only">Email</span>
-                  <At size="1.2em" />
-                </a>
-              </li>
             </ul>
           </div>
 
@@ -118,9 +104,7 @@
             >
               Information
             </h2>
-            <ul
-              class={`mb-12 font-medium text-lg ${purple ? 'text-agora-white' : 'text-agora-gray'}`}
-            >
+            <ul class={`mb-12 font-medium ${purple ? 'text-agora-white' : 'text-gray-600'}`}>
               <li>
                 <a
                   href="/"
@@ -160,9 +144,7 @@
             >
               Tools & Products
             </h2>
-            <ul
-              class={`mb-12 font-medium text-lg ${purple ? 'text-agora-white' : 'text-agora-gray'}`}
-            >
+            <ul class={`mb-12 font-medium ${purple ? 'text-agora-white' : 'text-gray-600'}`}>
               <li>
                 <a
                   href="/"
@@ -190,12 +172,12 @@
 
         <!-- Bottom links -->
         <div
-          class={`flex flex-col md:flex-row lg:justify-evenly md:space-x-8 lg:space-x-16 lg:text-center font-extralight ${
+          class={`flex flex-col md:flex-row px-8 font-extralight ${
             purple ? 'text-agora-white' : 'text-agora-gray'
           }`}
         >
-          <span class="h-8 mt-auto font-light">2021 Agora Space</span>
-          <a
+          <span class="h-8 mt-auto font-light">&copy; 2021 Agora Space</span>
+          <!-- <a
             href="/"
             class="h-8 mt-auto font-light focus:outline-none focus-visible:border-b-2 focus-visible:border-gray-300"
             >Privacy Policy</a
@@ -204,7 +186,7 @@
             href="/"
             class="h-8 mt-auto font-light focus:outline-none focus-visible:border-b-2 focus-visible:border-gray-300"
             >Terms of Service</a
-          >
+          > -->
         </div>
       </div>
     </div>
