@@ -107,28 +107,32 @@
             <ul class={`mb-12 font-medium ${purple ? 'text-agora-white' : 'text-gray-600'}`}>
               <li>
                 <a
-                  href="/"
+                  href="/about"
                   class="focus:outline-none focus-visible:border-b-2 focus-visible:border-gray-300"
                   >About</a
                 >
               </li>
               <li>
                 <a
-                  href="/"
+                  href="https://docs.agora.space/"
+                  target="_blank"
                   class="focus:outline-none focus-visible:border-b-2 focus-visible:border-gray-300"
                   >Gitbook</a
                 >
               </li>
+              <!--
+                <li>
+                  <a
+                    href="/"
+                    class="focus:outline-none focus-visible:border-b-2 focus-visible:border-gray-300"
+                    >Brandbook</a
+                  >
+                </li>
+              -->
               <li>
                 <a
-                  href="/"
-                  class="focus:outline-none focus-visible:border-b-2 focus-visible:border-gray-300"
-                  >Brandbook</a
-                >
-              </li>
-              <li>
-                <a
-                  href="/"
+                  href="https://discord.gg/T3Pb7VkUBz"
+                  target="_blank"
                   class="focus:outline-none focus-visible:border-b-2 focus-visible:border-gray-300"
                   >Support</a
                 >
@@ -147,18 +151,20 @@
             <ul class={`mb-12 font-medium ${purple ? 'text-agora-white' : 'text-gray-600'}`}>
               <li>
                 <a
-                  href="/"
+                  href="https://app.agora.space/"
+                  target="_blank"
                   class="focus:outline-none focus-visible:border-b-2 focus-visible:border-gray-300"
                   >Community explorer</a
                 >
               </li>
               <li>
                 <a
-                  href="/"
+                  href="/tools"
                   class="focus:outline-none focus-visible:border-b-2 focus-visible:border-gray-300"
                   >Role management bot</a
                 >
               </li>
+              <!--
               <li>
                 <a
                   href="/"
@@ -166,6 +172,7 @@
                   >Social Token Admin</a
                 >
               </li>
+              -->
             </ul>
           </div>
         </div>
