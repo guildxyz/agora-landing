@@ -19,7 +19,7 @@
       Roadmap <span class="text-lg tracking-normal">2021</span>
     </h2>
 
-    <div class="-mx-8 px-8 overflow-x-auto">
+    <div class="-mx-8 px-8 pb-4 lg:pb-0 overflow-x-auto light-scroll">
       <div class="pr-8 w-max lg:w-full grid grid-cols-3 gap-16">
         <Step
           title="Testing"

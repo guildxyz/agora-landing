@@ -9,7 +9,7 @@
 </script>
 
 <Button
-  class={`lg:hidden px-0 py-0 ${
+  class={`lg:hidden px-0 py-0 w-8 h-8 ${
     white ? 'text-agora-white' : 'text-agora-gray md:text-agora-white'
   }`}
   on:click={() => (show = true)}
@@ -23,7 +23,7 @@
     class="fixed inset-0 bg-agora-blue-bg text-agora-white font-display font-semibold"
   >
     <div class="flex justify-end p-4 mb-16">
-      <Button class="p-2" on:click={() => (show = false)}>
+      <Button class="p-2 focus-visible:ring-opacity-25" on:click={() => (show = false)}>
         <X slot="icon" />
       </Button>
     </div>

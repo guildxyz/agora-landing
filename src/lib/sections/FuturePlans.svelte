@@ -10,7 +10,7 @@
   >
     <!-- Left side -->
     <div
-      class="flex flex-col items-center justify-center space-y-8 relative lg:col-span-3 px-10 lg:px-20 xl:px-40 py-10 h-full bg-agora-gray text-agora-white text-center"
+      class="flex flex-col items-center justify-center space-y-8 relative lg:col-span-3 px-8 lg:px-20 xl:px-40 py-10 h-full bg-agora-gray text-agora-white text-center"
     >
       <h2
         class="mb-8 text-agora-pink-text text-5xl xl:text-6xl font-bold tracking-tight font-display uppercase"

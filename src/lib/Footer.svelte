@@ -32,73 +32,73 @@
               <li>
                 <Button
                   href="/"
-                  class={`px-0 w-8 h-8 rounded-none ${
+                  class={`px-0 w-8 h-8 rounded-sm ${
                     purple
                       ? 'bg-agora-white text-agora-blue-bg'
                       : 'bg-agora-blue-bg text-agora-white'
                   }`}
                 >
-                  <TwitterLogo size="1.2em" />
+                  <TwitterLogo slot="icon" size="1.2em" />
                 </Button>
               </li>
               <li>
                 <Button
                   href="/"
-                  class={`px-0 w-8 h-8 rounded-none ${
+                  class={`px-0 w-8 h-8 rounded-sm ${
                     purple
                       ? 'bg-agora-white text-agora-blue-bg'
                       : 'bg-agora-blue-bg text-agora-white'
                   }`}
                 >
-                  <GithubLogo size="1.2em" />
+                  <GithubLogo slot="icon" size="1.2em" />
                 </Button>
               </li>
               <li>
                 <Button
                   href="/"
-                  class={`px-0 w-8 h-8 rounded-none ${
+                  class={`px-0 w-8 h-8 rounded-sm ${
                     purple
                       ? 'bg-agora-white text-agora-blue-bg'
                       : 'bg-agora-blue-bg text-agora-white'
                   }`}
                 >
-                  <ArticleMedium size="1.2em" />
+                  <ArticleMedium slot="icon" size="1.2em" />
                 </Button>
               </li>
               <li>
                 <Button
                   href="/"
-                  class={`px-0 w-8 h-8 rounded-none ${
+                  class={`px-0 w-8 h-8 rounded-sm ${
                     purple
                       ? 'bg-agora-white text-agora-blue-bg'
                       : 'bg-agora-blue-bg text-agora-white'
                   }`}
                 >
-                  <DiscordLogo size="1.2em" />
+                  <DiscordLogo slot="icon" size="1.2em" />
                 </Button>
               </li>
               <li>
                 <Button
                   href="/"
-                  class={`px-0 w-8 h-8 rounded-none ${
+                  class={`px-0 w-8 h-8 rounded-sm ${
                     purple
                       ? 'bg-agora-white text-agora-blue-bg'
                       : 'bg-agora-blue-bg text-agora-white'
                   }`}
                 >
-                  <TelegramLogo size="1.2em" />
+                  <TelegramLogo slot="icon" size="1.2em" />
                 </Button>
               </li>
               <li>
                 <Button
                   href="/"
-                  class={`px-0 w-8 h-8 rounded-none ${
+                  class={`px-0 w-8 h-8 rounded-sm ${
                     purple
                       ? 'bg-agora-white text-agora-blue-bg'
                       : 'bg-agora-blue-bg text-agora-white'
                   }`}
                 >
-                  <At size="1.2em" />
+                  <At slot="icon" size="1.2em" />
                 </Button>
               </li>
             </ul>
@@ -116,16 +116,32 @@
               class={`mb-12 font-medium text-lg ${purple ? 'text-agora-white' : 'text-agora-gray'}`}
             >
               <li>
-                <a href="/">About</a>
+                <a
+                  href="/"
+                  class="focus:outline-none focus-visible:border-b-2 focus-visible:border-gray-300"
+                  >About</a
+                >
               </li>
               <li>
-                <a href="/">Gitbook</a>
+                <a
+                  href="/"
+                  class="focus:outline-none focus-visible:border-b-2 focus-visible:border-gray-300"
+                  >Gitbook</a
+                >
               </li>
               <li>
-                <a href="/">Brandbook</a>
+                <a
+                  href="/"
+                  class="focus:outline-none focus-visible:border-b-2 focus-visible:border-gray-300"
+                  >Brandbook</a
+                >
               </li>
               <li>
-                <a href="/">Support</a>
+                <a
+                  href="/"
+                  class="focus:outline-none focus-visible:border-b-2 focus-visible:border-gray-300"
+                  >Support</a
+                >
               </li>
             </ul>
           </div>
@@ -142,13 +158,25 @@
               class={`mb-12 font-medium text-lg ${purple ? 'text-agora-white' : 'text-agora-gray'}`}
             >
               <li>
-                <a href="/">Community explorer</a>
+                <a
+                  href="/"
+                  class="focus:outline-none focus-visible:border-b-2 focus-visible:border-gray-300"
+                  >Community explorer</a
+                >
               </li>
               <li>
-                <a href="/">Role management bot</a>
+                <a
+                  href="/"
+                  class="focus:outline-none focus-visible:border-b-2 focus-visible:border-gray-300"
+                  >Role management bot</a
+                >
               </li>
               <li>
-                <a href="/">Social Token Admin</a>
+                <a
+                  href="/"
+                  class="focus:outline-none focus-visible:border-b-2 focus-visible:border-gray-300"
+                  >Social Token Admin</a
+                >
               </li>
             </ul>
           </div>
@@ -160,9 +188,17 @@
             purple ? 'text-agora-white' : 'text-agora-gray'
           }`}
         >
-          <span class="mt-auto font-light">2021 Agora Space</span>
-          <a href="/" class="mt-auto font-light">Privacy Policy</a>
-          <a href="/" class="mt-auto font-light">Terms of Service</a>
+          <span class="h-8 mt-auto font-light">2021 Agora Space</span>
+          <a
+            href="/"
+            class="h-8 mt-auto font-light focus:outline-none focus-visible:border-b-2 focus-visible:border-gray-300"
+            >Privacy Policy</a
+          >
+          <a
+            href="/"
+            class="h-8 mt-auto font-light focus:outline-none focus-visible:border-b-2 focus-visible:border-gray-300"
+            >Terms of Service</a
+          >
         </div>
       </div>
     </div>

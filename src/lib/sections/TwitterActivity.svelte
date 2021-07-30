@@ -13,15 +13,13 @@
     <div
       class="order-1 lg:order-2 flex flex-col items-start justify-center space-y-8 text-center lg:text-left"
     >
-      <h2 class="mb-8 text-4xl 2xl:text-7xl font-bold tracking-tight font-display uppercase">
-        Role management bot
+      <h2 class="w-full text-4xl 2xl:text-7xl font-bold tracking-tight font-display uppercase">
+        Gamification Of Twitter Activity
       </h2>
 
       <p class="text-lg 2xl:text-xl">
-        Our bot Hermes bridges Telegram and Discord channels and his ally Medusa guards your token
-        gated communities. You can invite the bots to your channels with the press of a button and
-        Medusa will manage all affairs of admitting and dismissing people from your groups based on
-        how much they hold or stake of your token.
+        Let your fans earn badges and achievements based on social media activity. Increase the
+        online presence of your community while rewarding your biggest supporters.
       </p>
     </div>
   </div>

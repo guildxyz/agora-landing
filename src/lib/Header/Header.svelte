@@ -8,7 +8,7 @@
   <!-- Logo -->
   <a
     href="/"
-    class={`flex space-x-4 focus:outline-none focus-visible:border-b-2 focus-visible:border-gray-300 ${
+    class={`flex space-x-4 focus:outline-none focus-visible:border-b-2 focus-visible:border-gray-200 ${
       whiteLogo ? 'text-agora-white' : 'text-agora-gray'
     }`}
   >

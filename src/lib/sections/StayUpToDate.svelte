@@ -26,7 +26,7 @@
     </div>
 
     <!-- Photo -->
-    <div class="lg:col-span-7 relative -mx-8 h-[50vh]">
+    <div class="lg:col-span-7 relative -mx-8 h-[40vh] lg:h-full">
       <div
         class="absolute bottom-0 -right-1/2 md:right-0 w-[150vw] sm:w-[125vw] md:w-full xl:w-2/3"
       >

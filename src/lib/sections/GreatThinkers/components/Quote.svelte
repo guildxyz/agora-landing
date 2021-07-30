@@ -5,7 +5,7 @@
   export let name;
 </script>
 
-<div class="flex flex-col items-center h-full text-lg lg:text-xl">
+<div class="flex flex-col items-center text-lg lg:text-xl">
   <img src={image} {alt} class="mb-8 h-80" />
   <p class="mb-8 text-agora-white lg:font-semibold">
     “{quote}”
