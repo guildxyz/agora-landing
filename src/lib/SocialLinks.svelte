@@ -7,12 +7,27 @@
   export let buttonClasses;
 </script>
 
-<Button href="https://twitter.com/AgoraSpaceDAO" target="_BLANK" class={buttonClasses}>
+<Button
+  href="https://twitter.com/AgoraSpaceDAO"
+  target="_BLANK"
+  class={buttonClasses}
+  aria-label="Twitter"
+>
   <TwitterLogo weight="bold" slot="icon" />
 </Button>
-<Button href="https://discord.gg/fxVCPtA8N5" target="_BLANK" class={buttonClasses}>
+<Button
+  href="https://discord.gg/fxVCPtA8N5"
+  target="_BLANK"
+  class={buttonClasses}
+  aria-label="Discord"
+>
   <DiscordLogo weight="bold" slot="icon" />
 </Button>
-<Button href="https://github.com/AgoraSpaceDAO" target="_BLANK" class={buttonClasses}>
+<Button
+  href="https://github.com/AgoraSpaceDAO"
+  target="_BLANK"
+  class={buttonClasses}
+  aria-label="Github"
+>
   <GithubLogo weight="bold" slot="icon" />
 </Button>

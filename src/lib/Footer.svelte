@@ -21,13 +21,13 @@
         <div class="flex flex-col md:flex-row justify-evenly md:space-x-16">
           <!-- Columns -->
           <div class="flex flex-col">
-            <h4
+            <h2
               class={`mb-4 font-bold tracking-tight text-2xl font-display ${
                 purple ? 'text-agora-pink-text' : 'text-agora-pink-text-darker'
               }`}
             >
               Join the community
-            </h4>
+            </h2>
             <ul class="flex space-x-2 mb-12 font-medium text-lg">
               <li>
                 <a
@@ -38,6 +38,7 @@
                       : 'bg-agora-blue-bg text-agora-white'
                   }`}
                 >
+                  <span class="sr-only">Twitter</span>
                   <TwitterLogo size="1.2em" />
                 </a>
               </li>
@@ -50,6 +51,7 @@
                       : 'bg-agora-blue-bg text-agora-white'
                   }`}
                 >
+                  <span class="sr-only">Github</span>
                   <GithubLogo size="1.2em" />
                 </a>
               </li>
@@ -62,6 +64,7 @@
                       : 'bg-agora-blue-bg text-agora-white'
                   }`}
                 >
+                  <span class="sr-only">Medium</span>
                   <ArticleMedium size="1.2em" />
                 </a>
               </li>
@@ -74,6 +77,7 @@
                       : 'bg-agora-blue-bg text-agora-white'
                   }`}
                 >
+                  <span class="sr-only">Discord</span>
                   <DiscordLogo size="1.2em" />
                 </a>
               </li>
@@ -86,6 +90,7 @@
                       : 'bg-agora-blue-bg text-agora-white'
                   }`}
                 >
+                  <span class="sr-only">Telegram</span>
                   <TelegramLogo size="1.2em" />
                 </a>
               </li>
@@ -98,6 +103,7 @@
                       : 'bg-agora-blue-bg text-agora-white'
                   }`}
                 >
+                  <span class="sr-only">Email</span>
                   <At size="1.2em" />
                 </a>
               </li>
@@ -105,13 +111,13 @@
           </div>
 
           <div class="flex flex-col">
-            <h4
+            <h2
               class={`mb-4 font-bold tracking-tight text-2xl font-display ${
                 purple ? 'text-agora-pink-text' : 'text-agora-pink-text-darker'
               }`}
             >
               Information
-            </h4>
+            </h2>
             <ul
               class={`mb-12 font-medium text-lg ${purple ? 'text-agora-white' : 'text-agora-gray'}`}
             >
@@ -147,13 +153,13 @@
           </div>
 
           <div class="hidden xl:flex flex-col">
-            <h4
+            <h2
               class={`mb-4 font-bold tracking-tight text-2xl font-display ${
                 purple ? 'text-agora-pink-text' : 'text-agora-pink-text-darker'
               }`}
             >
               Tools & Products
-            </h4>
+            </h2>
             <ul
               class={`mb-12 font-medium text-lg ${purple ? 'text-agora-white' : 'text-agora-gray'}`}
             >

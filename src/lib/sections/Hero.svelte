@@ -25,7 +25,7 @@
     >
       <!-- Platon - large -->
       <div class="hidden md:block absolute bottom-0 md:-right-2/3 w-full xl:w-[125%] h-auto">
-        <img src="/images/hero.png" alt="Platon" class="w-full" />
+        <img src="/images/hero.png" alt="Platon" class="select-none w-full" />
       </div>
 
       <!-- Title / text -->
@@ -65,7 +65,7 @@
         <img
           src="/images/hero.png"
           alt="Platon"
-          class="absolute left-0 -top-40 h-[75vh] object-cover object-bottom"
+          class="select-none absolute left-0 -top-40 h-[75vh] object-cover object-bottom"
         />
 
         <!-- Buttons -->
