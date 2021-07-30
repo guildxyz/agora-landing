@@ -1,5 +1,5 @@
 <script>
-  import HamburgerMenu from './HamburgerMenu.svelte';
+  import HamburgerMenu from './components/HamburgerMenu.svelte';
 
   export let whiteLogo = false;
 </script>
