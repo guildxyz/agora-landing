@@ -16,7 +16,7 @@
   <TwitterLogo weight="bold" slot="icon" />
 </Button>
 <Button
-  href="https://discord.gg/fxVCPtA8N5"
+  href="https://discord.gg/KvXtEpDX8B"
   target="_BLANK"
   class={buttonClasses}
   aria-label="Discord"

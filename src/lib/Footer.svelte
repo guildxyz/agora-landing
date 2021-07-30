@@ -70,7 +70,7 @@
               </li>
               <li>
                 <a
-                  href="https://discord.gg/fxVCPtA8N5"
+                  href="https://discord.gg/KvXtEpDX8B"
                   class={`flex items-center justify-center w-8 h-8 rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-300 ${
                     purple
                       ? 'bg-agora-white text-agora-blue-bg focus-visible:ring-opacity-50'
