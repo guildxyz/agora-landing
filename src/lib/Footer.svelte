@@ -178,7 +178,7 @@
 
         <!-- Bottom links -->
         <div
-          class={`flex flex-col md:flex-row px-8 font-extralight ${
+          class={`flex flex-col md:flex-row font-extralight ${
             purple ? 'text-agora-white' : 'text-agora-gray'
           }`}
         >
