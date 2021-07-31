@@ -82,7 +82,7 @@
               </li>
               <li>
                 <a
-                  href="/"
+                  href="https://t.me/joinchat/xUE3YWMZ2WAxMmNk"
                   class={`flex items-center justify-center w-8 h-8 rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-300 ${
                     purple
                       ? 'bg-agora-white text-agora-blue-bg focus-visible:ring-opacity-50'
