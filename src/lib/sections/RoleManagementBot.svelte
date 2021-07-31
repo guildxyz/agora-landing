@@ -27,9 +27,9 @@
       </h2>
 
       <p class="text-lg 2xl:text-xl">
-        Our bot Hermes bridges Telegram and Discord channels and his ally Medusa guards your token
+        Our bot Hermes bridges Telegram and Discord channels and his ally Medousa guards your token
         gated communities. You can invite the bots to your channels with the press of a button and
-        Medusa will manage all affairs of admitting and dismissing people from your groups based on
+        Medousa will manage all affairs of admitting and dismissing people from your groups based on
         how much they hold or stake of your token.
       </p>
 

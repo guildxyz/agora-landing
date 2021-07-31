@@ -11,9 +11,9 @@
 </script>
 
 <footer class={purple ? 'bg-agora-purple-bg' : 'bg-agora-white'}>
-  <div class="container mx-auto">
+  <div class="container mx-auto bg-david-mirrored md:bg-none bg-no-repeat bg-footer-mobile">
     <div
-      class="flex md:justify-end px-8 lg:px-24 py-10 lg:pt-20 w-full bg-david-mirrored md:bg-david-default bg-footer-mobile md:bg-left-bottom bg-no-repeat bg-contain"
+      class="flex md:justify-end px-8 lg:px-24 py-10 lg:pt-20 w-full md:bg-david-default md:bg-left-bottom bg-no-repeat"
     >
       <div class="xl:w-3/5">
         <div class="flex flex-col md:flex-row justify-evenly md:space-x-16">
@@ -178,7 +178,7 @@
 
         <!-- Bottom links -->
         <div
-          class={`flex flex-col md:flex-row font-extralight ${
+          class={`flex flex-col md:flex-row 2xl:px-8 font-extralight ${
             purple ? 'text-agora-white' : 'text-agora-gray'
           }`}
         >

@@ -13,7 +13,7 @@
   $: hasIconOnly = $$slots?.icon && !$$slots?.default;
 
   let baseClasses =
-    'group relative flex items-center justify-center space-x-3 border border-transparent focus:outline-none focus-visible:ring-4 focus-visible:ring-gray-200 disabled:bg-opacity-50 disabled:cursor-default';
+    'group relative flex items-center justify-center space-x-3 border border-transparent focus:outline-none focus-visible:ring-4 focus-visible:ring-gray-200 disabled:bg-opacity-25 disabled:cursor-default';
   let defaultNormalClasses =
     'px-4 lg:px-6 py-2 lg:py-3 text-base font-semibold rounded-2xl lg:text-lg';
   let defaultIconOnlyClasses = 'p-3 rounded-full hover:bg-gray-100';

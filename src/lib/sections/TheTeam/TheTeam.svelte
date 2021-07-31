@@ -20,7 +20,7 @@
     <TeamMember photo="/images/team/kovjonas.png" name="KovJonas" label="Frontend Dev" />
     <TeamMember photo="/images/team/balazs.png" name="Balazs" label="Frontend Dev" />
     <TeamMember photo="/images/team/shronk.png" name="Shronk" label="Backend Dev" />
-    <TeamMember photo="/images/team/devid.png" name="Devid" label="Frontend dev" />
+    <TeamMember photo="/images/team/devid.png" name="Devid" label="Backend Dev" />
     <TeamMember photo="/images/team/d3v.png" name="D3v" label="Security advisor" />
     <TeamMember photo="/images/team/macy.png" name="Macy" label="Communication" />
     <TeamMember photo="/images/team/sito.png" name="Sito" label="Designer" />
