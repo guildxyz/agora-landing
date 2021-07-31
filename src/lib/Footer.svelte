@@ -1,5 +1,4 @@
 <script>
-  import Button from '$lib/Button';
   import {
     TwitterLogo,
     GithubLogo,

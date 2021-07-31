@@ -19,7 +19,10 @@
         Join the Agora Space Discord server to see all the interesting news.
       </p>
 
-      <Button href="/" class="w-max bg-agora-purple-bg text-agora-white">
+      <Button
+        href="https://discord.gg/KvXtEpDX8B"
+        class="w-max bg-agora-purple-bg text-agora-white"
+      >
         <span>Join our community</span>
         <ArrowRight slot="icon" weight="bold" size="1.2em" />
       </Button>
