@@ -130,6 +130,14 @@
               -->
               <li>
                 <a
+                  href="/agora-space-brand-kit.zip"
+                  target="_blank"
+                  class="focus:outline-none focus-visible:border-b-2 focus-visible:border-gray-300"
+                  >Brand kit</a
+                >
+              </li>
+              <li>
+                <a
                   href="https://discord.gg/T3Pb7VkUBz"
                   target="_blank"
                   class="focus:outline-none focus-visible:border-b-2 focus-visible:border-gray-300"
