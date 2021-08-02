@@ -30,6 +30,7 @@
   },
   "type": "module",
   "dependencies": {
-    "phosphor-svelte": "^1.0.0"
+    "phosphor-svelte": "^1.0.0",
+    "swiper": "^6.8.0"
   }
 }
