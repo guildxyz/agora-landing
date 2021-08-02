@@ -18,7 +18,9 @@
   <div class="container mx-auto py-20 px-8 grid lg:grid-cols-12 gap-16 lg:gap-0">
     <!-- Image -->
     <div class="order-2 lg:order-1 lg:col-span-8 flex items-center justify-center lg:pr-20">
-      <img src="/images/community-explorer.png" alt="Community explorer" class="max-w-full" />
+      <a href="https://app.agora.space" target="_blank">
+        <img src="/images/community-explorer.png" alt="Community explorer" class="max-w-full" />
+      </a>
     </div>
 
     <!-- Text -->

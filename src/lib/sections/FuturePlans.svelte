@@ -26,7 +26,7 @@
         <p class="xl:text-lg">
           <a
             href="https://www.superfluid.finance/home"
-            target="_BLANK"
+            target="_blank"
             class="transition hover:text-agora-pink-text-darker">Superfluid</a
           > to Agora Social Oracle layer for performance-based fluid payments.
         </p>
@@ -34,13 +34,13 @@
         <p class="xl:text-lg">
           <a
             href="https://eas.eth.link/"
-            target="_BLANK"
+            target="_blank"
             class="transition hover:text-agora-pink-text-darker">EAS</a
           >
           to Agora Space for gamification, reputation and KYC.
           <a
             href="https://tryroll.com/"
-            target="_BLANK"
+            target="_blank"
             class="transition hover:text-agora-pink-text-darker">Roll</a
           > for easy social token creation.
         </p>
@@ -48,13 +48,13 @@
         <p class="xl:text-lg">
           <a
             href="https://colony.io/"
-            target="_BLANK"
+            target="_blank"
             class="transition hover:text-agora-pink-text-darker">Colony.io</a
           >
           for starting a new DAO.
           <a
             href="https://doingud.com/"
-            target="_BLANK"
+            target="_blank"
             class="transition hover:text-agora-pink-text-darker">DoinGud</a
           > to Agora Social Oracle for trustless, dynamic NFTs.
         </p>

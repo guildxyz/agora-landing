@@ -44,7 +44,11 @@
 
       <!-- Buttons -->
       <div class="hidden md:flex flex-col space-y-2 lg:space-y-4 mb-8">
-        <Button href="https://app.agora.space" class="w-max bg-agora-blue-btn text-agora-white">
+        <Button
+          href="https://app.agora.space"
+          target="_blank"
+          class="w-max bg-agora-blue-btn text-agora-white"
+        >
           <span>Join a community</span>
           <SignIn slot="icon" weight="bold" size="1.2em" />
         </Button>
@@ -76,7 +80,11 @@
 
         <!-- Buttons -->
         <div class="relative flex flex-col justify-end items-center space-y-4 h-full">
-          <Button href="https://app.agora.space" class="w-max bg-agora-blue-btn text-agora-white">
+          <Button
+            href="https://app.agora.space"
+            target="_blank"
+            class="w-max bg-agora-blue-btn text-agora-white"
+          >
             <span>Join a community</span>
             <SignIn slot="icon" weight="bold" size="1.2em" />
           </Button>

@@ -9,7 +9,7 @@
 
 <Button
   href="https://twitter.com/AgoraSpaceDAO"
-  target="_BLANK"
+  target="_blank"
   class={buttonClasses}
   aria-label="Twitter"
 >
@@ -17,7 +17,7 @@
 </Button>
 <Button
   href="https://discord.gg/KvXtEpDX8B"
-  target="_BLANK"
+  target="_blank"
   class={buttonClasses}
   aria-label="Discord"
 >
@@ -25,7 +25,7 @@
 </Button>
 <Button
   href="https://github.com/AgoraSpaceDAO"
-  target="_BLANK"
+  target="_blank"
   class={buttonClasses}
   aria-label="Github"
 >
