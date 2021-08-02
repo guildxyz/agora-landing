@@ -13,17 +13,15 @@
       class="flex flex-col items-center justify-center space-y-8 relative lg:col-span-3 px-8 lg:px-20 xl:px-40 py-10 lg:py-20 h-full bg-agora-gray text-agora-white text-center"
     >
       <h2
-        class="mb-4 text-agora-pink-text text-5xl xl:text-6xl font-bold tracking-tight font-display uppercase"
+        class="mb-4 text-agora-pink-text text-3xl lg:text-4xl font-bold tracking-tight font-display uppercase"
       >
         Future plans
       </h2>
 
       <section class="space-y-4">
-        <h3 class="text-agora-pink-text text-xl lg:text-3xl xl:text-4xl font-bold font-display">
-          Integration
-        </h3>
+        <h3 class="text-agora-pink-text text-xl lg:text-2xl font-bold font-display">Integration</h3>
 
-        <p class="xl:text-lg">
+        <p>
           <a
             href="https://www.superfluid.finance/home"
             target="_blank"
@@ -31,7 +29,7 @@
           > to Agora Social Oracle layer for performance-based fluid payments.
         </p>
 
-        <p class="xl:text-lg">
+        <p>
           <a
             href="https://eas.eth.link/"
             target="_blank"
@@ -45,7 +43,7 @@
           > for easy social token creation.
         </p>
 
-        <p class="xl:text-lg">
+        <p>
           <a
             href="https://colony.io/"
             target="_blank"
@@ -63,24 +61,22 @@
       <img src="/images/future-plans.png" alt="Future plans" class="w-full max-w-xs lg:hidden" />
 
       <section class="space-y-4">
-        <h3 class="text-agora-pink-text text-xl lg:text-3xl xl:text-4xl font-bold font-display">
+        <h3 class="text-agora-pink-text text-xl lg:text-2xl font-bold font-display">
           Open-source toolkit
         </h3>
 
-        <p class="xl:text-lg">
+        <p>
           Agora space’s open-source toolkit will serve the developer community to allow faster
           growth of the space.
         </p>
       </section>
 
       <section class="space-y-4">
-        <h3 class="text-agora-pink-text text-xl lg:text-3xl xl:text-4xl font-bold font-display">
+        <h3 class="text-agora-pink-text text-xl lg:text-2xl font-bold font-display">
           Market making
         </h3>
 
-        <p class="xl:text-lg">
-          We provide a decentralized marketplace and deep liquidity for your community tokens.
-        </p>
+        <p>We provide a decentralized marketplace and deep liquidity for your community tokens.</p>
       </section>
     </div>
 

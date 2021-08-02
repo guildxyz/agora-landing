@@ -31,7 +31,7 @@
       <!-- Title / text -->
       <div class="mt-16 lg:mt-28 pb-32 md:pb-0 text-center md:text-left">
         <h2
-          class="mb-4 lg:mb-8 font-bold tracking-tight text-4xl lg:text-6xl xl:text-7xl font-display"
+          class="mb-4 lg:mb-8 font-bold tracking-tight text-3xl lg:text-4xl xl:text-7xl font-display"
         >
           Social token <br /><span class="text-agora-blue-bg">toolkit</span>
           <br class="inline md:hidden" />and oracle
@@ -43,7 +43,7 @@
       </div>
 
       <!-- Buttons -->
-      <div class="hidden md:flex flex-col space-y-2 lg:space-y-4 mb-8">
+      <div class="hidden md:flex flex-col space-y-2 lg:space-y-3 mb-8">
         <Button
           href="https://app.agora.space"
           target="_blank"

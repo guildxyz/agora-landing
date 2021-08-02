@@ -17,15 +17,15 @@
 
       <!-- Content -->
       <div
-        class="relative flex flex-col items-center justify-center px-10 lg:px-20 py-10 h-full text-agora-white text-center overflow-hidden"
+        class="relative flex flex-col items-center justify-center px-4 lg:px-10 py-10 h-full text-agora-white text-center overflow-hidden"
       >
         <!-- Background circle right -->
         <div
           class="absolute top-0 right-0 w-[50vw] h-[50vw] md:w-[25vw] md:h-[25vw] transform translate-x-1/2 -translate-y-1/2 bg-circle-pattern bg-no-repeat bg-cover"
         />
 
-        <h2 class="mb-8 text-4xl lg:text-6xl font-bold tracking-tight font-display uppercase">
-          Who is <br />Agora Space <br />for?
+        <h2 class="mb-8 text-3xl lg:text-4xl font-bold tracking-tight font-display uppercase">
+          Who is Agora Space for?
         </h2>
 
         <p class="hidden lg:inline-block font-semibold text-xl">

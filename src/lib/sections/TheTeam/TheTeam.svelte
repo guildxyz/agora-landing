@@ -7,7 +7,7 @@
     class="container mx-auto px-8 py-10 lg:py-20 space-y-10 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6 gap-8 text-center"
   >
     <h2
-      class="col-span-2 sm:col-span-3 md:col-span-4 xl:col-span-6 text-agora-pink-text text-4xl lg:text-6xl font-bold tracking-tight font-display uppercase"
+      class="col-span-2 sm:col-span-3 md:col-span-4 xl:col-span-6 text-agora-pink-text text-3xl lg:text-4xl font-bold tracking-tight font-display uppercase"
     >
       The team
     </h2>

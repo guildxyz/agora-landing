@@ -10,7 +10,7 @@
       class="lg:col-span-5 flex flex-col items-center justify-center space-y-8 lg:px-20 py-20 text-center"
     >
       <h2
-        class="text-agora-purple-bg text-4xl xl:text-6xl font-bold tracking-tight font-display uppercase"
+        class="text-agora-purple-bg text-3xl lg:text-4xl font-bold tracking-tight font-display uppercase"
       >
         Stay up to date
       </h2>

@@ -10,7 +10,6 @@ module.exports = {
     },
     extend: {
       colors: {
-        primary: colors.indigo,
         agora: {
           'white': '#FDF7FF',
           'gray': '#252525',

@@ -7,7 +7,7 @@
     class="container mx-auto px-8 py-28 space-y-10 md:grid md:grid-cols-3 gap-8 lg:gap-16 text-center"
   >
     <h2
-      class="col-span-3 text-agora-pink-text text-4xl lg:text-6xl font-bold tracking-tight font-display uppercase"
+      class="col-span-3 text-agora-pink-text text-3xl lg:text-4xl font-bold tracking-tight font-display uppercase"
     >
       Great thinkers are with us
     </h2>
