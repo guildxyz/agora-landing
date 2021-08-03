@@ -10,7 +10,7 @@
 
 <Button
   aria-label="Menu"
-  class={`lg:hidden px-0 py-0 w-8 h-8 ${
+  class={`lg:hidden px-0 py-0 w-8 h-8 focus:bg-transparent active:bg-transparent ${
     white ? 'text-agora-white' : 'text-agora-gray md:text-agora-white'
   }`}
   on:click={() => (show = true)}

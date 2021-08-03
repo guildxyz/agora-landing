@@ -12,7 +12,7 @@
     class="absolute top-0 right-0 w-[50vw] h-[50vw] md:w-[25vw] md:h-[25vw] transform translate-x-1/2 -translate-y-3/4 bg-circle-pattern bg-no-repeat bg-cover"
   />
 
-  <div class="container mx-auto px-8 py-20 space-y-16 text-center">
+  <div class="container mx-auto px-8 pt-20 pb-24 space-y-16 text-center">
     <h2
       class="col-span-3 text-agora-pink-text text-3xl lg:text-4xl 2xl:text-6xl font-bold tracking-tight font-display uppercase"
     >

@@ -12,7 +12,9 @@
     class="absolute top-0 right-0 w-[50vw] h-[50vw] md:w-[25vw] md:h-[25vw] transform translate-x-1/2 -translate-y-1/2 bg-circle-pattern bg-no-repeat bg-cover"
   />
 
-  <div class="container grid gap-16 md:gap-0 md:grid-cols-2 mx-auto px-8 py-20">
+  <div
+    class="container grid gap-16 md:gap-0 md:grid-cols-2 mx-auto px-8 pt-16 lg:pt-20 pb-20 lg:pb-24"
+  >
     <CtaImg
       title="Join a community"
       image="/images/community-explorer.png"

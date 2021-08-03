@@ -7,15 +7,30 @@
   export let image;
   export let url;
 
+  let windowWidth;
   let parent;
-  let mousePosition = spring(
-    { x: 0, y: 0 },
+  $: parentX =
+    (parent &&
+      (windowWidth > 1024
+        ? parent.getBoundingClientRect().x
+        : parent.getBoundingClientRect().width)) ||
+    0;
+  $: parentY =
+    (parent &&
+      (windowWidth > 1024
+        ? parent.getBoundingClientRect().y
+        : parent.getBoundingClientRect().height)) ||
+    0;
+  $: mousePosition = spring(
+    { x: parentX, y: parentY },
     {
       stiffness: 0.2,
       damping: 0.4
     }
   );
 </script>
+
+<svelte:window bind:innerWidth={windowWidth} />
 
 <div class="space-y-8">
   <h2
@@ -28,8 +43,7 @@
     <a
       href={url}
       on:mousemove={(e) => {
-        const offset = parent.getBoundingClientRect();
-        mousePosition.set({ x: e.clientX - offset.x, y: e.clientY - offset.y });
+        mousePosition.set({ x: e.clientX - parentX, y: e.clientY - parentY });
       }}
     >
       <span class="sr-only">{title}</span>
@@ -44,7 +58,7 @@
       <span class="sr-only">{title}</span>
       <Button
         aria-label={title}
-        class="flex items-center justify-center px-0 w-12 lg:w-14 h-12 lg:h-14 bg-agora-pink-text-darker text-agora-white rounded-full transform -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity"
+        class="flex items-center justify-center px-0 w-12 lg:w-14 h-12 lg:h-14 bg-agora-pink-text-darker text-agora-white rounded-full transform -translate-x-1/2 -translate-y-1/2 opacity-100 lg:opacity-0 group-hover:opacity-100 transition-opacity"
       >
         <ArrowRight size="1.5em" weight="bold" />
       </Button>
