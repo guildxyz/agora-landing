@@ -1,5 +1,5 @@
 <script>
-  import Hero from '$lib/sections/Hero.svelte';
+  import Hero from '$lib/sections/Hero';
   import WhatIsAgora from '$lib/sections/WhatIsAgora.svelte';
   import GreatThinkers from '$lib/sections/GreatThinkers';
   import WhoIsAgoraFor from '$lib/sections/WhoIsAgoraFor.svelte';
