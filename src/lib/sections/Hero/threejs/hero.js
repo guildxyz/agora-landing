@@ -44,7 +44,7 @@ export const resizeThreeJS = (w, h) => {
   camera.updateProjectionMatrix();
 };
 
-export const initThreeJS = (element) => {
+export const initThreeJS = (element, callback) => {
   const rect = element.getBoundingClientRect();
 
   // Camera
@@ -107,8 +107,9 @@ export const initThreeJS = (element) => {
     renderer.setSize(rect.width, rect.height);
     renderer.setClearColor(0x000000, 0);
 
-    resizeThreeJS(rect.width, rect.height);
+    // resizeThreeJS(rect.width, rect.height);
     renderer.render(scene, camera);
+    callback();
     animate();
   });
 };

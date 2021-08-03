@@ -6,7 +6,6 @@
   import { initThreeJS, resizeThreeJS } from './threejs/hero';
   import { onDestroy, onMount } from 'svelte';
 
-  let fadeTimeout;
   let windowSize = 1920;
   let canvas;
   let canvasWidth;
@@ -20,15 +19,9 @@
   };
 
   onMount(() => {
-    initThreeJS(canvas);
-
-    fadeTimeout = setTimeout(() => {
+    initThreeJS(canvas, () => {
       opacity = 100;
-    }, 200);
-  });
-
-  onDestroy(() => {
-    clearTimeout(fadeTimeout);
+    });
   });
 </script>
 
