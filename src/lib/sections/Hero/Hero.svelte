@@ -3,7 +3,30 @@
   import { SignIn, Users } from 'phosphor-svelte';
   import Button from '$lib/Button';
   import SocialLinks from '$lib/SocialLinks.svelte';
+  import { initThreeJS, resizeThreeJS } from './threejs/hero';
+  import { onMount } from 'svelte';
+
+  let windowSize = 1920;
+  let canvas;
+  let canvasWidth;
+  let canvasHeight;
+  let opacity = 0;
+
+  $: offset = windowSize > 1280 ? '-62%' : windowSize > 1024 ? '-48%' : '-48%';
+  $: resizeThreeJS(canvasWidth, canvasHeight);
+
+  const handleWindowResize = () => {
+    resizeThreeJS(canvasWidth, canvasHeight);
+  };
+
+  onMount(() => {
+    initThreeJS(canvas, () => {
+      opacity = 100;
+    });
+  });
 </script>
+
+<svelte:window on:resize={handleWindowResize} bind:innerWidth={windowSize} />
 
 <section id="hero" class="relative xl:h-screen">
   <!-- Hero background -->
@@ -24,8 +47,21 @@
       class="flex flex-col relative md:col-span-3 -mx-4 md:mx-0 pt-4 lg:pt-20 px-4 lg:px-0 bg-agora-white"
     >
       <!-- Platon - large -->
-      <div class="hidden md:block absolute bottom-0 md:-right-2/3 w-full xl:w-[125%] h-auto">
-        <img src="/images/hero.png" alt="Platon" class="select-none w-full" />
+      <div
+        class={`hidden md:block absolute bottom-0 w-full xl:w-[130%] h-auto max-h-[90%] transition-all opacity-${opacity} duration-500`}
+        style={`right: ${offset};`}
+        bind:clientWidth={canvasWidth}
+        bind:clientHeight={canvasHeight}
+      >
+        <div class="relative">
+          <canvas
+            bind:this={canvas}
+            width={canvasWidth}
+            height={canvasHeight}
+            class="absolute inset-0 w-full h-full"
+          />
+          <img src="/images/hero-cropped.png" alt="Platon" class="relative select-none w-full" />
+        </div>
       </div>
 
       <!-- Title / text -->

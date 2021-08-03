@@ -1,0 +1,26 @@
+/* Custom styles for Swiper components */
+
+.swiper-container {
+  padding-bottom: 40px;
+}
+
+.swiper-pagination {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 40px;
+}
+
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: #fdf7ff;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background: #ff7fe4;
+}
