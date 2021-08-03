@@ -48,7 +48,7 @@
     >
       <!-- Platon - large -->
       <div
-        class={`hidden md:block absolute bottom-0 w-full xl:w-[130%] h-auto transition-all opacity-${opacity} duration-500`}
+        class={`hidden md:block absolute bottom-0 w-full xl:w-[130%] h-auto max-h-[90%] transition-all opacity-${opacity} duration-500`}
         style={`right: ${offset};`}
         bind:clientWidth={canvasWidth}
         bind:clientHeight={canvasHeight}
