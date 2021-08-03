@@ -24,17 +24,14 @@
           class="absolute top-0 right-0 w-[50vw] h-[50vw] md:w-[25vw] md:h-[25vw] transform translate-x-1/2 -translate-y-1/2 bg-circle-pattern bg-no-repeat bg-cover"
         />
 
-        <h2 class="mb-8 text-3xl lg:text-4xl font-bold tracking-tight font-display uppercase">
+        <h2
+          class="mb-8 text-3xl lg:text-4xl 2xl:text-6xl font-bold tracking-tight font-display uppercase"
+        >
           Who is Agora Space for?
         </h2>
 
-        <p class="hidden lg:inline-block font-semibold text-xl">
+        <p class="font-semibold 2xl:text-xl">
           Those who want to make their community more efficient and rewarding
-        </p>
-
-        <p class="lg:hidden text-lg">
-          Who want to make their community more efficient and rewarding DAOs, crypto communities,
-          creatives, VCs, developers.
         </p>
       </div>
     </div>

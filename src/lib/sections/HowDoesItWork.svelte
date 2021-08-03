@@ -33,19 +33,19 @@
         How does it work?
       </h2>
 
-      <p class="text-lg 2xl:text-xl">
+      <p class="2xl:text-xl">
         Agora Space creates a bridge between social media and the blockchain with the help of the
         Agora Social Oracle layer while utilizing existing solutions.
       </p>
 
-      <p class="text-lg 2xl:text-xl">
+      <p class="2xl:text-xl">
         We collect and utilize the best blockchain projects in our tools to make your DeFi
         experience smoother and more efficient. Browse our explorer for all social tokens existing
         on the blockchain or use our comprehensive toolkit. Integrate your social token on our admin
         page and let the role management bots handle your token gated communities.
       </p>
 
-      <Button href="https://medium.com/@AgoraSpace" class="lg:-ml-6 px-0 w-max text-agora-white">
+      <Button href="https://medium.com/@AgoraSpace" class="2xl:-ml-6 px-0 w-max text-agora-white">
         <span>Read more on Medium</span>
         <ArrowRight slot="icon" weight="bold" size="1.2em" />
       </Button>

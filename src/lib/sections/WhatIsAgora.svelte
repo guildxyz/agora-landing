@@ -6,10 +6,12 @@
       class="absolute left-0 bottom-0 w-full md:w-1/2 lg:w-2/5 max-w-lg h-full bg-what-is-agora-space bg-contain bg-no-repeat bg-left-bottom"
     />
     <div class="w-full lg:w-3/5 text-center">
-      <h2 class="mb-8 text-3xl lg:text-4xl font-bold tracking-tight font-display uppercase">
+      <h2
+        class="mb-8 text-3xl lg:text-4xl 2xl:text-6xl font-bold tracking-tight font-display uppercase"
+      >
         What is <br class="md:hidden" />Agora Space?
       </h2>
-      <p class="lg:font-semibold text-lg md:text-xl">
+      <p class="lg:font-semibold 2xl:text-xl">
         A framework for all social token tools. A broad service pack elevating tokenized
         communities, helping their founders and members alike. It provides the first use-case for
         social oracle networks.

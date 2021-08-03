@@ -43,7 +43,7 @@
       </div>
 
       <!-- Buttons -->
-      <div class="hidden md:flex flex-col space-y-2 lg:space-y-3 mb-8">
+      <div class="hidden md:flex flex-col space-y-2 mb-8">
         <Button
           href="https://app.agora.space"
           target="_blank"

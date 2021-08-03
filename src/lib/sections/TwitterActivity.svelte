@@ -14,14 +14,14 @@
       class="order-1 lg:order-2 group relative lg:-top-8 flex flex-col items-start justify-center text-center lg:text-left"
     >
       <span
-        class="mb-2 w-full text-2xl 2xl:text-4xl font-bold tracking-tight font-display uppercase text-black opacity-20 lg:opacity-0 group-hover:opacity-20 transition-all duration-300 transform lg:translate-y-8 group-hover:translate-y-0"
+        class="mb-2 w-full text-2xl 2xl:text-4xl font-bold tracking-tight font-display uppercase text-agora-gray opacity-20 lg:opacity-0 group-hover:opacity-20 transition-all duration-300 transform lg:translate-y-8 group-hover:translate-y-0"
         >Coming soon</span
       >
       <h2 class="mb-8 w-full text-4xl 2xl:text-6xl font-bold tracking-tight font-display uppercase">
         Gamification Of Twitter Activity
       </h2>
 
-      <p class="text-lg 2xl:text-xl">
+      <p class="2xl:text-xl">
         Let your fans earn badges and achievements based on social media activity. Increase the
         online presence of your community while rewarding your biggest supporters.
       </p>

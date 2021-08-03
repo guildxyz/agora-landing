@@ -31,7 +31,7 @@
         Community explorer
       </h2>
 
-      <p class="text-lg 2xl:text-xl">
+      <p class="2xl:text-xl">
         Browse all existing social tokens in our explorer from Aragon, Rally, Stake Social,
         Colony.io Issue your token on your favourite platforms and DAO frameworks then add utility
         to them with Agora Space’s tools.

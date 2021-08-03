@@ -13,13 +13,15 @@
       class="flex flex-col items-center justify-center space-y-8 relative lg:col-span-3 px-8 lg:px-20 xl:px-40 py-10 lg:py-20 h-full bg-agora-gray text-agora-white text-center"
     >
       <h2
-        class="mb-4 text-agora-pink-text text-3xl lg:text-4xl font-bold tracking-tight font-display uppercase"
+        class="mb-4 text-agora-pink-text text-3xl lg:text-4xl 2xl:text-6xl font-bold tracking-tight font-display uppercase"
       >
         Future plans
       </h2>
 
       <section class="space-y-4">
-        <h3 class="text-agora-pink-text text-xl lg:text-2xl font-bold font-display">Integration</h3>
+        <h3 class="text-agora-pink-text text-xl lg:text-2xl 2xl:text-3xl font-bold font-display">
+          Integration
+        </h3>
 
         <p>
           <a
@@ -61,7 +63,7 @@
       <img src="/images/future-plans.png" alt="Future plans" class="w-full max-w-xs lg:hidden" />
 
       <section class="space-y-4">
-        <h3 class="text-agora-pink-text text-xl lg:text-2xl font-bold font-display">
+        <h3 class="text-agora-pink-text text-xl lg:text-2xl 2xl:text-3xl font-bold font-display">
           Open-source toolkit
         </h3>
 
@@ -72,7 +74,7 @@
       </section>
 
       <section class="space-y-4">
-        <h3 class="text-agora-pink-text text-xl lg:text-2xl font-bold font-display">
+        <h3 class="text-agora-pink-text text-xl lg:text-2xl 2xl:text-3xl font-bold font-display">
           Market making
         </h3>
 

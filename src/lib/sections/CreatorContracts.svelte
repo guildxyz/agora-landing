@@ -13,7 +13,7 @@
         Performance-based creator contracts
       </h2>
 
-      <p class="text-lg 2xl:text-xl">
+      <p class="2xl:text-xl">
         A new way of making trustless financial contracts based on data from social media.
         Participants decide on a performance indicator and a price for reaching that goal. Agora
         Social Oracle provides a decentralized system to make sure both parties get what they agreed

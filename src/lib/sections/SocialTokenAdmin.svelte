@@ -11,7 +11,7 @@
         Social token admin
       </h2>
 
-      <p class="text-lg 2xl:text-xl">
+      <p class="2xl:text-xl">
         When you find your token in our explorer you can take control of it by verifying that it is
         yours and implement the Agora Space features on our admin panel.
       </p>

@@ -26,14 +26,14 @@
         Role management bot
       </h2>
 
-      <p class="text-lg 2xl:text-xl">
+      <p class="2xl:text-xl">
         Our bot Hermes bridges Telegram and Discord channels and his ally Medousa guards your token
         gated communities. You can invite the bots to your channels with the press of a button and
         Medousa will manage all affairs of admitting and dismissing people from your groups based on
         how much they hold or stake of your token.
       </p>
 
-      <Button href="https://medium.com/@AgoraSpace" class="lg:-ml-6 px-0 w-max text-agora-white">
+      <Button href="https://medium.com/@AgoraSpace" class="2xl:-ml-6 px-0 w-max text-agora-white">
         <span>Read more on Medium</span>
         <ArrowRight slot="icon" weight="bold" size="1.2em" />
       </Button>

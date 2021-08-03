@@ -19,7 +19,7 @@
 
 <div class="space-y-8">
   <h2
-    class="text-agora-white text-3xl lg:text-4xl font-bold tracking-tight font-display uppercase text-center"
+    class="text-agora-white text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight font-display uppercase text-center"
   >
     {title}
   </h2>
@@ -33,7 +33,7 @@
       }}
     >
       <span class="sr-only">{title}</span>
-      <img src={image} alt="Join a community" class="w-full" />
+      <img src={image} alt={title} class="w-full" />
     </a>
 
     <a
