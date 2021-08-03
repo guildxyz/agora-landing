@@ -108,5 +108,6 @@ export const initThreeJS = (element) => {
   renderer.setClearColor(0x000000, 0);
 
   resizeThreeJS(rect.width, rect.height);
+  renderer.render(scene, camera);
   animate();
 };
