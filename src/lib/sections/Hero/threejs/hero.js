@@ -104,12 +104,12 @@ export const initThreeJS = (element, callback) => {
       alpha: true,
       canvas: element
     });
-    renderer.setSize(rect.width, rect.height);
     renderer.setClearColor(0x000000, 0);
 
     // resizeThreeJS(rect.width, rect.height);
     renderer.render(scene, camera);
-    callback();
     animate();
+    resizeThreeJS(rect.width, rect.height);
+    callback();
   });
 };
