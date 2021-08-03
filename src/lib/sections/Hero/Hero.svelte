@@ -4,8 +4,9 @@
   import Button from '$lib/Button';
   import SocialLinks from '$lib/SocialLinks.svelte';
   import { initThreeJS, resizeThreeJS } from './threejs/hero';
-  import { onMount } from 'svelte';
+  import { onDestroy, onMount } from 'svelte';
 
+  let fadeTimeout;
   let windowSize = 1920;
   let canvas;
   let canvasWidth;
@@ -20,7 +21,14 @@
 
   onMount(() => {
     initThreeJS(canvas);
-    opacity = 100;
+
+    fadeTimeout = setTimeout(() => {
+      opacity = 100;
+    }, 200);
+  });
+
+  onDestroy(() => {
+    clearTimeout(fadeTimeout);
   });
 </script>
 
