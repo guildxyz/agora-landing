@@ -39,9 +39,11 @@ const animate = () => {
 };
 
 export const resizeThreeJS = (w, h) => {
-  renderer.setSize(w, h);
-  camera.aspect = w / h;
-  camera.updateProjectionMatrix();
+  if (camera && renderer) {
+    camera.aspect = w / h;
+    camera.updateProjectionMatrix();
+    renderer.setSize(w, h);
+  }
 };
 
 export const initThreeJS = (element, callback) => {
@@ -106,10 +108,7 @@ export const initThreeJS = (element, callback) => {
     });
     renderer.setClearColor(0x000000, 0);
 
-    // resizeThreeJS(rect.width, rect.height);
-    renderer.render(scene, camera);
     animate();
-    resizeThreeJS(rect.width, rect.height);
     callback();
   });
 };

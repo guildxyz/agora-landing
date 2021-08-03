@@ -4,7 +4,7 @@
   import Button from '$lib/Button';
   import SocialLinks from '$lib/SocialLinks.svelte';
   import { initThreeJS, resizeThreeJS } from './threejs/hero';
-  import { onDestroy, onMount } from 'svelte';
+  import { onMount } from 'svelte';
 
   let windowSize = 1920;
   let canvas;
@@ -13,6 +13,7 @@
   let opacity = 0;
 
   $: offset = windowSize > 1280 ? '-62%' : windowSize > 1024 ? '-48%' : '-48%';
+  $: resizeThreeJS(canvasWidth, canvasHeight);
 
   const handleWindowResize = () => {
     resizeThreeJS(canvasWidth, canvasHeight);
@@ -52,8 +53,15 @@
         bind:clientWidth={canvasWidth}
         bind:clientHeight={canvasHeight}
       >
-        <canvas bind:this={canvas} class="absolute w-full h-full" />
-        <img src="/images/hero-cropped.png" alt="Platon" class="relative select-none w-full" />
+        <div class="relative">
+          <canvas
+            bind:this={canvas}
+            width={canvasWidth}
+            height={canvasHeight}
+            class="absolute inset-0 w-full h-full"
+          />
+          <img src="/images/hero-cropped.png" alt="Platon" class="relative select-none w-full" />
+        </div>
       </div>
 
       <!-- Title / text -->
