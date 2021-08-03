@@ -11,16 +11,29 @@
 </script>
 
 <footer class={purple ? 'bg-agora-purple-bg' : 'bg-agora-white'}>
-  <div class="container mx-auto bg-david-mirrored md:bg-none bg-no-repeat bg-footer-mobile">
-    <div
-      class="flex md:justify-end px-8 lg:px-24 py-10 lg:pt-20 w-full md:bg-david-default md:bg-left-bottom bg-no-repeat"
-    >
-      <div class="xl:w-3/5">
-        <div class="flex flex-col md:flex-row justify-evenly md:space-x-16">
+  <div class="relative container mx-auto">
+    <div class="absolute -right-16 md:right-auto left-20 bottom-0 h-full">
+      <!-- Mobile bg -->
+      <img
+        src="/images/david-mirrored.png"
+        alt="David"
+        class="md:hidden w-full h-full object-contain"
+      />
+      <!-- Desktop bg -->
+      <img
+        src="/images/david.png"
+        alt="David"
+        class="hidden md:block w-full h-full object-contain"
+      />
+    </div>
+
+    <div class="flex md:justify-end px-8 lg:px-24 py-10 lg:pt-20 w-full">
+      <div class="xl:w-4/5">
+        <div class="flex flex-col md:flex-row justify-end md:space-x-20">
           <!-- Columns -->
           <div class="flex flex-col">
             <h2
-              class={`mb-4 font-bold tracking-tight text-2xl font-display ${
+              class={`mb-4 font-bold tracking-tight text-2xl xl:text-3xl font-display ${
                 purple ? 'text-agora-pink-text' : 'text-agora-pink-text-darker'
               }`}
             >
@@ -93,17 +106,23 @@
                 </a>
               </li>
             </ul>
+
+            <span class="h-8 mt-auto font-light xl:text-lg">&copy; 2021 Agora Space</span>
           </div>
 
           <div class="flex flex-col">
             <h2
-              class={`mb-4 font-bold tracking-tight text-2xl font-display ${
+              class={`mb-4 font-bold tracking-tight text-2xl xl:text-3xl font-display ${
                 purple ? 'text-agora-pink-text' : 'text-agora-pink-text-darker'
               }`}
             >
               Information
             </h2>
-            <ul class={`mb-12 font-medium ${purple ? 'text-agora-white' : 'text-gray-600'}`}>
+            <ul
+              class={`mb-12 font-medium xl:text-lg ${
+                purple ? 'text-agora-white' : 'text-gray-600'
+              }`}
+            >
               <li>
                 <a
                   href="/about"
@@ -149,13 +168,17 @@
 
           <div class="hidden xl:flex flex-col">
             <h2
-              class={`mb-4 font-bold tracking-tight text-2xl font-display ${
+              class={`mb-4 font-bold tracking-tight text-2xl xl:text-3xl font-display ${
                 purple ? 'text-agora-pink-text' : 'text-agora-pink-text-darker'
               }`}
             >
               Tools & Products
             </h2>
-            <ul class={`mb-12 font-medium ${purple ? 'text-agora-white' : 'text-gray-600'}`}>
+            <ul
+              class={`mb-12 font-medium xl:text-lg ${
+                purple ? 'text-agora-white' : 'text-gray-600'
+              }`}
+            >
               <li>
                 <a
                   href="https://app.agora.space/"
@@ -182,25 +205,6 @@
               -->
             </ul>
           </div>
-        </div>
-
-        <!-- Bottom links -->
-        <div
-          class={`flex flex-col md:flex-row 2xl:px-8 font-extralight ${
-            purple ? 'text-agora-white' : 'text-agora-gray'
-          }`}
-        >
-          <span class="h-8 mt-auto font-light">&copy; 2021 Agora Space</span>
-          <!-- <a
-            href="/"
-            class="h-8 mt-auto font-light focus:outline-none focus-visible:border-b-2 focus-visible:border-gray-300"
-            >Privacy Policy</a
-          >
-          <a
-            href="/"
-            class="h-8 mt-auto font-light focus:outline-none focus-visible:border-b-2 focus-visible:border-gray-300"
-            >Terms of Service</a
-          > -->
         </div>
       </div>
     </div>

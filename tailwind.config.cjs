@@ -23,12 +23,9 @@ module.exports = {
       },
       backgroundImage: {
         'circle-pattern': "url('/images/circle-pattern.png')",
-        'what-is-agora-space': "url('/images/what-is-agora-space-bg.png')",
         'who-is-agora-space-for': "url('/images/who-is-agora-space-for-bg.png')",
         'circle-dark': "url('/svg/circle-dark.svg')",
-        'circle-purple': "url('/svg/circle-purple.svg')",
-        'david-default': "url('/images/david.png')",
-        'david-mirrored': "url('/images/david-mirrored.png')"
+        'circle-purple': "url('/svg/circle-purple.svg')"
       },
       backgroundPosition: {
         'bottom-footer-mobile': 'bottom right -20vw'

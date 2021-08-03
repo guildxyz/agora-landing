@@ -32,7 +32,7 @@
 
 <svelte:window bind:innerWidth={windowWidth} />
 
-<div class="space-y-8">
+<div class="space-y-8 lg:space-y-16">
   <h2
     class="text-agora-white text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight font-display uppercase text-center"
   >
