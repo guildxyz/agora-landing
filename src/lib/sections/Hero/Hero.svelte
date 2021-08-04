@@ -15,7 +15,9 @@
   $: resizeThreeJS(canvasWidth, canvasHeight);
 
   const handleWindowResize = () => {
-    resizeThreeJS(canvasWidth, canvasHeight);
+    if (canvasWidth && canvasHeight) {
+      resizeThreeJS(canvasWidth, canvasHeight);
+    }
   };
 
   onMount(() => {
