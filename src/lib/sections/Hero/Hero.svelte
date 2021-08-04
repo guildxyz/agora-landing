@@ -69,8 +69,11 @@
         <h2
           class="mb-4 lg:mb-8 font-bold tracking-tight text-4xl lg:text-6xl xl:text-7xl font-display"
         >
-          Social token <br /><span class="text-agora-blue-bg">toolkit</span>
-          <br class="inline md:hidden" />and oracle
+          <span class="text-agora-blue-bg">Oracle</span> <br />and social token <br />utility
+          toolkit
+
+          <!-- Social token <br /><span class="text-agora-blue-bg">toolkit</span>
+          <br class="inline md:hidden" />and oracle -->
         </h2>
 
         <p class="mb-4 lg:mb-10 font-semibold text-lg lg:text-xl leading-tight md:leading-normal">
