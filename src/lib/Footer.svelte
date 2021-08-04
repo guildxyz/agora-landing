@@ -10,7 +10,7 @@
   export let purple = false;
 </script>
 
-<footer class={purple ? 'bg-agora-purple-bg' : 'bg-agora-white'}>
+<footer class={purple ? 'bg-agora-purple' : 'bg-agora-white'}>
   <div class="relative container mx-auto">
     <div class="absolute -right-16 md:right-auto left-20 bottom-0 h-full">
       <!-- Mobile bg -->
@@ -34,7 +34,7 @@
           <div class="flex flex-col">
             <h2
               class={`mb-4 font-bold tracking-tight text-2xl xl:text-3xl font-display ${
-                purple ? 'text-agora-pink-text' : 'text-agora-pink-text-darker'
+                purple ? 'text-agora-pink-light' : 'text-agora-pink-medium'
               }`}
             >
               Join the community
@@ -45,8 +45,8 @@
                   href="https://twitter.com/AgoraSpaceDAO"
                   class={`flex items-center justify-center w-8 h-8 rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-300 ${
                     purple
-                      ? 'bg-agora-white text-agora-blue-bg focus-visible:ring-opacity-50 '
-                      : 'bg-agora-blue-bg text-agora-white'
+                      ? 'bg-agora-white text-agora-blue-medium focus-visible:ring-opacity-50 '
+                      : 'bg-agora-blue-medium text-agora-white'
                   }`}
                 >
                   <span class="sr-only">Twitter</span>
@@ -58,8 +58,8 @@
                   href="https://github.com/AgoraSpaceDAO"
                   class={`flex items-center justify-center w-8 h-8 rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-300 ${
                     purple
-                      ? 'bg-agora-white text-agora-blue-bg focus-visible:ring-opacity-50'
-                      : 'bg-agora-blue-bg text-agora-white'
+                      ? 'bg-agora-white text-agora-blue-medium focus-visible:ring-opacity-50'
+                      : 'bg-agora-blue-medium text-agora-white'
                   }`}
                 >
                   <span class="sr-only">Github</span>
@@ -71,8 +71,8 @@
                   href="https://medium.com/@AgoraSpace"
                   class={`flex items-center justify-center w-8 h-8 rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-300 ${
                     purple
-                      ? 'bg-agora-white text-agora-blue-bg focus-visible:ring-opacity-50'
-                      : 'bg-agora-blue-bg text-agora-white'
+                      ? 'bg-agora-white text-agora-blue-medium focus-visible:ring-opacity-50'
+                      : 'bg-agora-blue-medium text-agora-white'
                   }`}
                 >
                   <span class="sr-only">Medium</span>
@@ -84,8 +84,8 @@
                   href="https://discord.gg/KvXtEpDX8B"
                   class={`flex items-center justify-center w-8 h-8 rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-300 ${
                     purple
-                      ? 'bg-agora-white text-agora-blue-bg focus-visible:ring-opacity-50'
-                      : 'bg-agora-blue-bg text-agora-white'
+                      ? 'bg-agora-white text-agora-blue-medium focus-visible:ring-opacity-50'
+                      : 'bg-agora-blue-medium text-agora-white'
                   }`}
                 >
                   <span class="sr-only">Discord</span>
@@ -97,8 +97,8 @@
                   href="https://t.me/joinchat/xUE3YWMZ2WAxMmNk"
                   class={`flex items-center justify-center w-8 h-8 rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-300 ${
                     purple
-                      ? 'bg-agora-white text-agora-blue-bg focus-visible:ring-opacity-50'
-                      : 'bg-agora-blue-bg text-agora-white'
+                      ? 'bg-agora-white text-agora-blue-medium focus-visible:ring-opacity-50'
+                      : 'bg-agora-blue-medium text-agora-white'
                   }`}
                 >
                   <span class="sr-only">Telegram</span>
@@ -113,7 +113,7 @@
           <div class="flex flex-col">
             <h2
               class={`mb-4 font-bold tracking-tight text-2xl xl:text-3xl font-display ${
-                purple ? 'text-agora-pink-text' : 'text-agora-pink-text-darker'
+                purple ? 'text-agora-pink-light' : 'text-agora-pink-medium'
               }`}
             >
               Information
@@ -169,7 +169,7 @@
           <div class="hidden xl:flex flex-col">
             <h2
               class={`mb-4 font-bold tracking-tight text-2xl xl:text-3xl font-display ${
-                purple ? 'text-agora-pink-text' : 'text-agora-pink-text-darker'
+                purple ? 'text-agora-pink-light' : 'text-agora-pink-medium'
               }`}
             >
               Tools & Products

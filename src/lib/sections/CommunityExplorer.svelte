@@ -2,10 +2,7 @@
   import Header from '$lib/Header';
 </script>
 
-<section
-  id="social-token-admin"
-  class="relative pt-16 lg:pt-28 bg-agora-purple-bg text-agora-white"
->
+<section id="social-token-admin" class="relative pt-16 lg:pt-28 bg-agora-purple text-agora-white">
   <div class="absolute left-0 right-0 top-0 z-50">
     <Header whiteLogo />
   </div>

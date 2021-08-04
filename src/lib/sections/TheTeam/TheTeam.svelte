@@ -15,10 +15,10 @@
 
 <svelte:window bind:innerWidth={windowWidth} />
 
-<section id="the-team" class="relative bg-agora-blue-bg">
+<section id="the-team" class="relative bg-agora-blue-medium">
   <div class="container mx-auto px-8 py-10 lg:py-20 space-y-10 text-center">
     <h2
-      class="text-agora-pink-text text-3xl lg:text-4xl font-bold tracking-tight font-display uppercase"
+      class="text-agora-pink-light text-3xl lg:text-4xl font-bold tracking-tight font-display uppercase"
     >
       The team
     </h2>

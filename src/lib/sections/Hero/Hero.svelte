@@ -33,7 +33,9 @@
   <!-- Hero background -->
   <div class="absolute hidden md:flex lg:flex-row w-full h-full">
     <div class="flex-grow bg-agora-white" />
-    <div class="flex-grow bg-agora-blue-bg bg-circle-pattern bg-no-repeat bg-hero-right-bottom" />
+    <div
+      class="flex-grow bg-agora-blue-medium bg-circle-pattern bg-no-repeat bg-hero-right-bottom"
+    />
   </div>
 
   <div class="absolute left-0 right-0 top-0 z-50">
@@ -71,7 +73,7 @@
           <h2
             class="mb-4 lg:mb-8 font-bold tracking-tight text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-display"
           >
-            Social token <br /><span class="text-agora-blue-bg">toolkit</span>
+            Social token <br /><span class="text-agora-blue-medium">toolkit</span>
             <br class="inline md:hidden" />and oracle
           </h2>
 
@@ -87,7 +89,7 @@
           <Button
             href="https://app.agora.space"
             target="_blank"
-            class="w-max bg-agora-blue-btn text-agora-white"
+            class="w-max bg-agora-blue-medium text-agora-white"
           >
             <span>Join a community</span>
             <SignIn slot="icon" weight="bold" size="1.2em" />
@@ -96,7 +98,7 @@
           <Button
             disabled
             disabledMessage="Coming soon"
-            class="w-max bg-agora-purple-bg text-agora-white"
+            class="w-max bg-agora-purple text-agora-white"
           >
             <span>Integrate your token</span>
             <Users slot="icon" weight="bold" size="1.2em" />
@@ -106,7 +108,7 @@
 
       <!-- Mobile - purple section -->
       <div
-        class="md:hidden relative -mx-4 bg-agora-blue-bg bg-circle-pattern bg-no-repeat bg-hero-right-bottom"
+        class="md:hidden relative -mx-4 bg-agora-blue-medium bg-circle-pattern bg-no-repeat bg-hero-right-bottom"
       >
         <img
           src="/images/hero-mobile.png"
@@ -121,13 +123,13 @@
           <Button
             href="https://app.agora.space"
             target="_blank"
-            class="w-max bg-agora-blue-btn text-agora-white shadow-md"
+            class="w-max bg-agora-blue-light text-agora-white shadow-md"
           >
             <span>Join a community</span>
             <SignIn slot="icon" weight="bold" size="1.2em" />
           </Button>
 
-          <!-- <Button disabled class="w-max bg-agora-purple-bg text-agora-white shadow-md">
+          <!-- <Button disabled class="w-max bg-agora-purple text-agora-white shadow-md">
             <span>Integrate your token</span>
             <Users slot="icon" weight="bold" size="1.2em" />
           </Button> -->

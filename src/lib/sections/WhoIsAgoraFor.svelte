@@ -1,7 +1,7 @@
 <section id="who-is-agora-space-for" class="relative">
   <!-- Background -->
   <div class="absolute hidden lg:flex w-full h-full">
-    <div class="bg-agora-purple-bg w-1/2" />
+    <div class="bg-agora-purple w-1/2" />
     <div class="bg-agora-white w-1/2" />
   </div>
 
@@ -9,7 +9,7 @@
   <div
     class="relative lg:container mx-auto lg:grid lg:grid-cols-5 h-full overflow-hidden md:overflow-visible"
   >
-    <div class="relative lg:col-span-2 bg-agora-purple-bg">
+    <div class="relative lg:col-span-2 bg-agora-purple">
       <!-- Background circle left -->
       <div
         class="absolute bottom-0 left-0 w-[50vw] h-[50vw] md:w-[25vw] md:h-[25vw] transform -translate-x-1/2 translate-y-1/2 bg-circle-pattern bg-no-repeat bg-cover"
@@ -17,7 +17,7 @@
 
       <!-- Content -->
       <div
-        class="relative flex flex-col items-center justify-center px-4 lg:px-10 py-16 h-full text-agora-white text-center overflow-hidden"
+        class="relative flex flex-col items-center justify-center px-4 lg:px-0 lg:pr-20 py-16 h-full text-agora-white text-center overflow-hidden"
       >
         <!-- Background circle right -->
         <div

@@ -10,5 +10,7 @@
   <p class="mb-2 text-agora-white lg:font-semibold">
     “{quote}”
   </p>
-  <p class="mt-auto text-lg text-agora-pink-text font-bold tracking-tight font-display">-{name}-</p>
+  <p class="mt-auto text-lg text-agora-pink-light font-bold tracking-tight font-display">
+    -{name}-
+  </p>
 </div>

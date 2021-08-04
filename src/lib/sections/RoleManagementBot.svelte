@@ -11,7 +11,7 @@
 
   <!-- Background -->
   <div class="absolute hidden lg:flex w-full h-full">
-    <div class="bg-agora-purple-bg w-1/2" />
+    <div class="bg-agora-purple w-1/2" />
     <div class="bg-agora-gray w-1/2" />
   </div>
 
@@ -20,7 +20,7 @@
   >
     <!-- Left side -->
     <div
-      class="flex flex-col items-center lg:items-start justify-center space-y-8 relative lg:col-span-3 xl:col-span-2 px-8 lg:pr-20 pt-24 lg:pt-40 pb-10 h-full bg-agora-gray lg:bg-agora-purple-bg text-agora-white text-center lg:text-left"
+      class="flex flex-col items-center lg:items-start justify-center space-y-8 relative lg:col-span-3 xl:col-span-2 px-8 lg:pr-20 pt-24 lg:pt-40 pb-10 h-full bg-agora-gray lg:bg-agora-purple text-agora-white text-center lg:text-left"
     >
       <h2 class="w-full text-4xl 2xl:text-6xl font-bold tracking-tight font-display uppercase">
         Role management bot

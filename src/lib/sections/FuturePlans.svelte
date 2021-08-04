@@ -2,7 +2,7 @@
   <!-- Background -->
   <div class="absolute hidden lg:flex w-full h-full">
     <div class="bg-agora-gray w-1/2" />
-    <div class="bg-agora-purple-bg w-1/2" />
+    <div class="bg-agora-purple w-1/2" />
   </div>
 
   <div
@@ -10,16 +10,16 @@
   >
     <!-- Left side -->
     <div
-      class="flex flex-col items-center justify-center space-y-8 relative lg:col-span-3 px-8 lg:px-20 xl:px-40 py-10 lg:py-20 h-full bg-agora-gray text-agora-white text-center"
+      class="flex flex-col items-center justify-center space-y-8 relative lg:col-span-3 px-8 lg:px-0 lg:pr-28 xl:pr-48 py-10 lg:py-20 h-full bg-agora-gray text-agora-white text-center xl:text-lg"
     >
       <h2
-        class="mb-4 text-agora-pink-text text-3xl lg:text-4xl 2xl:text-6xl font-bold tracking-tight font-display uppercase"
+        class="mb-4 text-agora-pink-light text-3xl lg:text-4xl 2xl:text-6xl font-bold tracking-tight font-display uppercase"
       >
         Future plans
       </h2>
 
       <section class="space-y-4">
-        <h3 class="text-agora-pink-text text-xl lg:text-2xl 2xl:text-3xl font-bold font-display">
+        <h3 class="text-agora-pink-light text-xl lg:text-2xl 2xl:text-3xl font-bold font-display">
           Integration
         </h3>
 
@@ -27,7 +27,7 @@
           <a
             href="https://www.superfluid.finance/home"
             target="_blank"
-            class="transition hover:text-agora-pink-text-darker">Superfluid</a
+            class="transition hover:text-agora-pink-medium">Superfluid</a
           > to Agora Social Oracle layer for performance-based fluid payments.
         </p>
 
@@ -35,13 +35,13 @@
           <a
             href="https://eas.eth.link/"
             target="_blank"
-            class="transition hover:text-agora-pink-text-darker">EAS</a
+            class="transition hover:text-agora-pink-medium">EAS</a
           >
           to Agora Space for gamification, reputation and KYC.
           <a
             href="https://tryroll.com/"
             target="_blank"
-            class="transition hover:text-agora-pink-text-darker">Roll</a
+            class="transition hover:text-agora-pink-medium">Roll</a
           > for easy social token creation.
         </p>
 
@@ -49,13 +49,13 @@
           <a
             href="https://colony.io/"
             target="_blank"
-            class="transition hover:text-agora-pink-text-darker">Colony.io</a
+            class="transition hover:text-agora-pink-medium">Colony.io</a
           >
           for starting a new DAO.
           <a
             href="https://doingud.com/"
             target="_blank"
-            class="transition hover:text-agora-pink-text-darker">DoinGud</a
+            class="transition hover:text-agora-pink-medium">DoinGud</a
           > to Agora Social Oracle for trustless, dynamic NFTs.
         </p>
       </section>
@@ -63,7 +63,7 @@
       <img src="/images/future-plans.png" alt="Future plans" class="w-full max-w-xs lg:hidden" />
 
       <section class="space-y-4">
-        <h3 class="text-agora-pink-text text-xl lg:text-2xl 2xl:text-3xl font-bold font-display">
+        <h3 class="text-agora-pink-light text-xl lg:text-2xl 2xl:text-3xl font-bold font-display">
           Open-source toolkit
         </h3>
 
@@ -74,7 +74,7 @@
       </section>
 
       <section class="space-y-4">
-        <h3 class="text-agora-pink-text text-xl lg:text-2xl 2xl:text-3xl font-bold font-display">
+        <h3 class="text-agora-pink-light text-xl lg:text-2xl 2xl:text-3xl font-bold font-display">
           Market making
         </h3>
 
@@ -84,7 +84,7 @@
 
     <!-- Right Side -->
     <div
-      class="hidden lg:flex flex-col items-center justify-center lg:col-span-2 relative p-20 bg-agora-purple-bg"
+      class="hidden lg:flex flex-col items-center justify-center lg:col-span-2 relative p-20 bg-agora-purple"
     >
       <img src="/images/future-plans.png" alt="Future plans" class="object-contain" />
     </div>

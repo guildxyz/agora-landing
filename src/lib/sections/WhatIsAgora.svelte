@@ -1,11 +1,18 @@
-<section id="what-is-agora-space" class="relative bg-agora-purple-bg">
+<section id="what-is-agora-space" class="relative bg-agora-purple">
   <div
-    class="flex justify-end container mx-auto px-8 pt-16 md:pt-20 xl:pt-28 pb-72 lg:pb-28 text-agora-white"
+    class="flex flex-col lg:flex-row justify-end container mx-auto px-8 pt-16 md:pt-20 lg:py-28 text-agora-white"
   >
     <div
-      class="absolute left-0 bottom-0 w-full md:w-1/2 lg:w-2/5 max-w-lg h-full bg-what-is-agora-space bg-contain bg-no-repeat bg-left-bottom"
-    />
-    <div class="w-full lg:w-3/5 text-center">
+      class="order-2 lg:order-1 lg:absolute lg:left-0 lg:bottom-0 flex flex-col justify-end h-full w-full lg:w-1/2 pt-8 lg:pr-8 -mx-8"
+    >
+      <img
+        src="/images/what-is-agora-space-bg.png"
+        alt="What is Agora Space?"
+        class="w-full h-full object-cover lg:object-contain object-bottom"
+      />
+    </div>
+
+    <div class="order-1 lg:order-2 w-full lg:w-3/5 text-center">
       <h2
         class="mb-8 text-3xl lg:text-4xl 2xl:text-6xl font-bold tracking-tight font-display uppercase"
       >
