@@ -5,6 +5,7 @@
   import { initThreeJS, resizeThreeJS } from './threejs/hero';
   import { onMount } from 'svelte';
 
+  let hideHeroImg = false;
   let windowSize = 1920;
   let canvas;
   let canvasWidth;
@@ -23,6 +24,7 @@
   onMount(() => {
     initThreeJS(canvas, () => {
       opacity = 100;
+      hideHeroImg = true;
     });
   });
 </script>
@@ -51,7 +53,7 @@
     >
       <!-- Platon - large -->
       <div
-        class={`hidden md:block absolute bottom-0 w-full xl:w-[150%] h-auto max-h-[95%] transition-all opacity-${opacity} duration-500`}
+        class="hidden md:block absolute bottom-0 w-full xl:w-[150%] h-auto max-h-[95%]"
         style={`right: ${offset};`}
         bind:clientWidth={canvasWidth}
         bind:clientHeight={canvasHeight}
@@ -61,9 +63,16 @@
             bind:this={canvas}
             width={canvasWidth}
             height={canvasHeight}
-            class="absolute inset-0 w-full h-full"
+            class={`absolute inset-0 w-full h-full transition-opacity opacity-${opacity} duration-500`}
           />
-          <img src="/images/hero-cropped.png" alt="Platon" class="relative select-none w-full" />
+          <img src="/images/hero-cropped.png" alt="Platon" class={`relative select-none w-full`} />
+          <img
+            src="/images/hero.png"
+            alt="Platon"
+            class={`absolute left-0 bottom-0 select-none w-full transition-all duration-500 ${
+              hideHeroImg ? 'invisible opacity-0' : 'visible opacity-100'
+            }`}
+          />
         </div>
       </div>
 
