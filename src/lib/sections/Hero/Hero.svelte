@@ -3,7 +3,7 @@
   import { SignIn, Users } from 'phosphor-svelte';
   import Button from '$lib/Button';
   import { initThreeJS, resizeThreeJS } from './threejs/hero';
-  import { onMount } from 'svelte';
+  import { onMount, tick } from 'svelte';
 
   let hideHeroImg = false;
   let windowSize = 1920;
@@ -15,7 +15,8 @@
   $: offset = windowSize > 1280 ? '-70%' : windowSize > 1024 ? '-48%' : '-48%';
   $: resizeThreeJS(canvasWidth, canvasHeight);
 
-  const handleWindowResize = () => {
+  const handleWindowResize = async () => {
+    await tick();
     if (canvasWidth && canvasHeight) {
       resizeThreeJS(canvasWidth, canvasHeight);
     }
