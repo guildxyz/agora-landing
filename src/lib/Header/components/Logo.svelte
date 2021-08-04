@@ -6,7 +6,7 @@
   href="/"
   class="flex space-x-4 focus:outline-none focus-visible:border-b-2 focus-visible:border-gray-200"
 >
-  <svg width="250" height="35" viewBox="0 0 250 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <svg height="25" viewBox="0 0 250 35" fill="none" xmlns="http://www.w3.org/2000/svg">
     <rect y="1.5791" width="5.29098" height="28.0716" {fill} />
     <path
       d="M12.7832 13.3301L16.2901 17.2888L5.30716 29.625L0.837998 26.7436L12.7832 13.3301Z"

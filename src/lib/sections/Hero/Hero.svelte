@@ -2,7 +2,6 @@
   import Header from '$lib/Header';
   import { SignIn, Users } from 'phosphor-svelte';
   import Button from '$lib/Button';
-  import SocialLinks from '$lib/SocialLinks.svelte';
   import { initThreeJS, resizeThreeJS } from './threejs/hero';
   import { onMount } from 'svelte';
 
@@ -68,7 +67,7 @@
       <div class="h-full flex flex-col justify-center">
         <div class="mt-16 xl:mt-0 pb-32 md:pb-0 text-center md:text-left">
           <h2
-            class="mb-4 lg:mb-8 font-bold tracking-tight text-3xl lg:text-4xl xl:text-7xl font-display"
+            class="mb-4 lg:mb-8 font-bold tracking-tight text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-display"
           >
             Social token <br /><span class="text-agora-blue-bg">toolkit</span>
             <br class="inline md:hidden" />and oracle
@@ -82,7 +81,7 @@
         </div>
 
         <!-- Buttons -->
-        <div class="hidden md:flex flex-col space-y-2 mb-8">
+        <div class="hidden md:flex flex-col space-y-2 mb-20">
           <Button
             href="https://app.agora.space"
             target="_blank"
