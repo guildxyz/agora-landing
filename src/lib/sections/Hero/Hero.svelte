@@ -29,7 +29,7 @@
 
 <svelte:window on:resize={handleWindowResize} bind:innerWidth={windowSize} />
 
-<section id="hero" class="relative xl:h-screen">
+<section id="hero" class="relative xl:h-screen h-webkit-fill-available">
   <!-- Hero background -->
   <div class="absolute hidden md:flex lg:flex-row w-full h-full">
     <div class="flex-grow bg-agora-white" />
