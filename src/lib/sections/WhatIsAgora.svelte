@@ -1,6 +1,6 @@
 <section id="what-is-agora-space" class="relative bg-agora-purple">
   <div
-    class="flex flex-col lg:flex-row justify-end container mx-auto px-8 pt-16 md:pt-20 lg:py-28 text-agora-white"
+    class="flex flex-col lg:flex-row justify-end container mx-auto px-8 pt-16 md:pt-20 lg:py-28 xl:py-40 text-agora-white"
   >
     <div
       class="order-2 lg:order-1 lg:absolute lg:left-0 lg:bottom-0 flex flex-col justify-end h-full w-full lg:w-1/2 pt-8 lg:pr-8 -mx-8"
@@ -8,7 +8,7 @@
       <img
         src="/images/what-is-agora-space-bg.png"
         alt="What is Agora Space?"
-        class="w-full h-full object-cover lg:object-contain object-bottom"
+        class="w-full h-full object-cover lg:object-contain object-left-bottom"
       />
     </div>
 
