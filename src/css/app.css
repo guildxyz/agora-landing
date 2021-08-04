@@ -27,6 +27,10 @@
     background: rgba(255, 255, 255, 0.2);
   }
 
+  .custom-container {
+    max-width: 2560px;
+  }
+
   .h-webkit-fill-available {
     height: -webkit-fill-available;
   }

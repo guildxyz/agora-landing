@@ -7,7 +7,7 @@
 
   <!-- Left side -->
   <div
-    class="relative lg:container mx-auto lg:grid lg:grid-cols-5 h-full overflow-hidden md:overflow-visible"
+    class="relative w-full custom-container mx-auto lg:grid lg:grid-cols-5 h-full overflow-hidden md:overflow-visible"
   >
     <div class="relative lg:col-span-2 bg-agora-purple">
       <!-- Background circle left -->
@@ -17,7 +17,7 @@
 
       <!-- Content -->
       <div
-        class="relative flex flex-col items-center justify-center px-4 lg:px-0 lg:pr-20 py-16 h-full text-agora-white text-center overflow-hidden"
+        class="relative flex flex-col items-center justify-center px-4 lg:px-20 py-16 h-full text-agora-white text-center overflow-hidden"
       >
         <!-- Background circle right -->
         <div
