@@ -43,7 +43,7 @@
     <a
       href={url}
       on:mousemove={(e) => {
-        mousePosition.set({ x: e.clientX - parentX, y: e.clientY - parentY });
+        mousePosition.set({ x: e.clientX, y: e.clientY });
       }}
     >
       <span class="sr-only">{title}</span>
@@ -52,8 +52,8 @@
 
     <a
       href={url}
-      class="absolute"
-      style={`left: ${$mousePosition.x}px; top: ${$mousePosition.y}px`}
+      class="absolute lg:fixed left-full top-full"
+      style={windowWidth > 1024 && `left: ${$mousePosition.x}px; top: ${$mousePosition.y}px`}
     >
       <span class="sr-only">{title}</span>
       <Button
