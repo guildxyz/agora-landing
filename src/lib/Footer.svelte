@@ -12,12 +12,12 @@
 
 <footer class={purple ? 'bg-agora-purple' : 'bg-agora-white'}>
   <div class="relative container">
-    <div class="absolute -right-16 md:right-auto left-20 bottom-0 h-full">
+    <div class="absolute -right-16 md:right-auto flex items-end left-20 bottom-0 h-full">
       <!-- Mobile bg -->
       <img
         src="/images/david-mirrored.png"
         alt="David"
-        class="md:hidden w-full h-full object-contain"
+        class="md:hidden w-full h-[90%] sm:h-full object-contain"
       />
       <!-- Desktop bg -->
       <img
@@ -107,7 +107,9 @@
               </li>
             </ul>
 
-            <span class="h-8 mt-auto font-light xl:text-lg">&copy; 2021 Agora Space</span>
+            <span class={`hidden md:block mt-auto ${purple ? 'text-agora-white' : 'font-light'}`}
+              >&copy; 2021 Agora Space</span
+            >
           </div>
 
           <div class="flex flex-col">
@@ -165,6 +167,9 @@
               </li>
             </ul>
           </div>
+          <span class={`md:hidden ${purple ? 'text-agora-white' : 'font-light'}`}
+            >&copy; 2021 Agora Space</span
+          >
 
           <div class="hidden xl:flex flex-col">
             <h2

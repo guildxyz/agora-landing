@@ -52,7 +52,7 @@
 
     <a
       href={url}
-      class="absolute lg:fixed left-full top-full"
+      class="absolute lg:fixed left-[90%] top-full"
       style={windowWidth > 1024 && `left: ${$mousePosition.x}px; top: ${$mousePosition.y}px`}
     >
       <span class="sr-only">{title}</span>

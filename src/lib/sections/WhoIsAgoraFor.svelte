@@ -17,7 +17,7 @@
 
       <!-- Content -->
       <div
-        class="relative flex flex-col items-center justify-center px-4 lg:px-20 py-16 h-full text-agora-white text-center overflow-hidden"
+        class="relative flex flex-col items-center justify-center px-4 lg:px-20 py-28 h-full text-agora-white text-center overflow-hidden"
       >
         <!-- Background circle right -->
         <div
