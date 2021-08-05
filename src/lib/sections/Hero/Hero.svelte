@@ -80,7 +80,7 @@
           <h2
             class="mb-4 lg:mb-8 font-bold tracking-tight text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-display"
           >
-            Social <span class="text-agora-blue-bg">oracle</span> <br />and token utility
+            Social <span class="text-agora-blue-medium">oracle</span> <br />and token utility
             <br />toolkit
           </h2>
 
