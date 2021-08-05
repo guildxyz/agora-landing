@@ -10,15 +10,15 @@
   >
     <!-- Left side -->
     <div
-      class="flex flex-col items-center justify-center space-y-8 relative lg:col-span-3 px-8 lg:px-28 xl:px-48 py-10 lg:py-20 h-full bg-agora-gray text-agora-white text-center xl:text-lg"
+      class="flex flex-col items-center justify-center space-y-8 relative lg:col-span-3 px-8 lg:px-28 xl:px-48 py-10 lg:py-20 h-full bg-agora-gray text-agora-white text-center "
     >
       <h2
-        class="mb-4 text-agora-pink-light text-3xl lg:text-4xl 2xl:text-6xl font-bold tracking-tight font-display uppercase"
+        class="mb-4 text-agora-pink-light text-3xl lg:text-5xl 2xl:text-6xl font-bold tracking-tight font-display uppercase"
       >
         Future plans
       </h2>
 
-      <section class="space-y-4">
+      <section class="space-y-4 font-semibold">
         <h3 class="text-agora-pink-light text-xl lg:text-2xl 2xl:text-3xl font-bold font-display">
           Integration
         </h3>
@@ -67,7 +67,7 @@
           Open-source toolkit
         </h3>
 
-        <p>
+        <p class="font-semibold">
           Agora space’s open-source toolkit will serve the developer community to allow faster
           growth of the space.
         </p>
@@ -78,7 +78,9 @@
           Market making
         </h3>
 
-        <p>We provide a decentralized marketplace and deep liquidity for your community tokens.</p>
+        <p class="font-semibold">
+          We provide a decentralized marketplace and deep liquidity for your community tokens.
+        </p>
       </section>
     </div>
 

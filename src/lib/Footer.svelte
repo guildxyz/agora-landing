@@ -29,11 +29,11 @@
 
     <div class="flex md:justify-end px-8 lg:px-24 py-10 lg:pt-20 w-full">
       <div class="xl:w-4/5">
-        <div class="flex flex-col md:flex-row justify-end md:space-x-20">
+        <div class="flex flex-col md:flex-row justify-between lg:pl-28 md:space-x-20">
           <!-- Columns -->
           <div class="flex flex-col">
             <h2
-              class={`mb-4 font-bold tracking-tight text-2xl xl:text-3xl font-display ${
+              class={`mb-4 font-bold tracking-tight text-2xl 2xl:text-3xl font-display ${
                 purple ? 'text-agora-pink-light' : 'text-agora-pink-medium'
               }`}
             >
@@ -112,7 +112,7 @@
 
           <div class="flex flex-col">
             <h2
-              class={`mb-4 font-bold tracking-tight text-2xl xl:text-3xl font-display ${
+              class={`mb-4 font-bold tracking-tight text-2xl 2xl:text-3xl font-display ${
                 purple ? 'text-agora-pink-light' : 'text-agora-pink-medium'
               }`}
             >
@@ -168,7 +168,7 @@
 
           <div class="hidden xl:flex flex-col">
             <h2
-              class={`mb-4 font-bold tracking-tight text-2xl xl:text-3xl font-display ${
+              class={`mb-4 font-bold tracking-tight text-2xl 2xl:text-3xl font-display ${
                 purple ? 'text-agora-pink-light' : 'text-agora-pink-medium'
               }`}
             >

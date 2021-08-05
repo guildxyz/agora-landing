@@ -25,7 +25,7 @@
         />
 
         <h2
-          class="mb-8 text-3xl lg:text-4xl 2xl:text-6xl font-bold tracking-tight font-display uppercase"
+          class="mb-8 text-3xl lg:text-5xl 2xl:text-6xl font-bold tracking-tight font-display uppercase"
         >
           Who is Agora Space for?
         </h2>

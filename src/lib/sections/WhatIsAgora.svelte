@@ -14,7 +14,7 @@
 
     <div class="order-1 lg:order-2 w-full lg:w-3/5 text-center">
       <h2
-        class="mb-8 text-3xl lg:text-4xl 2xl:text-6xl font-bold tracking-tight font-display uppercase"
+        class="mb-8 text-3xl lg:text-5xl 2xl:text-6xl font-bold tracking-tight font-display uppercase"
       >
         What is <br class="md:hidden" />Agora Space?
       </h2>
