@@ -13,7 +13,7 @@
   let opacity = 0;
 
   $: offset = windowSize > 1280 ? '-70%' : windowSize > 1024 ? '-48%' : '-48%';
-  $: resizeThreeJS(canvasWidth, canvasHeight);
+  $: canvasWidth && canvasHeight && resizeThreeJS(canvasWidth, canvasHeight);
 
   onMount(() => {
     initThreeJS(canvas, () => {
@@ -49,8 +49,6 @@
       <div
         class="hidden md:block w-full xl:w-[150%] h-auto max-h-[95%]"
         style={`position: absolute; bottom:0; right: ${offset};`}
-        bind:clientWidth={canvasWidth}
-        bind:clientHeight={canvasHeight}
       >
         <div class="relative">
           <canvas
@@ -59,7 +57,13 @@
             height={canvasHeight}
             class={`absolute inset-0 w-full h-full transition-opacity opacity-${opacity} duration-500`}
           />
-          <img src="/images/hero-cropped.png" alt="Platon" class={`relative select-none w-full`} />
+          <div bind:clientWidth={canvasWidth} bind:clientHeight={canvasHeight}>
+            <img
+              src="/images/hero-cropped.png"
+              alt="Platon"
+              class={`relative select-none w-full`}
+            />
+          </div>
           <img
             src="/images/hero.png"
             alt="Platon"

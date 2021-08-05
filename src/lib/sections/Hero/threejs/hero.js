@@ -109,6 +109,7 @@ export const initThreeJS = (element, callback) => {
   });
   renderer.setClearColor(0x000000, 0);
 
+  resizeThreeJS(rect.width, rect.height);
   animate();
   callback();
 };
