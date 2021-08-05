@@ -3,7 +3,7 @@
   import { SignIn, Users } from 'phosphor-svelte';
   import Button from '$lib/Button';
   import { initThreeJS, resizeThreeJS } from './threejs/hero';
-  import { onMount, tick } from 'svelte';
+  import { onMount } from 'svelte';
 
   let hideHeroImg = false;
   let windowSize = 1920;
@@ -15,13 +15,6 @@
   $: offset = windowSize > 1280 ? '-70%' : windowSize > 1024 ? '-48%' : '-48%';
   $: resizeThreeJS(canvasWidth, canvasHeight);
 
-  const handleWindowResize = async () => {
-    await tick();
-    if (canvasWidth && canvasHeight) {
-      resizeThreeJS(canvasWidth, canvasHeight);
-    }
-  };
-
   onMount(() => {
     initThreeJS(canvas, () => {
       opacity = 100;
@@ -30,7 +23,7 @@
   });
 </script>
 
-<svelte:window on:resize={handleWindowResize} bind:innerWidth={windowSize} />
+<svelte:window bind:innerWidth={windowSize} />
 
 <section id="hero" class="relative xl:h-screen h-webkit-fill-available">
   <!-- Hero background -->
