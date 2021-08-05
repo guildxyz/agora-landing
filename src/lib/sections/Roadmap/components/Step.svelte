@@ -13,7 +13,7 @@
     >
   </h3>
 
-  <p class="text-agora-white font-semibold text-md ">{content}</p>
+  <p class="text-agora-white font-semibold text-md 2xl:text-lg">{content}</p>
 
   <div class="group-last:hidden absolute top-3/5 -right-20 w-20 h-0.5 bg-agora-white" />
 </div>

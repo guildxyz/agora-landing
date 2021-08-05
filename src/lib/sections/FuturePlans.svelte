@@ -18,7 +18,7 @@
         Future plans
       </h2>
 
-      <section class="space-y-4 font-semibold">
+      <section class="space-y-4 font-semibold 2xl:text-lg">
         <h3 class="text-agora-pink-light text-xl lg:text-2xl 2xl:text-3xl font-bold font-display">
           Integration
         </h3>
@@ -67,7 +67,7 @@
           Open-source toolkit
         </h3>
 
-        <p class="font-semibold">
+        <p class="font-semibold 2xl:text-lg">
           Agora space’s open-source toolkit will serve the developer community to allow faster
           growth of the space.
         </p>
@@ -78,7 +78,7 @@
           Market making
         </h3>
 
-        <p class="font-semibold">
+        <p class="font-semibold 2xl:text-lg">
           We provide a decentralized marketplace and deep liquidity for your community tokens.
         </p>
       </section>
