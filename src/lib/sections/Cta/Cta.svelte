@@ -13,7 +13,7 @@
   />
 
   <div
-    class="container grid gap-16 md:gap-0 md:grid-cols-2 mx-auto px-8 pt-16 lg:pt-20 xl:pt-24 pb-20 lg:pb-24 xl:pb-28"
+    class="container grid gap-16 md:gap-0 md:grid-cols-2 px-8 pt-16 lg:pt-20 xl:pt-24 pb-20 lg:pb-24 xl:pb-28"
   >
     <CtaImg
       title="Join a community"

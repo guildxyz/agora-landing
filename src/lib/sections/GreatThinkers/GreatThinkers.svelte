@@ -16,7 +16,7 @@
 <svelte:window bind:innerWidth={windowWidth} />
 
 <section id="great-thinkers-are-with-us" class="relative bg-agora-gray">
-  <div class="container mx-auto px-8 py-24 2xl:py-28 space-y-4 2xl:space-y-10 text-center">
+  <div class="container px-8 py-24 2xl:py-28 space-y-4 2xl:space-y-10 text-center">
     <h2
       class="mb-24 col-span-3 text-agora-pink-light text-3xl lg:text-5xl 2xl:text-6xl font-bold tracking-tight font-display uppercase"
     >

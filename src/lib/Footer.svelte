@@ -11,7 +11,7 @@
 </script>
 
 <footer class={purple ? 'bg-agora-purple' : 'bg-agora-white'}>
-  <div class="relative container mx-auto">
+  <div class="relative container">
     <div class="absolute -right-16 md:right-auto left-20 bottom-0 h-full">
       <!-- Mobile bg -->
       <img

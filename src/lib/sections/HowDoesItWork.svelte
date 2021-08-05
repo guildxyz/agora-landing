@@ -16,7 +16,7 @@
   </div>
 
   <div
-    class="relative lg:container mx-auto flex flex-col lg:grid lg:grid-cols-6 xl:grid-cols-5 h-full overflow-hidden"
+    class="relative lg:container flex flex-col lg:grid lg:grid-cols-6 xl:grid-cols-5 h-full overflow-hidden"
   >
     <!-- Left side -->
     <div

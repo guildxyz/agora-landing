@@ -2,7 +2,7 @@
   id="social-token-admin"
   class="relative bg-agora-pink-dark lg:bg-agora-gray text-agora-white"
 >
-  <div class="container mx-auto py-20 px-8 grid lg:grid-cols-12 gap-16 lg:gap-0">
+  <div class="container py-20 px-8 grid lg:grid-cols-12 gap-16 lg:gap-0">
     <!-- Text -->
     <div
       class="lg:col-span-4 flex flex-col items-start justify-center space-y-8 text-center lg:text-left"

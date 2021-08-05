@@ -7,7 +7,7 @@
 
   <!-- Left side -->
   <div
-    class="relative w-full custom-container mx-auto lg:grid lg:grid-cols-5 h-full overflow-hidden md:overflow-visible"
+    class="relative w-full custom-container lg:grid lg:grid-cols-5 h-full overflow-hidden md:overflow-visible"
   >
     <div class="relative lg:col-span-2 bg-agora-purple">
       <!-- Background circle left -->

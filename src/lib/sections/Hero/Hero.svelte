@@ -38,9 +38,7 @@
     <Header />
   </div>
 
-  <div
-    class="relative md:container mx-auto lg:px-8 grid md:grid-cols-5 md:h-1/2 lg:h-2/3 xl:h-full"
-  >
+  <div class="relative md:container lg:px-8 grid md:grid-cols-5 md:h-1/2 lg:h-2/3 xl:h-full">
     <!-- Hero - left side -->
     <section
       class="flex flex-col relative md:col-span-3 -mx-4 md:mx-0 pt-4 lg:pt-20 px-4 lg:px-0 bg-agora-white"

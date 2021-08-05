@@ -31,6 +31,9 @@ module.exports = {
         'circle-dark': "url('/svg/circle-dark.svg')",
         'circle-purple': "url('/svg/circle-purple.svg')"
       }
+    },
+    container: {
+      center: true,
     }
   },
   plugins: []

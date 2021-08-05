@@ -4,7 +4,7 @@
 </script>
 
 <section id="what-is-agora-space" class="relative bg-agora-white overflow-hidden">
-  <div class="container mx-auto grid lg:grid-cols-12 px-8">
+  <div class="container grid lg:grid-cols-12 px-8">
     <!-- Text -->
     <div
       class="lg:col-span-5 flex flex-col items-center justify-center space-y-8 lg:px-20 py-20 text-center"
