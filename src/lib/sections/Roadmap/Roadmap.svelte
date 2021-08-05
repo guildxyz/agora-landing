@@ -14,7 +14,7 @@
 
   <div class="container px-8 pt-16 xl:pt-24 pb-20 xl:pb-28 space-y-16 text-center">
     <h2
-      class="col-span-3 text-agora-pink-light text-3xl lg:text-5xl 2xl:text-6xl font-bold tracking-tight font-display uppercase"
+      class="col-span-3 text-agora-pink-light text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold tracking-tight font-display uppercase"
     >
       Roadmap <span class="text-lg tracking-normal">2021</span>
     </h2>

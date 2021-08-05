@@ -10,10 +10,10 @@
   >
     <!-- Left side -->
     <div
-      class="flex flex-col items-center justify-center space-y-8 relative lg:col-span-3 px-8 lg:px-28 xl:px-48 py-16 lg:py-20 h-full bg-agora-gray text-agora-white text-center "
+      class="flex flex-col items-center justify-center space-y-8 relative lg:col-span-3 px-8 lg:px-28 xl:px-48 py-16 lg:py-24 h-full bg-agora-gray text-agora-white text-center "
     >
       <h2
-        class="mb-4 text-agora-pink-light text-3xl lg:text-5xl 2xl:text-6xl font-bold tracking-tight font-display uppercase"
+        class="mb-4 text-agora-pink-light text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold tracking-tight font-display uppercase"
       >
         Future plans
       </h2>
@@ -86,7 +86,7 @@
 
     <!-- Right Side -->
     <div
-      class="hidden lg:flex flex-col items-center justify-center lg:col-span-2 relative p-20 bg-agora-purple"
+      class="hidden lg:flex flex-col mx-auto items-center justify-center lg:col-span-2 relative p-20 max-w-2xl bg-agora-purple"
     >
       <img src="/images/future-plans.png" alt="Future plans" class="object-contain" />
     </div>

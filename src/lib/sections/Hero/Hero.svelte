@@ -41,7 +41,7 @@
   <div class="relative md:container px-6 lg:px-8 grid md:grid-cols-5 md:h-1/2 lg:h-2/3 xl:h-full">
     <!-- Hero - left side -->
     <section
-      class="flex flex-col relative md:col-span-4 lg:col-span-3 -mx-6 md:mx-0 pt-4 lg:pt-20 px-4 lg:px-0 bg-agora-white"
+      class="flex flex-col relative md:col-span-4 lg:col-span-3 -mx-6 md:mx-0 pt-4 lg:pt-10 xl:pt-20 px-4 lg:px-0 bg-agora-white"
     >
       <!-- Platon - large -->
       <div
@@ -76,7 +76,7 @@
       <div class="h-full flex flex-col justify-center">
         <div class="relative mt-20 xl:mt-0 pb-32 md:pb-0 text-center md:text-left">
           <h2
-            class="mb-4 lg:mb-8 font-bold tracking-tight text-4xl md:text-5xl xl:text-6xl 2xl:text-7xl font-display"
+            class="mb-4 lg:mb-8 font-bold tracking-tight text-4xl sm:text-5xl xl:text-6xl 2xl:text-7xl font-display"
           >
             Social <span class="text-agora-blue-medium">oracle</span> <br />and token utility
             <br />toolkit

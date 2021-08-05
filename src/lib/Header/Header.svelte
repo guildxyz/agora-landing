@@ -5,7 +5,9 @@
   export let whiteLogo = false;
 </script>
 
-<header class="container flex justify-between items-center px-4 md:px-10 lg:px-8 pt-4 lg:pt-16">
+<header
+  class="container flex justify-between items-center px-4 md:px-10 lg:px-8 pt-4 lg:pt-8 xl:pt-16"
+>
   <!-- Logo -->
   <Logo fill={whiteLogo ? '#FDF7FF' : '#252525'} />
 
