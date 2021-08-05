@@ -12,20 +12,18 @@
 
 <footer class={purple ? 'bg-agora-purple' : 'bg-agora-white'}>
   <div class="relative container">
-    <div class="absolute -right-16 md:right-auto flex items-end left-20 bottom-0 h-full">
-      <!-- Mobile bg -->
-      <img
-        src="/images/david-mirrored.png"
-        alt="David"
-        class="md:hidden w-full h-[90%] sm:h-full object-contain"
-      />
-      <!-- Desktop bg -->
-      <img
-        src="/images/david.png"
-        alt="David"
-        class="hidden md:block w-full h-full object-contain"
-      />
-    </div>
+    <!-- Mobile bg -->
+    <img
+      src="/images/david-mirrored.png"
+      alt="David"
+      class="absolute md:hidden h-[90%] sm:h-full object-contain bottom-0 -right-6"
+    />
+    <!-- Desktop bg -->
+    <img
+      src="/images/david.png"
+      alt="David"
+      class="absolute hidden md:block h-full object-contain left-6 xl:left-16 bottom-0 right-auto"
+    />
 
     <div class="flex md:justify-end px-8 lg:px-24 py-10 lg:pt-20 w-full">
       <div class="xl:w-4/5">
