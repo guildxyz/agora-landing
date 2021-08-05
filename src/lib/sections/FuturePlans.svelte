@@ -41,8 +41,15 @@
           <a
             href="https://tryroll.com/"
             target="_blank"
-            class="transition hover:text-agora-pink-text-darker">Roll</a
-          > for easy social token creation.
+            class="transition hover:text-agora-pink-text-darker">TryRoll</a
+          >
+          and
+          <a
+            href="https://stakes.social/"
+            target="_blank"
+            class="transition hover:text-agora-pink-text-darker">Stakes.social</a
+          >
+          for easy social token creation.
         </p>
 
         <p class="xl:text-lg">
@@ -50,13 +57,19 @@
             href="https://colony.io/"
             target="_blank"
             class="transition hover:text-agora-pink-text-darker">Colony.io</a
-          >
-          for starting a new DAO.
+          >,
           <a
-            href="https://doingud.com/"
+            href="https://aragon.org/"
             target="_blank"
-            class="transition hover:text-agora-pink-text-darker">DoinGud</a
-          > to Agora Social Oracle for trustless, dynamic NFTs.
+            class="transition hover:text-agora-pink-text-darker">Aragon</a
+          >
+          and
+          <a
+            href="https://daohaus.club/"
+            target="_blank"
+            class="transition hover:text-agora-pink-text-darker">Daohaus</a
+          >
+          summoners will be able to integrate their tokens.
         </p>
       </section>
 
