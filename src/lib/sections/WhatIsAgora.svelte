@@ -19,9 +19,9 @@
         What is <br class="md:hidden" />Agora Space?
       </h2>
       <p class="lg:font-semibold 2xl:text-xl">
-        A framework for all social token tools. A broad service pack elevating tokenized
-        communities, helping their founders and members alike. It provides the first use-case for
-        social oracle networks.
+        A framework for all social token tools with an oracle twist. A broad service pack elevating
+        tokenized communities, helping their founders and members alike. It provides the first
+        use-case for social oracle networks.
       </p>
     </div>
   </div>
