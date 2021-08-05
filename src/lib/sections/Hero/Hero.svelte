@@ -76,7 +76,7 @@
 
       <!-- Title / text -->
       <div class="h-full flex flex-col justify-center">
-        <div class="mt-16 xl:mt-0 pb-32 md:pb-0 text-center md:text-left">
+        <div class="relative mt-16 xl:mt-0 pb-32 md:pb-0 text-center md:text-left">
           <h2
             class="mb-4 lg:mb-8 font-bold tracking-tight text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-display"
           >
