@@ -24,8 +24,8 @@
   $: mousePosition = spring(
     { x: parentX, y: parentY },
     {
-      stiffness: 0.2,
-      damping: 0.4
+      stiffness: 0.28,
+      damping: 0.8
     }
   );
 </script>

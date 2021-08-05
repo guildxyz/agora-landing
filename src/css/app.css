@@ -47,4 +47,8 @@
     background-position: right -4vw bottom 4vh;
     background-size: 30vw;
   }
+
+  .max-fullhd-container {
+    max-width: 1920px;
+  }
 }
