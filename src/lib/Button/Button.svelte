@@ -14,8 +14,7 @@
 
   let baseClasses =
     'group relative flex items-center justify-center space-x-3 border border-transparent focus:outline-none focus-visible:ring-4 focus-visible:ring-gray-200 disabled:bg-opacity-25 disabled:cursor-default';
-  let defaultNormalClasses =
-    'px-4 2xl:px-6 py-2 2xl:py-3 text-base font-semibold rounded-2xl 2xl:text-lg';
+  let defaultNormalClasses = 'px-6 py-3 2xl:py-3 text-base font-semibold rounded-2xl 2xl:text-lg';
   let defaultIconOnlyClasses = 'p-3 rounded-full hover:bg-gray-100';
 
   $: defaultClasses = baseClasses.concat(
