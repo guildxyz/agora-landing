@@ -80,6 +80,7 @@ export const initThreeJS = (element, callback) => {
     shader.vertexShader = shader.vertexShader.replace(
       '#include <common>',
       `
+
           #include <common>
   
           ${vertexShaderHead}

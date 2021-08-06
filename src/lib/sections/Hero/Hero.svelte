@@ -10,8 +10,10 @@
   let canvasWidth;
   let canvasHeight;
   let opacity = 0;
+
   $: offset = windowSize > 1280 ? '-70%' : windowSize > 1024 ? '-48%' : '-48%';
   $: canvasWidth && canvasHeight && resizeThreeJS(canvasWidth, canvasHeight);
+
   onMount(() => {
     initThreeJS(canvas, () => {
       opacity = 100;
