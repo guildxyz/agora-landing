@@ -4,17 +4,14 @@
   import Button from '$lib/Button';
   import { initThreeJS, resizeThreeJS } from './threejs/hero';
   import { onMount } from 'svelte';
-
   let hideHeroImg = false;
   let windowSize = 1920;
   let canvas;
   let canvasWidth;
   let canvasHeight;
   let opacity = 0;
-
   $: offset = windowSize > 1280 ? '-70%' : windowSize > 1024 ? '-48%' : '-48%';
   $: canvasWidth && canvasHeight && resizeThreeJS(canvasWidth, canvasHeight);
-
   onMount(() => {
     initThreeJS(canvas, () => {
       opacity = 100;
