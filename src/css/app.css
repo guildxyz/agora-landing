@@ -27,6 +27,14 @@
     background: rgba(255, 255, 255, 0.2);
   }
 
+  .custom-container {
+    max-width: 2560px;
+  }
+
+  .h-webkit-fill-available {
+    height: -webkit-fill-available;
+  }
+
   .button {
     @apply flex items-center justify-center px-8 max-w-max h-14 text-white text-lg font-semibold rounded-2xl ring-0 focus:outline-none focus:ring-4 focus:ring-gray-300 hover:bg-opacity-90 transition;
   }
@@ -40,8 +48,7 @@
     background-size: 30vw;
   }
 
-  .bg-footer-mobile {
-    background-position-x: 50vw;
-    background-position-y: bottom;
+  .max-fullhd-container {
+    max-width: 1920px;
   }
 }

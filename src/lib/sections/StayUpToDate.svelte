@@ -4,13 +4,13 @@
 </script>
 
 <section id="what-is-agora-space" class="relative bg-agora-white overflow-hidden">
-  <div class="container mx-auto grid lg:grid-cols-12 px-8">
+  <div class="container grid lg:grid-cols-12 px-8">
     <!-- Text -->
     <div
       class="lg:col-span-5 flex flex-col items-center justify-center space-y-8 lg:px-20 py-20 text-center"
     >
       <h2
-        class="text-agora-purple-bg text-4xl xl:text-6xl font-bold tracking-tight font-display uppercase"
+        class="text-agora-purple text-3xl lg:text-4xl font-bold tracking-tight font-display uppercase"
       >
         Stay up to date
       </h2>
@@ -19,10 +19,7 @@
         Join the Agora Space Discord server to see all the interesting news.
       </p>
 
-      <Button
-        href="https://discord.gg/KvXtEpDX8B"
-        class="w-max bg-agora-purple-bg text-agora-white"
-      >
+      <Button href="https://discord.gg/KvXtEpDX8B" class="w-max bg-agora-purple text-agora-white">
         <span>Join our community</span>
         <ArrowRight slot="icon" weight="bold" size="1.2em" />
       </Button>

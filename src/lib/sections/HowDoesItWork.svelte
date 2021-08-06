@@ -12,11 +12,11 @@
   <!-- Background -->
   <div class="absolute hidden lg:flex w-full h-full">
     <div class="bg-agora-gray w-1/2" />
-    <div class="bg-agora-pink-bg w-1/2" />
+    <div class="bg-agora-pink-dark w-1/2" />
   </div>
 
   <div
-    class="relative lg:container mx-auto flex flex-col lg:grid lg:grid-cols-6 xl:grid-cols-5 h-full overflow-hidden"
+    class="relative lg:container flex flex-col lg:grid lg:grid-cols-6 xl:grid-cols-5 h-full overflow-hidden"
   >
     <!-- Left side -->
     <div
@@ -27,25 +27,25 @@
 
     <!-- Right Side -->
     <div
-      class="flex flex-col items-start justify-center space-y-4 lg:col-span-3 xl:col-span-2 relative px-8 lg:px-20 pt-10 lg:pt-40 pb-10 lg:pb-20 bg-agora-pink-bg text-agora-white text-center md:text-left"
+      class="flex flex-col items-start justify-center space-y-4 lg:col-span-3 xl:col-span-2 relative px-8 lg:px-20 pt-10 lg:pt-40 pb-10 lg:pb-20 bg-agora-pink-dark text-agora-white text-center md:text-left"
     >
       <h2 class="mb-8 w-full text-4xl 2xl:text-6xl font-bold tracking-tight font-display uppercase">
         How does it work?
       </h2>
 
-      <p class="text-lg 2xl:text-xl">
+      <p class="2xl:text-xl">
         Agora Space creates a bridge between social media and the blockchain with the help of the
         Agora Social Oracle layer while utilizing existing solutions.
       </p>
 
-      <p class="text-lg 2xl:text-xl">
+      <p class="2xl:text-xl">
         We collect and utilize the best blockchain projects in our tools to make your DeFi
         experience smoother and more efficient. Browse our explorer for all social tokens existing
         on the blockchain or use our comprehensive toolkit. Integrate your social token on our admin
         page and let the role management bots handle your token gated communities.
       </p>
 
-      <Button href="https://medium.com/@AgoraSpace" class="lg:-ml-6 px-0 w-max text-agora-white">
+      <Button href="https://medium.com/@AgoraSpace" class="px-0 w-max text-agora-white">
         <span>Read more on Medium</span>
         <ArrowRight slot="icon" weight="bold" size="1.2em" />
       </Button>

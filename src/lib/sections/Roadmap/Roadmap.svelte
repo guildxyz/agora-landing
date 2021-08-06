@@ -2,7 +2,7 @@
   import Step from './components/Step.svelte';
 </script>
 
-<section id="roadmap" class="relative bg-agora-blue-bg">
+<section id="roadmap" class="relative bg-agora-blue-medium">
   <!-- Background circles -->
   <div
     class="absolute bottom-0 left-0 w-[50vw] h-[50vw] md:w-[25vw] md:h-[25vw] transform -translate-x-3/4 translate-y-1/2 bg-circle-pattern bg-no-repeat bg-cover"
@@ -12,9 +12,9 @@
     class="absolute top-0 right-0 w-[50vw] h-[50vw] md:w-[25vw] md:h-[25vw] transform translate-x-1/2 -translate-y-3/4 bg-circle-pattern bg-no-repeat bg-cover"
   />
 
-  <div class="container mx-auto px-8 py-20 space-y-16 text-center">
+  <div class="container px-8 pt-16 xl:pt-24 pb-20 xl:pb-28 space-y-16 text-center">
     <h2
-      class="col-span-3 text-agora-pink-text text-4xl lg:text-6xl font-bold tracking-tight font-display uppercase"
+      class="col-span-3 text-agora-pink-light text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold tracking-tight font-display uppercase"
     >
       Roadmap <span class="text-lg tracking-normal">2021</span>
     </h2>
