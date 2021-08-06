@@ -1,6 +1,4 @@
 <script>
-  import { onMount } from 'svelte';
-
   let showStartVideo = true;
   let windowHeight;
   let scrollY;
@@ -12,14 +10,12 @@
     loopingVideo.play();
   };
 
-  const scrollHandler = (e) => {
-    if (scrollY >= windowHeight / 2) {
-      firstVideo.play();
-    }
-  };
+  $: if (scrollY >= windowHeight / 2 && firstVideo && loopingVideo) {
+    firstVideo.play();
+  }
 </script>
 
-<svelte:window bind:innerHeight={windowHeight} bind:scrollY on:scroll={scrollHandler} />
+<svelte:window bind:innerHeight={windowHeight} bind:scrollY />
 
 <section id="what-is-agora-space" class="relative bg-agora-purple">
   <div class="relative w-full max-fullhd-container mx-auto flex flex-col">
