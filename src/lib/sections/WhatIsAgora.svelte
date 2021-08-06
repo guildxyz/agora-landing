@@ -1,10 +1,56 @@
+<script>
+  import { onMount } from 'svelte';
+
+  let showStartVideo = true;
+  let windowHeight;
+  let scrollY;
+  let firstVideo;
+  let loopingVideo;
+
+  const handleStartEnd = () => {
+    showStartVideo = false;
+    loopingVideo.play();
+  };
+
+  const scrollHandler = (e) => {
+    if (scrollY >= windowHeight / 2) {
+      firstVideo.play();
+    }
+  };
+</script>
+
+<svelte:window bind:innerHeight={windowHeight} bind:scrollY on:scroll={scrollHandler} />
+
 <section id="what-is-agora-space" class="relative bg-agora-purple">
   <div class="relative w-full max-fullhd-container mx-auto flex flex-col">
     <div class="flex flex-col lg:flex-row text-agora-white">
       <div
         class="order-2 lg:order-1 flex lg:self-end flex-col justify-end h-full w-full max-w-3xl pt-16"
       >
-        <img src="/images/what-is-agora-space-bg.png" alt="What is Agora Space?" class="w-full" />
+        <!-- svelte-ignore a11y-media-has-caption -->
+        <video
+          src="/animations/what-is-agora-space-start.webm"
+          muted
+          width="100%"
+          height="auto"
+          on:ended={handleStartEnd}
+          bind:this={firstVideo}
+          style={`display: ${showStartVideo ? 'block' : 'none'};`}
+        >
+          <img src="/images/what-is-agora-space-bg.png" alt="What is Agora Space?" class="w-full" />
+        </video>
+        <!-- svelte-ignore a11y-media-has-caption -->
+        <video
+          src="/animations/what-is-agora-space.webm"
+          muted
+          width="100%"
+          height="auto"
+          loop
+          bind:this={loopingVideo}
+          style={`display: ${showStartVideo ? 'none' : 'block'};`}
+        >
+          <img src="/images/what-is-agora-space-bg.png" alt="What is Agora Space?" class="w-full" />
+        </video>
       </div>
 
       <div
