@@ -28,7 +28,7 @@
       <svelte:component
         this={sectionWrapper}
         modules={[Pagination]}
-        class="relative flex flex-col space-y-8 lg:space-y-16 pb-12 lg:pb-0"
+        class="relative flex flex-col pb-12 lg:pb-0"
         pagination={{ clickable: true }}
       >
         <!-- Block 1 -->
