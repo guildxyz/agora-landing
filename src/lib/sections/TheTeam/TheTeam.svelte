@@ -16,53 +16,86 @@
 <svelte:window bind:innerWidth={windowWidth} />
 
 <section id="the-team" class="relative bg-agora-blue-medium">
-  <div class="container px-8 py-10 lg:py-20 space-y-10 text-center">
-    <h2
-      class="text-agora-pink-light text-3xl lg:text-4xl font-bold tracking-tight font-display uppercase"
-    >
-      The team
-    </h2>
+  <div class="flex flex-col px-8 py-10 lg:py-20">
+    <div class="container space-y-16 text-center">
+      <h2
+        class="text-agora-pink-light text-3xl lg:text-4xl 2xl:text-6xl font-bold tracking-tight font-display uppercase"
+      >
+        The team
+      </h2>
 
-    <!-- Team members -->
-    <svelte:component
-      this={sectionWrapper}
-      modules={[Pagination]}
-      class="relative pb-12 lg:pb-0 lg:grid lg:grid-cols-3 gap-8 lg:gap-16"
-      pagination={{ clickable: true }}
-    >
-      <!-- Block 1 -->
-      <svelte:component this={membersWrapper} class="flex justify-center">
-        <div class="grid grid-cols-2 gap-8 lg:gap-16 max-w-xs lg:max-w-none">
-          <TeamMember photo="/images/team/brunya.png" name="Brunya" label="Operation" />
-          <TeamMember photo="/images/team/dovalid.png" name="Dovalid" label="Fullstack Dev" />
-          <TeamMember photo="/images/team/shronk.png" name="Shronk" label="Backend Dev" />
-          <TeamMember photo="/images/team/devid.png" name="Devid" label="Backend Dev" />
-        </div>
-      </svelte:component>
+      <!-- Team members -->
+      <svelte:component
+        this={sectionWrapper}
+        modules={[Pagination]}
+        class="relative flex flex-col space-y-8 lg:space-y-16 pb-12 lg:pb-0"
+        pagination={{ clickable: true }}
+      >
+        <!-- Block 1 -->
+        <svelte:component this={membersWrapper} class="flex justify-center">
+          <div
+            class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-16 xl:gap-32 max-w-xs lg:max-w-none"
+          >
+            <TeamMember photo="/images/team/brunya.png" name="Brunya" label="Operation" />
+            <TeamMember photo="/images/team/dovalid.png" name="Dovalid" label="Fullstack Dev" />
+            <TeamMember photo="/images/team/shronk.png" name="Shronk" label="Backend Dev" />
+            <TeamMember photo="/images/team/devid.png" name="Devid" label="Backend Dev" />
+          </div>
+        </svelte:component>
 
-      <!-- Block 2 -->
-      <svelte:component this={membersWrapper} class="flex justify-center">
-        <div class="grid grid-cols-2 gap-8 lg:gap-16 max-w-xs lg:max-w-none">
-          <TeamMember photo="/images/team/ejay.png" name="Ejay" label="Fullstack Dev" />
-          <TeamMember
-            photo="/images/team/tomi_ohl.png"
-            name="Tomi_Ohl"
-            label="Smart contract Dev"
-          />
-          <TeamMember photo="/images/team/d3v.png" name="D3v" label="Security advisor" />
-          <TeamMember photo="/images/team/macy.png" name="Macy" label="Communication" />
-        </div>
-      </svelte:component>
+        <!-- Block 2 -->
+        <svelte:component this={membersWrapper} class="flex justify-center">
+          <div
+            class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-16 xl:gap-32 max-w-xs lg:max-w-none"
+          >
+            <TeamMember photo="/images/team/ejay.png" name="Ejay" label="Fullstack Dev" />
+            <TeamMember
+              photo="/images/team/tomi_ohl.png"
+              name="Tomi_Ohl"
+              label="Smart contract Dev"
+            />
+            <TeamMember photo="/images/team/d3v.png" name="D3v" label="Security advisor" />
+            <TeamMember photo="/images/team/macy.png" name="Macy" label="Communication" />
+          </div>
+        </svelte:component>
 
-      <!-- Block 3 -->
-      <svelte:component this={membersWrapper} class="flex justify-center">
-        <div class="grid grid-cols-2 gap-8 lg:gap-16 max-w-xs lg:max-w-none">
-          <TeamMember photo="/images/team/kovjonas.png" name="KovJonas" label="Frontend Dev" />
-          <TeamMember photo="/images/team/balazs.png" name="Balazs" label="Frontend Dev" />
-          <TeamMember photo="/images/team/sito.png" name="Sito" label="Designer" />
-          <TeamMember photo="/images/team/raz.png" name="R A Z" label="Strategic advisor" />
-        </div>
+        <!-- Block 3 -->
+        <svelte:component this={membersWrapper} class="flex justify-center">
+          <div
+            class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-16 xl:gap-32 max-w-xs lg:max-w-none"
+          >
+            <TeamMember photo="/images/team/kovjonas.png" name="KovJonas" label="Frontend Dev" />
+            <TeamMember photo="/images/team/balazs.png" name="Balazs" label="Frontend Dev" />
+            <TeamMember photo="/images/team/sito.png" name="Sito" label="Designer" />
+          </div>
+        </svelte:component>
       </svelte:component>
-    </svelte:component>
+    </div>
+
+    <div class="container space-y-16 text-center">
+      <h2
+        class="mt-32 text-agora-pink-light text-3xl lg:text-4xl 2xl:text-6xl font-bold tracking-tight font-display uppercase"
+      >
+        Advisors
+      </h2>
+      <!-- Advisors -->
+      <svelte:component
+        this={sectionWrapper}
+        modules={[Pagination]}
+        class="relative pb-12 lg:pb-0"
+        pagination={{ clickable: true }}
+      >
+        <!-- Block 1 -->
+        <svelte:component this={membersWrapper} class="flex justify-center">
+          <div
+            class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-16 xl:gap-32 max-w-xs lg:max-w-none"
+          >
+            <TeamMember photo="/images/team/raz.png" name="R A Z" label="Strategic advisor" />
+            <TeamMember photo="/images/team/petermm.png" name="Peter MM" label="Advisor" />
+            <TeamMember photo="/images/team/nima.png" name="NiMA" label="Advisor" />
+          </div>
+        </svelte:component>
+      </svelte:component>
+    </div>
   </div>
 </section>
