@@ -41,13 +41,13 @@
           <a
             href="https://tryroll.com/"
             target="_blank"
-            class="transition hover:text-agora-pink-text-darker">TryRoll</a
+            class="transition hover:text-agora-pink-medium">TryRoll</a
           >
           and
           <a
             href="https://stakes.social/"
             target="_blank"
-            class="transition hover:text-agora-pink-text-darker">Stakes.social</a
+            class="transition hover:text-agora-pink-medium">Stakes.social</a
           >
           for easy social token creation.
         </p>
@@ -56,18 +56,18 @@
           <a
             href="https://colony.io/"
             target="_blank"
-            class="transition hover:text-agora-pink-text-darker">Colony.io</a
+            class="transition hover:text-agora-pink-medium">Colony.io</a
           >,
           <a
             href="https://aragon.org/"
             target="_blank"
-            class="transition hover:text-agora-pink-text-darker">Aragon</a
+            class="transition hover:text-agora-pink-medium">Aragon</a
           >
           and
           <a
             href="https://daohaus.club/"
             target="_blank"
-            class="transition hover:text-agora-pink-text-darker">Daohaus</a
+            class="transition hover:text-agora-pink-medium">Daohaus</a
           >
           summoners will be able to integrate their tokens.
         </p>
