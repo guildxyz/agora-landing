@@ -37,7 +37,7 @@
             class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-16 xl:gap-32 max-w-xs lg:max-w-none"
           >
             <TeamMember photo="/images/team/brunya.png" name="Brunya" label="Operation" />
-            <TeamMember photo="/images/team/dovalid.png" name="Dovalid" label="Fullstack Dev" />
+            <TeamMember photo="/images/team/dovalid.png" name="Dovalid" label="Frontend Dev" />
             <TeamMember photo="/images/team/shronk.png" name="Shronk" label="Backend Dev" />
             <TeamMember photo="/images/team/devid.png" name="Devid" label="Backend Dev" />
           </div>
@@ -48,14 +48,14 @@
           <div
             class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-16 xl:gap-32 max-w-xs lg:max-w-none"
           >
-            <TeamMember photo="/images/team/ejay.png" name="Ejay" label="Fullstack Dev" />
+            <TeamMember photo="/images/team/ejay.png" name="Ejay" label="Backend Dev" />
             <TeamMember
               photo="/images/team/tomi_ohl.png"
               name="Tomi_Ohl"
               label="Smart contract Dev"
             />
-            <TeamMember photo="/images/team/d3v.png" name="D3v" label="Security advisor" />
             <TeamMember photo="/images/team/macy.png" name="Macy" label="Communication" />
+            <TeamMember photo="/images/team/balazs.png" name="Balazs" label="Frontend Dev" />
           </div>
         </svelte:component>
 
@@ -64,8 +64,8 @@
           <div
             class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-16 xl:gap-32 max-w-xs lg:max-w-none"
           >
+            <div class="hidden lg:block" />
             <TeamMember photo="/images/team/kovjonas.png" name="KovJonas" label="Frontend Dev" />
-            <TeamMember photo="/images/team/balazs.png" name="Balazs" label="Frontend Dev" />
             <TeamMember photo="/images/team/sito.png" name="Sito" label="Designer" />
           </div>
         </svelte:component>
@@ -92,6 +92,7 @@
           >
             <TeamMember photo="/images/team/raz.png" name="R A Z" label="Strategic advisor" />
             <TeamMember photo="/images/team/petermm.png" name="Peter MM" label="Advisor" />
+            <TeamMember photo="/images/team/d3v.png" name="D3v" label="Security advisor" />
             <TeamMember photo="/images/team/nima.png" name="NiMA" label="Advisor" />
           </div>
         </svelte:component>
