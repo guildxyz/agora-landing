@@ -7,6 +7,7 @@
 
   import Div from '$lib/Div.svelte';
   import TeamMember from './components/TeamMembers.svelte';
+  import NewTeamMember from './components/NewTeamMember.svelte';
 
   let windowWidth;
   $: sectionWrapper = windowWidth >= 1024 ? Div : Swiper;
@@ -17,9 +18,9 @@
 
 <section id="the-team" class="relative bg-agora-blue-medium">
   <div class="flex flex-col px-8 py-10 lg:py-20">
-    <div class="container space-y-16 text-center">
+    <div class="container space-y-16">
       <h2
-        class="text-agora-pink-light text-3xl lg:text-4xl 2xl:text-6xl font-bold tracking-tight font-display uppercase"
+        class="text-agora-pink-light text-3xl lg:text-4xl 2xl:text-6xl font-bold tracking-tight font-display uppercase text-center"
       >
         The team
       </h2>
@@ -36,7 +37,13 @@
           <div
             class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-16 xl:gap-32 max-w-xs lg:max-w-none"
           >
-            <TeamMember photo="/images/team/brunya.png" name="Brunya" label="Operation" />
+            <NewTeamMember
+              photo="/images/team/brunya.svg"
+              name="Brunya"
+              label="Operation"
+              twitter="https://twitter.com/BrunoZawiasa"
+              github="https://github.com/Brunya"
+            />
             <TeamMember photo="/images/team/dovalid.png" name="Dovalid" label="Fullstack Dev" />
             <TeamMember photo="/images/team/shronk.png" name="Shronk" label="Backend Dev" />
             <TeamMember photo="/images/team/devid.png" name="Devid" label="Backend Dev" />
@@ -72,9 +79,9 @@
       </svelte:component>
     </div>
 
-    <div class="container space-y-16 text-center">
+    <div class="container space-y-16">
       <h2
-        class="mt-32 text-agora-pink-light text-3xl lg:text-4xl 2xl:text-6xl font-bold tracking-tight font-display uppercase"
+        class="mt-32 text-agora-pink-light text-3xl lg:text-4xl 2xl:text-6xl font-bold tracking-tight font-display uppercase text-center"
       >
         Advisors
       </h2>
