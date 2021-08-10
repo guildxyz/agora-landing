@@ -90,10 +90,20 @@
           <div
             class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-16 xl:gap-32 max-w-xs lg:max-w-none"
           >
-            <TeamMember photo="/images/team/raz.png" name="R A Z" label="Strategic advisor" />
+            <TeamMember
+              photo="/images/team/raz.png"
+              name="R A Z"
+              label="Strategic advisor"
+              twitter="https://twitter.com/L1sp3r"
+            />
             <TeamMember photo="/images/team/petermm.png" name="Peter MM" label="Advisor" />
             <TeamMember photo="/images/team/d3v.png" name="D3v" label="Security advisor" />
-            <TeamMember photo="/images/team/nima.png" name="NiMA" label="Advisor" />
+            <TeamMember
+              photo="/images/team/nima.png"
+              name="NiMA"
+              label="Advisor"
+              twitter="https://twitter.com/insidenima"
+            />
           </div>
         </svelte:component>
       </svelte:component>
