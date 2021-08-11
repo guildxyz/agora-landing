@@ -6,6 +6,8 @@
   export let title;
   export let image;
   export let url;
+  export let openNewPage = false;
+  export let comingSoon = false;
 
   let windowWidth;
   let parent;
@@ -32,16 +34,23 @@
 
 <svelte:window bind:innerWidth={windowWidth} />
 
-<div class="space-y-8 lg:space-y-16">
+<div class="space-y-12 lg:space-y-16">
   <h2
-    class="text-agora-white text-2xl md:text-3xl xl:text-4xl font-bold tracking-tight font-display uppercase text-center"
+    class="relative text-agora-white text-2xl md:text-3xl xl:text-4xl font-bold tracking-tight font-display uppercase text-center"
   >
     {title}
+    {#if comingSoon}
+      <span
+        class="absolute -bottom-4 lg:-bottom-6 left-0 w-full h-4 text-base lg:text-lg text-agora-pink-medium text-center"
+        >Coming soon</span
+      >
+    {/if}
   </h2>
 
   <div class="group relative md:mx-8 lg:mx-16" bind:this={parent}>
     <a
       href={url}
+      target={openNewPage ? '_blank' : '_self'}
       on:mousemove={(e) => {
         mousePosition.set({ x: e.clientX, y: e.clientY });
       }}
@@ -52,6 +61,7 @@
 
     <a
       href={url}
+      target={openNewPage ? '_blank' : '_self'}
       class="absolute lg:fixed left-[90%] top-full"
       style={windowWidth > 1024 && `left: ${$mousePosition.x}px; top: ${$mousePosition.y}px`}
     >

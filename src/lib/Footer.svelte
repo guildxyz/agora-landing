@@ -41,6 +41,7 @@
               <li>
                 <a
                   href="https://twitter.com/AgoraSpaceDAO"
+                  target="_blank"
                   class={`flex items-center justify-center w-8 h-8 rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-300 ${
                     purple
                       ? 'bg-agora-white text-agora-blue-medium focus-visible:ring-opacity-50 '
@@ -54,6 +55,7 @@
               <li>
                 <a
                   href="https://github.com/AgoraSpaceDAO"
+                  target="_blank"
                   class={`flex items-center justify-center w-8 h-8 rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-300 ${
                     purple
                       ? 'bg-agora-white text-agora-blue-medium focus-visible:ring-opacity-50'
@@ -67,6 +69,7 @@
               <li>
                 <a
                   href="https://medium.com/@AgoraSpace"
+                  target="_blank"
                   class={`flex items-center justify-center w-8 h-8 rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-300 ${
                     purple
                       ? 'bg-agora-white text-agora-blue-medium focus-visible:ring-opacity-50'
@@ -80,6 +83,7 @@
               <li>
                 <a
                   href="https://discord.gg/KvXtEpDX8B"
+                  target="_blank"
                   class={`flex items-center justify-center w-8 h-8 rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-300 ${
                     purple
                       ? 'bg-agora-white text-agora-blue-medium focus-visible:ring-opacity-50'
@@ -93,6 +97,7 @@
               <li>
                 <a
                   href="https://t.me/joinchat/xUE3YWMZ2WAxMmNk"
+                  target="_blank"
                   class={`flex items-center justify-center w-8 h-8 rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-300 ${
                     purple
                       ? 'bg-agora-white text-agora-blue-medium focus-visible:ring-opacity-50'
