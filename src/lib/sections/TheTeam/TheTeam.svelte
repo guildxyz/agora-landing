@@ -6,8 +6,7 @@
   import '../../../css/swiper-custom.css';
 
   import Div from '$lib/Div.svelte';
-  import TeamMember from './components/TeamMembers.svelte';
-  import NewTeamMember from './components/NewTeamMember.svelte';
+  import TeamMember from './components/TeamMember.svelte';
 
   let windowWidth;
   $: sectionWrapper = windowWidth >= 1024 ? Div : Swiper;
@@ -37,16 +36,32 @@
           <div
             class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-16 xl:gap-32 max-w-xs lg:max-w-none"
           >
-            <NewTeamMember
-              photo="/images/team/brunya.svg"
+            <TeamMember
+              photo="/images/team/brunya.png"
               name="Brunya"
               label="Operation"
               twitter="https://twitter.com/BrunoZawiasa"
               github="https://github.com/Brunya"
             />
-            <TeamMember photo="/images/team/dovalid.png" name="Dovalid" label="Frontend Dev" />
-            <TeamMember photo="/images/team/shronk.png" name="Shronk" label="Backend Dev" />
-            <TeamMember photo="/images/team/devid.png" name="Devid" label="Backend Dev" />
+            <TeamMember
+              photo="/images/team/dovalid.png"
+              name="Dovalid"
+              label="Frontend Dev"
+              github="https://github.com/dovalid"
+              twitter="https://twitter.com/dovalid"
+            />
+            <TeamMember
+              photo="/images/team/shronk.png"
+              name="Shronk"
+              label="Backend Dev"
+              github="https://github.com/schronck"
+            />
+            <TeamMember
+              photo="/images/team/devid.png"
+              name="Devid"
+              label="Backend Dev"
+              github="https://github.com/DevidAbt"
+            />
           </div>
         </svelte:component>
 
@@ -55,14 +70,25 @@
           <div
             class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-16 xl:gap-32 max-w-xs lg:max-w-none"
           >
-            <TeamMember photo="/images/team/ejay.png" name="Ejay" label="Backend Dev" />
+            <TeamMember
+              photo="/images/team/ejay.png"
+              name="Ejay"
+              label="Backend Dev"
+              github="https://github.com/dezsim"
+            />
             <TeamMember
               photo="/images/team/tomi_ohl.png"
               name="Tomi_Ohl"
               label="Smart contract Dev"
+              github="https://github.com/TomiOhl"
             />
             <TeamMember photo="/images/team/macy.png" name="Macy" label="Communication" />
-            <TeamMember photo="/images/team/balazs.png" name="Balazs" label="Frontend Dev" />
+            <TeamMember
+              photo="/images/team/balazs.png"
+              name="Balazs"
+              label="Frontend Dev"
+              github="https://github.com/cs-balazs"
+            />
           </div>
         </svelte:component>
 
@@ -72,7 +98,12 @@
             class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-16 xl:gap-32 max-w-xs lg:max-w-none"
           >
             <div class="hidden lg:block" />
-            <TeamMember photo="/images/team/kovjonas.png" name="KovJonas" label="Frontend Dev" />
+            <TeamMember
+              photo="/images/team/kovjonas.png"
+              name="KovJonas"
+              label="Frontend Dev"
+              github="https://github.com/KovJonas"
+            />
             <TeamMember photo="/images/team/sito.png" name="Sito" label="Designer" />
           </div>
         </svelte:component>
@@ -104,7 +135,13 @@
               twitter="https://twitter.com/L1sp3r"
             />
             <TeamMember photo="/images/team/petermm.png" name="Peter MM" label="Advisor" />
-            <TeamMember photo="/images/team/d3v.png" name="D3v" label="Security advisor" />
+            <TeamMember
+              photo="/images/team/d3v.png"
+              name="D3v"
+              label="Security advisor"
+              github="https://github.com/D3vl0per"
+              twitter="https://twitter.com/D3v___"
+            />
             <TeamMember
               photo="/images/team/nima.png"
               name="NiMA"
