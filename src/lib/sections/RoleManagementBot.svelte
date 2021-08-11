@@ -33,7 +33,11 @@
         how much they hold or stake of your token.
       </p>
 
-      <Button href="https://medium.com/@AgoraSpace" class="px-0 w-max text-agora-white">
+      <Button
+        href="https://medium.com/@AgoraSpace"
+        rel="noopener"
+        class="px-0 w-max text-agora-white"
+      >
         <span>Read more on Medium</span>
         <ArrowRight slot="icon" weight="bold" size="1.2em" />
       </Button>

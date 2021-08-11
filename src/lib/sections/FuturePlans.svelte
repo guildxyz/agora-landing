@@ -27,6 +27,7 @@
           <a
             href="https://www.superfluid.finance/home"
             target="_blank"
+            rel="noopener"
             class="transition hover:text-agora-pink-medium">Superfluid</a
           > to Agora Social Oracle layer for performance-based fluid payments.
         </p>
@@ -35,18 +36,21 @@
           <a
             href="https://eas.eth.link/"
             target="_blank"
+            rel="noopener"
             class="transition hover:text-agora-pink-medium">EAS</a
           >
           to Agora Space for gamification, reputation and KYC.
           <a
             href="https://tryroll.com/"
             target="_blank"
+            rel="noopener"
             class="transition hover:text-agora-pink-medium">TryRoll</a
           >
           and
           <a
             href="https://stakes.social/"
             target="_blank"
+            rel="noopener"
             class="transition hover:text-agora-pink-medium">Stakes.social</a
           >
           for easy social token creation.
@@ -56,17 +60,20 @@
           <a
             href="https://colony.io/"
             target="_blank"
+            rel="noopener"
             class="transition hover:text-agora-pink-medium">Colony.io</a
           >,
           <a
             href="https://aragon.org/"
             target="_blank"
+            rel="noopener"
             class="transition hover:text-agora-pink-medium">Aragon</a
           >
           and
           <a
             href="https://daohaus.club/"
             target="_blank"
+            rel="noopener"
             class="transition hover:text-agora-pink-medium">Daohaus</a
           >
           summoners will be able to integrate their tokens.
@@ -104,48 +111,4 @@
       <img src="/images/future-plans.png" alt="Future plans" class="object-contain" />
     </div>
   </div>
-
-  <!-- We'll need to generate resizible image map -->
-  <!-- <map name="image-map">
-    <area
-      target="_blank"
-      alt="Colony.io"
-      title="Colony.io"
-      href="https://colony.io/"
-      coords="81,267,62"
-      shape="circle"
-    />
-    <area
-      target="_blank"
-      alt="Superfluid"
-      title="Superfluid"
-      href="https://www.superfluid.finance/home"
-      coords="157,128,56"
-      shape="circle"
-    />
-    <area
-      target="_blank"
-      alt="Roll"
-      title="Roll"
-      href="https://tryroll.com/"
-      coords="307,73,63"
-      shape="circle"
-    />
-    <area
-      target="_blank"
-      alt="EAS"
-      title="EAS"
-      href="https://eas.eth.link/"
-      coords="462,136,59"
-      shape="circle"
-    />
-    <area
-      target=""
-      alt="DoinGud"
-      title="DoinGud"
-      href="https://doingud.com/"
-      coords="532,272,59"
-      shape="circle"
-    />
-  </map> -->
 </section>

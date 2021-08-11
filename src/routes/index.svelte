@@ -9,6 +9,20 @@
   import Footer from '$lib/Footer.svelte';
 </script>
 
+<svelte:head>
+  <title>Agora Space</title>
+  <meta property="og:title" content="Agora Space" />
+  <meta
+    name="description"
+    content="Agora Space is an aggregator and builder of token utility tools with a social oracle twist."
+  />
+  <meta
+    property="og:description"
+    content="Agora Space is an aggregator and builder of token utility tools with a social oracle twist."
+  />
+</svelte:head>
+
+<h1 class="sr-only">Agora Space</h1>
 <Hero />
 <WhatIsAgora />
 <GreatThinkers />
