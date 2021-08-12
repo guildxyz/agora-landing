@@ -56,7 +56,7 @@
     </span>
   </span>
 
-  <div class="absolute bottom-0 right-1 flex flex-col space-y-1 text-agora-blue-medium">
+  <div class="absolute bottom-0 lg:bottom-1 right-1 flex flex-col space-y-1 text-agora-blue-medium">
     {#if twitter}
       <a
         href={twitter}
