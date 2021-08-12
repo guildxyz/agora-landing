@@ -61,6 +61,7 @@
               name="Devid"
               label="Backend Dev"
               github="https://github.com/DevidAbt"
+              twitter="https://twitter.com/DevidAbt"
             />
           </div>
         </svelte:component>
@@ -75,6 +76,7 @@
               name="Ejay"
               label="Backend Dev"
               github="https://github.com/dezsim"
+              twitter="https://twitter.com/dezsim_"
             />
             <TeamMember
               photo="/images/team/tomi_ohl.png"
@@ -104,7 +106,12 @@
               label="Frontend Dev"
               github="https://github.com/KovJonas"
             />
-            <TeamMember photo="/images/team/sito.png" name="Sito" label="Designer" />
+            <TeamMember
+              photo="/images/team/sito.png"
+              name="Sito"
+              label="Designer"
+              twitter="https://twitter.com/hajduboti"
+            />
           </div>
         </svelte:component>
       </svelte:component>

@@ -45,18 +45,18 @@
   </div>
   <span class="flex flex-col">
     <span
-      class="relative left-1/2 group-hover:left-0 group-focus-within:left-0 inline-block max-w-max text-agora-pink-light text-xl font-bold tracking-tight font-display transition-all duration-500 -translate-x-1/2 group-hover:-translate-x-0 group-focus-within:-translate-x-0"
+      class="relative left-1/2 group-hover:left-0 group-focus-within:left-0 inline-block max-w-max text-agora-pink-light text-lg lg:text-xl font-bold tracking-tight font-display transition-all duration-500 -translate-x-1/2 group-hover:-translate-x-0 group-focus-within:-translate-x-0"
     >
       {name}
     </span>
     <span
-      class="relative left-1/2 group-hover:left-0 group-focus-within:left-0 inline-block max-w-max text-agora-white font-display font-light transition-all duration-500 -translate-x-1/2 group-hover:-translate-x-0 group-focus-within:-translate-x-0 delay-100"
+      class="relative left-1/2 group-hover:left-0 group-focus-within:left-0 inline-block max-w-max text-agora-white font-display text-sm lg:text-base font-light transition-all duration-500 -translate-x-1/2 group-hover:-translate-x-0 group-focus-within:-translate-x-0 delay-100"
     >
       {label}
     </span>
   </span>
 
-  <div class="absolute bottom-1 right-1 flex flex-col space-y-1 text-agora-blue-medium">
+  <div class="absolute bottom-0 right-1 flex flex-col space-y-1 text-agora-blue-medium">
     {#if twitter}
       <a
         href={twitter}
@@ -77,6 +77,10 @@
       >
         <GithubLogo />
       </a>
+      {#if !twitter}
+        <!-- Placeholder div... -->
+        <div class="w-5 h-5" />
+      {/if}
     {:else}
       <!-- Placeholder div... -->
       <div class="w-5 h-5" />
