@@ -45,7 +45,7 @@
         page and let the role management bots handle your token gated communities.
       </p>
 
-      <Button href="https://medium.com/@AgoraSpace" class="px-0 w-max text-agora-white">
+      <Button href="https://medium.com/@AgoraSpaceDAO" class="px-0 w-max text-agora-white">
         <span>Read more on Medium</span>
         <ArrowRight slot="icon" weight="bold" size="1.2em" />
       </Button>
