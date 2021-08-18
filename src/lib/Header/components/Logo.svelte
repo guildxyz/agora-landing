@@ -7,7 +7,7 @@
   class="flex space-x-4 focus:outline-none focus-visible:border-b-2 focus-visible:border-gray-200"
 >
   <svg
-    aria-label="Agora Space"
+    aria-label="Agora Space logo"
     height="25"
     viewBox="0 0 250 35"
     fill="none"
