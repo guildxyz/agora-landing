@@ -28,7 +28,7 @@
             href="https://www.superfluid.finance/home"
             target="_blank"
             rel="noopener"
-            class="transition hover:text-agora-pink-medium">Superfluid</a
+            class="transition underline hover:text-agora-pink-medium">Superfluid</a
           > to Agora Social Oracle layer for performance-based fluid payments.
         </p>
 
@@ -37,21 +37,21 @@
             href="https://eas.eth.link/"
             target="_blank"
             rel="noopener"
-            class="transition hover:text-agora-pink-medium">EAS</a
+            class="transition underline hover:text-agora-pink-medium">EAS</a
           >
           to Agora Space for gamification, reputation and KYC.
           <a
             href="https://tryroll.com/"
             target="_blank"
             rel="noopener"
-            class="transition hover:text-agora-pink-medium">TryRoll</a
+            class="transition underline hover:text-agora-pink-medium">TryRoll</a
           >
           and
           <a
             href="https://stakes.social/"
             target="_blank"
             rel="noopener"
-            class="transition hover:text-agora-pink-medium">Stakes.social</a
+            class="transition underline hover:text-agora-pink-medium">Stakes.social</a
           >
           for easy social token creation.
         </p>
@@ -61,20 +61,20 @@
             href="https://colony.io/"
             target="_blank"
             rel="noopener"
-            class="transition hover:text-agora-pink-medium">Colony.io</a
+            class="transition underline hover:text-agora-pink-medium">Colony.io</a
           >,
           <a
             href="https://aragon.org/"
             target="_blank"
             rel="noopener"
-            class="transition hover:text-agora-pink-medium">Aragon</a
+            class="transition underline hover:text-agora-pink-medium">Aragon</a
           >
           and
           <a
             href="https://daohaus.club/"
             target="_blank"
             rel="noopener"
-            class="transition hover:text-agora-pink-medium">Daohaus</a
+            class="transition underline hover:text-agora-pink-medium">Daohaus</a
           >
           summoners will be able to integrate their tokens.
         </p>
