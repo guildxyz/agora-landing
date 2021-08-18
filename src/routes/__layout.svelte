@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head>
-  <meta property="og:image" content={linkPreviewImage} />
+  <meta property="og:image" content={`https://agora.space${linkPreviewImage}`} />
 </svelte:head>
 
 <slot />
