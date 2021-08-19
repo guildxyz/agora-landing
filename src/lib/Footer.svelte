@@ -70,7 +70,7 @@
               </li>
               <li>
                 <a
-                  href="https://medium.com/@AgoraSpace"
+                  href="https://medium.com/@AgoraSpaceDAO"
                   target="_blank"
                   rel="noopener"
                   class={`flex items-center justify-center w-8 h-8 rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-300 ${

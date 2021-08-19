@@ -46,7 +46,7 @@
       </p>
 
       <Button
-        href="https://medium.com/@AgoraSpace"
+        href="https://medium.com/@AgoraSpaceDAO"
         rel="noopener"
         class="px-0 w-max text-agora-white"
       >
