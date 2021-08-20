@@ -24,17 +24,29 @@
         <Step
           title="Testing"
           q="Q2"
-          content="Telegram & Discord management bot. Bridging chats between social platforms. Audited smart contracts."
+          content={[
+            'Telegram & Discord management bot',
+            'Bridging chats between social platforms',
+            'Audited smart contracts'
+          ]}
         />
         <Step
           title="Releasing"
           q="Q3"
-          content="Aragon and Gnosis integration Agora Social Oracle layer Agora Space, the “App Store” of social tokens."
+          content={[
+            'Aragon and Gnosis integration',
+            'Agora Social Oracle layer',
+            'Agora Space, the “App Store” of social tokens'
+          ]}
         />
         <Step
           title="More tools"
           q="Q4"
-          content="Integrating other token issuers Token admin dashboard Bridge a token between blockchains with full utility."
+          content={[
+            'Integrating other token issuers',
+            'Token admin dashboard',
+            'Bridge a token between blockchains with full utility'
+          ]}
         />
       </div>
     </div>

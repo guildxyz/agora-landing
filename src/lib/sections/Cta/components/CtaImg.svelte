@@ -51,6 +51,7 @@
     <a
       href={url}
       target={openNewPage ? '_blank' : '_self'}
+      rel={openNewPage && 'noopener'}
       on:mousemove={(e) => {
         mousePosition.set({ x: e.clientX, y: e.clientY });
       }}
@@ -62,6 +63,7 @@
     <a
       href={url}
       target={openNewPage ? '_blank' : '_self'}
+      rel={openNewPage && 'noopener'}
       class="absolute lg:fixed left-[90%] top-full"
       style={windowWidth > 1024 && `left: ${$mousePosition.x}px; top: ${$mousePosition.y}px`}
     >

@@ -33,7 +33,12 @@
         how much they hold or stake of your token.
       </p>
 
-      <Button href="https://app.agora.space/" target="_blank" class="px-0 w-max text-agora-white">
+      <Button
+        href="https://app.agora.space/"
+        rel="noopener"
+        target="_blank"
+        class="px-0 w-max text-agora-white"
+      >
         <span>Try out our bot</span>
         <ArrowRight slot="icon" weight="bold" size="1.2em" />
       </Button>

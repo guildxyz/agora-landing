@@ -11,7 +11,9 @@
   </div>
   <span class="text-agora-pink-light text-xl font-bold tracking-tight font-display">
     {#if twitter}
-      <a href={twitter} target="_blank" class="transition hover:text-agora-white">{name}</a>
+      <a href={twitter} target="_blank" rel="noopener" class="transition hover:text-agora-white"
+        >{name}</a
+      >
     {:else}
       {name}
     {/if}

@@ -13,7 +13,11 @@
     >
   </h3>
 
-  <p class="text-agora-white font-semibold text-md 2xl:text-lg">{content}</p>
+  <ul class="space-y-3">
+    {#each content as text}
+      <li class="text-agora-white font-semibold text-md 2xl:text-lg">{text}</li>
+    {/each}
+  </ul>
 
   <div class="group-last:hidden absolute top-3/5 -right-20 w-20 h-0.5 bg-agora-white" />
 </div>

@@ -93,6 +93,7 @@
           <Button
             href="https://app.agora.space"
             target="_blank"
+            rel="noopener"
             class="w-max bg-agora-blue-medium text-agora-white"
           >
             <span>Join a community</span>
@@ -127,6 +128,7 @@
           <Button
             href="https://app.agora.space"
             target="_blank"
+            rel="noopener"
             class="w-max bg-agora-blue-light text-agora-white shadow-md"
           >
             <span>Join a community</span>
