@@ -137,7 +137,7 @@
               </li>
               <li>
                 <a
-                  href="https://agoraspace.gitbook.io/agoraspace/"
+                  href="https://app.gitbook.com/@agora-space/s/agoraspace/"
                   target="_blank"
                   class="focus:outline-none focus-visible:border-b-2 focus-visible:border-gray-300"
                   >Gitbook</a
