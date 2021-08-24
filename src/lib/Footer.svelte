@@ -100,7 +100,7 @@
               </li>
               <li>
                 <a
-                  href="https://t.me/joinchat/xUE3YWMZ2WAxMmNk"
+                  href="https://t.me/joinchat/UxeaoiNXDH5lN2Rk"
                   target="_blank"
                   rel="noopener"
                   class={`flex items-center justify-center w-8 h-8 rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-300 ${
