@@ -33,12 +33,20 @@
     }
   );
 
-  const scrollHandler = () => {
-    shouldShowOnHover = windowWidth < 1024 || parent.getBoundingClientRect().y < $mousePosition.y;
+  const mouseStateHandler = () => {
+    shouldShowOnHover =
+      windowWidth < 1024 ||
+      (parent.getBoundingClientRect().y < $mousePosition.y &&
+        parent.getBoundingClientRect().y + parent.getBoundingClientRect().height >
+          $mousePosition.y);
   };
 </script>
 
-<svelte:window bind:innerWidth={windowWidth} on:scroll={scrollHandler} />
+<svelte:window
+  bind:innerWidth={windowWidth}
+  on:scroll={mouseStateHandler}
+  on:mousemove={mouseStateHandler}
+/>
 
 <div class="space-y-12 lg:space-y-16">
   <h2
@@ -78,7 +86,7 @@
       <span class="sr-only">{title}</span>
       <Button
         aria-label={title}
-        class="flex items-center justify-center px-0 w-12 lg:w-14 h-12 lg:h-14 bg-agora-pink-medium text-agora-white rounded-full transform -translate-x-1/2 -translate-y-1/2 opacity-100 lg:opacity-0 group-hover:opacity-100 transition-opacity"
+        class="flex items-center justify-center px-0 w-12 lg:w-14 h-12 lg:h-14 bg-agora-pink-medium text-agora-white rounded-full transform -translate-x-1/2 -translate-y-1/2 opacity-100 lg:opacity-0 group-hover:opacity-100 transition-all"
       >
         <ArrowRight size="1.5em" weight="bold" />
       </Button>
