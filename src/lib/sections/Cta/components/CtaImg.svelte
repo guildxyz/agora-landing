@@ -11,6 +11,7 @@
 
   let windowWidth;
   let parent;
+
   $: parentX =
     (parent &&
       (windowWidth > 1024
@@ -30,9 +31,18 @@
       damping: 0.8
     }
   );
+
+  const windowScrollHandler = (e) => {
+    if (parent.getBoundingClientRect().y > $mousePosition.y) {
+      mousePosition.set({
+        x: $mousePosition.x,
+        y: parent.getBoundingClientRect().y + parent.getBoundingClientRect().height
+      });
+    }
+  };
 </script>
 
-<svelte:window bind:innerWidth={windowWidth} />
+<svelte:window bind:innerWidth={windowWidth} on:scroll={windowScrollHandler} />
 
 <div class="space-y-12 lg:space-y-16">
   <h2
@@ -70,7 +80,7 @@
       <span class="sr-only">{title}</span>
       <Button
         aria-label={title}
-        class="flex items-center justify-center px-0 w-12 lg:w-14 h-12 lg:h-14 bg-agora-pink-medium text-agora-white rounded-full transform -translate-x-1/2 -translate-y-1/2 opacity-100 lg:opacity-0 group-hover:opacity-100 transition-opacity"
+        class="flex items-center justify-center px-0 w-12 lg:w-14 h-12 lg:h-14 bg-agora-pink-medium text-agora-white rounded-full transform -translate-x-1/2 -translate-y-1/2 opacity-100 lg:opacity-0 group-hover:opacity-100 transition-opacity delay-75"
       >
         <ArrowRight size="1.5em" weight="bold" />
       </Button>
