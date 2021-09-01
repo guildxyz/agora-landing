@@ -11,6 +11,7 @@
 
   let windowWidth;
   let parent;
+  let shouldShowOnHover = true;
 
   $: parentX =
     (parent &&
@@ -32,17 +33,12 @@
     }
   );
 
-  const windowScrollHandler = (e) => {
-    if (parent.getBoundingClientRect().y > $mousePosition.y) {
-      mousePosition.set({
-        x: $mousePosition.x,
-        y: parent.getBoundingClientRect().y + parent.getBoundingClientRect().height
-      });
-    }
+  const scrollHandler = () => {
+    shouldShowOnHover = windowWidth < 1024 || parent.getBoundingClientRect().y < $mousePosition.y;
   };
 </script>
 
-<svelte:window bind:innerWidth={windowWidth} on:scroll={windowScrollHandler} />
+<svelte:window bind:innerWidth={windowWidth} on:scroll={scrollHandler} />
 
 <div class="space-y-12 lg:space-y-16">
   <h2
@@ -74,13 +70,15 @@
       href={url}
       target={openNewPage ? '_blank' : '_self'}
       rel={openNewPage && 'noopener'}
-      class="absolute lg:fixed left-[90%] top-full"
-      style={windowWidth > 1024 && `left: ${$mousePosition.x}px; top: ${$mousePosition.y}px`}
+      class="absolute lg:fixed"
+      style={`visibility: ${shouldShowOnHover ? 'visible' : 'hidden'}; left: ${
+        windowWidth > 1024 ? $mousePosition.x : parentX
+      }px; top: ${windowWidth > 1024 ? $mousePosition.y : parentY}px;`}
     >
       <span class="sr-only">{title}</span>
       <Button
         aria-label={title}
-        class="flex items-center justify-center px-0 w-12 lg:w-14 h-12 lg:h-14 bg-agora-pink-medium text-agora-white rounded-full transform -translate-x-1/2 -translate-y-1/2 opacity-100 lg:opacity-0 group-hover:opacity-100 transition-opacity delay-75"
+        class="flex items-center justify-center px-0 w-12 lg:w-14 h-12 lg:h-14 bg-agora-pink-medium text-agora-white rounded-full transform -translate-x-1/2 -translate-y-1/2 opacity-100 lg:opacity-0 group-hover:opacity-100 transition-opacity"
       >
         <ArrowRight size="1.5em" weight="bold" />
       </Button>
