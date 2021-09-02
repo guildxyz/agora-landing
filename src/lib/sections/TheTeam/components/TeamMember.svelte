@@ -8,11 +8,11 @@
   export let github = null;
 </script>
 
-<div class="relative group flex flex-col">
+<div class="group flex flex-col">
   <div class="flex flex-col items-end mb-2 h-50 lg:h-64">
     <img src={photo} alt={name} class="w-full h-full object-contain" />
   </div>
-  <span class="flex flex-col">
+  <div class="relative flex flex-col">
     <span
       class={`relative left-1/2 inline-block max-w-max text-agora-pink-light text-lg lg:text-xl font-bold tracking-tight font-display transition-all duration-500 -translate-x-1/2 ${
         (twitter || github) &&
@@ -29,36 +29,29 @@
     >
       {label}
     </span>
-  </span>
-
-  <div class="absolute bottom-0 lg:bottom-1 right-1 flex flex-col space-y-1 text-agora-blue-medium">
-    {#if twitter}
-      <a
-        href={twitter}
-        target="_blank"
-        alt={`${name} - Twitter`}
-        class="relative -right-4 group-hover:right-0 group-focus-within:right-0 flex items-center justify-center w-5 h-5 bg-white rounded-sm opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-all duration-500 delay-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-300"
-      >
-        <TwitterLogo />
-      </a>
-    {/if}
-
-    {#if github}
-      <a
-        href={github}
-        target="_blank"
-        alt={`${name} - Github`}
-        class="relative -right-4 group-hover:right-0 group-focus-within:right-0 flex items-center justify-center w-5 h-5 bg-white rounded-sm opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-all duration-500 delay-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-300"
-      >
-        <GithubLogo />
-      </a>
-      {#if !twitter}
-        <!-- Placeholder -->
-        <div class="w-5 h-5" />
+    <div
+      class="absolute top-0 bottom-0 right-1 flex flex-col space-y-1 justify-center text-agora-blue-medium"
+    >
+      {#if twitter}
+        <a
+          href={twitter}
+          target="_blank"
+          alt={`${name} - Twitter`}
+          class="relative -right-4 group-hover:right-0 group-focus-within:right-0 flex items-center justify-center w-5 h-5 bg-white rounded-sm opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-all duration-500 delay-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-300"
+        >
+          <TwitterLogo />
+        </a>
       {/if}
-    {:else}
-      <!-- Placeholder -->
-      <div class="w-5 h-5" />
-    {/if}
+      {#if github}
+        <a
+          href={github}
+          target="_blank"
+          alt={`${name} - Github`}
+          class="relative -right-4 group-hover:right-0 group-focus-within:right-0 flex items-center justify-center w-5 h-5 bg-white rounded-sm opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-all duration-500 delay-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-300"
+        >
+          <GithubLogo />
+        </a>
+      {/if}
+    </div>
   </div>
 </div>

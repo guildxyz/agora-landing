@@ -135,12 +135,7 @@
               twitter="https://twitter.com/L1sp3r"
             />
             <TeamMember photo="/images/team/petermm.png" name="Peter MM" label="Advisor" />
-            <TeamMember
-              photo="/images/team/d3v.png"
-              name="D3v"
-              label="Security advisor"
-              github="https://github.com/D3vl0per"
-            />
+            <TeamMember photo="/images/team/d3v.png" name="D3v" label="Security advisor" />
             <TeamMember
               photo="/images/team/nima.png"
               name="NiMA"
