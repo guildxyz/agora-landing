@@ -7,7 +7,7 @@
     </h2>
 
     <div
-      class="xl:col-span-3 relative flex flex-col justify-center pt-12 md:py-12 2xl:py-14 text-center xl:text-right text-agora-white"
+      class="xl:col-span-3 mb-8 md:mb-0 mx-auto relative flex flex-col justify-center pt-12 md:py-12 2xl:py-14 max-w-sm text-center xl:text-right text-agora-white"
     >
       <img
         class="hidden xl:block absolute top-0 -right-32 max-h-full"
@@ -47,7 +47,7 @@
     </div>
 
     <div
-      class="xl:col-span-3 relative flex flex-col justify-center pb-12 md:py-12 2xl:py-14 text-center xl:text-left text-agora-white"
+      class="xl:col-span-3 mx-auto relative flex flex-col justify-center pb-12 md:py-12 2xl:py-14 max-w-sm text-center xl:text-left text-agora-white"
     >
       <img
         class="hidden xl:block absolute top-0 -left-32 max-h-full"
