@@ -101,11 +101,12 @@
           </Button>
 
           <Button
-            disabled
-            disabledMessage="Coming soon"
+            href="https://app.agora.space/register"
+            target="_blank"
+            rel="noopener"
             class="w-max bg-agora-purple text-agora-white"
           >
-            <span>Integrate your token</span>
+            <span>Create your Agora</span>
             <Users slot="icon" weight="bold" size="1.2em" />
           </Button>
         </div>
@@ -135,10 +136,15 @@
             <SignIn slot="icon" weight="bold" size="1.2em" />
           </Button>
 
-          <!-- <Button disabled class="w-max bg-agora-purple text-agora-white shadow-md">
-            <span>Integrate your token</span>
+          <Button
+            href="https://app.agora.space/register"
+            target="_blank"
+            rel="noopener"
+            class="w-max bg-agora-purple text-agora-white shadow-md"
+          >
+            <span>Create your Agora</span>
             <Users slot="icon" weight="bold" size="1.2em" />
-          </Button> -->
+          </Button>
         </div>
       </div>
     </section>

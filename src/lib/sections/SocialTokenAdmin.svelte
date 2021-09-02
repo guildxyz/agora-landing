@@ -19,7 +19,9 @@
 
     <!-- Image -->
     <div class="lg:col-span-8 flex items-center justify-center lg:pl-20">
-      <img src="/images/social-token-admin.png" alt="Social token admin" class="max-w-full" />
+      <a href="https://app.agora.space/register" target="_blank" rel="noopener">
+        <img src="/images/social-token-admin.png" alt="Social token admin" class="max-w-full" />
+      </a>
     </div>
   </div>
 </section>

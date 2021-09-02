@@ -22,6 +22,11 @@
       openNewPage
     />
 
-    <CtaImg title="Create a community" image="/images/social-token-admin.png" url="#" comingSoon />
+    <CtaImg
+      title="Create a community"
+      image="/images/social-token-admin.png"
+      url="https://app.agora.space/register"
+      openNewPage
+    />
   </div>
 </section>
