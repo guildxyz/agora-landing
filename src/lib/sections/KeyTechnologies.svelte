@@ -42,13 +42,13 @@
       </p>
     </div>
 
-    <div class="hidden xl:block col-span-5 py-12 2xl:py-14 text-center">
+    <div class="col-span-5 hidden xl:flex flex-col pt-12 2xl:pt-14 text-center">
       <h2
-        class="text-agora-gray text-3xl lg:text-4xl xl:text-5xl font-bold tracking-tight font-display uppercase"
+        class="mb-8 text-agora-gray text-3xl lg:text-4xl xl:text-5xl font-bold tracking-tight font-display uppercase"
       >
         Key <br class="2xl:hidden" />technologies
       </h2>
-      <img class="mx-auto max-h-[44vh]" src="/images/medousa.png" alt="Medousa" />
+      <img class="mt-auto mx-auto px-8 max-h-[44vh]" src="/images/medousa.png" alt="Medousa" />
     </div>
 
     <div
