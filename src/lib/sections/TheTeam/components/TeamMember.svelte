@@ -9,7 +9,7 @@
 </script>
 
 <div class="relative group flex flex-col">
-  <div class="flex flex-col items-end mb-2 h-52 lg:h-64">
+  <div class="flex flex-col items-end mb-2 h-50 lg:h-64">
     <img src={photo} alt={name} class="w-full h-full object-contain" />
   </div>
   <span class="flex flex-col">

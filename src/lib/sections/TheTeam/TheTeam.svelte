@@ -32,7 +32,7 @@
         pagination={{ clickable: true }}
       >
         <!-- Block 1 -->
-        <svelte:component this={membersWrapper} class="flex justify-center">
+        <svelte:component this={membersWrapper} class="flex justify-center px-1 md:px-0">
           <div
             class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-16 xl:gap-32 max-w-xs lg:max-w-none"
           >
@@ -65,7 +65,7 @@
         </svelte:component>
 
         <!-- Block 2 -->
-        <svelte:component this={membersWrapper} class="flex justify-center">
+        <svelte:component this={membersWrapper} class="flex justify-center  px-1 md:px-0">
           <div
             class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-16 xl:gap-32 max-w-xs lg:max-w-none"
           >
@@ -93,7 +93,7 @@
         </svelte:component>
 
         <!-- Block 3 -->
-        <svelte:component this={membersWrapper} class="flex justify-center">
+        <svelte:component this={membersWrapper} class="flex justify-center  px-1 md:px-0">
           <div
             class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-16 xl:gap-32 max-w-xs lg:max-w-none"
           >
