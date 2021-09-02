@@ -210,15 +210,15 @@
                   >Role management bot</a
                 >
               </li>
-              <!--
               <li>
                 <a
-                  href="/"
+                  href="https://app.agora.space/register"
+                  target="_blank"
+                  rel="noopener"
                   class="block py-2 lg:py-0 max-w-max focus:outline-none focus-visible:border-b-2 focus-visible:border-gray-300"
                   >Social Token Admin</a
                 >
               </li>
-              -->
             </ul>
           </div>
         </div>
