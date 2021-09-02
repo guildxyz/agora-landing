@@ -26,8 +26,7 @@
     <div
       class="flex flex-col items-start justify-center space-y-4 lg:col-span-3 relative px-20 lg:pt-40 pb-10 lg:pb-20 pr-8 pl-10 lg:pl-20 xl:pl-40 text-agora-white"
     >
-      <!-- TODO: Update the image -->
-      <!-- <img src="/images/role-management-bot.png" alt="Role management bot" class="max-w-full" /> -->
+      <img src="/images/gamification.png" alt="Role management bot" class="max-w-full" />
     </div>
   </div>
 </section>
