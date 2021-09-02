@@ -40,7 +40,6 @@
               photo="/images/team/brunya.png"
               name="Brunya"
               label="Operation"
-              twitter="https://twitter.com/BrunoZawiasa"
               github="https://github.com/Brunya"
             />
             <TeamMember
@@ -61,7 +60,6 @@
               name="Devid"
               label="Backend Dev"
               github="https://github.com/DevidAbt"
-              twitter="https://twitter.com/DevidAbt"
             />
           </div>
         </svelte:component>
@@ -106,12 +104,7 @@
               label="Frontend Dev"
               github="https://github.com/KovJonas"
             />
-            <TeamMember
-              photo="/images/team/sito.png"
-              name="Sito"
-              label="Designer"
-              twitter="https://twitter.com/hajduboti"
-            />
+            <TeamMember photo="/images/team/sito.png" name="Sito" label="Designer" />
           </div>
         </svelte:component>
       </svelte:component>
@@ -147,7 +140,6 @@
               name="D3v"
               label="Security advisor"
               github="https://github.com/D3vl0per"
-              twitter="https://twitter.com/D3v___"
             />
             <TeamMember
               photo="/images/team/nima.png"
