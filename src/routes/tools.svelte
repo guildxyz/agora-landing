@@ -1,10 +1,7 @@
 <script>
-  import RoleManagementBot from '$lib/sections/RoleManagementBot.svelte';
   import TokenGatedAccess from '$lib/sections/TokenGatedAccess.svelte';
   import TrustlessFinancialContract from '$lib/sections/TrustlessFinancialContract.svelte';
   import Gamification from '$lib/sections/Gamification.svelte';
-  import TwitterActivity from '$lib/sections/TwitterActivity.svelte';
-  import CreatorContracts from '$lib/sections/CreatorContracts.svelte';
   import Footer from '$lib/Footer.svelte';
 </script>
 
@@ -22,10 +19,7 @@
 </svelte:head>
 
 <h1 class="sr-only">Tools - Agora Space</h1>
-<!-- <RoleManagementBot /> -->
 <TokenGatedAccess />
 <TrustlessFinancialContract />
 <Gamification />
-<!-- <TwitterActivity /> -->
-<!-- <CreatorContracts /> -->
 <Footer purple />

@@ -1,3 +1,4 @@
+<!-- We don't use this component currently, but I left it here just in case we need it again, or if we'll need to make a similar section in the future -->
 <script>
   import Header from '$lib/Header';
   import Button from '$lib/Button';
