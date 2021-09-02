@@ -11,8 +11,13 @@
 
     <!-- Text -->
     <div
-      class="order-1 lg:order-2 group lg:-top-8 flex flex-col items-start justify-center text-center lg:text-left"
+      class="order-1 lg:order-2 group relative lg:-top-8 flex flex-col items-start justify-center text-center lg:text-left"
     >
+      <span
+        class="mb-2 w-full text-lg 2xl:text-2xl font-bold tracking-tight font-display uppercase opacity-100 lg:opacity-0 group-hover:opacity-100 transition-all duration-300 transform lg:translate-y-8 group-hover:translate-y-0"
+        >Demo is ready</span
+      >
+
       <h2 class="mb-8 w-full text-4xl 2xl:text-6xl font-bold tracking-tight font-display uppercase">
         Trustless financial contracts
       </h2>
