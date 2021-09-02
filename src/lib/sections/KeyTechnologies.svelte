@@ -1,24 +1,11 @@
-<section id="key-technologies" class="relative bg-agora-pink-light">
-  <!-- Background circle -->
-  <div
-    class="absolute top-0 right-0 w-[50vw] h-[50vw] md:w-[25vw] md:h-[25vw] transform translate-x-1/2 -translate-y-1/2 bg-circle-pattern bg-no-repeat bg-cover"
-  />
-
-  <div class="container px-8 grid md:grid-cols-2 xl:grid-cols-11 gap-x-16 xl:gap-0">
-    <h2
-      class="xl:hidden md:col-span-2 pt-12 text-agora-gray text-3xl lg:text-4xl xl:text-5xl font-bold tracking-tight font-display uppercase text-center"
-    >
-      Key technologies
-    </h2>
-
-    <div
-      class="xl:col-span-3 mb-8 md:mb-0 mx-auto relative flex flex-col justify-center pt-12 md:py-12 2xl:py-14 max-w-sm text-center xl:text-right text-agora-white"
-    >
-      <img
-        class="hidden xl:block absolute top-0 -right-32 max-h-full"
-        src="/images/pillar-left.png"
-        alt="Left pillar"
-      />
+<section id="key-technologies" class="relative bg-agora-pink-dark text-agora-white">
+  <div class="container relative px-8 py-24 text-center lg:text-left">
+    <div class="mx-auto lg:mx-0 max-w-lg xl:max-w-screen-sm">
+      <h2
+        class="mb-16 text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold tracking-tight font-display uppercase"
+      >
+        Key technologies
+      </h2>
 
       <h3
         class="mb-2 lg:mb-4 text-xl lg:text-2xl xl:text-3xl font-bold tracking-tight font-display uppercase"
@@ -35,30 +22,11 @@
       >
         On-chain Privacy
       </h3>
-      <p class="lg:font-semibold 2xl:text-lg">
+      <p class="mb-8 lg:font-semibold 2xl:text-lg">
         Zero knowledge based self-sovereign identity management system for keeping the link between
         your social media accounts and wallets private. This allows a private decision making and
         sybil attack resistency for many cases.
       </p>
-    </div>
-
-    <div class="col-span-5 hidden xl:flex flex-col pt-12 2xl:pt-14 text-center">
-      <h2
-        class="mb-8 text-agora-gray text-3xl lg:text-4xl xl:text-5xl font-bold tracking-tight font-display uppercase"
-      >
-        Key <br class="2xl:hidden" />technologies
-      </h2>
-      <img class="mt-auto mx-auto px-8 max-h-[44vh]" src="/images/medousa.png" alt="Medousa" />
-    </div>
-
-    <div
-      class="xl:col-span-3 mx-auto relative flex flex-col justify-center pb-12 md:py-12 2xl:py-14 max-w-sm text-center xl:text-left text-agora-white"
-    >
-      <img
-        class="hidden xl:block absolute top-0 -left-32 max-h-full"
-        src="/images/pillar-right.png"
-        alt="Right pillar"
-      />
 
       <h3
         class="mb-2 lg:mb-4 text-xl lg:text-2xl xl:text-3xl font-bold tracking-tight font-display uppercase"
@@ -85,5 +53,11 @@
         We integrate every major EVM-compatible blockchains and L2s besides Solana and Near.
       </p>
     </div>
+
+    <img
+      class="hidden lg:block absolute bottom-0 right-0 w-3/5"
+      src="/images/pegasus.png"
+      alt="Pegasus"
+    />
   </div>
 </section>
