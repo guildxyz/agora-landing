@@ -27,7 +27,6 @@
 <WhatIsAgora />
 <GreatThinkers />
 <WhoIsAgoraFor />
-<Roadmap />
 <FuturePlans />
 <Cta />
 <Footer />
