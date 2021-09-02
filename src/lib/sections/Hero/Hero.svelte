@@ -3,7 +3,9 @@
   import { SignIn, Users } from 'phosphor-svelte';
   import Button from '$lib/Button';
   import { initThreeJS, resizeThreeJS } from './threejs/hero';
-  import { onMount } from 'svelte';
+  import { onMount, onDestroy } from 'svelte';
+  import { fade, fly } from 'svelte/transition';
+
   let hideHeroImg = false;
   let windowSize = 1920;
   let canvas;
@@ -11,7 +13,7 @@
   let canvasHeight;
   let opacity = 0;
 
-  $: offset = windowSize > 1280 ? '-70%' : windowSize > 1024 ? '-48%' : '-48%';
+  $: offset = windowSize > 1280 ? '-62%' : windowSize > 1024 ? '-48%' : '-48%';
   $: canvasWidth && canvasHeight && resizeThreeJS(canvasWidth, canvasHeight);
 
   onMount(() => {
@@ -19,6 +21,22 @@
       opacity = 100;
       hideHeroImg = true;
     });
+  });
+
+  // Heading animation
+  const headlines = ['Gamification', 'Trustless Financial Contracts', 'Decision-making tools'];
+  let currentHeadline = 0;
+  $: headline = headlines[currentHeadline % headlines.length];
+
+  const headlineTimeout = setInterval(() => {
+    currentHeadline++;
+    console.log(currentHeadline % headlines.length);
+  }, 4000);
+
+  onDestroy(() => {
+    if (headlineTimeout) {
+      clearInterval(headlineTimeout);
+    }
   });
 </script>
 
@@ -37,14 +55,16 @@
     <Header />
   </div>
 
-  <div class="relative md:container px-6 lg:px-8 grid md:grid-cols-5 md:h-1/2 lg:h-2/3 xl:h-full">
+  <div
+    class="relative md:container px-6 lg:px-8 grid md:grid-cols-9 lg:grid-cols-7 md:h-1/2 lg:h-2/3 xl:h-full"
+  >
     <!-- Hero - left side -->
     <section
-      class="flex flex-col relative md:col-span-4 lg:col-span-3 -mx-6 md:mx-0 pt-4 lg:pt-10 xl:pt-20 px-4 lg:px-0 bg-agora-white"
+      class="flex flex-col relative md:col-span-7 lg:col-span-5 -mx-6 md:mx-0 pt-4 lg:pt-10 xl:pt-20 px-4 lg:px-0 bg-agora-white"
     >
       <!-- Platon - large -->
       <div
-        class="hidden md:block w-full xl:w-[150%] h-auto max-h-[95%]"
+        class="hidden md:block w-full xl:w-[120%] 2xl:w-[130%] h-auto max-h-[95%]"
         style={`position: absolute; bottom:0; right: ${offset};`}
       >
         <div class="relative">
@@ -72,19 +92,27 @@
       </div>
 
       <!-- Title / text -->
-      <div class="h-full flex flex-col justify-center">
-        <div class="relative mt-20 xl:mt-0 pb-32 md:pb-0 text-center md:text-left">
+      <div class="w-full h-full flex flex-col justify-center">
+        <div class="relative mt-40 xl:mt-0 pb-32 md:pb-0 text-center md:text-left">
           <h2
-            class="mb-4 lg:mb-8 font-bold tracking-tight text-4xl sm:text-5xl xl:text-6xl 2xl:text-7xl font-display"
+            class="mb-4 lg:mb-8 font-bold tracking-tight text-4xl lg:text-5xl 2xl:text-6xl font-display"
           >
-            Social <span class="text-agora-blue-medium">oracle</span> <br />and token utility
-            <br />toolkit
+            <span class="relative pt-24">
+              {#key headline}
+                <span
+                  class="absolute left-0 top-0 flex flex-col justify-end h-24 text-agora-blue-medium"
+                  in:fly={{ y: -20, duration: 800 }}
+                  out:fade={{ duration: 200 }}>{headline}</span
+                >
+              {/key}
+              <span>for DAOs and Social Tokens</span>
+            </span>
           </h2>
 
           <p
             class="mb-8 lg:mb-10 font-semibold text-lg lg:text-xl leading-tight md:leading-normal text-gray-600"
           >
-            Two-way social media integration <br />to the blockchain
+            Building essentials for future internet<br /> communities.
           </p>
         </div>
 
