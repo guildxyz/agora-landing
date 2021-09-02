@@ -93,14 +93,14 @@
 
       <!-- Title / text -->
       <div class="w-full h-full flex flex-col justify-center">
-        <div class="relative mt-40 xl:mt-0 pb-32 md:pb-0 text-center md:text-left">
+        <div class="relative mt-24 xl:mt-0 pb-32 md:pb-0 text-center md:text-left">
           <h2
             class="mb-4 lg:mb-8 font-bold tracking-tight text-4xl lg:text-5xl 2xl:text-6xl font-display"
           >
-            <span class="relative pt-24">
+            <span class="block w-full relative pt-24">
               {#key headline}
                 <span
-                  class="absolute left-0 top-0 flex flex-col justify-end h-24 text-agora-blue-medium"
+                  class="absolute left-0 top-0 flex flex-col justify-end w-full md:max-w-md lg:max-w-full h-24 text-agora-blue-medium"
                   in:fly={{ y: -20, duration: 800 }}
                   out:fade={{ duration: 200 }}>{headline}</span
                 >
