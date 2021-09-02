@@ -1,5 +1,6 @@
 <script>
   import Header from '$lib/Header';
+  import { ArrowRight } from 'phosphor-svelte';
 </script>
 
 <section id="social-token-admin" class="relative pt-16 lg:pt-28 bg-agora-purple text-agora-white">
@@ -22,17 +23,46 @@
 
     <!-- Text -->
     <div
-      class="order-1 lg:order-2 lg:col-span-4 flex flex-col items-start justify-center space-y-8 text-center lg:text-left"
+      class="order-1 lg:order-2 lg:col-span-4 flex flex-col items-start justify-center text-center lg:text-left"
     >
-      <h2 class="w-full text-4xl 2xl:text-6xl font-bold tracking-tight font-display uppercase">
+      <h2 class="mb-8 w-full text-4xl 2xl:text-6xl font-bold tracking-tight font-display uppercase">
         Community explorer
       </h2>
 
-      <p class="2xl:text-xl">
-        Browse all existing social tokens in our explorer from Aragon, Rally, Stake Social,
-        Colony.io Issue your token on your favourite platforms and DAO frameworks then add utility
-        to them with Agora Space’s tools.
+      <p class="mb-4 2xl:text-xl">
+        Browse all existing social tokens in our explorer from Aragon, tryroll, Stakes Social,
+        Colony.io.
       </p>
+
+      <ol class="leading-loose text-left">
+        <li class="flex itmes-start space-x-2">
+          <span class="relative top-2">
+            <ArrowRight weight="bold" size={16} />
+          </span>
+          <span>Issue your token on your favourite platforms and DAO frameworks,</span>
+        </li>
+
+        <li class="flex itmes-start space-x-2">
+          <span class="relative top-2">
+            <ArrowRight weight="bold" size={16} />
+          </span>
+          <span>Find it in our explorer,</span>
+        </li>
+
+        <li class="flex itmes-start space-x-2">
+          <span class="relative top-2">
+            <ArrowRight weight="bold" size={16} />
+          </span>
+          <span>Verify that it is yours,</span>
+        </li>
+
+        <li class="flex itmes-start space-x-2">
+          <span class="relative top-2">
+            <ArrowRight weight="bold" size={16} />
+          </span>
+          <span>Add Agora Space’s tools to your community.</span>
+        </li>
+      </ol>
     </div>
   </div>
 </section>
