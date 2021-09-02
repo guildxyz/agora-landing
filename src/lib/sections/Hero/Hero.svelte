@@ -100,7 +100,7 @@
             <span class="block w-full relative pt-24">
               {#key headline}
                 <span
-                  class="absolute left-0 top-0 flex flex-col justify-end w-full md:max-w-md lg:max-w-full h-24 text-agora-blue-medium"
+                  class="absolute left-0 top-0 flex flex-col justify-end w-full md:max-w-md xl:max-w-full h-24 text-agora-blue-medium"
                   in:fly={{ y: -20, duration: 800 }}
                   out:fade={{ duration: 200 }}>{headline}</span
                 >
