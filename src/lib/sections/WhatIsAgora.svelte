@@ -15,10 +15,13 @@
         >
           What is <br class="md:hidden" />Agora Space?
         </h2>
+        <p class="mb-4 lg:font-semibold 2xl:text-xl">
+          Agora Space connects Discord, Twitter and other social media platforms with the blockchain
+          providing a range of tools to upgrade DAOs and Social Token communities.
+        </p>
         <p class="lg:font-semibold 2xl:text-xl">
-          A framework for all social token tools with an oracle twist. A broad service pack
-          elevating tokenized communities, helping their founders and members alike. It provides the
-          first use-case for social oracle networks.
+          Our vision is to supercharge Web3 adoption by creating gasless, multichain and
+          platform-agnostic solutions, without sacrificing decentralisation or privacy.
         </p>
       </div>
     </div>
