@@ -5,6 +5,7 @@
   import { initThreeJS, resizeThreeJS } from './threejs/hero';
   import { onMount, onDestroy } from 'svelte';
   import { fade, fly } from 'svelte/transition';
+  import { elasticOut } from 'svelte/easing';
 
   let hideHeroImg = false;
   let windowSize = 1920;
@@ -35,7 +36,22 @@
 
   const headlineTimeout = setInterval(() => {
     currentHeadline++;
-  }, 4000);
+  }, 3000);
+
+  // Custom 3D transition
+  /*
+  const cube = (node, { duration }) => ({
+    duration,
+    css: (t) => {
+      const o = +getComputedStyle(node).opacity;
+
+      return `
+        transform: translateZ(${t * 20}px) translateY(${t * 20}px) rotateX(${t * 90}deg);
+        opacity: ${t * o};
+      `;
+    }
+  });
+  */
 
   onDestroy(() => {
     if (headlineTimeout) {
@@ -105,7 +121,7 @@
               {#key headline}
                 <span
                   class="absolute left-0 top-0 flex flex-col justify-end w-full md:max-w-md xl:max-w-full h-24 text-agora-blue-medium"
-                  in:fly={{ y: -20, duration: 800 }}
+                  in:fly={{ y: -50, duration: 800 }}
                   out:fade={{ duration: 200 }}>{headline}</span
                 >
               {/key}
