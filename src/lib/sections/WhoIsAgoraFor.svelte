@@ -30,7 +30,7 @@
           Who is Agora Space for?
         </h2>
 
-        <p class="font-semibold 2xl:text-xl">
+        <p class="font-semibold 2xl:text-2xl">
           Those who want to make their community more efficient and rewarding
         </p>
       </div>

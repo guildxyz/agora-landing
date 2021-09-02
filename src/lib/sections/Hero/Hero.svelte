@@ -24,7 +24,12 @@
   });
 
   // Heading animation
-  const headlines = ['Gamification', 'Trustless Financial Contracts', 'Decision-making tools'];
+  const headlines = [
+    'Token-Gated Access',
+    'Gamification',
+    'Trustless Financial Contracts',
+    'Decision-making tools'
+  ];
   let currentHeadline = 0;
   $: headline = headlines[currentHeadline % headlines.length];
 
@@ -132,9 +137,9 @@
             href="https://app.agora.space/register"
             target="_blank"
             rel="noopener"
-            class="w-max bg-agora-purple text-agora-white"
+            class="w-max bg-agora-pink-medium text-agora-white"
           >
-            <span>Create your Agora</span>
+            <span>Create an Agora</span>
             <Users slot="icon" weight="bold" size="1.2em" />
           </Button>
         </div>
@@ -170,7 +175,7 @@
             rel="noopener"
             class="w-max bg-agora-purple text-agora-white shadow-md"
           >
-            <span>Create your Agora</span>
+            <span>Create an Agora</span>
             <Users slot="icon" weight="bold" size="1.2em" />
           </Button>
         </div>
