@@ -13,7 +13,9 @@
 
       <p class="2xl:text-xl">
         When you find your token in our explorer you can take control of it by verifying that it is
-        yours and implement the Agora Space features on our admin panel.
+        yours and implement the Agora Space features on our admin panel.<br />Here you can interact
+        with our tools, create any “levels” in your community, custimize your page’s appearence or
+        set bounties for your members.
       </p>
     </div>
 
