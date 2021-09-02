@@ -6,51 +6,26 @@
   export let label;
   export let twitter = null;
   export let github = null;
-
-  /*
-  // SVG animation - will need to uncomment it when we'll add the SVG photos!
-  let svgPhoto;
-
-  const hoverAnimation = () => {
-    const rectangle = svgPhoto.contentDocument.querySelector('.rectangle');
-    rectangle.style.transition = '0.5s ease';
-    rectangle.style.opacity = 0;
-  };
-
-  const hoverOutAnimation = () => {
-    const rectangle = svgPhoto.contentDocument.querySelector('.rectangle');
-    rectangle.style.opacity = 1;
-  };
-  */
 </script>
 
-<!-- <div
-  class="relative group flex flex-col"
-  on:mouseover={hoverAnimation}
-  on:focus={hoverAnimation}
-  on:mouseleave={hoverOutAnimation}
-  on:blur={hoverOutAnimation}
-> -->
 <div class="relative group flex flex-col">
   <div class="flex flex-col items-end mb-2 h-52 lg:h-64">
-    <!-- <object
-      class="w-full h-full"
-      type="image/svg+xml"
-      data={photo}
-      aria-label={name}
-    >
-      {name}
-    </object> -->
     <img src={photo} alt={name} class="w-full h-full object-contain" />
   </div>
   <span class="flex flex-col">
     <span
-      class="relative left-1/2 group-hover:left-0 group-focus-within:left-0 inline-block max-w-max text-agora-pink-light text-lg lg:text-xl font-bold tracking-tight font-display transition-all duration-500 -translate-x-1/2 group-hover:-translate-x-0 group-focus-within:-translate-x-0"
+      class={`relative left-1/2 inline-block max-w-max text-agora-pink-light text-lg lg:text-xl font-bold tracking-tight font-display transition-all duration-500 -translate-x-1/2 ${
+        (twitter || github) &&
+        'group-hover:left-0 group-focus-within:left-0 group-hover:-translate-x-0 group-focus-within:-translate-x-0'
+      }`}
     >
       {name}
     </span>
     <span
-      class="relative left-1/2 group-hover:left-0 group-focus-within:left-0 inline-block max-w-max text-agora-white font-display text-sm lg:text-base font-light transition-all duration-500 -translate-x-1/2 group-hover:-translate-x-0 group-focus-within:-translate-x-0 delay-100"
+      class={`relative left-1/2 inline-block max-w-max text-agora-white font-display text-sm lg:text-base font-light transition-all duration-500 -translate-x-1/2 ${
+        (twitter || github) &&
+        'group-hover:left-0 group-focus-within:left-0 group-hover:-translate-x-0 group-focus-within:-translate-x-0'
+      } delay-100`}
     >
       {label}
     </span>
@@ -78,11 +53,11 @@
         <GithubLogo />
       </a>
       {#if !twitter}
-        <!-- Placeholder div... -->
+        <!-- Placeholder -->
         <div class="w-5 h-5" />
       {/if}
     {:else}
-      <!-- Placeholder div... -->
+      <!-- Placeholder -->
       <div class="w-5 h-5" />
     {/if}
   </div>
