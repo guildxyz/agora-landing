@@ -34,15 +34,15 @@
       </h2>
 
       <p class="2xl:text-xl">
-        Agora Space creates a bridge between social media and the blockchain with the help of the
-        Agora Social Oracle layer while utilizing existing solutions.
+        On Agora.Space social media meets EVM-compatible blockchains in a two-way integration system
+        to disrupt existing applications. We aggregate and build tools to give your existing tokens
+        extra utility. These permissionless and independent tools are collectively governed by the
+        Agora Space DAO.
       </p>
 
       <p class="2xl:text-xl">
-        We collect and utilize the best blockchain projects in our tools to make your DeFi
-        experience smoother and more efficient. Browse our explorer for all social tokens existing
-        on the blockchain or use our comprehensive toolkit. Integrate your social token on our admin
-        page and let the role management bots handle your token gated communities.
+        The special juice in Agora.Space is a social layer on the Witnet decentralized oracle
+        network which we use in almost evers tool.
       </p>
 
       <Button
