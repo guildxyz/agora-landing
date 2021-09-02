@@ -4,7 +4,7 @@
   import { ArrowRight } from 'phosphor-svelte';
 </script>
 
-<section id="role-management-bot" class="relative">
+<section id="token-gated-access" class="relative">
   <div class="absolute left-0 right-0 top-0 z-50">
     <Header whiteLogo />
   </div>

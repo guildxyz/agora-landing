@@ -1,4 +1,4 @@
-<section id="role-management-bot" class="relative bg-agora-gray">
+<section id="gamification" class="relative bg-agora-gray">
   <div
     class="relative lg:container flex flex-col lg:grid lg:grid-cols-6 xl:grid-cols-5 h-full overflow-hidden"
   >

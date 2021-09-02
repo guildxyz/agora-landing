@@ -1,4 +1,4 @@
-<section id="great-thinkers-are-with-us" class="relative bg-agora-pink-light">
+<section id="key-technologies" class="relative bg-agora-pink-light">
   <div class="container px-8 grid md:grid-cols-2 xl:grid-cols-11 gap-x-16 xl:gap-0">
     <h2
       class="xl:hidden md:col-span-2 pt-12 text-agora-gray text-3xl lg:text-4xl xl:text-5xl font-bold tracking-tight font-display uppercase text-center"
