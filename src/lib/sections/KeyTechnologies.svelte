@@ -1,4 +1,9 @@
 <section id="key-technologies" class="relative bg-agora-pink-light">
+  <!-- Background circle -->
+  <div
+    class="absolute top-0 right-0 w-[50vw] h-[50vw] md:w-[25vw] md:h-[25vw] transform translate-x-1/2 -translate-y-1/2 bg-circle-pattern bg-no-repeat bg-cover"
+  />
+
   <div class="container px-8 grid md:grid-cols-2 xl:grid-cols-11 gap-x-16 xl:gap-0">
     <h2
       class="xl:hidden md:col-span-2 pt-12 text-agora-gray text-3xl lg:text-4xl xl:text-5xl font-bold tracking-tight font-display uppercase text-center"
