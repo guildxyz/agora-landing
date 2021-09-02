@@ -3,6 +3,7 @@
   import WhatIsAgora from '$lib/sections/WhatIsAgora.svelte';
   import GreatThinkers from '$lib/sections/GreatThinkers';
   import WhoIsAgoraFor from '$lib/sections/WhoIsAgoraFor.svelte';
+  import KeyTechnologies from '$lib/sections/KeyTechnologies.svelte';
   import Cta from '$lib/sections/Cta';
   import Footer from '$lib/Footer.svelte';
 </script>
@@ -25,5 +26,6 @@
 <WhatIsAgora />
 <GreatThinkers />
 <WhoIsAgoraFor />
+<KeyTechnologies />
 <Cta />
 <Footer />
