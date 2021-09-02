@@ -30,11 +30,11 @@
       {label}
     </span>
     <div
-      class="absolute top-0 bottom-0 right-1 flex flex-col space-y-1 justify-center text-agora-blue-medium"
+      class="absolute inset-y-0 right-1 flex flex-col space-y-1 justify-center text-agora-blue-medium"
     >
       {#if twitter || github}
         <div
-          class="absolute top-0 -right-4 group-hover:right-0 group-focus-within:right-0 w-10 h-12 bg-gradient-to-l from-agora-blue-medium  via-agora-blue-medium opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-all duration-500"
+          class="absolute inset-y-0 -right-4 group-hover:right-0 group-focus-within:right-0 w-10 bg-gradient-to-l from-agora-blue-medium  via-agora-blue-medium opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-all duration-500"
         />
       {/if}
       {#if twitter}
