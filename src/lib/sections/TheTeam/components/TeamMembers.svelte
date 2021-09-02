@@ -43,14 +43,11 @@
   {#if links.length > 0}
     <div class="mt-2 flex flex-col space-y-1 text-agora-pink-light font-semibold">
       {#each links as link}
-        <span class="flex items-center justify-start space-x-2 text-left">
+        <span class="flex items-center justify-center space-x-2 text-center">
           {#if link.url}
             <a href={link.url} target="_blank">
               {link.text}
             </a>
-            <span class="hidden lg:inline">
-              <Link />
-            </span>
           {:else}
             {link.text}
           {/if}
