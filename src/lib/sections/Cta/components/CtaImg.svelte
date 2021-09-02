@@ -11,6 +11,8 @@
 
   let windowWidth;
   let parent;
+  let shouldShowOnHover = true;
+
   $: parentX =
     (parent &&
       (windowWidth > 1024
@@ -30,9 +32,21 @@
       damping: 0.8
     }
   );
+
+  const mouseStateHandler = () => {
+    shouldShowOnHover =
+      windowWidth < 1024 ||
+      (parent.getBoundingClientRect().y < $mousePosition.y &&
+        parent.getBoundingClientRect().y + parent.getBoundingClientRect().height >
+          $mousePosition.y);
+  };
 </script>
 
-<svelte:window bind:innerWidth={windowWidth} />
+<svelte:window
+  bind:innerWidth={windowWidth}
+  on:scroll={mouseStateHandler}
+  on:mousemove={mouseStateHandler}
+/>
 
 <div class="space-y-12 lg:space-y-16">
   <h2
@@ -51,6 +65,7 @@
     <a
       href={url}
       target={openNewPage ? '_blank' : '_self'}
+      rel={openNewPage && 'noopener'}
       on:mousemove={(e) => {
         mousePosition.set({ x: e.clientX, y: e.clientY });
       }}
@@ -62,13 +77,16 @@
     <a
       href={url}
       target={openNewPage ? '_blank' : '_self'}
-      class="absolute lg:fixed left-[90%] top-full"
-      style={windowWidth > 1024 && `left: ${$mousePosition.x}px; top: ${$mousePosition.y}px`}
+      rel={openNewPage && 'noopener'}
+      class="absolute lg:fixed"
+      style={`visibility: ${shouldShowOnHover ? 'visible' : 'hidden'}; left: ${
+        windowWidth > 1024 ? $mousePosition.x : parentX
+      }px; top: ${windowWidth > 1024 ? $mousePosition.y : parentY}px;`}
     >
       <span class="sr-only">{title}</span>
       <Button
         aria-label={title}
-        class="flex items-center justify-center px-0 w-12 lg:w-14 h-12 lg:h-14 bg-agora-pink-medium text-agora-white rounded-full transform -translate-x-1/2 -translate-y-1/2 opacity-100 lg:opacity-0 group-hover:opacity-100 transition-opacity"
+        class="flex items-center justify-center px-0 w-12 lg:w-14 h-12 lg:h-14 bg-agora-pink-medium text-agora-white rounded-full transform -translate-x-1/2 -translate-y-1/2 opacity-100 lg:opacity-0 group-hover:opacity-100 transition-all"
       >
         <ArrowRight size="1.5em" weight="bold" />
       </Button>

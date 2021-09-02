@@ -1,5 +1,5 @@
 <script>
-  import linkPreviewImage from '$lib/assets/img/link-preview.png';
+  import linkPreviewImage from '$lib/assets/img/link-preview.jpg';
   import '../css/app.css';
 </script>
 

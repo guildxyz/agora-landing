@@ -41,6 +41,7 @@
         <a
           href={twitter}
           target="_blank"
+          rel="noopener"
           alt={`${name} - Twitter`}
           class="relative -right-4 group-hover:right-0 group-focus-within:right-0 flex items-center justify-center w-5 h-5 bg-white rounded-sm opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-all duration-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-300"
         >
@@ -51,6 +52,7 @@
         <a
           href={github}
           target="_blank"
+          rel="noopener"
           alt={`${name} - Github`}
           class="relative -right-4 group-hover:right-0 group-focus-within:right-0 flex items-center justify-center w-5 h-5 bg-white rounded-sm opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-all duration-500 delay-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-300"
         >
