@@ -35,7 +35,6 @@
 
   const headlineTimeout = setInterval(() => {
     currentHeadline++;
-    console.log(currentHeadline % headlines.length);
   }, 4000);
 
   onDestroy(() => {
