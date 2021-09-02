@@ -1,0 +1,32 @@
+<section
+  id="gamification-of-twitter-activity"
+  class="relative bg-agora-pink-light text-agora-white"
+>
+  <div class="container py-20 px-8 grid lg:grid-cols-2 gap-16 lg:gap-0">
+    <!-- Image -->
+    <div class="order-2 lg:order-1 flex items-center justify-center lg:pr-20">
+      <!-- TODO: Update the image -->
+      <!-- <img
+        src="/images/trustless-financial-contracts.png"
+        alt="Gamification Of Twitter Activity"
+        class="max-w-full"
+      /> -->
+    </div>
+
+    <!-- Text -->
+    <div
+      class="order-1 lg:order-2 group lg:-top-8 flex flex-col items-start justify-center text-center lg:text-left"
+    >
+      <h2 class="mb-8 w-full text-4xl 2xl:text-6xl font-bold tracking-tight font-display uppercase">
+        Trustless financial contracts
+      </h2>
+
+      <p class="2xl:text-xl">
+        A new way of making trustless financial contracts based on data from social media.
+        Participants decide on a performance indicator and a price for reaching that goal. Agora
+        Social Oracle provides a decentralized system to make sure both parties get what they agreed
+        to without involving legal entities.
+      </p>
+    </div>
+  </div>
+</section>

@@ -21,4 +21,5 @@
 <h1 class="sr-only">Tools - Agora Space</h1>
 <!-- <RoleManagementBot /> -->
 <TokenGatedAccess />
+<TrustlessFinancialContract />
 <Footer purple />
