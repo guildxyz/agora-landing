@@ -8,10 +8,10 @@
       </div>
 
       <div
-        class="order-1 lg:order-2 container self-center pt-16 px-8 xl:px-32 2xl:px-38 max-w-5xl md:pt-20 lg:py-28 2xl:py-38 lg:max-w-3/5 text-center"
+        class="order-1 lg:order-2 container self-center pt-16 px-8 xl:px-32 2xl:px-38 max-w-5xl md:pt-20 lg:py-28 2xl:py-32 lg:max-w-3/5 text-center"
       >
         <h2
-          class="mb-8 text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold tracking-tight font-display uppercase"
+          class="mb-8 text-3xl lg:text-4xl 2xl:text-5xl font-bold tracking-tight font-display uppercase"
         >
           What is <br class="md:hidden" />Agora Space?
         </h2>

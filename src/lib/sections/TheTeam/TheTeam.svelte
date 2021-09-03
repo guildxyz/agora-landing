@@ -19,7 +19,7 @@
   <div class="flex flex-col px-8 py-10 lg:py-20">
     <div class="container space-y-16">
       <h2
-        class="text-agora-pink-light text-3xl lg:text-4xl 2xl:text-6xl font-bold tracking-tight font-display uppercase text-center"
+        class="text-agora-pink-light text-3xl lg:text-4xl 2xl:text-5xl font-bold tracking-tight font-display uppercase text-center"
       >
         The team
       </h2>
@@ -112,7 +112,7 @@
 
     <div class="container space-y-16">
       <h2
-        class="mt-32 text-agora-pink-light text-3xl lg:text-4xl 2xl:text-6xl font-bold tracking-tight font-display uppercase text-center"
+        class="mt-32 text-agora-pink-light text-3xl lg:text-4xl 2xl:text-5xl font-bold tracking-tight font-display uppercase text-center"
       >
         Advisors
       </h2>

@@ -9,7 +9,7 @@
   <div
     class="relative w-full custom-container lg:grid lg:grid-cols-5 h-full overflow-hidden md:overflow-visible"
   >
-    <div class="relative lg:col-span-2 bg-agora-purple lg:bg-agora-gray">
+    <div class="relative lg:col-span-2 bg-agora-purple lg:bg-agora-purple">
       <!-- Background circle left -->
       <div
         class="absolute bottom-0 left-0 w-[50vw] h-[50vw] md:w-[25vw] md:h-[25vw] transform -translate-x-1/2 translate-y-1/2 bg-circle-pattern bg-no-repeat bg-cover"
@@ -25,7 +25,7 @@
         />
 
         <h2
-          class="mb-8 text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold tracking-tight font-display uppercase"
+          class="mb-8 text-3xl lg:text-4xl 2xl:text-5xl font-bold tracking-tight font-display uppercase"
         >
           Who is Agora Space for?
         </h2>

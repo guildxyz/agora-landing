@@ -29,7 +29,9 @@
     <div
       class="flex flex-col items-start justify-center space-y-4 lg:col-span-3 xl:col-span-2 relative px-8 lg:px-20 pt-10 lg:pt-40 pb-10 lg:pb-20 bg-agora-pink-dark text-agora-white text-center md:text-left"
     >
-      <h2 class="mb-8 w-full text-4xl 2xl:text-6xl font-bold tracking-tight font-display uppercase">
+      <h2
+        class="mb-8 w-full text-3xl lg:text-4xl 2xl:text-5xl font-bold tracking-tight font-display uppercase"
+      >
         How does it work?
       </h2>
 

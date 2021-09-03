@@ -11,7 +11,9 @@
         >Coming soon</span
       >
 
-      <h2 class="mb-8 text-4xl 2xl:text-6xl font-bold tracking-tight font-display uppercase">
+      <h2
+        class="mb-8 text-3xl lg:text-4xl 2xl:text-5xl font-bold tracking-tight font-display uppercase"
+      >
         Performance-based creator contracts
       </h2>
 
