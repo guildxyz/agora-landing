@@ -13,7 +13,13 @@ const config = {
     adapter: adapter(),
     target: '#svelte',
     /* hydrate: false, */
-    router: false
+    router: false,
+    vite: {
+      ssr: {
+        // https://github.com/vitejs/vite/issues/2393#issuecomment-901697217
+        noExternal: ['three']
+      }
+    }
   }
 };
 

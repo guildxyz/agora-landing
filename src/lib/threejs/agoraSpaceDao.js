@@ -1,7 +1,14 @@
 import * as THREE from 'three';
 import { createBubbleMaterial } from './customShader';
 
+// Post-processing
+import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer.js';
+import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass.js';
+import { BokehPass } from 'three/examples/jsm/postprocessing/BokehPass.js';
+import { SMAAPass } from 'three/examples/jsm/postprocessing/SMAAPass.js';
+
 let renderer,
+  composer,
   camera,
   scene,
   clock,
@@ -14,6 +21,11 @@ let renderer,
   smallBubble2Geometry,
   smallBubble2,
   smallBubble2Speed;
+
+const sizes = {
+  width: 0,
+  height: 0
+};
 
 const customUniforms = {
   uTime: { value: 0 },
@@ -32,7 +44,7 @@ const generateRandomXPosition = () => {
       (latestRandomPosition > 0 && randomPosition > 0) ||
       (latestRandomPosition < 0 && randomPosition < 0)
     ) {
-      randomPosition = Math.random() * 11 - 5;
+      randomPosition = Math.random() * 9 - 5;
     }
   }
 
@@ -43,9 +55,9 @@ const generateRandomXPosition = () => {
   return randomPosition;
 };
 
-const generateRandomSpeed = () => Math.random() * 0.005;
+const generateRandomSpeed = () => Math.random() * 0.005 + 0.005;
 
-const generateRandomZPosition = () => Math.random() * 4 - 2;
+const generateRandomZPosition = () => Math.random() * 4 - 4;
 
 const animate = () => {
   requestAnimationFrame(animate);
@@ -61,7 +73,7 @@ const animate = () => {
   // Reset its Y position & set a random X position
   if (smallBubble1.position.y > 5) {
     smallBubble1Speed = generateRandomSpeed();
-    smallBubble2.position.set(generateRandomXPosition(), -5, generateRandomZPosition());
+    smallBubble1.position.set(generateRandomXPosition(), -5, generateRandomZPosition());
   }
 
   smallBubble2.position.y += smallBubble2Speed;
@@ -74,14 +86,16 @@ const animate = () => {
     smallBubble2.position.set(generateRandomXPosition(), -6, generateRandomZPosition());
   }
 
-  renderer.render(scene, camera);
+  // renderer.render(scene, camera);
+  composer.render();
 };
 
 export const resizeThreeJS = (w, h) => {
-  if (camera && renderer) {
+  if (camera && renderer && composer) {
     camera.aspect = w / h;
     camera.updateProjectionMatrix();
     renderer.setSize(w, h);
+    composer.setSize(w, h);
   }
 };
 
@@ -134,7 +148,45 @@ export const initThreeJS = (element) => {
     alpha: true,
     canvas: element
   });
-  renderer.setClearColor(0x000000, 0);
+  renderer.setClearColor(0x252525);
+
+  // Custom render target
+  let RenderTargetClass = null;
+
+  if (renderer.getPixelRatio() === 1 && renderer.capabilities.isWebGL2) {
+    RenderTargetClass = THREE.WebGLMultisampleRenderTarget;
+  } else {
+    RenderTargetClass = THREE.WebGLRenderTarget;
+  }
+
+  // Rendertarget - needed for proper colors...
+  const renderTarget = new RenderTargetClass(0, 0);
+
+  // Composer
+  const effectComposer = new EffectComposer(renderer, renderTarget);
+  effectComposer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+  // Effect composer
+  composer = new EffectComposer(renderer, renderTarget);
+
+  // Post processing
+  const renderPass = new RenderPass(scene, camera);
+  const bokehPass = new BokehPass(scene, camera, {
+    focus: 10,
+    aperture: 10,
+    maxblur: 0.0015,
+    width: sizes.width,
+    height: sizes.height
+  });
+
+  composer.addPass(renderPass);
+  composer.addPass(bokehPass);
+
+  // Anti-aliasing -- SMAA pass
+  if (renderer.getPixelRatio() === 1 && !renderer.capabilities.isWebGL2) {
+    const smaaPass = new SMAAPass();
+    effectComposer.addPass(smaaPass);
+  }
 
   resizeThreeJS(rect.width, rect.height);
   animate();
