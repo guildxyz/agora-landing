@@ -11,7 +11,7 @@
 
 <section id="agora-space-dao" class="relative h-screen bg-agora-gray">
   <canvas bind:this={canvas} class="absolute inset-0 w-full h-full" />
-  <div class="container px-8 max-w-screen-md text-center">
+  <div class="relative container px-8 max-w-screen-md text-center">
     <h2
       class="mt-24 mb-12 text-3xl lg:text-4xl 2xl:text-5xl font-bold tracking-tight font-display uppercase text-agora-pink-light"
     >
