@@ -10,8 +10,10 @@ let renderer,
   bigBubble,
   smallBubble1Geometry,
   smallBubble1,
+  smallBubble1Speed,
   smallBubble2Geometry,
-  smallBubble2;
+  smallBubble2,
+  smallBubble2Speed;
 
 const customUniforms = {
   uTime: { value: 0 },
@@ -41,13 +43,9 @@ const generateRandomXPosition = () => {
   return randomPosition;
 };
 
-const generateRandomSpeed = () => {
-  // TODO
-};
+const generateRandomSpeed = () => Math.random() * 0.005;
 
-const generateRandomZPosition = () => {
-  // TODO
-};
+const generateRandomZPosition = () => Math.random() * 4 - 2;
 
 const animate = () => {
   requestAnimationFrame(animate);
@@ -56,25 +54,24 @@ const animate = () => {
   customUniforms.uTime.value = clock.getElapsedTime();
 
   // Update bubble position:
-  smallBubble1.position.y += 0.002;
+  smallBubble1.position.y += smallBubble1Speed;
   smallBubble1.rotation.x += 0.001;
   smallBubble1.rotation.y += 0.001;
 
   // Reset its Y position & set a random X position
   if (smallBubble1.position.y > 5) {
-    smallBubble1.position.y = -5;
-    smallBubble1.position.x = generateRandomXPosition();
+    smallBubble1Speed = generateRandomSpeed();
+    smallBubble2.position.set(generateRandomXPosition(), -5, generateRandomZPosition());
   }
 
-  smallBubble2.position.y += 0.0015;
+  smallBubble2.position.y += smallBubble2Speed;
   smallBubble2.rotation.y += 0.0015;
   smallBubble2.rotation.z += 0.001;
 
   // Reset its position & set a random X position
   if (smallBubble2.position.y > 5) {
-    smallBubble2.position.y = -6;
-
-    smallBubble2.position.x = generateRandomXPosition();
+    smallBubble2Speed = generateRandomSpeed();
+    smallBubble2.position.set(generateRandomXPosition(), -6, generateRandomZPosition());
   }
 
   renderer.render(scene, camera);
@@ -115,21 +112,21 @@ export const initThreeJS = (element) => {
   bubbleMaterial.onBeforeCompile = (shader) => createBubbleMaterial(shader, customUniforms);
 
   bigBubble = new THREE.Mesh(bigBubbleGeometry, bubbleMaterial);
-  bigBubble.scale.set(1.8, 1.8, 1.8);
+  bigBubble.scale.set(2, 2, 2);
   scene.add(bigBubble);
-  bigBubble.position.y = -0.8;
+  bigBubble.position.y = -0.64;
 
   smallBubble1Geometry = new THREE.IcosahedronGeometry(0.6, 32);
   smallBubble1 = new THREE.Mesh(smallBubble1Geometry, bubbleMaterial);
+  smallBubble1Speed = generateRandomSpeed();
   scene.add(smallBubble1);
-  // smallBubble1.position.set(2, -5, -2);
-  smallBubble1.position.set(generateRandomXPosition(), -5, -2);
+  smallBubble1.position.set(generateRandomXPosition(), -5, generateRandomZPosition());
 
   smallBubble2Geometry = new THREE.IcosahedronGeometry(0.64, 48);
   smallBubble2 = new THREE.Mesh(smallBubble2Geometry, bubbleMaterial);
+  smallBubble2Speed = generateRandomSpeed();
   scene.add(smallBubble2);
-  // smallBubble2.position.set(-2.5, -6, -1.5);
-  smallBubble2.position.set(generateRandomXPosition(), -6, -1.5);
+  smallBubble2.position.set(generateRandomXPosition(), -6, generateRandomZPosition());
 
   // Renderer
   renderer = new THREE.WebGLRenderer({
