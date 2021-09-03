@@ -1,15 +1,23 @@
 <script>
   import { onMount } from 'svelte';
-  import { initThreeJS } from '$lib/threejs/agoraSpaceDao';
+  import { initThreeJS, resizeThreeJS } from '$lib/threejs/agoraSpaceDao';
 
   let canvas;
+  let canvasWidth;
+  let canvasHeight;
+  $: canvasWidth && canvasHeight && resizeThreeJS(canvasWidth, canvasHeight);
 
   onMount(() => {
     initThreeJS(canvas);
   });
 </script>
 
-<section id="agora-space-dao" class="relative h-screen bg-agora-gray">
+<section
+  id="agora-space-dao"
+  class="relative h-screen bg-agora-gray"
+  bind:clientWidth={canvasWidth}
+  bind:clientHeight={canvasHeight}
+>
   <canvas bind:this={canvas} class="absolute inset-0 w-full h-full" />
   <div class="relative container px-8 max-w-screen-md text-center">
     <h2
