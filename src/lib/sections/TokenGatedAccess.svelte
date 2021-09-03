@@ -1,11 +1,10 @@
-<!-- We don't use this component currently, but I left it here just in case we need it again, or if we'll need to make a similar section in the future -->
 <script>
   import Header from '$lib/Header';
   import Button from '$lib/Button';
   import { ArrowRight } from 'phosphor-svelte';
 </script>
 
-<section id="role-management-bot" class="relative">
+<section id="token-gated-access" class="relative">
   <div class="absolute left-0 right-0 top-0 z-50">
     <Header whiteLogo />
   </div>
@@ -26,23 +25,25 @@
       <h2
         class="w-full text-3xl lg:text-4xl 2xl:text-5xl font-bold tracking-tight font-display uppercase"
       >
-        Role management bot
+        Token-Gated Access
       </h2>
 
       <p class="2xl:text-xl">
-        Our bot Hermes bridges Telegram and Discord channels and his ally Medousa guards your token
-        gated communities. You can invite the bots to your channels with the press of a button and
-        Medousa will manage all affairs of admitting and dismissing people from your groups based on
-        how much they hold or stake of your token.
+        You can invite the bots to your channels with the press of a button and Medusa will manage
+        all affairs of admitting and dismissing people from your groups based on how much they hold
+        or stake of your token.
+      </p>
+
+      <p class="2xl:text-xl">
+        Our fist tool and the open gateway to access the rest of what Agora Space has to offer.
       </p>
 
       <Button
-        href="https://app.agora.space/"
+        href="https://medium.com/@AgoraSpaceDAO"
         rel="noopener"
-        target="_blank"
         class="px-0 w-max text-agora-white"
       >
-        <span>Try out our bot</span>
+        <span>Read more on Medium</span>
         <ArrowRight slot="icon" weight="bold" size="1.2em" />
       </Button>
     </div>
@@ -51,7 +52,7 @@
     <div
       class="flex flex-col items-start justify-center space-y-4 lg:col-span-3 relative px-20 lg:pt-40 pb-10 lg:pb-20 pr-8 pl-10 lg:pl-20 xl:pl-40 bg-agora-gray text-agora-white"
     >
-      <img src="/images/role-management-bot.png" alt="Role management bot" class="max-w-full" />
+      <img src="/images/token-gated-access.png" alt="Role management bot" class="max-w-full" />
     </div>
   </div>
 </section>

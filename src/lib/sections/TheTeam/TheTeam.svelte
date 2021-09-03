@@ -19,7 +19,7 @@
   <div class="flex flex-col px-8 py-10 lg:py-20">
     <div class="container space-y-16">
       <h2
-        class="text-agora-pink-light text-3xl lg:text-4xl 2xl:text-6xl font-bold tracking-tight font-display uppercase text-center"
+        class="text-agora-pink-light text-3xl lg:text-4xl 2xl:text-5xl font-bold tracking-tight font-display uppercase text-center"
       >
         The team
       </h2>
@@ -82,7 +82,7 @@
               label="Smart contract Dev"
               github="https://github.com/TomiOhl"
             />
-            <TeamMember photo="/images/team/macy.png" name="Macy" label="Communication" />
+            <TeamMember photo="/images/team/macy.png" name="Réka" label="Communication" />
             <TeamMember
               photo="/images/team/balazs.png"
               name="Balazs"
@@ -112,7 +112,7 @@
 
     <div class="container space-y-16">
       <h2
-        class="mt-32 text-agora-pink-light text-3xl lg:text-4xl 2xl:text-6xl font-bold tracking-tight font-display uppercase text-center"
+        class="mt-32 text-agora-pink-light text-3xl lg:text-4xl 2xl:text-5xl font-bold tracking-tight font-display uppercase text-center"
       >
         Advisors
       </h2>
@@ -133,14 +133,53 @@
               name="R A Z"
               label="Strategic advisor"
               twitter="https://twitter.com/L1sp3r"
+              links={[
+                {
+                  text: 'Supernova Fund',
+                  url: 'https://supernova.fund'
+                }
+              ]}
             />
-            <TeamMember photo="/images/team/petermm.png" name="Peter MM" label="Advisor" />
-            <TeamMember photo="/images/team/d3v.png" name="D3v" label="Security advisor" />
+            <TeamMember
+              photo="/images/team/petermm.png"
+              name="Peter MM"
+              label="Advisor"
+              links={[
+                {
+                  text: 'Supernova Fund',
+                  url: 'https://supernova.fund'
+                },
+                {
+                  text: 'Prev.: J.P. Morgan'
+                }
+              ]}
+            />
+            <TeamMember
+              photo="/images/team/d3v.png"
+              name="D3v"
+              label="Security advisor"
+              links={[
+                {
+                  text: 'Former SSNS NCSC',
+                  url: 'https://mi.nemzetilabor.hu/partners/special-service-national-security'
+                }
+              ]}
+            />
             <TeamMember
               photo="/images/team/nima.png"
               name="NiMA"
               label="Advisor"
               twitter="https://twitter.com/insidenima"
+              links={[
+                {
+                  text: 'Seedclub',
+                  url: 'https://seedclub.xyz'
+                },
+                {
+                  text: 'Mintbase',
+                  url: 'https://www.mintbase.io'
+                }
+              ]}
             />
           </div>
         </svelte:component>

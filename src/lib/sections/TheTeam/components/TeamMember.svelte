@@ -6,6 +6,7 @@
   export let label;
   export let twitter = null;
   export let github = null;
+  export let links = []; // format: [{ text: string, url?: string }, ...]
 </script>
 
 <div class="group flex flex-col">
@@ -61,4 +62,20 @@
       {/if}
     </div>
   </div>
+
+  {#if links.length > 0}
+    <div class="mt-2 flex flex-col space-y-1 text-agora-pink-light font-semibold">
+      {#each links as link}
+        <span class="flex items-center justify-center space-x-2 text-center">
+          {#if link.url}
+            <a href={link.url} target="_blank">
+              {link.text}
+            </a>
+          {:else}
+            {link.text}
+          {/if}
+        </span>
+      {/each}
+    </div>
+  {/if}
 </div>
