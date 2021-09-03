@@ -4,8 +4,6 @@
   import Button from '$lib/Button';
   import { initThreeJS, resizeThreeJS } from './threejs/hero';
   import { onMount, onDestroy } from 'svelte';
-  import { fade, fly } from 'svelte/transition';
-  import { elasticOut } from 'svelte/easing';
 
   let hideHeroImg = false;
   let windowSize = 1920;
@@ -39,19 +37,33 @@
   }, 3000);
 
   // Custom 3D transition
-  /*
-  const cube = (node, { duration }) => ({
+  const cubeIn = (node, { rotateFrom, duration }) => ({
     duration,
     css: (t) => {
       const o = +getComputedStyle(node).opacity;
 
       return `
-        transform: translateZ(${t * 20}px) translateY(${t * 20}px) rotateX(${t * 90}deg);
-        opacity: ${t * o};
+        transform: translateZ(${-64 + t * 64}px) translateY(${-64 + t * 64}%) rotate3d(1, 0, 0, ${
+        rotateFrom - t * 90
+      }deg);
+        opacity: ${0.25 + t * o}
       `;
     }
   });
-  */
+
+  const cubeOut = (node, { rotateTo, duration }) => ({
+    duration,
+    css: (t) => {
+      const o = +getComputedStyle(node).opacity;
+
+      return `
+        transform: translateZ(${-64 + t * 64}px) translateY(${(1 - t) * 64}%) rotate3d(1, 0, 0, ${
+        (1 - t) * rotateTo
+      }deg);
+        opacity: ${0.25 + t * o}
+      `;
+    }
+  });
 
   onDestroy(() => {
     if (headlineTimeout) {
@@ -115,14 +127,17 @@
       <div class="w-full h-full flex flex-col justify-center">
         <div class="relative mt-24 xl:mt-0 pb-32 md:pb-0 text-center md:text-left">
           <h2
-            class="mb-4 lg:mb-8 font-bold tracking-tight text-4xl lg:text-5xl 2xl:text-6xl font-display"
+            class="mb-4 xl:mb-8 font-bold tracking-tight text-3xl xl:text-5xl 2xl:text-6xl font-display"
           >
-            <span class="block w-full relative pt-24">
+            <span
+              class="block w-full relative pt-20 md:pt-10 xl:pt-14"
+              style="perspective: 1600px;"
+            >
               {#key headline}
                 <span
-                  class="absolute left-0 top-0 flex flex-col justify-end w-full md:max-w-md xl:max-w-full h-24 text-agora-blue-medium"
-                  in:fly={{ y: -50, duration: 800 }}
-                  out:fade={{ duration: 200 }}>{headline}</span
+                  class="absolute left-0 top-0 flex flex-col justify-center w-full md:max-w-md xl:max-w-full h-1/2 text-agora-blue-medium transition-all"
+                  in:cubeIn={{ rotateFrom: 90, duration: 600 }}
+                  out:cubeOut={{ rotateTo: -90, duration: 600 }}>{headline}</span
                 >
               {/key}
               <span>for DAOs and Social Tokens</span>
@@ -130,7 +145,7 @@
           </h2>
 
           <p
-            class="mb-8 lg:mb-10 font-semibold text-lg lg:text-xl leading-tight md:leading-normal text-gray-600"
+            class="mb-8 lg:mb-10 font-semibold lg:text-lg 2xl:text-xl leading-tight md:leading-normal text-gray-600"
           >
             Building essentials for future internet<br /> communities.
           </p>
