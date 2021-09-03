@@ -26,7 +26,7 @@ export const resizeThreeJS = (w, h) => {
   }
 };
 
-export const initThreeJS = (element, callback) => {
+export const initThreeJS = (element) => {
   const rect = element.getBoundingClientRect();
 
   // Camera
@@ -67,5 +67,4 @@ export const initThreeJS = (element, callback) => {
 
   resizeThreeJS(rect.width, rect.height);
   animate();
-  callback();
 };

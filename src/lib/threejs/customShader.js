@@ -1,4 +1,6 @@
-export const vertexShaderHead = (noise) => `
+import { noise } from '$lib/threejs/noise';
+
+export const vertexShaderHead = `
   uniform float uTime;
   uniform float uSpeed;
   uniform float uNoiseDensity;
@@ -18,7 +20,7 @@ export const vertexShaderBody = `
   gl_Position = projectionMatrix * modelViewMatrix * vec4(pos, 1.0);
 `;
 
-export const createBubbleMaterial = (shader, noise, customUniforms) => {
+export const createBubbleMaterial = (shader, customUniforms) => {
   shader.uniforms.uTime = customUniforms.uTime;
   shader.uniforms.uSpeed = customUniforms.uSpeed;
   shader.uniforms.uNoiseDensity = customUniforms.uNoiseDensity;
@@ -31,7 +33,7 @@ export const createBubbleMaterial = (shader, noise, customUniforms) => {
 
         #include <common>
 
-        ${vertexShaderHead(noise)}
+        ${vertexShaderHead}
       `
   );
 
