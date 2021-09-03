@@ -1,27 +1,8 @@
 import * as THREE from 'three';
-import { noise } from './noise';
+import { createBubbleMaterial } from './customShader';
+import { noise } from '$lib/threejs/noise';
 
 let renderer, camera, scene, clock, bubbleGeometry, bubbleMaterial, bubble;
-
-const vertexShaderHead = `
-  uniform float uTime;
-  uniform float uSpeed;
-  uniform float uNoiseDensity;
-  uniform float uNoiseStrength;
-
-  ${noise}
-`;
-
-const vertexShaderBody = `
-  float t = uTime * uSpeed;
-  float distortion = pnoise((normal + t) * uNoiseDensity, vec3(10.0)) * uNoiseStrength;
-
-  vec3 pos = position + (normal * distortion);
-    
-  vNormal = normal;
-
-  gl_Position = projectionMatrix * modelViewMatrix * vec4(pos, 1.0);
-`;
 
 const customUniforms = {
   uTime: { value: 0 },
@@ -70,32 +51,7 @@ export const initThreeJS = (element, callback) => {
   });
 
   // Modifying the vertex shader
-  bubbleMaterial.onBeforeCompile = (shader) => {
-    shader.uniforms.uTime = customUniforms.uTime;
-    shader.uniforms.uSpeed = customUniforms.uSpeed;
-    shader.uniforms.uNoiseDensity = customUniforms.uNoiseDensity;
-    shader.uniforms.uNoiseStrength = customUniforms.uNoiseStrength;
-
-    // Adding the necessary code to the vertex shader's header
-    shader.vertexShader = shader.vertexShader.replace(
-      '#include <common>',
-      `
-
-          #include <common>
-  
-          ${vertexShaderHead}
-        `
-    );
-
-    shader.vertexShader = shader.vertexShader.replace(
-      '#include <fog_vertex>',
-      `
-          #include <fog_vertex>
-  
-          ${vertexShaderBody}
-        `
-    );
-  };
+  bubbleMaterial.onBeforeCompile = (shader) => createBubbleMaterial(shader, noise, customUniforms);
 
   bubble = new THREE.Mesh(bubbleGeometry, bubbleMaterial);
   bubble.position.set(0.2, 1.5, 0);

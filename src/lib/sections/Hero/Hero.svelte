@@ -2,7 +2,7 @@
   import Header from '$lib/Header';
   import { SignIn, Users } from 'phosphor-svelte';
   import Button from '$lib/Button';
-  import { initThreeJS, resizeThreeJS } from './threejs/hero';
+  import { initThreeJS, resizeThreeJS } from '$lib/threejs/hero';
   import { onMount, onDestroy } from 'svelte';
   import { fade, fly } from 'svelte/transition';
   import { elasticOut } from 'svelte/easing';
