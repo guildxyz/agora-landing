@@ -1,8 +1,8 @@
-<section id="key-technologies" class="relative bg-agora-pink-dark text-agora-white">
+<section id="key-technologies" class="relative bg-agora-blue-medium text-agora-white">
   <div class="container relative px-8 py-24 text-center lg:text-left">
     <div class="mx-auto lg:mx-0 max-w-lg xl:max-w-screen-sm">
       <h2
-        class="mb-16 text-3xl lg:text-4xl 2xl:text-5xl font-bold tracking-tight font-display uppercase"
+        class="mb-16 text-3xl lg:text-4xl 2xl:text-5xl font-bold tracking-tight font-display uppercase text-agora-pink-light"
       >
         Key technologies
       </h2>
