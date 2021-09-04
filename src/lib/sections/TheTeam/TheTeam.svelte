@@ -82,7 +82,12 @@
               label="Smart contract Dev"
               github="https://github.com/TomiOhl"
             />
-            <TeamMember photo="/images/team/macy.png" name="Réka" label="Communication" />
+            <TeamMember
+              photo="/images/team/macy.png"
+              name="Réka"
+              label="Communication"
+              twitter="https://twitter.com/reka_eth"
+            />
             <TeamMember
               photo="/images/team/balazs.png"
               name="Balazs"
