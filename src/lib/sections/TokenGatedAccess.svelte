@@ -41,9 +41,10 @@
       <Button
         href="https://medium.com/@AgoraSpaceDAO"
         rel="noopener"
-        class="px-0 w-max text-agora-white"
+        class="w-max text-agora-white"
+        noPadding
       >
-        <span>Read more on Medium</span>
+        Read more on Medium
         <ArrowRight slot="icon" weight="bold" size="1.2em" />
       </Button>
     </div>

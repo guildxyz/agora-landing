@@ -159,7 +159,7 @@
             rel="noopener"
             class="w-max bg-agora-blue-medium text-agora-white"
           >
-            <span>Join a community</span>
+            Join a community
             <SignIn slot="icon" weight="bold" size="1.2em" />
           </Button>
 
@@ -169,7 +169,7 @@
             rel="noopener"
             class="w-max bg-agora-pink-medium text-agora-white"
           >
-            <span>Create an Agora</span>
+            Create an Agora
             <Users slot="icon" weight="bold" size="1.2em" />
           </Button>
         </div>
@@ -195,7 +195,7 @@
             rel="noopener"
             class="w-max bg-agora-blue-light text-agora-white shadow-md"
           >
-            <span>Join a community</span>
+            Join a community
             <SignIn slot="icon" weight="bold" size="1.2em" />
           </Button>
 
@@ -205,7 +205,7 @@
             rel="noopener"
             class="w-max bg-agora-purple text-agora-white shadow-md"
           >
-            <span>Create an Agora</span>
+            Create an Agora
             <Users slot="icon" weight="bold" size="1.2em" />
           </Button>
         </div>
