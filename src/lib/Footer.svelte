@@ -8,9 +8,14 @@
   } from 'phosphor-svelte';
 
   export let purple = false;
+  export let pink = false;
 </script>
 
-<footer class={purple ? 'bg-agora-purple' : 'bg-agora-white'}>
+<footer
+  class={`${!purple && !pink && 'bg-agora-white'} ${purple && 'bg-agora-purple'} ${
+    pink && 'bg-agora-pink-dark'
+  }`}
+>
   <div class="relative container">
     <!-- Mobile bg -->
     <img
@@ -32,8 +37,8 @@
           <div class="flex flex-col">
             <h2
               class={`mb-4 font-bold tracking-tight text-2xl 2xl:text-3xl font-display ${
-                purple ? 'text-agora-pink-light' : 'text-agora-pink-medium'
-              }`}
+                !pink && !purple && 'text-agora-pink-medium'
+              } ${purple && 'text-agora-pink-light'} ${pink && 'text-agora-white'}`}
             >
               Join the community
             </h2>
@@ -44,8 +49,8 @@
                   target="_blank"
                   rel="noopener"
                   class={`flex items-center justify-center w-8 h-8 rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-300 ${
-                    purple
-                      ? 'bg-agora-white text-agora-blue-medium focus-visible:ring-opacity-50 '
+                    purple || pink
+                      ? 'bg-agora-white text-agora-blue-medium focus-visible:ring-opacity-50'
                       : 'bg-agora-blue-medium text-agora-white'
                   }`}
                 >
@@ -59,7 +64,7 @@
                   target="_blank"
                   rel="noopener"
                   class={`flex items-center justify-center w-8 h-8 rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-300 ${
-                    purple
+                    purple || pink
                       ? 'bg-agora-white text-agora-blue-medium focus-visible:ring-opacity-50'
                       : 'bg-agora-blue-medium text-agora-white'
                   }`}
@@ -74,7 +79,7 @@
                   target="_blank"
                   rel="noopener"
                   class={`flex items-center justify-center w-8 h-8 rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-300 ${
-                    purple
+                    purple || pink
                       ? 'bg-agora-white text-agora-blue-medium focus-visible:ring-opacity-50'
                       : 'bg-agora-blue-medium text-agora-white'
                   }`}
@@ -89,7 +94,7 @@
                   target="_blank"
                   rel="noopener"
                   class={`flex items-center justify-center w-8 h-8 rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-300 ${
-                    purple
+                    purple || pink
                       ? 'bg-agora-white text-agora-blue-medium focus-visible:ring-opacity-50'
                       : 'bg-agora-blue-medium text-agora-white'
                   }`}
@@ -104,7 +109,7 @@
                   target="_blank"
                   rel="noopener"
                   class={`flex items-center justify-center w-8 h-8 rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-300 ${
-                    purple
+                    purple || pink
                       ? 'bg-agora-white text-agora-blue-medium focus-visible:ring-opacity-50'
                       : 'bg-agora-blue-medium text-agora-white'
                   }`}
@@ -115,22 +120,24 @@
               </li>
             </ul>
 
-            <span class={`hidden md:block mt-auto ${purple ? 'text-agora-white' : 'font-light'}`}
-              >&copy; 2021 Agora Space</span
+            <span
+              class={`hidden md:block mt-auto ${
+                purple || pink ? 'text-agora-white' : 'font-light'
+              }`}>&copy; 2021 Agora Space</span
             >
           </div>
 
           <div class="flex flex-col">
             <h2
               class={`mb-4 font-bold tracking-tight text-2xl 2xl:text-3xl font-display ${
-                purple ? 'text-agora-pink-light' : 'text-agora-pink-medium'
-              }`}
+                !pink && !purple && 'text-agora-pink-medium'
+              } ${purple && 'text-agora-pink-light'} ${pink && 'text-agora-white'}`}
             >
               Information
             </h2>
             <ul
               class={`mb-12 font-medium xl:text-lg ${
-                purple ? 'text-agora-white' : 'text-gray-600'
+                purple || pink ? 'text-agora-white' : 'text-gray-600'
               }`}
             >
               <li>
@@ -177,21 +184,21 @@
               </li>
             </ul>
           </div>
-          <span class={`md:hidden ${purple ? 'text-agora-white' : 'font-light'}`}
+          <span class={`md:hidden ${purple || pink ? 'text-agora-white' : 'font-light'}`}
             >&copy; 2021 Agora Space</span
           >
 
           <div class="hidden xl:flex flex-col">
             <h2
               class={`mb-4 font-bold tracking-tight text-2xl 2xl:text-3xl font-display ${
-                purple ? 'text-agora-pink-light' : 'text-agora-pink-medium'
-              }`}
+                !pink && !purple && 'text-agora-pink-medium'
+              } ${purple && 'text-agora-pink-light'} ${pink && 'text-agora-white'}`}
             >
               Tools & Products
             </h2>
             <ul
               class={`mb-12 font-medium xl:text-lg ${
-                purple ? 'text-agora-white' : 'text-gray-600'
+                purple || pink ? 'text-agora-white' : 'text-gray-600'
               }`}
             >
               <li>
