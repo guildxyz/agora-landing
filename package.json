@@ -4,7 +4,6 @@
   "scripts": {
     "dev": "svelte-kit dev",
     "build": "svelte-kit build",
-    "postbuild": "svelte-sitemap --domain https://agora.space --reset-time",
     "preview": "svelte-kit preview",
     "lint": "prettier --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
     "format": "prettier --write --plugin-search-dir=. ."
@@ -25,7 +24,6 @@
     "prettier-plugin-svelte": "^2.3.1",
     "svelte": "^3.41.0",
     "svelte-preprocess": "^4.7.4",
-    "svelte-sitemap": "^2.0.1",
     "tailwindcss": "^2.2.7",
     "tslib": "^2.3.0",
     "typescript": "^4.3.5"
