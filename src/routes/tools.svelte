@@ -3,6 +3,7 @@
   import TrustlessFinancialContract from '$lib/sections/TrustlessFinancialContract.svelte';
   import Gamification from '$lib/sections/Gamification.svelte';
   import Footer from '$lib/Footer.svelte';
+  import DecisionMakingTools from '$lib/sections/DecisionMakingTools.svelte';
 </script>
 
 <svelte:head>
@@ -22,4 +23,5 @@
 <TokenGatedAccess />
 <TrustlessFinancialContract />
 <Gamification />
-<Footer purple />
+<DecisionMakingTools />
+<Footer />
