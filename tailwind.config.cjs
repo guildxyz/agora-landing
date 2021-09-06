@@ -29,7 +29,8 @@ module.exports = {
         'circle-pattern': "url('/images/circle-pattern.png')",
         'who-is-agora-space-for': "url('/images/who-is-agora-space-for-bg.png')",
         'circle-dark': "url('/svg/circle-dark.svg')",
-        'circle-purple': "url('/svg/circle-purple.svg')"
+        'circle-purple': "url('/svg/circle-purple.svg')",
+        "notfound": "url('/images/404.png')"
       }
     },
     container: {
