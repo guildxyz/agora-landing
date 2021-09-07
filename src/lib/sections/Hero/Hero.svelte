@@ -2,7 +2,7 @@
   import Header from '$lib/Header';
   import { SignIn, Users } from 'phosphor-svelte';
   import Button from '$lib/Button';
-  import { initThreeJS, resizeThreeJS } from './threejs/hero';
+  import { initThreeJS, resetBubbleSpeed, resizeThreeJS, speedUpBubble } from './threejs/hero';
   import { onMount } from 'svelte';
   let hideHeroImg = false;
   let windowSize = 1920;
@@ -10,9 +10,21 @@
   let canvasWidth;
   let canvasHeight;
   let opacity = 0;
+  let video1;
+  let video2;
 
   $: offset = windowSize > 1280 ? '-70%' : windowSize > 1024 ? '-48%' : '-48%';
   $: canvasWidth && canvasHeight && resizeThreeJS(canvasWidth, canvasHeight);
+
+  const startBreathing = () => {
+    // TODO: stop video2, then play video1 from (1 - video2.currentTime)
+    video1.play();
+  };
+
+  const stopBreathing = () => {
+    // TODO: stop video1, then play video2 from (1 - video1.currentTime)
+    // video2.play();
+  };
 
   onMount(() => {
     initThreeJS(canvas, () => {
@@ -47,20 +59,49 @@
         class="hidden md:block w-full xl:w-[150%] h-auto max-h-[95%]"
         style={`position: absolute; bottom:0; right: ${offset};`}
       >
-        <div class="relative">
+        <div
+          class="relative h-screen"
+          bind:clientWidth={canvasWidth}
+          bind:clientHeight={canvasHeight}
+        >
+          <!-- <canvas
+            bind:this={canvas}
+            width={canvasWidth}
+            height={canvasHeight}
+            class={`absolute inset-0 w-full h-full transition-opacity opacity-${opacity} duration-500`}
+          /> -->
           <canvas
             bind:this={canvas}
             width={canvasWidth}
             height={canvasHeight}
             class={`absolute inset-0 w-full h-full transition-opacity opacity-${opacity} duration-500`}
+            on:mouseover={() => speedUpBubble()}
+            on:focus={() => speedUpBubble()}
+            on:mouseout={() => resetBubbleSpeed()}
+            on:blur={() => resetBubbleSpeed()}
           />
-          <div bind:clientWidth={canvasWidth} bind:clientHeight={canvasHeight}>
-            <img
-              src="/images/hero-cropped.png"
-              alt="Platon"
-              class={`relative select-none w-full`}
+          <!-- <div
+            bind:clientWidth={canvasWidth}
+            bind:clientHeight={canvasHeight}
+            on:mouseenter={startBreathing}
+            on:mouseleave={stopBreathing}
+          >
+            <video
+              src="/animations/kilevp3.webm"
+              muted
+              width="95%"
+              height="auto"
+              class="relative select-none w-[95%]"
+              bind:this={video1}
             />
-          </div>
+          </div> -->
+          <video
+            id="platon-video-2"
+            src="/animations/platon-out.webm"
+            muted
+            playsinline
+            class="hidden"
+          />
           <img
             src="/images/hero.png"
             alt="Platon"
@@ -93,6 +134,7 @@
           <Button
             href="https://app.agora.space"
             target="_blank"
+            rel="noopener"
             class="w-max bg-agora-blue-medium text-agora-white"
           >
             <span>Join a community</span>
@@ -127,6 +169,7 @@
           <Button
             href="https://app.agora.space"
             target="_blank"
+            rel="noopener"
             class="w-max bg-agora-blue-light text-agora-white shadow-md"
           >
             <span>Join a community</span>

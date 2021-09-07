@@ -1,7 +1,16 @@
 import * as THREE from 'three';
 import { noise } from './noise';
 
-let renderer, camera, scene, clock, bubbleGeometry, bubbleMaterial, bubble;
+let renderer,
+  camera,
+  scene,
+  clock,
+  bubbleGeometry,
+  bubbleMaterial,
+  bubble,
+  platonGeometry,
+  platonMaterial,
+  platon;
 
 const vertexShaderHead = `
   uniform float uTime;
@@ -23,6 +32,8 @@ const vertexShaderBody = `
   gl_Position = projectionMatrix * modelViewMatrix * vec4(pos, 1.0);
 `;
 
+let SPEEDUP = false;
+
 const customUniforms = {
   uTime: { value: 0 },
   uSpeed: { value: 0.25 },
@@ -30,10 +41,27 @@ const customUniforms = {
   uNoiseStrength: { value: 0.1 }
 };
 
+export const speedUpBubble = () => {
+  // SPEEDUP = true;
+};
+export const resetBubbleSpeed = () => {
+  SPEEDUP = false;
+};
+
 const animate = () => {
   requestAnimationFrame(animate);
 
   // Update the necessary uniforms
+  /*
+  if (SPEEDUP && customUniforms.uSpeed.value < 0.5) {
+    customUniforms.uSpeed.value = 0.5;
+  }
+
+  if (!SPEEDUP && customUniforms.uSpeed.value > 0.25) {
+    customUniforms.uSpeed.value = 0.25;
+  }
+  */
+
   customUniforms.uTime.value = clock.getElapsedTime();
   renderer.render(scene, camera);
 };
@@ -97,9 +125,22 @@ export const initThreeJS = (element, callback) => {
     };
 
     bubble = new THREE.Mesh(bubbleGeometry, bubbleMaterial);
-    bubble.position.set(0.2, 1.5, 0);
-    bubble.scale.set(1, 0.8, 1);
+    bubble.position.set(0.2, 1.75, 0);
+    bubble.scale.set(1.05, 0.8, 1.05);
     scene.add(bubble);
+
+    // Platon
+    const video2 = document.getElementById('platon-video-2');
+    const platonVideoTexture2 = new THREE.VideoTexture(video2);
+    platonVideoTexture2.format = THREE.RGBAFormat;
+    // @ts-ignore
+    video2.play();
+
+    platonGeometry = new THREE.PlaneGeometry(6, 3.8);
+    platonMaterial = new THREE.MeshBasicMaterial({ map: platonVideoTexture2, transparent: true });
+    platon = new THREE.Mesh(platonGeometry, platonMaterial);
+    platon.position.set(0, -0.36, 1);
+    scene.add(platon);
 
     // Renderer
     renderer = new THREE.WebGLRenderer({
