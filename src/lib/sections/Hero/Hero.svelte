@@ -2,7 +2,7 @@
   import Header from '$lib/Header';
   import { SignIn, Users } from 'phosphor-svelte';
   import Button from '$lib/Button';
-  import { initThreeJS, resetBubbleSpeed, resizeThreeJS, speedUpBubble } from './threejs/hero';
+  import { initThreeJS, resizeThreeJS, onPlatonHover, onPlatonBlur } from '$lib/threejs/hero';
   import { onDestroy, onMount } from 'svelte';
   let hideHeroImg = false;
   let windowSize = 1920;
@@ -16,6 +16,7 @@
   $: offset = windowSize > 1280 ? '-62%' : windowSize > 1024 ? '-48%' : '-48%';
   $: canvasWidth && canvasHeight && resizeThreeJS(canvasWidth, canvasHeight);
 
+  /*
   const startBreathing = () => {
     // TODO: stop video2, then play video1 from (1 - video2.currentTime)
     video1.play();
@@ -25,6 +26,7 @@
     // TODO: stop video1, then play video2 from (1 - video1.currentTime)
     // video2.play();
   };
+  */
 
   onMount(() => {
     initThreeJS(canvas, () => {
@@ -107,60 +109,42 @@
     >
       <!-- Platon - large -->
       <div
-        class="hidden md:block w-full xl:w-[120%] 2xl:w-[130%] h-auto max-h-[95%]"
+        class="hidden md:block w-full xl:w-[120%] 2xl:w-[130%] h-full max-h-[95%]"
         style={`position: absolute; bottom:0; right: ${offset};`}
+        bind:clientWidth={canvasWidth}
+        bind:clientHeight={canvasHeight}
       >
-        <div
-          class="relative h-screen"
-          bind:clientWidth={canvasWidth}
-          bind:clientHeight={canvasHeight}
-        >
-          <!-- <canvas
-            bind:this={canvas}
-            width={canvasWidth}
-            height={canvasHeight}
-            class={`absolute inset-0 w-full h-full transition-opacity opacity-${opacity} duration-500`}
-          /> -->
-          <canvas
-            bind:this={canvas}
-            width={canvasWidth}
-            height={canvasHeight}
-            class={`absolute inset-0 w-full h-full transition-opacity opacity-${opacity} duration-500`}
-            on:mouseover={() => speedUpBubble()}
-            on:focus={() => speedUpBubble()}
-            on:mouseout={() => resetBubbleSpeed()}
-            on:blur={() => resetBubbleSpeed()}
-          />
-          <!-- <div
-            bind:clientWidth={canvasWidth}
-            bind:clientHeight={canvasHeight}
-            on:mouseenter={startBreathing}
-            on:mouseleave={stopBreathing}
-          >
-            <video
-              src="/animations/kilevp3.webm"
-              muted
-              width="95%"
-              height="auto"
-              class="relative select-none w-[95%]"
-              bind:this={video1}
-            />
-          </div> -->
-          <video
-            id="platon-video-2"
-            src="/animations/platon-out.webm"
-            muted
-            playsinline
-            class="hidden"
-          />
-          <img
-            src="/images/hero.png"
-            alt="Platon"
-            class={`absolute left-0 bottom-0 select-none w-full transition-all duration-500 ${
-              hideHeroImg ? 'invisible opacity-0' : 'visible opacity-100'
-            }`}
-          />
-        </div>
+        <canvas
+          bind:this={canvas}
+          width={canvasWidth}
+          height={canvasHeight}
+          class={`absolute inset-0 w-full h-full transition-opacity opacity-${opacity} duration-500`}
+          on:mouseover={() => onPlatonHover()}
+          on:focus={() => onPlatonHover()}
+          on:mouseout={() => onPlatonBlur()}
+          on:blur={() => onPlatonBlur()}
+        />
+        <video
+          id="platon-video"
+          src="/animations/platon-in.webm"
+          muted
+          playsinline
+          class="hidden"
+        />
+        <!-- <video
+          id="platon-video-2"
+          src="/animations/platon-out.webm"
+          muted
+          playsinline
+          class="hidden"
+        /> -->
+        <img
+          src="/images/hero.png"
+          alt="Platon"
+          class={`absolute left-0 bottom-0 select-none w-full transition-all duration-500 ${
+            hideHeroImg ? 'invisible opacity-0' : 'visible opacity-100'
+          }`}
+        />
       </div>
 
       <!-- Title / text -->
