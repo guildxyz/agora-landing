@@ -1,3 +1,5 @@
+<!-- We don't use this component currently, but I left it here just in case we need it again, or if we'll need to make a similar section in the future -->
+
 <section id="performance-based-creator-contracts" class="relative bg-agora-gray text-agora-white">
   <div class="container py-20 px-8 grid lg:grid-cols-2 gap-16 lg:gap-0">
     <!-- Text -->
@@ -9,7 +11,9 @@
         >Coming soon</span
       >
 
-      <h2 class="mb-8 text-4xl 2xl:text-6xl font-bold tracking-tight font-display uppercase">
+      <h2
+        class="mb-8 text-3xl lg:text-4xl 2xl:text-5xl font-bold tracking-tight font-display uppercase"
+      >
         Performance-based creator contracts
       </h2>
 

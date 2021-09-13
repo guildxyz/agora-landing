@@ -19,8 +19,14 @@
       title="Join a community"
       image="/images/community-explorer.png"
       url="https://app.agora.space/"
+      openNewPage
     />
 
-    <CtaImg title="Create a community" image="/images/social-token-admin.png" url="/" />
+    <CtaImg
+      title="Create an Agora"
+      image="/images/social-token-admin.png"
+      url="https://app.agora.space/register"
+      openNewPage
+    />
   </div>
 </section>

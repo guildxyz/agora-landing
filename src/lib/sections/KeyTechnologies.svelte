@@ -1,0 +1,53 @@
+<section id="key-technologies" class="relative bg-agora-pink-dark text-agora-white">
+  <div class="container relative px-8 py-24 text-center lg:text-left">
+    <div class="mx-auto lg:mx-0 max-w-lg xl:max-w-screen-sm">
+      <h2
+        class="mb-16 text-3xl lg:text-4xl 2xl:text-5xl font-bold tracking-tight font-display uppercase"
+      >
+        Key technologies
+      </h2>
+
+      <h3 class="mb-2 lg:mb-3 text-xl lg:text-2xl font-bold tracking-tight font-display uppercase">
+        Social Oracle Layer
+      </h3>
+      <p class="mb-8 lg:font-semibold 2xl:text-lg">
+        Two way social media integration Powered by Witnet to the blockchain creating a circular
+        information flow.
+      </p>
+
+      <h3 class="mb-2 lg:mb-3 text-xl lg:text-2xl font-bold tracking-tight font-display uppercase">
+        On-chain Privacy
+      </h3>
+      <p class="mb-8 lg:font-semibold 2xl:text-lg">
+        Zero knowledge based self-sovereign identity management system for keeping the link between
+        your social media accounts and wallets private. This allows a private decision making and
+        sybil attack resistency for many cases.
+      </p>
+
+      <h3 class="mb-2 lg:mb-3 text-xl lg:text-2xl font-bold tracking-tight font-display uppercase">
+        Permissionless Tools
+      </h3>
+      <p class="mb-8 lg:font-semibold 2xl:text-lg">Fully open-source, hosted on IPFS.</p>
+
+      <h3 class="mb-2 lg:mb-3 text-xl lg:text-2xl font-bold tracking-tight font-display uppercase">
+        Customizable
+      </h3>
+      <p class="mb-8 lg:font-semibold 2xl:text-lg">
+        Spaces can have their own custom domain name and unique appearance.
+      </p>
+
+      <h3 class="mb-2 lg:mb-3 text-xl lg:text-2xl font-bold tracking-tight font-display uppercase">
+        Multi-chain
+      </h3>
+      <p class="lg:font-semibold 2xl:text-lg">
+        We integrate every major EVM-compatible blockchains and L2s besides Solana and Near.
+      </p>
+    </div>
+
+    <img
+      class="hidden lg:block absolute bottom-0 right-0 w-3/5"
+      src="/images/pegasus.png"
+      alt="Pegasus"
+    />
+  </div>
+</section>

@@ -3,7 +3,7 @@
   import { SignIn, Users } from 'phosphor-svelte';
   import Button from '$lib/Button';
   import { initThreeJS, resetBubbleSpeed, resizeThreeJS, speedUpBubble } from './threejs/hero';
-  import { onMount } from 'svelte';
+  import { onDestroy, onMount } from 'svelte';
   let hideHeroImg = false;
   let windowSize = 1920;
   let canvas;
@@ -13,7 +13,7 @@
   let video1;
   let video2;
 
-  $: offset = windowSize > 1280 ? '-70%' : windowSize > 1024 ? '-48%' : '-48%';
+  $: offset = windowSize > 1280 ? '-62%' : windowSize > 1024 ? '-48%' : '-48%';
   $: canvasWidth && canvasHeight && resizeThreeJS(canvasWidth, canvasHeight);
 
   const startBreathing = () => {
@@ -32,6 +32,55 @@
       hideHeroImg = true;
     });
   });
+
+  // Heading animation
+  const headlines = [
+    'Token-Gated Access',
+    'Gamification',
+    'Trustless Financial Contracts',
+    'Decision-making tools'
+  ];
+  let currentHeadline = 0;
+  $: headline = headlines[currentHeadline % headlines.length];
+
+  const headlineTimeout = setInterval(() => {
+    currentHeadline++;
+  }, 3000);
+
+  // Custom 3D transition
+  const cubeIn = (node, { rotateFrom, duration }) => ({
+    duration,
+    css: (t) => {
+      const o = +getComputedStyle(node).opacity;
+
+      return `
+        transform: translateZ(${-64 + t * 64}px) translateY(${-64 + t * 64}%) rotate3d(1, 0, 0, ${
+        rotateFrom - t * 90
+      }deg);
+        opacity: ${0.25 + t * o}
+      `;
+    }
+  });
+
+  const cubeOut = (node, { rotateTo, duration }) => ({
+    duration,
+    css: (t) => {
+      const o = +getComputedStyle(node).opacity;
+
+      return `
+        transform: translateZ(${-64 + t * 64}px) translateY(${(1 - t) * 64}%) rotate3d(1, 0, 0, ${
+        (1 - t) * rotateTo
+      }deg);
+        opacity: ${0.25 + t * o}
+      `;
+    }
+  });
+
+  onDestroy(() => {
+    if (headlineTimeout) {
+      clearInterval(headlineTimeout);
+    }
+  });
 </script>
 
 <svelte:window bind:innerWidth={windowSize} />
@@ -39,24 +88,26 @@
 <section id="hero" class="relative xl:h-screen h-webkit-fill-available">
   <!-- Hero background -->
   <div class="absolute hidden md:flex lg:flex-row w-full h-full">
-    <div class="flex-grow bg-agora-white" />
+    <div class="flex-grow bg-agora-gray" />
     <div
       class="flex-grow bg-agora-blue-medium bg-circle-pattern bg-no-repeat bg-hero-right-bottom"
     />
   </div>
 
   <div class="absolute left-0 right-0 top-0 z-50">
-    <Header />
+    <Header whiteLogo />
   </div>
 
-  <div class="relative md:container px-6 lg:px-8 grid md:grid-cols-5 md:h-1/2 lg:h-2/3 xl:h-full">
+  <div
+    class="relative md:container px-6 lg:px-8 grid md:grid-cols-9 lg:grid-cols-7 md:h-1/2 lg:h-2/3 xl:h-full"
+  >
     <!-- Hero - left side -->
     <section
-      class="flex flex-col relative md:col-span-4 lg:col-span-3 -mx-6 md:mx-0 pt-4 lg:pt-10 xl:pt-20 px-4 lg:px-0 bg-agora-white"
+      class="flex flex-col relative md:col-span-7 lg:col-span-5 -mx-6 md:mx-0 pt-4 lg:pt-10 xl:pt-20 px-4 lg:px-0 bg-agora-gray"
     >
       <!-- Platon - large -->
       <div
-        class="hidden md:block w-full xl:w-[150%] h-auto max-h-[95%]"
+        class="hidden md:block w-full xl:w-[120%] 2xl:w-[130%] h-auto max-h-[95%]"
         style={`position: absolute; bottom:0; right: ${offset};`}
       >
         <div
@@ -113,19 +164,30 @@
       </div>
 
       <!-- Title / text -->
-      <div class="h-full flex flex-col justify-center">
-        <div class="relative mt-20 xl:mt-0 pb-32 md:pb-0 text-center md:text-left">
+      <div class="w-full h-full flex flex-col justify-center">
+        <div class="relative mt-24 xl:mt-0 pb-32 md:pb-0 text-center md:text-left text-agora-white">
           <h2
-            class="mb-4 lg:mb-8 font-bold tracking-tight text-4xl sm:text-5xl xl:text-6xl 2xl:text-7xl font-display"
+            class="mb-4 xl:mb-8 font-bold tracking-tight text-3xl xl:text-5xl 2xl:text-6xl font-display"
           >
-            Social <span class="text-agora-blue-medium">oracle</span> <br />and token utility
-            <br />toolkit
+            <span
+              class="block w-full relative pt-20 md:pt-10 xl:pt-14"
+              style="perspective: 1600px;"
+            >
+              {#key headline}
+                <span
+                  class="absolute left-0 top-0 flex flex-col justify-center w-full md:max-w-md xl:max-w-full h-1/2 text-agora-pink-dark transition-all"
+                  in:cubeIn={{ rotateFrom: 90, duration: 600 }}
+                  out:cubeOut={{ rotateTo: -90, duration: 600 }}>{headline}</span
+                >
+              {/key}
+              <span>for DAOs and Social Tokens</span>
+            </span>
           </h2>
 
           <p
-            class="mb-8 lg:mb-10 font-semibold text-lg lg:text-xl leading-tight md:leading-normal text-gray-600"
+            class="mb-8 lg:mb-10 font-semibold lg:text-lg 2xl:text-xl leading-tight md:leading-normal"
           >
-            Two-way social media integration <br />to the blockchain
+            Building essentials for future internet<br /> communities.
           </p>
         </div>
 
@@ -137,16 +199,17 @@
             rel="noopener"
             class="w-max bg-agora-blue-medium text-agora-white"
           >
-            <span>Join a community</span>
+            Join a community
             <SignIn slot="icon" weight="bold" size="1.2em" />
           </Button>
 
           <Button
-            disabled
-            disabledMessage="Coming soon"
-            class="w-max bg-agora-purple text-agora-white"
+            href="https://app.agora.space/register"
+            target="_blank"
+            rel="noopener"
+            class="w-max bg-agora-pink-medium text-agora-white"
           >
-            <span>Integrate your token</span>
+            Create an Agora
             <Users slot="icon" weight="bold" size="1.2em" />
           </Button>
         </div>
@@ -172,14 +235,19 @@
             rel="noopener"
             class="w-max bg-agora-blue-light text-agora-white shadow-md"
           >
-            <span>Join a community</span>
+            Join a community
             <SignIn slot="icon" weight="bold" size="1.2em" />
           </Button>
 
-          <!-- <Button disabled class="w-max bg-agora-purple text-agora-white shadow-md">
-            <span>Integrate your token</span>
+          <Button
+            href="https://app.agora.space/register"
+            target="_blank"
+            rel="noopener"
+            class="w-max bg-agora-purple text-agora-white shadow-md"
+          >
+            Create an Agora
             <Users slot="icon" weight="bold" size="1.2em" />
-          </Button> -->
+          </Button>
         </div>
       </div>
     </section>

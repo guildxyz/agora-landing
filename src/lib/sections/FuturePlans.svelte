@@ -13,7 +13,7 @@
       class="flex flex-col items-center justify-center space-y-8 relative lg:col-span-3 px-8 lg:px-28 xl:px-48 py-16 lg:py-24 h-full bg-agora-gray text-agora-white text-center "
     >
       <h2
-        class="mb-4 text-agora-pink-light text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold tracking-tight font-display uppercase"
+        class="mb-4 text-agora-pink-light text-3xl lg:text-4xl 2xl:text-5xl font-bold tracking-tight font-display uppercase"
       >
         Future plans
       </h2>
@@ -27,7 +27,8 @@
           <a
             href="https://www.superfluid.finance/home"
             target="_blank"
-            class="transition hover:text-agora-pink-medium">Superfluid</a
+            rel="noopener"
+            class="transition underline hover:text-agora-pink-medium">Superfluid</a
           > to Agora Social Oracle layer for performance-based fluid payments.
         </p>
 
@@ -35,19 +36,22 @@
           <a
             href="https://eas.eth.link/"
             target="_blank"
-            class="transition hover:text-agora-pink-medium">EAS</a
+            rel="noopener"
+            class="transition underline hover:text-agora-pink-medium">EAS</a
           >
           to Agora Space for gamification, reputation and KYC.
           <a
             href="https://tryroll.com/"
             target="_blank"
-            class="transition hover:text-agora-pink-text-darker">TryRoll</a
+            rel="noopener"
+            class="transition underline hover:text-agora-pink-medium">TryRoll</a
           >
           and
           <a
             href="https://stakes.social/"
             target="_blank"
-            class="transition hover:text-agora-pink-text-darker">Stakes.social</a
+            rel="noopener"
+            class="transition underline hover:text-agora-pink-medium">Stakes.social</a
           >
           for easy social token creation.
         </p>
@@ -56,18 +60,21 @@
           <a
             href="https://colony.io/"
             target="_blank"
-            class="transition hover:text-agora-pink-text-darker">Colony.io</a
+            rel="noopener"
+            class="transition underline hover:text-agora-pink-medium">Colony.io</a
           >,
           <a
             href="https://aragon.org/"
             target="_blank"
-            class="transition hover:text-agora-pink-text-darker">Aragon</a
+            rel="noopener"
+            class="transition underline hover:text-agora-pink-medium">Aragon</a
           >
           and
           <a
             href="https://daohaus.club/"
             target="_blank"
-            class="transition hover:text-agora-pink-text-darker">Daohaus</a
+            rel="noopener"
+            class="transition underline hover:text-agora-pink-medium">Daohaus</a
           >
           summoners will be able to integrate their tokens.
         </p>
@@ -104,48 +111,4 @@
       <img src="/images/future-plans.png" alt="Future plans" class="object-contain" />
     </div>
   </div>
-
-  <!-- We'll need to generate resizible image map -->
-  <!-- <map name="image-map">
-    <area
-      target="_blank"
-      alt="Colony.io"
-      title="Colony.io"
-      href="https://colony.io/"
-      coords="81,267,62"
-      shape="circle"
-    />
-    <area
-      target="_blank"
-      alt="Superfluid"
-      title="Superfluid"
-      href="https://www.superfluid.finance/home"
-      coords="157,128,56"
-      shape="circle"
-    />
-    <area
-      target="_blank"
-      alt="Roll"
-      title="Roll"
-      href="https://tryroll.com/"
-      coords="307,73,63"
-      shape="circle"
-    />
-    <area
-      target="_blank"
-      alt="EAS"
-      title="EAS"
-      href="https://eas.eth.link/"
-      coords="462,136,59"
-      shape="circle"
-    />
-    <area
-      target=""
-      alt="DoinGud"
-      title="DoinGud"
-      href="https://doingud.com/"
-      coords="532,272,59"
-      shape="circle"
-    />
-  </map> -->
 </section>

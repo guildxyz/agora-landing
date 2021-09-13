@@ -1,3 +1,5 @@
+<!-- We don't use this component currently, but I left it here just in case we need it again, or if we'll need to make a similar section in the future -->
+
 <section id="gamification-of-twitter-activity" class="relative bg-agora-pink-dark text-agora-white">
   <div class="container py-20 px-8 grid lg:grid-cols-2 gap-16 lg:gap-0">
     <!-- Image -->
@@ -17,7 +19,9 @@
         class="mb-2 w-full text-2xl 2xl:text-4xl font-bold tracking-tight font-display uppercase text-agora-gray opacity-20 lg:opacity-0 group-hover:opacity-20 transition-all duration-300 transform lg:translate-y-8 group-hover:translate-y-0"
         >Coming soon</span
       >
-      <h2 class="mb-8 w-full text-4xl 2xl:text-6xl font-bold tracking-tight font-display uppercase">
+      <h2
+        class="mb-8 w-full text-3xl lg:text-4xl 2xl:text-5xl font-bold tracking-tight font-display uppercase"
+      >
         Gamification Of Twitter Activity
       </h2>
 

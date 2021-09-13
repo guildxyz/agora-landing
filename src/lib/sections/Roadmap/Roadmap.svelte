@@ -14,7 +14,7 @@
 
   <div class="container px-8 pt-16 xl:pt-24 pb-20 xl:pb-28 space-y-16 text-center">
     <h2
-      class="col-span-3 text-agora-pink-light text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold tracking-tight font-display uppercase"
+      class="col-span-3 text-agora-pink-light text-3xl lg:text-4xl 2xl:text-5xl font-bold tracking-tight font-display uppercase"
     >
       Roadmap <span class="text-lg tracking-normal">2021</span>
     </h2>
@@ -24,17 +24,29 @@
         <Step
           title="Testing"
           q="Q2"
-          content="Telegram & Discord management bot. Bridging chats between social platforms. Audited smart contracts."
+          content={[
+            'Telegram & Discord management bot',
+            'Bridging chats between social platforms',
+            'Audited smart contracts'
+          ]}
         />
         <Step
           title="Releasing"
           q="Q3"
-          content="Aragon and Gnosis integration Agora Social Oracle layer Agora Space, the “App Store” of social tokens."
+          content={[
+            'Aragon and Gnosis integration',
+            'Agora Social Oracle layer',
+            'Agora Space, the “App Store” of social tokens'
+          ]}
         />
         <Step
           title="More tools"
           q="Q4"
-          content="Integrating other token issuers Token admin dashboard Bridge a token between blockchains with full utility."
+          content={[
+            'Integrating other token issuers',
+            'Token admin dashboard',
+            'Bridge a token between blockchains with full utility'
+          ]}
         />
       </div>
     </div>

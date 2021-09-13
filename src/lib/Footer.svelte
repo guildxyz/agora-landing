@@ -8,9 +8,14 @@
   } from 'phosphor-svelte';
 
   export let purple = false;
+  export let pink = false;
 </script>
 
-<footer class={purple ? 'bg-agora-purple' : 'bg-agora-white'}>
+<footer
+  class={`${!purple && !pink && 'bg-agora-white'} ${purple && 'bg-agora-purple'} ${
+    pink && 'bg-agora-pink-dark'
+  }`}
+>
   <div class="relative container">
     <!-- Mobile bg -->
     <img
@@ -32,8 +37,8 @@
           <div class="flex flex-col">
             <h2
               class={`mb-4 font-bold tracking-tight text-2xl 2xl:text-3xl font-display ${
-                purple ? 'text-agora-pink-light' : 'text-agora-pink-medium'
-              }`}
+                !pink && !purple && 'text-agora-pink-medium'
+              } ${purple && 'text-agora-pink-light'} ${pink && 'text-agora-white'}`}
             >
               Join the community
             </h2>
@@ -41,9 +46,11 @@
               <li>
                 <a
                   href="https://twitter.com/AgoraSpaceDAO"
+                  target="_blank"
+                  rel="noopener"
                   class={`flex items-center justify-center w-8 h-8 rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-300 ${
-                    purple
-                      ? 'bg-agora-white text-agora-blue-medium focus-visible:ring-opacity-50 '
+                    purple || pink
+                      ? 'bg-agora-white text-agora-blue-medium focus-visible:ring-opacity-50'
                       : 'bg-agora-blue-medium text-agora-white'
                   }`}
                 >
@@ -54,8 +61,10 @@
               <li>
                 <a
                   href="https://github.com/AgoraSpaceDAO"
+                  target="_blank"
+                  rel="noopener"
                   class={`flex items-center justify-center w-8 h-8 rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-300 ${
-                    purple
+                    purple || pink
                       ? 'bg-agora-white text-agora-blue-medium focus-visible:ring-opacity-50'
                       : 'bg-agora-blue-medium text-agora-white'
                   }`}
@@ -66,9 +75,11 @@
               </li>
               <li>
                 <a
-                  href="https://medium.com/@AgoraSpace"
+                  href="https://medium.com/@AgoraSpaceDAO"
+                  target="_blank"
+                  rel="noopener"
                   class={`flex items-center justify-center w-8 h-8 rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-300 ${
-                    purple
+                    purple || pink
                       ? 'bg-agora-white text-agora-blue-medium focus-visible:ring-opacity-50'
                       : 'bg-agora-blue-medium text-agora-white'
                   }`}
@@ -80,8 +91,10 @@
               <li>
                 <a
                   href="https://discord.gg/KvXtEpDX8B"
+                  target="_blank"
+                  rel="noopener"
                   class={`flex items-center justify-center w-8 h-8 rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-300 ${
-                    purple
+                    purple || pink
                       ? 'bg-agora-white text-agora-blue-medium focus-visible:ring-opacity-50'
                       : 'bg-agora-blue-medium text-agora-white'
                   }`}
@@ -92,9 +105,11 @@
               </li>
               <li>
                 <a
-                  href="https://t.me/joinchat/xUE3YWMZ2WAxMmNk"
+                  href="https://t.me/joinchat/UxeaoiNXDH5lN2Rk"
+                  target="_blank"
+                  rel="noopener"
                   class={`flex items-center justify-center w-8 h-8 rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-300 ${
-                    purple
+                    purple || pink
                       ? 'bg-agora-white text-agora-blue-medium focus-visible:ring-opacity-50'
                       : 'bg-agora-blue-medium text-agora-white'
                   }`}
@@ -105,36 +120,39 @@
               </li>
             </ul>
 
-            <span class={`hidden md:block mt-auto ${purple ? 'text-agora-white' : 'font-light'}`}
-              >&copy; 2021 Agora Space</span
+            <span
+              class={`hidden md:block mt-auto ${
+                purple || pink ? 'text-agora-white' : 'font-light'
+              }`}>&copy; 2021 Agora Space</span
             >
           </div>
 
           <div class="flex flex-col">
             <h2
               class={`mb-4 font-bold tracking-tight text-2xl 2xl:text-3xl font-display ${
-                purple ? 'text-agora-pink-light' : 'text-agora-pink-medium'
-              }`}
+                !pink && !purple && 'text-agora-pink-medium'
+              } ${purple && 'text-agora-pink-light'} ${pink && 'text-agora-white'}`}
             >
               Information
             </h2>
             <ul
               class={`mb-12 font-medium xl:text-lg ${
-                purple ? 'text-agora-white' : 'text-gray-600'
+                purple || pink ? 'text-agora-white' : 'text-gray-600'
               }`}
             >
               <li>
                 <a
                   href="/about"
-                  class="focus:outline-none focus-visible:border-b-2 focus-visible:border-gray-300"
+                  class="block py-2 lg:py-0 max-w-max focus:outline-none focus-visible:border-b-2 focus-visible:border-gray-300"
                   >About</a
                 >
               </li>
               <li>
                 <a
-                  href="https://agoraspace.gitbook.io/agoraspace/"
+                  href="https://app.gitbook.com/@agora-space/s/agoraspace/"
                   target="_blank"
-                  class="focus:outline-none focus-visible:border-b-2 focus-visible:border-gray-300"
+                  rel="noopener"
+                  class="block py-2 lg:py-0 max-w-max focus:outline-none focus-visible:border-b-2 focus-visible:border-gray-300"
                   >Gitbook</a
                 >
               </li>
@@ -142,7 +160,7 @@
                 <li>
                   <a
                     href="/"
-                    class="focus:outline-none focus-visible:border-b-2 focus-visible:border-gray-300"
+                    class="block py-2 lg:py-0 max-w-max focus:outline-none focus-visible:border-b-2 focus-visible:border-gray-300"
                     >Brandbook</a
                   >
                 </li>
@@ -151,7 +169,7 @@
                 <a
                   href="/agora-space-brand-kit.zip"
                   target="_blank"
-                  class="focus:outline-none focus-visible:border-b-2 focus-visible:border-gray-300"
+                  class="block py-2 lg:py-0 max-w-max focus:outline-none focus-visible:border-b-2 focus-visible:border-gray-300"
                   >Brand kit</a
                 >
               </li>
@@ -159,53 +177,55 @@
                 <a
                   href="https://discord.gg/T3Pb7VkUBz"
                   target="_blank"
-                  class="focus:outline-none focus-visible:border-b-2 focus-visible:border-gray-300"
+                  rel="noopener"
+                  class="block py-2 lg:py-0 max-w-max focus:outline-none focus-visible:border-b-2 focus-visible:border-gray-300"
                   >Support</a
                 >
               </li>
             </ul>
           </div>
-          <span class={`md:hidden ${purple ? 'text-agora-white' : 'font-light'}`}
+          <span class={`md:hidden ${purple || pink ? 'text-agora-white' : 'font-light'}`}
             >&copy; 2021 Agora Space</span
           >
 
           <div class="hidden xl:flex flex-col">
             <h2
               class={`mb-4 font-bold tracking-tight text-2xl 2xl:text-3xl font-display ${
-                purple ? 'text-agora-pink-light' : 'text-agora-pink-medium'
-              }`}
+                !pink && !purple && 'text-agora-pink-medium'
+              } ${purple && 'text-agora-pink-light'} ${pink && 'text-agora-white'}`}
             >
               Tools & Products
             </h2>
             <ul
               class={`mb-12 font-medium xl:text-lg ${
-                purple ? 'text-agora-white' : 'text-gray-600'
+                purple || pink ? 'text-agora-white' : 'text-gray-600'
               }`}
             >
               <li>
                 <a
                   href="https://app.agora.space/"
                   target="_blank"
-                  class="focus:outline-none focus-visible:border-b-2 focus-visible:border-gray-300"
+                  rel="noopener"
+                  class="block py-2 lg:py-0 max-w-max focus:outline-none focus-visible:border-b-2 focus-visible:border-gray-300"
                   >Community explorer</a
                 >
               </li>
               <li>
                 <a
                   href="/tools"
-                  class="focus:outline-none focus-visible:border-b-2 focus-visible:border-gray-300"
+                  class="block py-2 lg:py-0 max-w-max focus:outline-none focus-visible:border-b-2 focus-visible:border-gray-300"
                   >Role management bot</a
                 >
               </li>
-              <!--
               <li>
                 <a
-                  href="/"
-                  class="focus:outline-none focus-visible:border-b-2 focus-visible:border-gray-300"
+                  href="https://app.agora.space/register"
+                  target="_blank"
+                  rel="noopener"
+                  class="block py-2 lg:py-0 max-w-max focus:outline-none focus-visible:border-b-2 focus-visible:border-gray-300"
                   >Social Token Admin</a
                 >
               </li>
-              -->
             </ul>
           </div>
         </div>

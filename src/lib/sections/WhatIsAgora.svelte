@@ -50,17 +50,20 @@
       </div>
 
       <div
-        class="order-1 lg:order-2 container self-center pt-16 px-8 xl:px-32 2xl:px-38 max-w-5xl md:pt-20 lg:py-28 2xl:py-38 lg:max-w-3/5 text-center"
+        class="order-1 lg:order-2 container self-center pt-16 px-8 xl:px-32 2xl:px-38 max-w-5xl md:pt-20 lg:py-28 2xl:py-32 lg:max-w-3/5 text-center"
       >
         <h2
-          class="mb-8 text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold tracking-tight font-display uppercase"
+          class="mb-8 text-3xl lg:text-4xl 2xl:text-5xl font-bold tracking-tight font-display uppercase"
         >
           What is <br class="md:hidden" />Agora Space?
         </h2>
+        <p class="mb-4 lg:font-semibold 2xl:text-xl">
+          Agora Space connects Discord, Twitter and other social media platforms with the blockchain
+          providing a range of tools to upgrade DAOs and Social Token communities.
+        </p>
         <p class="lg:font-semibold 2xl:text-xl">
-          A framework for all social token tools with an oracle twist. A broad service pack
-          elevating tokenized communities, helping their founders and members alike. It provides the
-          first use-case for social oracle networks.
+          Our vision is to supercharge Web3 adoption by creating gasless, multichain and
+          platform-agnostic solutions, without sacrificing decentralisation or privacy.
         </p>
       </div>
     </div>

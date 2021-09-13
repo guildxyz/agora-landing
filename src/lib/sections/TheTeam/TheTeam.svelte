@@ -6,7 +6,7 @@
   import '../../../css/swiper-custom.css';
 
   import Div from '$lib/Div.svelte';
-  import TeamMember from './components/TeamMembers.svelte';
+  import TeamMember from './components/TeamMember.svelte';
 
   let windowWidth;
   $: sectionWrapper = windowWidth >= 1024 ? Div : Swiper;
@@ -16,53 +16,179 @@
 <svelte:window bind:innerWidth={windowWidth} />
 
 <section id="the-team" class="relative bg-agora-blue-medium">
-  <div class="container px-8 py-10 lg:py-20 space-y-10 text-center">
-    <h2
-      class="text-agora-pink-light text-3xl lg:text-4xl font-bold tracking-tight font-display uppercase"
-    >
-      The team
-    </h2>
+  <div class="flex flex-col px-8 py-10 lg:py-20">
+    <div class="container space-y-16">
+      <h2
+        class="text-agora-pink-light text-3xl lg:text-4xl 2xl:text-5xl font-bold tracking-tight font-display uppercase text-center"
+      >
+        The team
+      </h2>
 
-    <!-- Team members -->
-    <svelte:component
-      this={sectionWrapper}
-      modules={[Pagination]}
-      class="relative pb-12 lg:pb-0 lg:grid lg:grid-cols-3 gap-8 lg:gap-16"
-      pagination={{ clickable: true }}
-    >
-      <!-- Block 1 -->
-      <svelte:component this={membersWrapper} class="flex justify-center">
-        <div class="grid grid-cols-2 gap-8 lg:gap-16 max-w-xs lg:max-w-none">
-          <TeamMember photo="/images/team/brunya.png" name="Brunya" label="Operation" />
-          <TeamMember photo="/images/team/dovalid.png" name="Dovalid" label="Fullstack Dev" />
-          <TeamMember photo="/images/team/shronk.png" name="Shronk" label="Backend Dev" />
-          <TeamMember photo="/images/team/devid.png" name="Devid" label="Backend Dev" />
-        </div>
-      </svelte:component>
+      <!-- Team members -->
+      <svelte:component
+        this={sectionWrapper}
+        modules={[Pagination]}
+        class="relative flex flex-col lg:space-y-16 pb-12 lg:pb-0"
+        pagination={{ clickable: true }}
+      >
+        <!-- Block 1 -->
+        <svelte:component this={membersWrapper} class="flex justify-center px-1 md:px-0">
+          <div
+            class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-16 xl:gap-32 max-w-xs lg:max-w-none"
+          >
+            <TeamMember
+              photo="/images/team/brunya.png"
+              name="Brunya"
+              label="Operation"
+              github="https://github.com/Brunya"
+            />
+            <TeamMember
+              photo="/images/team/dovalid.png"
+              name="Dovalid"
+              label="Frontend Dev"
+              github="https://github.com/dovalid"
+              twitter="https://twitter.com/dovalid"
+            />
+            <TeamMember
+              photo="/images/team/shronk.png"
+              name="Shronk"
+              label="Backend Dev"
+              github="https://github.com/schronck"
+            />
+            <TeamMember
+              photo="/images/team/devid.png"
+              name="Devid"
+              label="Backend Dev"
+              github="https://github.com/DevidAbt"
+            />
+          </div>
+        </svelte:component>
 
-      <!-- Block 2 -->
-      <svelte:component this={membersWrapper} class="flex justify-center">
-        <div class="grid grid-cols-2 gap-8 lg:gap-16 max-w-xs lg:max-w-none">
-          <TeamMember photo="/images/team/ejay.png" name="Ejay" label="Fullstack Dev" />
-          <TeamMember
-            photo="/images/team/tomi_ohl.png"
-            name="Tomi_Ohl"
-            label="Smart contract Dev"
-          />
-          <TeamMember photo="/images/team/d3v.png" name="D3v" label="Security advisor" />
-          <TeamMember photo="/images/team/macy.png" name="Macy" label="Communication" />
-        </div>
-      </svelte:component>
+        <!-- Block 2 -->
+        <svelte:component this={membersWrapper} class="flex justify-center  px-1 md:px-0">
+          <div
+            class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-16 xl:gap-32 max-w-xs lg:max-w-none"
+          >
+            <TeamMember
+              photo="/images/team/ejay.png"
+              name="Ejay"
+              label="Backend Dev"
+              github="https://github.com/dezsim"
+              twitter="https://twitter.com/dezsim_"
+            />
+            <TeamMember
+              photo="/images/team/tomi_ohl.png"
+              name="Tomi_Ohl"
+              label="Smart contract Dev"
+              github="https://github.com/TomiOhl"
+            />
+            <TeamMember
+              photo="/images/team/macy.png"
+              name="Réka"
+              label="Communication"
+              twitter="https://twitter.com/reka_eth"
+            />
+            <TeamMember
+              photo="/images/team/balazs.png"
+              name="Balazs"
+              label="Frontend Dev"
+              github="https://github.com/cs-balazs"
+            />
+          </div>
+        </svelte:component>
 
-      <!-- Block 3 -->
-      <svelte:component this={membersWrapper} class="flex justify-center">
-        <div class="grid grid-cols-2 gap-8 lg:gap-16 max-w-xs lg:max-w-none">
-          <TeamMember photo="/images/team/kovjonas.png" name="KovJonas" label="Frontend Dev" />
-          <TeamMember photo="/images/team/balazs.png" name="Balazs" label="Frontend Dev" />
-          <TeamMember photo="/images/team/sito.png" name="Sito" label="Designer" />
-          <TeamMember photo="/images/team/raz.png" name="R A Z" label="Strategic advisor" />
-        </div>
+        <!-- Block 3 -->
+        <svelte:component this={membersWrapper} class="flex justify-center  px-1 md:px-0">
+          <div
+            class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-16 xl:gap-32 max-w-xs lg:max-w-none"
+          >
+            <div class="hidden lg:block" />
+            <TeamMember
+              photo="/images/team/kovjonas.png"
+              name="KovJonas"
+              label="Frontend Dev"
+              github="https://github.com/KovJonas"
+            />
+            <TeamMember photo="/images/team/sito.png" name="Sito" label="Designer" />
+          </div>
+        </svelte:component>
       </svelte:component>
-    </svelte:component>
+    </div>
+
+    <div class="container space-y-16">
+      <h2
+        class="mt-32 text-agora-pink-light text-3xl lg:text-4xl 2xl:text-5xl font-bold tracking-tight font-display uppercase text-center"
+      >
+        Advisors
+      </h2>
+      <!-- Advisors -->
+      <svelte:component
+        this={sectionWrapper}
+        modules={[Pagination]}
+        class="relative pb-12 lg:pb-0"
+        pagination={{ clickable: true }}
+      >
+        <!-- Block 1 -->
+        <svelte:component this={membersWrapper} class="flex justify-center">
+          <div
+            class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-16 xl:gap-32 max-w-xs lg:max-w-none"
+          >
+            <TeamMember
+              photo="/images/team/raz.png"
+              name="R A Z"
+              label="Strategic advisor"
+              twitter="https://twitter.com/L1sp3r"
+              links={[
+                {
+                  text: 'Supernova Fund',
+                  url: 'https://supernova.fund'
+                }
+              ]}
+            />
+            <TeamMember
+              photo="/images/team/petermm.png"
+              name="Peter MM"
+              label="Advisor"
+              links={[
+                {
+                  text: 'Supernova Fund',
+                  url: 'https://supernova.fund'
+                },
+                {
+                  text: 'Prev.: J.P. Morgan'
+                }
+              ]}
+            />
+            <TeamMember
+              photo="/images/team/d3v.png"
+              name="D3v"
+              label="Security advisor"
+              links={[
+                {
+                  text: 'Former SSNS NCSC',
+                  url: 'https://mi.nemzetilabor.hu/partners/special-service-national-security'
+                }
+              ]}
+            />
+            <TeamMember
+              photo="/images/team/nima.png"
+              name="NiMA"
+              label="Advisor"
+              twitter="https://twitter.com/insidenima"
+              links={[
+                {
+                  text: 'Seedclub',
+                  url: 'https://seedclub.xyz'
+                },
+                {
+                  text: 'Mintbase',
+                  url: 'https://www.mintbase.io'
+                }
+              ]}
+            />
+          </div>
+        </svelte:component>
+      </svelte:component>
+    </div>
   </div>
 </section>

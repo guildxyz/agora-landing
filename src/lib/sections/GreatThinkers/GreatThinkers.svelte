@@ -18,8 +18,7 @@
 <section id="great-thinkers-are-with-us" class="relative bg-agora-gray">
   <div class="container px-8 py-24 2xl:py-28 space-y-4 2xl:space-y-10 text-center">
     <h2
-      class="mb-24 col-span-3 text-agora-pink-light text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold tracking-tight font-display uppercase"
-
+      class="mb-24 col-span-3 text-agora-pink-light text-3xl lg:text-4xl 2xl:text-5xl font-bold tracking-tight font-display uppercase"
     >
       Great thinkers are with us
     </h2>
@@ -34,7 +33,8 @@
         <Quote
           image="/images/plato-portrait.png"
           alt="Plato portrait"
-          quote="I wish oracles would finally provide social data. Agora Space is very promising in that regard and also in easing the limitations of social tokens."
+          quoteStart="Token-gated communities"
+          quote="create the perfect foundation for Sybil-Resistant decision-making and rewarding mechanisms."
           name="Plato"
         />
       </svelte:component>
@@ -43,7 +43,8 @@
         <Quote
           image="/images/aristotle-portrait.png"
           alt="Aristotle portrait"
-          quote="The entire social token ecosystem is available on this one unified platform, catering to all the needs of communities."
+          quoteStart="Trustless financial contracts"
+          quote="are essential for a DAO2DAO future."
           name="Aristotle"
         />
       </svelte:component>
@@ -52,7 +53,8 @@
         <Quote
           image="/images/epikuros-portrait.png"
           alt="Epikuros portrait"
-          quote="I am looking forward to seeing more use-cases available here for connecting social media and the blockchain, and how they provide a new financial system for creators."
+          quoteStart="Gasless web3 applications"
+          quote="unleash the burden of onboarding millions to DAOs"
           name="Epikuros"
         />
       </svelte:component>
