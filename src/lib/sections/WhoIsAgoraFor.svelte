@@ -40,6 +40,7 @@
     <div
       class="flex flex-col items-center justify-center space-y-4 relative lg:col-span-3 lg:min-h-full bg-agora-white overflow-hidden"
     >
+      <!-- 
       <div
         class="flex items-center justify-center -mt-8 w-52 h-52 text-agora-white text-3xl font-bold font-display bg-circle-purple lg:bg-circle-dark bg-no-repeat bg-center bg-contain"
       >
@@ -54,6 +55,16 @@
 
       <div
         class="w-full md:w-1/2 pt-[40%] bg-who-is-agora-space-for bg-no-repeat bg-contain bg-bottom"
+      /> -->
+      <!-- svelte-ignore a11y-media-has-caption -->
+      <video
+        src="/animations/who-is-agora-space-for.webm"
+        muted
+        autoplay
+        loop
+        width="50%"
+        height="auto"
+        class="w-1/2 h-auto"
       />
     </div>
   </div>
