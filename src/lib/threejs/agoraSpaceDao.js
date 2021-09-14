@@ -66,9 +66,9 @@ const animate = () => {
   smallBubblesData.forEach((bubble) => bubble.object.lookAt(camera.position));
 
   // Intro animation
-  if (ANIMATE && bigBubble.position.y < 0.6 && centerAxis.position.y < 0) {
-    bigBubble.position.y += 0.04;
-    centerAxis.position.y += 0.04;
+  if (ANIMATE && bigBubble.position.y < 0.64 && centerAxis.position.y < 0) {
+    bigBubble.position.y += 0.028;
+    centerAxis.position.y += 0.028;
   }
 
   // Updating the main axis rotation
