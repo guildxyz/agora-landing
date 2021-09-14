@@ -21,32 +21,46 @@
   <div class="relative w-full max-fullhd-container mx-auto flex flex-col">
     <div class="flex flex-col lg:flex-row text-agora-white">
       <div
-        class="order-2 lg:order-1 flex lg:self-end flex-col justify-end h-full w-full max-w-3xl pt-16"
+        class="order-2 lg:order-1 w-full h-80 sm:h-96 md:h-[50vh] lg:h-auto flex flex-col max-w-3xl pt-16"
       >
-        <!-- svelte-ignore a11y-media-has-caption -->
-        <video
-          src="/animations/what-is-agora-space-start.webm"
-          muted
-          width="100%"
-          height="auto"
-          on:ended={handleStartEnd}
-          bind:this={firstVideo}
-          style={`display: ${showStartVideo ? 'block' : 'none'};`}
-        >
-          <img src="/images/what-is-agora-space-bg.png" alt="What is Agora Space?" class="w-full" />
-        </video>
-        <!-- svelte-ignore a11y-media-has-caption -->
-        <video
-          src="/animations/what-is-agora-space.webm"
-          muted
-          width="100%"
-          height="auto"
-          loop
-          bind:this={loopingVideo}
-          style={`display: ${showStartVideo ? 'none' : 'block'};`}
-        >
-          <img src="/images/what-is-agora-space-bg.png" alt="What is Agora Space?" class="w-full" />
-        </video>
+        <div class="relative h-full">
+          <!-- svelte-ignore a11y-media-has-caption -->
+          <video
+            src="/animations/what-is-agora-space-start.webm"
+            muted
+            width="100%"
+            height="auto"
+            on:ended={handleStartEnd}
+            bind:this={firstVideo}
+            class={`absolute bottom-0 left-0 ${
+              showStartVideo ? 'opacity-1' : 'opacity-0'
+            } transition-opacity duration-75 delay-75`}
+          >
+            <img
+              src="/images/what-is-agora-space-bg.png"
+              alt="What is Agora Space?"
+              class="w-full"
+            />
+          </video>
+          <!-- svelte-ignore a11y-media-has-caption -->
+          <video
+            src="/animations/what-is-agora-space.webm"
+            muted
+            width="100%"
+            height="auto"
+            loop
+            bind:this={loopingVideo}
+            class={`absolute bottom-0 left-0 ${
+              showStartVideo ? 'opacity-0' : 'opacity-1'
+            } transition-opacity duration-75`}
+          >
+            <img
+              src="/images/what-is-agora-space-bg.png"
+              alt="What is Agora Space?"
+              class="w-full"
+            />
+          </video>
+        </div>
       </div>
 
       <div
