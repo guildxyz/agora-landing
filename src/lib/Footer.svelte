@@ -6,9 +6,20 @@
     DiscordLogo,
     TelegramLogo
   } from 'phosphor-svelte';
+  import { onMount } from 'svelte';
+  import { initThreeJS, resizeThreeJS } from '$lib/threejs/footer';
 
   export let purple = false;
   export let pink = false;
+
+  let canvas;
+  let canvasWidth;
+  let canvasHeight;
+  $: canvasWidth && canvasHeight && resizeThreeJS(canvasWidth, canvasHeight);
+
+  onMount(() => {
+    initThreeJS(canvas);
+  });
 </script>
 
 <footer
@@ -24,11 +35,28 @@
       class="absolute md:hidden h-[90%] sm:h-full object-contain bottom-0 -right-6"
     />
     <!-- Desktop bg -->
-    <img
+    <!-- <img
       src="/images/david.png"
       alt="David"
       class="absolute hidden md:block h-full object-contain left-6 xl:left-16 bottom-0 right-auto"
-    />
+    /> -->
+    <div
+      class="absolute hidden md:block w-1/4 h-full object-contain left-6 xl:left-16 bottom-0 right-auto"
+      bind:clientWidth={canvasWidth}
+      bind:clientHeight={canvasHeight}
+    >
+      <div class="relative">
+        <canvas width={canvasWidth} height={canvasHeight} bind:this={canvas} />
+
+        <img
+          src="/images/agora-footer.png"
+          width={canvasWidth}
+          height="auto"
+          alt="Agora Space"
+          class="absolute bottom-0 left-0"
+        />
+      </div>
+    </div>
 
     <div class="flex md:justify-end px-8 lg:px-24 py-10 lg:pt-20 w-full">
       <div class="xl:w-4/5">
