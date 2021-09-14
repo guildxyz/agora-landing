@@ -12,8 +12,16 @@ let renderer,
   video,
   platonVideoTexture,
   platonMaterial,
-  platon,
-  interval;
+  platon;
+
+const sizes = {
+  width: 0,
+  height: 0
+};
+
+const mouse = new THREE.Vector2(-Infinity, -Infinity);
+
+const raycaster = new THREE.Raycaster();
 
 const customUniforms = {
   uTime: { value: 0 },
@@ -22,48 +30,48 @@ const customUniforms = {
   uNoiseStrength: { value: 0.1 }
 };
 
-let HOVER = false;
-let SPEEDUP = false;
-const msPerFrame = 1000 / 60;
-export const onPlatonHover = () => {
-  // interval = setInterval(() => {
-  //   console.log(video.currentTime, video.duration);
-  //   if (video.currentTime < video.duration) {
-  //     video.currentTime += 0.01;
-  //     platonVideoTexture.needsUpdate = true;
-  //   } else {
-  //     clearInterval(interval);
-  //   }
-  // }, msPerFrame);
-  HOVER = true;
-  // SPEEDUP = true;
-};
-export const onPlatonBlur = () => {
-  // interval = setInterval(() => {
-  //   console.log(video.currentTime, video.duration);
-  //   if (video.currentTime > 0) {
-  //     video.currentTime -= 0.01;
-  //   } else {
-  //     clearInterval(interval);
-  //   }
-  // }, msPerFrame);
-  // SPEEDUP = false;
-  HOVER = false;
-};
-
 const animate = () => {
   requestAnimationFrame(animate);
 
   // Update the necessary uniforms
   customUniforms.uTime.value = clock.getElapsedTime();
+
+  // Cast a ray with the raycaster in the "mouse direction"
+  raycaster.setFromCamera(mouse, camera);
+
+  const objectsToTest = [bubble, platon];
+  const intersects = raycaster.intersectObjects(objectsToTest);
+
+  if (intersects?.length > 0) {
+    if (video.currentTime === 0) {
+      video.play();
+    }
+
+    if (
+      video.currentTime >= video.duration / 2 - 0.015 &&
+      video.currentTime <= video.duration / 2 + 0.015
+    ) {
+      video.pause();
+    }
+  } else {
+    if (video.currentTime > 0) {
+      video.play();
+    } else {
+      video.pause();
+    }
+  }
+
   renderer.render(scene, camera);
 };
 
 export const resizeThreeJS = (w, h) => {
+  sizes.width = w;
+  sizes.height = h;
+
   if (camera && renderer) {
-    camera.aspect = w / h;
+    camera.aspect = sizes.width / sizes.height;
     camera.updateProjectionMatrix();
-    renderer.setSize(w, h);
+    renderer.setSize(sizes.width, sizes.height);
   }
 };
 
@@ -104,14 +112,30 @@ export const initThreeJS = (element, callback) => {
   platonVideoTexture.format = THREE.RGBAFormat;
 
   platonGeometry = new THREE.PlaneGeometry(6, 3.8);
-  platonMaterial = new THREE.MeshBasicMaterial({ map: platonVideoTexture, transparent: true });
+  platonMaterial = new THREE.MeshBasicMaterial({
+    map: platonVideoTexture,
+    transparent: true
+  });
   platon = new THREE.Mesh(platonGeometry, platonMaterial);
   platon.position.set(0, -0.55, 1);
   scene.add(platon);
 
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore
-  video.currentTime = 0.01;
+  video.currentTime = 0;
+
+  // Needed for the raycaster
+  if (element) {
+    element.addEventListener('mousemove', (e) => {
+      mouse.x = (e.offsetX / sizes.width) * 2 - 1;
+      mouse.y = -(e.offsetY / sizes.height) * 2 + 1;
+    });
+
+    element.addEventListener('mouseleave', () => {
+      mouse.x = -Infinity;
+      mouse.y = -Infinity;
+    });
+  }
 
   // Renderer
   renderer = new THREE.WebGLRenderer({

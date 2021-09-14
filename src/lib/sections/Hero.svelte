@@ -2,7 +2,7 @@
   import Header from '$lib/Header';
   import { SignIn, Users } from 'phosphor-svelte';
   import Button from '$lib/Button';
-  import { initThreeJS, resizeThreeJS, onPlatonHover, onPlatonBlur } from '$lib/threejs/hero';
+  import { initThreeJS, resizeThreeJS } from '$lib/threejs/hero';
   import { onDestroy, onMount } from 'svelte';
   let hideHeroImg = false;
   let windowSize = 1920;
@@ -15,18 +15,6 @@
 
   $: offset = windowSize > 1280 ? '-62%' : windowSize > 1024 ? '-48%' : '-48%';
   $: canvasWidth && canvasHeight && resizeThreeJS(canvasWidth, canvasHeight);
-
-  /*
-  const startBreathing = () => {
-    // TODO: stop video2, then play video1 from (1 - video2.currentTime)
-    video1.play();
-  };
-
-  const stopBreathing = () => {
-    // TODO: stop video1, then play video2 from (1 - video1.currentTime)
-    // video2.play();
-  };
-  */
 
   onMount(() => {
     initThreeJS(canvas, () => {
@@ -119,25 +107,8 @@
           width={canvasWidth}
           height={canvasHeight}
           class={`absolute inset-0 w-full h-full object-contain transition-opacity opacity-${opacity} duration-500`}
-          on:mouseover={() => onPlatonHover()}
-          on:focus={() => onPlatonHover()}
-          on:mouseout={() => onPlatonBlur()}
-          on:blur={() => onPlatonBlur()}
         />
-        <video
-          id="platon-video"
-          src="/animations/platon-in.webm"
-          muted
-          playsinline
-          class="hidden"
-        />
-        <!-- <video
-          id="platon-video-2"
-          src="/animations/platon-out.webm"
-          muted
-          playsinline
-          class="hidden"
-        /> -->
+        <video id="platon-video" src="/animations/platon.webm" muted class="hidden" />
         <img
           src="/images/hero.png"
           alt="Platon"
