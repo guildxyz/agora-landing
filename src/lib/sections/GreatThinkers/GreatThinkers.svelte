@@ -31,21 +31,21 @@
     >
       <svelte:component this={quoteWrapper}>
         <Quote
-          image="/images/plato-portrait.png"
-          alt="Plato portrait"
-          quoteStart="Token-gated communities"
-          quote="create the perfect foundation for Sybil-Resistant decision-making and rewarding mechanisms."
-          name="Plato"
-        />
-      </svelte:component>
-
-      <svelte:component this={quoteWrapper}>
-        <Quote
           image="/images/aristotle-portrait.png"
           alt="Aristotle portrait"
           quoteStart="Trustless financial contracts"
           quote="are essential for a DAO2DAO future."
           name="Aristotle"
+        />
+      </svelte:component>
+
+      <svelte:component this={quoteWrapper}>
+        <Quote
+          image="/images/plato-portrait.png"
+          alt="Plato portrait"
+          quoteStart="Token-gated communities"
+          quote="create the perfect foundation for Sybil-Resistant decision-making and rewarding mechanisms."
+          name="Plato"
         />
       </svelte:component>
 
