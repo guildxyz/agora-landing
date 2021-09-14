@@ -1,31 +1,54 @@
 import * as THREE from 'three';
 import { createBubbleMaterial } from './customShader';
 
-// Post-processing
-import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer.js';
-import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass.js';
-import { BokehPass } from 'three/examples/jsm/postprocessing/BokehPass.js';
-import { SMAAPass } from 'three/examples/jsm/postprocessing/SMAAPass.js';
-
 let renderer,
-  composer,
   camera,
   scene,
   clock,
-  bubbleMaterial,
+  centerAxis,
+  bigBubbleMaterial,
   bigBubbleGeometry,
   bigBubble,
-  smallBubble1Geometry,
-  smallBubble1,
-  smallBubble1Speed,
-  smallBubble2Geometry,
-  smallBubble2,
-  smallBubble2Speed;
+  smallBubbleMaterial,
+  smallBubbleGeometry,
+  smallBubbles;
 
-const sizes = {
-  width: 0,
-  height: 0
-};
+let ANIMATE = false;
+
+export const startAnimation = () => (ANIMATE = true);
+
+const smallBubblesData = [
+  {
+    color: 0x000000,
+    position: new THREE.Vector3(1.5, 0, 0),
+    object: null,
+    image: '/images/logos/witnet.svg'
+  },
+  {
+    color: 0xc9fba6,
+    position: new THREE.Vector3(-1.5, 0.5, 0),
+    object: null,
+    image: '/images/logos/seedclub.svg'
+  },
+  {
+    color: 0xf4f4f4,
+    position: new THREE.Vector3(0.25, 0.8, -1.5),
+    object: null,
+    image: '/images/logos/aragon.svg'
+  },
+  {
+    color: 0xf4f4f4,
+    position: new THREE.Vector3(-1, 1.2, 1),
+    object: null,
+    image: '/images/logos/colony.svg'
+  },
+  {
+    color: 0x304ffe,
+    position: new THREE.Vector3(1, 1, 1),
+    object: null,
+    image: '/images/logos/dxdao.svg'
+  }
+];
 
 const customUniforms = {
   uTime: { value: 0 },
@@ -34,68 +57,31 @@ const customUniforms = {
   uNoiseStrength: { value: 0.1 }
 };
 
-let latestRandomPosition = null;
-const generateRandomXPosition = () => {
-  let randomPosition = Math.random() * 11 - 5;
-
-  if (latestRandomPosition) {
-    while (
-      (randomPosition < latestRandomPosition + 2 && randomPosition > latestRandomPosition - 2) ||
-      (latestRandomPosition > 0 && randomPosition > 0) ||
-      (latestRandomPosition < 0 && randomPosition < 0)
-    ) {
-      randomPosition = Math.random() * 9 - 5;
-    }
-  }
-
-  if (randomPosition < 0 && randomPosition > -2) randomPosition -= 2;
-  if (randomPosition > 0 && randomPosition < 2) randomPosition += 2;
-
-  latestRandomPosition = randomPosition;
-  return randomPosition;
-};
-
-const generateRandomSpeed = () => Math.random() * 0.005 + 0.005;
-
-const generateRandomZPosition = () => Math.random() * 4 - 4;
-
 const animate = () => {
   requestAnimationFrame(animate);
 
   // Update the necessary uniforms
   customUniforms.uTime.value = clock.getElapsedTime();
 
-  // Update bubble position:
-  smallBubble1.position.y += smallBubble1Speed;
-  smallBubble1.rotation.x += 0.001;
-  smallBubble1.rotation.y += 0.001;
+  smallBubblesData.forEach((bubble) => bubble.object.lookAt(camera.position));
 
-  // Reset its Y position & set a random X position
-  if (smallBubble1.position.y > 5) {
-    smallBubble1Speed = generateRandomSpeed();
-    smallBubble1.position.set(generateRandomXPosition(), -5, generateRandomZPosition());
+  // Intro animation
+  if (ANIMATE && bigBubble.position.y < 0.6 && centerAxis.position.y < 0) {
+    bigBubble.position.y += 0.04;
+    centerAxis.position.y += 0.04;
   }
 
-  smallBubble2.position.y += smallBubble2Speed;
-  smallBubble2.rotation.y += 0.0015;
-  smallBubble2.rotation.z += 0.001;
+  // Updating the main axis rotation
+  centerAxis.rotation.y = clock.getElapsedTime() * 0.2;
 
-  // Reset its position & set a random X position
-  if (smallBubble2.position.y > 5) {
-    smallBubble2Speed = generateRandomSpeed();
-    smallBubble2.position.set(generateRandomXPosition(), -6, generateRandomZPosition());
-  }
-
-  // renderer.render(scene, camera);
-  composer.render();
+  renderer.render(scene, camera);
 };
 
 export const resizeThreeJS = (w, h) => {
-  if (camera && renderer && composer) {
+  if (camera && renderer) {
     camera.aspect = w / h;
     camera.updateProjectionMatrix();
     renderer.setSize(w, h);
-    composer.setSize(w, h);
   }
 };
 
@@ -112,35 +98,50 @@ export const initThreeJS = (element) => {
   // Clock
   clock = new THREE.Clock();
 
-  // Texture
+  // Bubble texture
   const textureLoader = new THREE.TextureLoader();
   const matCapTexture = textureLoader.load('/images/bubble-matcap.png');
 
-  // Object
+  centerAxis = new THREE.Object3D();
+  centerAxis.position.y = -2.6;
+
   bigBubbleGeometry = new THREE.IcosahedronGeometry(0.8, 64);
-  bubbleMaterial = new THREE.MeshMatcapMaterial({
+  bigBubbleMaterial = new THREE.MeshMatcapMaterial({
     matcap: matCapTexture
   });
+  bigBubbleMaterial.onBeforeCompile = (shader) => createBubbleMaterial(shader, customUniforms);
 
-  // Modifying the vertex shader
-  bubbleMaterial.onBeforeCompile = (shader) => createBubbleMaterial(shader, customUniforms);
-
-  bigBubble = new THREE.Mesh(bigBubbleGeometry, bubbleMaterial);
-  bigBubble.scale.set(2, 2, 2);
+  bigBubble = new THREE.Mesh(bigBubbleGeometry, bigBubbleMaterial);
+  bigBubble.scale.set(1.5, 1.5, 1.5);
+  bigBubble.position.y = -2;
   scene.add(bigBubble);
-  bigBubble.position.y = -0.64;
 
-  smallBubble1Geometry = new THREE.IcosahedronGeometry(0.6, 32);
-  smallBubble1 = new THREE.Mesh(smallBubble1Geometry, bubbleMaterial);
-  smallBubble1Speed = generateRandomSpeed();
-  scene.add(smallBubble1);
-  smallBubble1.position.set(generateRandomXPosition(), -5, generateRandomZPosition());
+  smallBubbleGeometry = new THREE.IcosahedronGeometry(0.6, 32);
+  smallBubbles = new THREE.InstancedMesh(smallBubbleGeometry, smallBubbleMaterial, 2);
+  smallBubbles.instanceMatrix.setUsage(THREE.DynamicDrawUsage);
 
-  smallBubble2Geometry = new THREE.IcosahedronGeometry(0.64, 48);
-  smallBubble2 = new THREE.Mesh(smallBubble2Geometry, bubbleMaterial);
-  smallBubble2Speed = generateRandomSpeed();
-  scene.add(smallBubble2);
-  smallBubble2.position.set(generateRandomXPosition(), -6, generateRandomZPosition());
+  // Setting up the positions
+  smallBubblesData.forEach((bubble) => {
+    const currentMaterial = new THREE.MeshMatcapMaterial({
+      color: bubble.color
+    });
+    currentMaterial.onBeforeCompile = (shader) => createBubbleMaterial(shader, customUniforms);
+    bubble.object = new THREE.Mesh(smallBubbleGeometry, currentMaterial);
+    bubble.object.position.set(bubble.position.x, bubble.position.y, bubble.position.z);
+    bubble.object.scale.set(0.5, 0.5, 0.5);
+
+    const imagePlane = new THREE.Mesh(
+      new THREE.PlaneGeometry(0.5, 0.5),
+      new THREE.MeshBasicMaterial({ map: textureLoader.load(bubble.image), transparent: true })
+    );
+
+    bubble.object.add(imagePlane);
+    imagePlane.position.z = 0.7;
+
+    centerAxis.add(bubble.object);
+  });
+
+  scene.add(centerAxis);
 
   // Renderer
   renderer = new THREE.WebGLRenderer({
@@ -148,45 +149,7 @@ export const initThreeJS = (element) => {
     alpha: true,
     canvas: element
   });
-  renderer.setClearColor(0x252525);
-
-  // Custom render target
-  let RenderTargetClass = null;
-
-  if (renderer.getPixelRatio() === 1 && renderer.capabilities.isWebGL2) {
-    RenderTargetClass = THREE.WebGLMultisampleRenderTarget;
-  } else {
-    RenderTargetClass = THREE.WebGLRenderTarget;
-  }
-
-  // Rendertarget - needed for proper colors...
-  const renderTarget = new RenderTargetClass(0, 0);
-
-  // Composer
-  const effectComposer = new EffectComposer(renderer, renderTarget);
-  effectComposer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-
-  // Effect composer
-  composer = new EffectComposer(renderer, renderTarget);
-
-  // Post processing
-  const renderPass = new RenderPass(scene, camera);
-  const bokehPass = new BokehPass(scene, camera, {
-    focus: 10,
-    aperture: 10,
-    maxblur: 0.0015,
-    width: sizes.width,
-    height: sizes.height
-  });
-
-  composer.addPass(renderPass);
-  composer.addPass(bokehPass);
-
-  // Anti-aliasing -- SMAA pass
-  if (renderer.getPixelRatio() === 1 && !renderer.capabilities.isWebGL2) {
-    const smaaPass = new SMAAPass();
-    effectComposer.addPass(smaaPass);
-  }
+  renderer.setClearColor(0x252525, 0);
 
   resizeThreeJS(rect.width, rect.height);
   animate();
