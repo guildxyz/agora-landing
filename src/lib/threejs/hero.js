@@ -30,6 +30,9 @@ const customUniforms = {
   uNoiseStrength: { value: 0.1 }
 };
 
+const isVideoPlaying = (video) =>
+  !!(video.currentTime > 0 && !video.paused && !video.ended && video.readyState > 2);
+
 const animate = () => {
   requestAnimationFrame(animate);
 
@@ -53,11 +56,21 @@ const animate = () => {
     ) {
       video.pause();
     }
+
+    if (bubble.position.x < 0.28 && isVideoPlaying(video)) {
+      bubble.position.x += 0.0016;
+      bubble.rotation.z -= Math.PI * 0.0004;
+    }
   } else {
     if (video.currentTime > 0) {
       video.play();
     } else {
       video.pause();
+    }
+
+    if (bubble.position.x > 0.2 && isVideoPlaying(video)) {
+      bubble.position.x -= 0.0016;
+      bubble.rotation.z += Math.PI * 0.0004;
     }
   }
 
