@@ -118,7 +118,7 @@
           bind:this={canvas}
           width={canvasWidth}
           height={canvasHeight}
-          class={`absolute inset-0 w-full h-full transition-opacity opacity-${opacity} duration-500`}
+          class={`absolute inset-0 w-full h-full object-contain transition-opacity opacity-${opacity} duration-500`}
           on:mouseover={() => onPlatonHover()}
           on:focus={() => onPlatonHover()}
           on:mouseout={() => onPlatonBlur()}
@@ -141,7 +141,7 @@
         <img
           src="/images/hero.png"
           alt="Platon"
-          class={`absolute left-0 bottom-0 select-none w-full transition-all duration-500 ${
+          class={`absolute inset-0 w-full h-full object-contain select-none transition-all duration-500 ${
             hideHeroImg ? 'invisible opacity-0' : 'visible opacity-100'
           }`}
         />

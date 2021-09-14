@@ -1,4 +1,4 @@
-<section id="who-is-agora-space-for" class="relative">
+<section id="who-is-agora-space-for" class="relative overflow-hidden">
   <!-- Background -->
   <div class="absolute hidden lg:flex w-full h-full">
     <div class="bg-agora-purple w-1/2" />

@@ -119,7 +119,7 @@ export const initThreeJS = (element, callback) => {
     alpha: true,
     canvas: element
   });
-  renderer.setClearColor(0x000000, 0);
+  renderer.setClearColor(0x252525, 0);
 
   resizeThreeJS(rect.width, rect.height);
   animate();
