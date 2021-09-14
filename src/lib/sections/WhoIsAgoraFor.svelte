@@ -6,7 +6,7 @@
   </div>
 
   <div
-    class="relative w-full custom-container lg:grid lg:grid-cols-5 h-full overflow-hidden md:overflow-visible"
+    class="relative w-full custom-container lg:grid lg:grid-cols-5 overflow-hidden md:overflow-visible"
   >
     <!-- Left side -->
     <div class="relative lg:col-span-2 bg-agora-purple">
@@ -37,31 +37,17 @@
 
     <!-- Right Side -->
     <div
-      class="flex flex-col items-center justify-center space-y-4 relative lg:col-span-3 lg:min-h-full bg-agora-white overflow-hidden"
+      class="flex flex-col items-center justify-center space-y-4 relative lg:col-span-3 bg-agora-white overflow-hidden"
     >
-      <!-- <div
-        class="flex items-center justify-center -mt-8 w-52 h-52 text-agora-white text-3xl font-bold font-display bg-circle-purple lg:bg-circle-dark bg-no-repeat bg-center bg-contain"
-      >
-        Creatives
-      </div>
-
-      <div
-        class="flex items-center justify-center w-40 h-40 text-agora-white text-3xl font-bold font-display bg-circle-purple lg:bg-circle-dark bg-no-repeat bg-center bg-contain"
-      >
-        DAOs
-      </div>
-
-      <div
-        class="w-full md:w-1/2 pt-[40%] bg-who-is-agora-space-for bg-no-repeat bg-contain bg-bottom"
-      /> -->
-
       <video
         src="/animations/who-is-agora-space-for.webm"
         muted
         autoplay
         playsinline
         loop
-        class="max-w-1/2 h-full max-h-screen"
+        width="100%"
+        height="80vh"
+        class="max-w-1/2 h-full max-h-[80vh]"
       />
     </div>
   </div>
