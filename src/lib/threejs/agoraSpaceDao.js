@@ -117,8 +117,6 @@ export const initThreeJS = (element) => {
   scene.add(bigBubble);
 
   smallBubbleGeometry = new THREE.IcosahedronGeometry(0.6, 32);
-  smallBubbles = new THREE.InstancedMesh(smallBubbleGeometry, smallBubbleMaterial, 2);
-  smallBubbles.instanceMatrix.setUsage(THREE.DynamicDrawUsage);
 
   // Setting up the positions
   smallBubblesData.forEach((bubble) => {
