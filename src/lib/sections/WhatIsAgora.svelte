@@ -1,9 +1,14 @@
 <script>
+  import { onMount } from 'svelte';
+
   let showStartVideo = true;
+  let windowWidth;
   let windowHeight;
   let scrollY;
   let firstVideo;
   let loopingVideo;
+  let firstVideoSrc;
+  let loopingVideoSrc;
 
   const handleStartEnd = () => {
     showStartVideo = false;
@@ -13,9 +18,19 @@
   $: if (scrollY >= windowHeight / 2 && firstVideo && loopingVideo) {
     firstVideo.play();
   }
+
+  onMount(() => {
+    if (windowWidth > 768) {
+      firstVideoSrc = '/animations/what-is-agora-space-start.webm';
+      loopingVideoSrc = '/animations/what-is-agora-space.webm';
+    } else {
+      firstVideoSrc = '/animations/mobile-what-is-agora-space-start.webm';
+      loopingVideoSrc = '/animations/mobile-what-is-agora-space.webm';
+    }
+  });
 </script>
 
-<svelte:window bind:innerHeight={windowHeight} bind:scrollY />
+<svelte:window bind:innerWidth={windowWidth} bind:innerHeight={windowHeight} bind:scrollY />
 
 <section id="what-is-agora-space" class="relative bg-agora-purple">
   <div class="relative w-full max-fullhd-container mx-auto flex flex-col">
@@ -26,7 +41,7 @@
         <div class="relative h-full">
           <!-- svelte-ignore a11y-media-has-caption -->
           <video
-            src="/animations/what-is-agora-space-start.webm"
+            src={firstVideoSrc}
             muted
             preload="auto"
             width="100%"
@@ -45,7 +60,7 @@
           </video>
           <!-- svelte-ignore a11y-media-has-caption -->
           <video
-            src="/animations/what-is-agora-space.webm"
+            src={loopingVideoSrc}
             muted
             preload="auto"
             width="100%"

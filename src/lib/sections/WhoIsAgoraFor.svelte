@@ -1,3 +1,20 @@
+<script>
+  import { onMount } from 'svelte';
+
+  let windowWidth;
+  let videoSrc;
+
+  onMount(() => {
+    if (windowWidth > 768) {
+      videoSrc = '/animations/who-is-agora-space-for.webm';
+    } else {
+      videoSrc = '/animations/mobile-who-is-agora-space-for.webm';
+    }
+  });
+</script>
+
+<svelte:window bind:innerWidth={windowWidth} />
+
 <section id="who-is-agora-space-for" class="relative overflow-hidden">
   <!-- Background -->
   <div class="absolute hidden lg:flex w-full h-full">
@@ -40,7 +57,7 @@
       class="flex flex-col items-center justify-center space-y-4 relative lg:col-span-3 bg-agora-white overflow-hidden"
     >
       <video
-        src="/animations/who-is-agora-space-for.webm"
+        src={videoSrc}
         muted
         autoplay
         playsinline

@@ -3,10 +3,13 @@
   import { initThreeJS, resizeThreeJS, startAnimation } from '$lib/threejs/agoraSpaceDao';
 
   let showStartVideo = true;
+  let windowWidth;
   let windowHeight;
   let scrollY;
   let videoContainer;
+  let firstVideoSrc;
   let firstVideo;
+  let loopingVideoSrc;
   let loopingVideo;
 
   const handleStartEnd = () => {
@@ -27,11 +30,19 @@
   $: canvasWidth && canvasHeight && resizeThreeJS(canvasWidth, canvasHeight);
 
   onMount(() => {
+    if (windowWidth > 768) {
+      firstVideoSrc = '/animations/agora-space-dao-in.webm';
+      loopingVideoSrc = '/animations/agora-space-dao.webm';
+    } else {
+      firstVideoSrc = '/animations/mobile-agora-space-dao-in.webm';
+      loopingVideoSrc = '/animations/mobile-agora-space-dao.webm';
+    }
+
     initThreeJS(canvas);
   });
 </script>
 
-<svelte:window bind:innerHeight={windowHeight} bind:scrollY />
+<svelte:window bind:innerWidth={windowWidth} bind:innerHeight={windowHeight} bind:scrollY />
 
 <section id="agora-space-dao" class="relative lg:h-screen bg-agora-gray">
   <!-- Background -->
@@ -55,7 +66,7 @@
       >
         <div class="relative w-full" style={`height: ${canvasHeight}px`}>
           <video
-            src="/animations/agora-space-dao-in.webm"
+            src={firstVideoSrc}
             muted
             width="100%"
             height="auto"
@@ -67,7 +78,7 @@
             } transition-opacity duration-75 delay-75`}
           />
           <video
-            src="/animations/agora-space-dao.webm"
+            src={loopingVideoSrc}
             muted
             width="100%"
             height="auto"
