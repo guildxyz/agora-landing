@@ -10,17 +10,17 @@
   let canvasWidth;
   let canvasHeight;
   let opacity = 0;
-  let video1;
-  let video2;
 
   $: offset = windowSize > 1280 ? '-62%' : windowSize > 1024 ? '-48%' : '-48%';
   $: canvasWidth && canvasHeight && resizeThreeJS(canvasWidth, canvasHeight);
 
   onMount(() => {
-    initThreeJS(canvas, () => {
-      opacity = 100;
-      hideHeroImg = true;
-    });
+    initThreeJS(canvas, () =>
+      setTimeout(() => {
+        opacity = 100;
+        hideHeroImg = true;
+      }, 1000)
+    );
   });
 
   // Heading animation
