@@ -11,18 +11,20 @@
   let firstVideo;
   let loopingVideoSrc;
   let loopingVideo;
+  let shouldPlay = true;
 
   const handleStartEnd = () => {
     showStartVideo = false;
     loopingVideo.play();
   };
 
-  $: if (scrollY >= windowHeight && firstVideo && loopingVideo && showStartVideo) {
+  const scrollHandler = () => {
     const rect = videoContainer.getBoundingClientRect();
-    if (rect.bottom <= windowHeight + rect.bottom / 2) {
+    if (rect.bottom < windowHeight + rect.bottom / 4 && shouldPlay) {
       firstVideo.play();
+      shouldPlay = false;
     }
-  }
+  };
 
   let canvas;
   let canvasWidth;
@@ -42,7 +44,12 @@
   });
 </script>
 
-<svelte:window bind:innerWidth={windowWidth} bind:innerHeight={windowHeight} bind:scrollY />
+<svelte:window
+  bind:innerWidth={windowWidth}
+  bind:innerHeight={windowHeight}
+  bind:scrollY
+  on:scroll={scrollHandler}
+/>
 
 <section id="agora-space-dao" class="relative lg:h-screen bg-agora-gray">
   <!-- Background -->
