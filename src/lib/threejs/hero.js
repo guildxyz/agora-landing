@@ -135,7 +135,7 @@ export const initThreeJS = (element, callback) => {
 
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore
-  video.currentTime = video.duration;
+  video.currentTime = 0.01;
 
   // Needed for the raycaster
   if (element) {
