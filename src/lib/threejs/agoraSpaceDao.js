@@ -9,9 +9,7 @@ let renderer,
   bigBubbleMaterial,
   bigBubbleGeometry,
   bigBubble,
-  smallBubbleMaterial,
-  smallBubbleGeometry,
-  smallBubbles;
+  smallBubbleGeometry;
 
 let ANIMATE = false;
 
