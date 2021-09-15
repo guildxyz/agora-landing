@@ -4,7 +4,7 @@
       class="mx-auto lg:mx-0 max-w-lg lg:max-w-screen-md lg:text-left lg:grid lg:grid-cols-2 lg:gap-16"
     >
       <h2
-        class="mb-16 text-3xl lg:text-4xl 2xl:text-5xl font-bold tracking-tight font-display uppercase text-agora-pink-light lg:col-span-2"
+        class="mb-8 text-3xl lg:text-4xl 2xl:text-5xl font-bold tracking-tight font-display uppercase text-agora-pink-light lg:col-span-2"
       >
         Key technologies
       </h2>
