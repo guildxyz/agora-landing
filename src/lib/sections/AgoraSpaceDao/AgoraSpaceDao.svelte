@@ -54,24 +54,30 @@
         class="absolute left-1/2 bottom-0 w-full max-w-screen-md h-full flex items-end transform -translate-x-1/2"
         bind:this={videoContainer}
       >
-        <video
-          src="/animations/agora-space-dao-in.webm"
-          muted
-          width="100%"
-          height="auto"
-          on:ended={handleStartEnd}
-          bind:this={firstVideo}
-          style={`display: ${showStartVideo ? 'block' : 'none'};`}
-        />
-        <video
-          src="/animations/agora-space-dao.webm"
-          muted
-          width="100%"
-          height="auto"
-          loop
-          bind:this={loopingVideo}
-          style={`display: ${showStartVideo ? 'none' : 'block'};`}
-        />
+        <div class="relative w-full" style={`height: ${canvasHeight}px`}>
+          <video
+            src="/animations/agora-space-dao-in.webm"
+            muted
+            width="100%"
+            height="auto"
+            on:ended={handleStartEnd}
+            bind:this={firstVideo}
+            class={`absolute bottom-0 left-0 ${
+              showStartVideo ? 'opacity-1' : 'opacity-0'
+            } transition-opacity duration-75 delay-75`}
+          />
+          <video
+            src="/animations/agora-space-dao.webm"
+            muted
+            width="100%"
+            height="auto"
+            loop
+            bind:this={loopingVideo}
+            class={`absolute bottom-0 left-0 ${
+              showStartVideo ? 'opacity-0' : 'opacity-1'
+            } transition-opacity duration-75`}
+          />
+        </div>
       </div>
 
       <canvas bind:this={canvas} class="absolute inset-0 w-full h-full" />
