@@ -50,7 +50,7 @@ export const initThreeJS = (element) => {
   });
   bubbleMaterial.onBeforeCompile = (shader) => createBubbleMaterial(shader, customUniforms);
   bubble = new THREE.Mesh(bubbleGeometry, bubbleMaterial);
-  bubble.position.y = -1.25;
+  bubble.position.y = -1.5;
   scene.add(bubble);
 
   // Renderer
