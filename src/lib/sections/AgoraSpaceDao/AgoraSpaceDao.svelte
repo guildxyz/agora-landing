@@ -34,7 +34,7 @@
 
 <svelte:window bind:innerHeight={windowHeight} bind:scrollY />
 
-<section id="agora-space-dao" class="relative h-screen bg-agora-gray">
+<section id="agora-space-dao" class="relative lg:h-screen bg-agora-gray">
   <!-- Background -->
   <div class="absolute hidden lg:flex w-full h-full">
     <div class="bg-agora-gray w-1/2" />
@@ -42,16 +42,16 @@
   </div>
 
   <div
-    class="relative w-full custom-container lg:grid lg:grid-cols-5 h-full overflow-hidden md:overflow-visible"
+    class="relative w-full custom-container grid lg:grid-cols-5 h-full overflow-hidden md:overflow-visible"
   >
     <!-- Left side -->
     <div
-      class="relative lg:col-span-3 bg-agora-gray"
+      class="order-2 lg:order-1 relative lg:col-span-3 h-[80vh] lg:h-auto bg-agora-gray"
       bind:clientWidth={canvasWidth}
       bind:clientHeight={canvasHeight}
     >
       <div
-        class="absolute left-1/2 bottom-0 w-full max-w-screen-md h-full flex items-end transform -translate-x-1/2"
+        class="absolute left-1/2 bottom-0 w-full max-w-screen-md flex items-end transform -translate-x-1/2"
         bind:this={videoContainer}
       >
         <div class="relative w-full" style={`height: ${canvasHeight}px`}>
@@ -80,12 +80,17 @@
         </div>
       </div>
 
-      <canvas bind:this={canvas} class="absolute inset-0 w-full h-full" />
+      <canvas
+        bind:this={canvas}
+        class="absolute inset-0"
+        width={canvasWidth}
+        height={canvasHeight}
+      />
     </div>
 
     <!-- Right Side -->
     <div
-      class="flex flex-col items-center justify-center space-y-4 relative lg:col-span-2 lg:min-h-full bg-agora-purple text-agora-white overflow-hidden"
+      class="order-1 lg:order-2 flex flex-col items-center justify-center space-y-4 relative lg:col-span-2 lg:min-h-full bg-agora-purple text-agora-white overflow-hidden"
     >
       <!-- Background circle left -->
       <div
