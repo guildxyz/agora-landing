@@ -108,7 +108,13 @@
           height={canvasHeight}
           class={`absolute inset-0 w-full h-full object-contain transition-opacity opacity-${opacity} duration-500`}
         />
-        <video id="platon-video" src="/animations/platon.webm" muted class="hidden" />
+        <video
+          id="platon-video"
+          src="/animations/platon.webm"
+          muted
+          class="hidden"
+          poster="/animations/platon-static.png"
+        />
         <img
           src="/images/hero.png"
           alt="Platon"
