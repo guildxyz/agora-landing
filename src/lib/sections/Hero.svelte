@@ -112,8 +112,8 @@
           id="platon-video"
           src="/animations/platon.webm"
           muted
-          class="hidden"
-          poster="/animations/platon-static.png"
+          class="invisible"
+          preload="auto"
         />
         <img
           src="/images/hero.png"

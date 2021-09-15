@@ -28,6 +28,7 @@
           <video
             src="/animations/what-is-agora-space-start.webm"
             muted
+            preload="auto"
             width="100%"
             height="auto"
             on:ended={handleStartEnd}
@@ -46,6 +47,7 @@
           <video
             src="/animations/what-is-agora-space.webm"
             muted
+            preload="auto"
             width="100%"
             height="auto"
             loop
