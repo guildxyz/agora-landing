@@ -19,10 +19,6 @@ const sizes = {
   height: 0
 };
 
-const mouse = new THREE.Vector2(-Infinity, -Infinity);
-
-const raycaster = new THREE.Raycaster();
-
 const customUniforms = {
   uTime: { value: 0 },
   uSpeed: { value: 0.25 },
@@ -39,40 +35,13 @@ const animate = () => {
   // Update the necessary uniforms
   customUniforms.uTime.value = clock.getElapsedTime();
 
-  // Cast a ray with the raycaster in the "mouse direction"
-  raycaster.setFromCamera(mouse, camera);
-
-  const objectsToTest = [bubble, platon];
-  const intersects = raycaster.intersectObjects(objectsToTest);
-
-  if (intersects?.length > 0) {
-    if (video.currentTime === 0) {
-      video.play();
-    }
-
-    if (
-      video.currentTime >= video.duration / 2 - 0.015 &&
-      video.currentTime <= video.duration / 2 + 0.015
-    ) {
-      video.pause();
-    }
-
-    if (bubble.position.x < 0.28 && isVideoPlaying(video)) {
-      bubble.position.x += 0.0016;
-      bubble.rotation.z -= Math.PI * 0.0004;
-    }
-  } else {
-    if (video.currentTime > 0) {
-      video.play();
-    } else {
-      video.pause();
-    }
-
-    if (bubble.position.x > 0.2 && isVideoPlaying(video)) {
-      bubble.position.x -= 0.0016;
-      bubble.rotation.z += Math.PI * 0.0004;
-    }
+  if (!isVideoPlaying(video)) {
+    video.play();
   }
+
+  const timing = -Math.sin(Math.abs(video.currentTime - video.duration / 2)) * 0.2;
+  bubble.position.x = 0.28 + timing * 0.28;
+  bubble.rotation.z = timing;
 
   renderer.render(scene, camera);
 };
@@ -135,20 +104,7 @@ export const initThreeJS = (element, callback) => {
 
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore
-  video.currentTime = video.duration;
-
-  // Needed for the raycaster
-  if (element) {
-    element.addEventListener('mousemove', (e) => {
-      mouse.x = (e.offsetX / sizes.width) * 2 - 1;
-      mouse.y = -(e.offsetY / sizes.height) * 2 + 1;
-    });
-
-    element.addEventListener('mouseleave', () => {
-      mouse.x = -Infinity;
-      mouse.y = -Infinity;
-    });
-  }
+  video.currentTime = 0;
 
   // Renderer
   renderer = new THREE.WebGLRenderer({
