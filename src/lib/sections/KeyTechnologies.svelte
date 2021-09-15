@@ -1,3 +1,33 @@
+<script>
+  import { onMount } from 'svelte';
+
+  let windowWidth;
+  let windowHeight;
+  let scrollY;
+  let videoContainer;
+  let videoSrc;
+  let video;
+  let shouldPlay = true;
+
+  const scrollHandler = () => {
+    const rect = videoContainer.getBoundingClientRect();
+    if (rect.bottom < windowHeight && shouldPlay) {
+      video.play();
+      shouldPlay = false;
+    }
+  };
+
+  onMount(() => {
+    if (windowWidth > 768) {
+      videoSrc = '/animations/key-technologies.webm';
+    } else {
+      videoSrc = '/animations/mobile-key-technologies.webm';
+    }
+  });
+</script>
+
+<svelte:window bind:innerHeight={windowHeight} bind:scrollY on:scroll={scrollHandler} />
+
 <section id="key-technologies" class="relative bg-agora-blue-medium text-agora-white">
   <div class="container relative px-8 pt-24 lg:pb-24 text-center">
     <div
@@ -59,10 +89,13 @@
       </div>
     </div>
 
-    <img
+    <div
       class="lg:absolute lg:bottom-0 lg:-right-20 xl:right-0 w-full lg:w-2/5"
-      src="/images/pegasus.png"
-      alt="Pegasus"
-    />
+      bind:this={videoContainer}
+    >
+      <video src={videoSrc} muted preload="auto" width="100%" height="auto" bind:this={video}>
+        <img src="/images/pegasus.png" alt="Pegasus" />
+      </video>
+    </div>
   </div>
 </section>
