@@ -66,6 +66,7 @@
       >
         <div class="relative w-full" style={`height: ${canvasHeight}px`}>
           <video
+            id="agora-space-dao-video"
             src={firstVideoSrc}
             muted
             width="100%"

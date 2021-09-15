@@ -9,7 +9,8 @@ let renderer,
   bigBubbleMaterial,
   bigBubbleGeometry,
   bigBubble,
-  smallBubbleGeometry;
+  smallBubbleGeometry,
+  video;
 
 let ANIMATE = false;
 
@@ -58,15 +59,17 @@ const customUniforms = {
 const animate = () => {
   requestAnimationFrame(animate);
 
+  const elapsedTime = clock.getElapsedTime();
+
   // Update the necessary uniforms
-  customUniforms.uTime.value = clock.getElapsedTime();
+  customUniforms.uTime.value = elapsedTime;
 
   smallBubblesData.forEach((bubble) => bubble.object.lookAt(camera.position));
 
   // Intro animation
-  if (ANIMATE && bigBubble.position.y < 0.64 && centerAxis.position.y < 0) {
-    bigBubble.position.y += 0.028;
-    centerAxis.position.y += 0.028;
+  if (ANIMATE && bigBubble.position.y < 0.64 && video) {
+    // bigBubble.position.y += 0.028;
+    bigBubble.position.y += (video.currentTime / 12) * 0.64;
   }
 
   // Updating the main axis rotation
@@ -101,18 +104,16 @@ export const initThreeJS = (element) => {
   const matCapTexture = textureLoader.load('/images/bubble-matcap.png');
 
   centerAxis = new THREE.Object3D();
-  centerAxis.position.y = -2.6;
+  centerAxis.position.y = -0.6;
 
-  bigBubbleGeometry = new THREE.IcosahedronGeometry(0.8, 64);
+  bigBubbleGeometry = new THREE.IcosahedronGeometry(1.2, 64);
   bigBubbleMaterial = new THREE.MeshMatcapMaterial({
     matcap: matCapTexture
   });
   bigBubbleMaterial.onBeforeCompile = (shader) => createBubbleMaterial(shader, customUniforms);
 
   bigBubble = new THREE.Mesh(bigBubbleGeometry, bigBubbleMaterial);
-  bigBubble.scale.set(1.5, 1.5, 1.5);
   bigBubble.position.y = -2;
-  scene.add(bigBubble);
 
   smallBubbleGeometry = new THREE.IcosahedronGeometry(0.6, 32);
 
@@ -137,7 +138,10 @@ export const initThreeJS = (element) => {
     centerAxis.add(bubble.object);
   });
 
-  scene.add(centerAxis);
+  bigBubble.add(centerAxis);
+  scene.add(bigBubble);
+
+  video = document.getElementById('agora-space-dao-video');
 
   // Renderer
   renderer = new THREE.WebGLRenderer({
