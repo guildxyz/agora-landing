@@ -4,12 +4,13 @@
 </script>
 
 <div
-  class="min-h-screen flex flex-col items-center xl:items-start justify-center bg-agora-gray text-agora-white"
+  class="min-h-screen flex flex-col items-center justify-center px-8 lg_px-0 bg-agora-gray text-agora-white"
 >
-  <div
-    class="container h-[80vh] text-center xl:text-left xl:bg-notfound bg-no-repeat bg-top bg-cover"
-  >
-    <div class="flex flex-col mx-auto xl:mx-0 max-w-sm h-full">
+  <div class="relative w-full md:w-auto">
+    <img class="hidden md:block" src="/images/404.png" alt="404 - Page not found!" />
+    <div
+      class="md:absolute top-0 left-0 flex flex-col mx-auto xl:mx-0 max-w-sm h-full text-center md:text-left"
+    >
       <h1
         class="mb-8 text-3xl md:text-4xl xl:text-5xl font-bold tracking-tight font-display uppercase text-agora-pink-medium"
       >
@@ -18,14 +19,14 @@
       <p class="mb-16 font-semibold 2xl:text-2xl">
         Sorry, something went wrong and the page you’re looking for cannot be accessed.
       </p>
-      <Button href="/" class="mx-auto xl:mx-0 max-w-max bg-agora-pink-medium">
+      <Button href="/" class="mx-auto md:mx-0 max-w-max bg-agora-pink-medium">
         <span>Go Back</span>
         <ArrowRight slot="icon" weight="bold" size="1.2em" />
       </Button>
       <a
         href="https://discord.gg/T3Pb7VkUBz"
         target="_blank"
-        class="mt-auto mb-4 font-semibold 2xl:text-2xl">Contact us</a
+        class="mt-8 md:mt-auto mb-4 font-semibold 2xl:text-2xl">Contact us</a
       >
     </div>
   </div>
