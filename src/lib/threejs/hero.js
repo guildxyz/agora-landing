@@ -31,17 +31,17 @@ const isVideoPlaying = (video) =>
 
 const animate = () => {
   requestAnimationFrame(animate);
+  const elapsedTime = clock.getElapsedTime();
 
   // Update the necessary uniforms
-  customUniforms.uTime.value = clock.getElapsedTime();
+  customUniforms.uTime.value = elapsedTime;
 
-  if (!isVideoPlaying(video)) {
+  if (!isVideoPlaying(video) && elapsedTime % 5 >= 0 && elapsedTime % 5 <= 1) {
     video.play();
   }
 
   const timing = -Math.sin(Math.abs(video.currentTime - video.duration / 2)) * 0.2;
-  bubble.position.x = 0.28 + timing * 0.28;
-  bubble.rotation.z = timing;
+  bubble.position.x = 0.064 + timing * 0.064;
 
   renderer.render(scene, camera);
 };
@@ -61,8 +61,8 @@ export const initThreeJS = (element, callback) => {
   const rect = element.getBoundingClientRect();
 
   // Camera
-  camera = new THREE.PerspectiveCamera(45, rect.width / rect.height, 0.01, 10);
-  camera.position.z = 6.4;
+  camera = new THREE.OrthographicCamera(-1, 1, 1, -1, 0.01, 10);
+  camera.position.z = 1;
 
   // Scene
   scene = new THREE.Scene();
@@ -75,7 +75,7 @@ export const initThreeJS = (element, callback) => {
   const matCapTexture = textureLoader.load('/images/bubble-matcap.png');
 
   // Object
-  bubbleGeometry = new THREE.IcosahedronGeometry(0.8, 64);
+  bubbleGeometry = new THREE.IcosahedronGeometry(1, 64);
   bubbleMaterial = new THREE.MeshMatcapMaterial({
     matcap: matCapTexture
   });
@@ -84,8 +84,8 @@ export const initThreeJS = (element, callback) => {
   bubbleMaterial.onBeforeCompile = (shader) => createBubbleMaterial(shader, customUniforms);
 
   bubble = new THREE.Mesh(bubbleGeometry, bubbleMaterial);
-  bubble.position.set(0.2, 1.5, 0);
-  bubble.scale.set(1, 0.8, 1);
+  bubble.position.set(0, 0.55, -0.5);
+  bubble.scale.set(0.2, 0.28, 0.2);
   scene.add(bubble);
 
   // Platon
@@ -93,13 +93,13 @@ export const initThreeJS = (element, callback) => {
   platonVideoTexture = new THREE.VideoTexture(video);
   platonVideoTexture.format = THREE.RGBAFormat;
 
-  platonGeometry = new THREE.PlaneGeometry(6, 3.8);
+  platonGeometry = new THREE.PlaneGeometry(1.64, 1.64);
   platonMaterial = new THREE.MeshBasicMaterial({
     map: platonVideoTexture,
     transparent: true
   });
   platon = new THREE.Mesh(platonGeometry, platonMaterial);
-  platon.position.set(0, -0.55, 1);
+  platon.position.set(0, -0.25, 0);
   scene.add(platon);
 
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment

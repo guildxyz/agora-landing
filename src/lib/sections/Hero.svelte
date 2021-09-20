@@ -11,7 +11,8 @@
   let canvasHeight;
   let opacity = 0;
 
-  $: offset = windowSize > 1280 ? '-62%' : windowSize > 1024 ? '-48%' : '-48%';
+  $: offset =
+    windowSize > 1536 ? '-62%' : windowSize > 1280 ? '-58%' : windowSize > 1024 ? '-48%' : '-48%';
   $: canvasWidth && canvasHeight && resizeThreeJS(canvasWidth, canvasHeight);
 
   onMount(() => {
@@ -97,30 +98,37 @@
     >
       <!-- Platon - large -->
       <div
-        class="hidden md:block w-full xl:w-[120%] 2xl:w-[130%] h-full max-h-[95%]"
-        style={`position: absolute; bottom:0; right: ${offset};`}
-        bind:clientWidth={canvasWidth}
-        bind:clientHeight={canvasHeight}
+        class="hidden md:block absolute bottom-0 w-full xl:w-[120%] 2xl:w-[130%] h-full max-h-[95%]"
+        style={`right: ${offset};`}
       >
         <canvas
           bind:this={canvas}
           width={canvasWidth}
           height={canvasHeight}
-          class={`absolute inset-0 w-full h-full object-contain transition-opacity opacity-${opacity} duration-500`}
+          class={`absolute left-0 right-0 bottom-0 w-full h-full object-contain transition-opacity opacity-${opacity} duration-500`}
         />
-        <video
-          id="platon-video"
-          src="/animations/platon.webm"
-          muted
-          class="invisible"
-          preload="auto"
-        />
+        <div
+          class="w-full invisible"
+          bind:clientWidth={canvasWidth}
+          bind:clientHeight={canvasHeight}
+        >
+          <video
+            id="platon-video"
+            src="/animations/platon.webm"
+            muted
+            preload="auto"
+            width="100%"
+          />
+        </div>
         <img
           src="/images/hero.png"
           alt="Platon"
-          class={`absolute inset-0 w-full h-full object-contain select-none transition-all duration-500 ${
+          width={canvasWidth * 0.8}
+          height={canvasHeight * 0.8}
+          class={`absolute bottom-0 select-none transition-all duration-500 ${
             hideHeroImg ? 'invisible opacity-0' : 'visible opacity-100'
           }`}
+          style={`left: ${canvasWidth * 0.1}px;`}
         />
       </div>
 
