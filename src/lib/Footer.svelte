@@ -9,8 +9,7 @@
   import { onMount } from 'svelte';
   import { initThreeJS, resizeThreeJS } from '$lib/threejs/footer';
 
-  export let purple = false;
-  export let pink = false;
+  export let dark = false;
 
   let canvas;
   let canvasWidth;
@@ -22,11 +21,7 @@
   });
 </script>
 
-<footer
-  class={`${!purple && !pink && 'bg-agora-white'} ${purple && 'bg-agora-purple'} ${
-    pink && 'bg-agora-pink-dark'
-  }`}
->
+<footer class={`${dark ? 'bg-agora-gray' : 'bg-agora-white'}`}>
   <div class="relative container grid md:grid-cols-3 lg:grid-cols-4">
     <div
       class="order-2 md:order-1 relative w-full h-full"
@@ -65,8 +60,8 @@
         <div class="flex flex-col">
           <h2
             class={`mb-4 font-bold tracking-tight text-2xl 2xl:text-3xl font-display ${
-              !pink && !purple && 'text-agora-pink-medium'
-            } ${purple && 'text-agora-pink-light'} ${pink && 'text-agora-white'}`}
+              dark ? 'text-agora-white' : 'text-agora-pink-medium'
+            }`}
           >
             Join the community
           </h2>
@@ -77,10 +72,8 @@
                 target="_blank"
                 rel="noopener"
                 class={`flex items-center justify-center w-8 h-8 rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-300 ${
-                  purple || pink
-                    ? 'bg-agora-white text-agora-blue-medium focus-visible:ring-opacity-50'
-                    : 'bg-agora-blue-medium text-agora-white'
-                }`}
+                  dark ? 'bg-agora-pink-medium' : 'bg-agora-blue-medium'
+                } text-agora-white focus-visible:ring-opacity-50`}
               >
                 <span class="sr-only">Twitter</span>
                 <TwitterLogo size="1.2em" />
@@ -92,10 +85,8 @@
                 target="_blank"
                 rel="noopener"
                 class={`flex items-center justify-center w-8 h-8 rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-300 ${
-                  purple || pink
-                    ? 'bg-agora-white text-agora-blue-medium focus-visible:ring-opacity-50'
-                    : 'bg-agora-blue-medium text-agora-white'
-                }`}
+                  dark ? 'bg-agora-pink-medium' : 'bg-agora-blue-medium'
+                } text-agora-white focus-visible:ring-opacity-50`}
               >
                 <span class="sr-only">Github</span>
                 <GithubLogo size="1.2em" />
@@ -107,10 +98,8 @@
                 target="_blank"
                 rel="noopener"
                 class={`flex items-center justify-center w-8 h-8 rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-300 ${
-                  purple || pink
-                    ? 'bg-agora-white text-agora-blue-medium focus-visible:ring-opacity-50'
-                    : 'bg-agora-blue-medium text-agora-white'
-                }`}
+                  dark ? 'bg-agora-pink-medium' : 'bg-agora-blue-medium'
+                } text-agora-white focus-visible:ring-opacity-50`}
               >
                 <span class="sr-only">Medium</span>
                 <ArticleMedium size="1.2em" />
@@ -122,10 +111,8 @@
                 target="_blank"
                 rel="noopener"
                 class={`flex items-center justify-center w-8 h-8 rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-300 ${
-                  purple || pink
-                    ? 'bg-agora-white text-agora-blue-medium focus-visible:ring-opacity-50'
-                    : 'bg-agora-blue-medium text-agora-white'
-                }`}
+                  dark ? 'bg-agora-pink-medium' : 'bg-agora-blue-medium'
+                } text-agora-white focus-visible:ring-opacity-50`}
               >
                 <span class="sr-only">Discord</span>
                 <DiscordLogo size="1.2em" />
@@ -137,10 +124,8 @@
                 target="_blank"
                 rel="noopener"
                 class={`flex items-center justify-center w-8 h-8 rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-300 ${
-                  purple || pink
-                    ? 'bg-agora-white text-agora-blue-medium focus-visible:ring-opacity-50'
-                    : 'bg-agora-blue-medium text-agora-white'
-                }`}
+                  dark ? 'bg-agora-pink-medium' : 'bg-agora-blue-medium'
+                } text-agora-white focus-visible:ring-opacity-50`}
               >
                 <span class="sr-only">Telegram</span>
                 <TelegramLogo size="1.2em" />
@@ -148,8 +133,7 @@
             </li>
           </ul>
 
-          <span
-            class={`hidden md:block mt-auto ${purple || pink ? 'text-agora-white' : 'font-light'}`}
+          <span class={`hidden md:block mt-auto font-light ${dark && 'text-agora-white'}`}
             >&copy; 2021 Agora Space</span
           >
         </div>
@@ -157,16 +141,12 @@
         <div class="flex flex-col">
           <h2
             class={`mb-4 font-bold tracking-tight text-2xl 2xl:text-3xl font-display ${
-              !pink && !purple && 'text-agora-pink-medium'
-            } ${purple && 'text-agora-pink-light'} ${pink && 'text-agora-white'}`}
+              dark ? 'text-agora-white' : 'text-agora-pink-medium'
+            }`}
           >
             Information
           </h2>
-          <ul
-            class={`mb-12 font-medium xl:text-lg ${
-              purple || pink ? 'text-agora-white' : 'text-gray-600'
-            }`}
-          >
+          <ul class={`mb-12 font-medium xl:text-lg ${dark ? 'text-agora-white' : 'text-gray-600'}`}>
             <li>
               <a
                 href="/about"
@@ -202,23 +182,19 @@
             </li>
           </ul>
         </div>
-        <span class={`md:hidden ${purple || pink ? 'text-agora-white' : 'font-light'}`}
+        <span class={`md:hidden ${dark ? 'text-agora-white' : 'font-light'}`}
           >&copy; 2021 Agora Space</span
         >
 
         <div class="hidden xl:flex flex-col">
           <h2
             class={`mb-4 font-bold tracking-tight text-2xl 2xl:text-3xl font-display ${
-              !pink && !purple && 'text-agora-pink-medium'
-            } ${purple && 'text-agora-pink-light'} ${pink && 'text-agora-white'}`}
+              dark ? 'text-agora-white' : 'text-agora-pink-medium'
+            }`}
           >
             Tools & Products
           </h2>
-          <ul
-            class={`mb-12 font-medium xl:text-lg ${
-              purple || pink ? 'text-agora-white' : 'text-gray-600'
-            }`}
-          >
+          <ul class={`mb-12 font-medium xl:text-lg ${dark ? 'text-agora-white' : 'text-gray-600'}`}>
             <li>
               <a
                 href="https://app.agora.space/"

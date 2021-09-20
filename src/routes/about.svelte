@@ -22,4 +22,4 @@
 <HowDoesItWork />
 <TheTeam />
 <StayUpToDate />
-<Footer purple />
+<Footer dark />

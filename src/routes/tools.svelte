@@ -24,4 +24,4 @@
 <TrustlessFinancialContract />
 <Gamification />
 <DecisionMakingTools />
-<Footer pink />
+<Footer dark />
