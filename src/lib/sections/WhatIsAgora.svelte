@@ -2,7 +2,7 @@
   <div class="relative w-full max-fullhd-container mx-auto flex flex-col">
     <div class="flex flex-col lg:flex-row text-agora-white">
       <div
-        class="order-2 lg:order-1 flex lg:self-end flex-col justify-end h-full w-full max-w-3xl pt-16"
+        class="order-2 lg:order-1 flex lg:self-end flex-col justify-end h-full w-full max-w-3xl pt-16 lg:pt-20"
       >
         <img src="/images/what-is-agora-space-bg.png" alt="What is Agora Space?" class="w-full" />
       </div>
@@ -15,11 +15,11 @@
         >
           What is <br class="md:hidden" />Agora Space?
         </h2>
-        <p class="mb-4 lg:font-semibold 2xl:text-xl">
+        <p class="mb-4 lg:font-semibold max-w-md 2xl:text-xl 2xl:max-w-xl mx-auto">
           Agora Space connects Discord, Twitter and other social media platforms with the blockchain
           providing a range of tools to upgrade DAOs and Social Token communities.
         </p>
-        <p class="lg:font-semibold 2xl:text-xl">
+        <p class="lg:font-semibold max-w-md 2xl:text-xl 2xl:max-w-xl mx-auto">
           Our vision is to supercharge Web3 adoption by creating gasless, multichain and
           platform-agnostic solutions, without sacrificing decentralisation or privacy.
         </p>
