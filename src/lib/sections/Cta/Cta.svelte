@@ -23,7 +23,7 @@
     />
 
     <CtaImg
-      title="Create an Agora"
+      title="Build your Agora"
       image="/images/social-token-admin.png"
       url="https://app.agora.space/register"
       openNewPage

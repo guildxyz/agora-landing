@@ -169,7 +169,7 @@
             rel="noopener"
             class="w-max bg-agora-pink-medium text-agora-white"
           >
-            Create an Agora
+            Build your Agora
             <Users slot="icon" weight="bold" size="1.2em" />
           </Button>
         </div>
@@ -205,7 +205,7 @@
             rel="noopener"
             class="w-max bg-agora-purple text-agora-white shadow-md"
           >
-            Create an Agora
+            Build your Agora
             <Users slot="icon" weight="bold" size="1.2em" />
           </Button>
         </div>
