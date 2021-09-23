@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://agora.space/sitemap.xml
+Sitemap: https://agora.xyz/sitemap.xml
