@@ -76,7 +76,7 @@
 
 <svelte:window bind:innerWidth={windowSize} />
 
-<section id="hero" class="relative xl:h-screen h-webkit-fill-available">
+<section id="hero" class="relative xl:h-screen">
   <!-- Hero background -->
   <div class="absolute hidden md:flex lg:flex-row w-full h-full">
     <div class="flex-grow bg-agora-gray" />
