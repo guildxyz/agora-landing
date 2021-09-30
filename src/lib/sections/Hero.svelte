@@ -115,6 +115,7 @@
           <video
             id="platon-video"
             src="/animations/platon.webm"
+            playsinline
             muted
             preload="auto"
             width="100%"

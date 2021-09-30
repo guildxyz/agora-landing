@@ -43,6 +43,7 @@
           <video
             src={firstVideoSrc}
             muted
+            playsinline
             preload="auto"
             width="100%"
             height="auto"
@@ -62,6 +63,7 @@
           <video
             src={loopingVideoSrc}
             muted
+            playsinline
             preload="auto"
             width="100%"
             height="auto"

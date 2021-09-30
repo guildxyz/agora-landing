@@ -93,7 +93,15 @@
       class="lg:absolute lg:bottom-0 lg:-right-20 xl:right-0 w-full lg:w-2/5"
       bind:this={videoContainer}
     >
-      <video src={videoSrc} muted preload="auto" width="100%" height="auto" bind:this={video}>
+      <video
+        src={videoSrc}
+        playsinline
+        muted
+        preload="auto"
+        width="100%"
+        height="auto"
+        bind:this={video}
+      >
         <img src="/images/pegasus.png" alt="Pegasus" />
       </video>
     </div>

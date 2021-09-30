@@ -76,6 +76,7 @@
             id="agora-space-dao-video"
             src={firstVideoSrc}
             muted
+            playsinline
             width="100%"
             height="auto"
             on:ended={handleStartEnd}
@@ -88,6 +89,7 @@
           <video
             src={loopingVideoSrc}
             muted
+            playsinline
             width="100%"
             height="auto"
             loop
