@@ -157,7 +157,7 @@
           <p
             class="mb-8 lg:mb-10 font-semibold lg:text-lg 2xl:text-xl leading-tight md:leading-normal"
           >
-            Building essentials for future internet<br /> communities.
+            Building essentials for internet<br /> communities.
           </p>
         </div>
 
