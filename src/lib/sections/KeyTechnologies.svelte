@@ -29,7 +29,7 @@
 <svelte:window bind:innerHeight={windowHeight} bind:scrollY on:scroll={scrollHandler} />
 
 <section id="key-technologies" class="relative bg-agora-blue-medium text-agora-white">
-  <div class="container relative px-8 pt-24 lg:pb-24 text-center">
+  <div class="container relative pt-24 lg:pb-24 text-center">
     <div
       class="mx-auto lg:mx-0 max-w-lg lg:max-w-screen-md lg:text-left lg:grid lg:grid-cols-2 lg:gap-16"
     >

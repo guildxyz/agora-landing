@@ -30,16 +30,16 @@
       src={video}
       on:mouseenter={onMouseEnter}
       on:mouseleave={onMouseLeave}
-      class="w-full h-full object-contain"
+      class="object-contain w-full h-full"
     >
-      <img src={image} {alt} class="w-full h-full object-contain" />
+      <img src={image} {alt} class="object-contain w-full h-full" />
     </video>
   </div>
-  <p class="mb-3 text-agora-white lg:font-semibold 2xl:text-lg">
+  <p class="mx-3 mb-3 text-agora-white lg:font-semibold 2xl:text-lg">
     “<strong>{quoteStart}</strong><br />
     {quote}”
   </p>
-  <p class="mt-auto text-lg text-agora-pink-light font-bold tracking-tight font-display">
+  <p class="mt-auto text-lg font-bold tracking-tight text-agora-pink-light font-display">
     -{name}-
   </p>
 </div>

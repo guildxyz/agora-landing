@@ -1,5 +1,5 @@
 <section id="trustless-financial-contract" class="relative bg-agora-pink-dark text-agora-white">
-  <div class="container py-20 px-8 grid lg:grid-cols-2 gap-16 lg:gap-0">
+  <div class="container py-20 grid lg:grid-cols-2 gap-16 lg:gap-0">
     <!-- Image -->
     <div class="order-2 lg:order-1 flex items-center justify-center lg:pr-20">
       <img

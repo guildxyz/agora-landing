@@ -83,7 +83,7 @@
       </div>
 
       <div
-        class="order-1 lg:order-2 container self-center pt-16 px-8 xl:px-32 2xl:px-38 max-w-5xl md:pt-20 lg:py-28 2xl:py-32 lg:max-w-3/5 text-center"
+        class="order-1 lg:order-2 container self-center pt-16 xl:px-32 2xl:px-38 sm:max-w-lg md:pt-20 lg:py-28 2xl:py-32 lg:max-w-5xl text-center"
       >
         <h2
           class="mb-8 text-3xl lg:text-4xl 2xl:text-5xl font-bold tracking-tight font-display uppercase"
