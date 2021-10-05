@@ -7,37 +7,16 @@
     TelegramLogo
   } from 'phosphor-svelte';
   import { onMount } from 'svelte';
-  import { initThreeJS, resizeThreeJS } from '$lib/threejs/footer';
 
   export let dark = false;
-
-  let canvas;
-  let canvasWidth;
-  let canvasHeight;
-  $: canvasWidth && canvasHeight && resizeThreeJS(canvasWidth, canvasHeight);
-
-  onMount(() => {
-    initThreeJS(canvas);
-  });
 </script>
 
 <footer class={`${dark ? 'bg-agora-gray' : 'bg-agora-white'}`}>
   <div class="relative container grid md:grid-cols-3 lg:grid-cols-4">
-    <div
-      class="order-2 md:order-1 relative w-full h-full"
-      bind:clientWidth={canvasWidth}
-      bind:clientHeight={canvasHeight}
-    >
-      <canvas
-        width={canvasWidth}
-        height={canvasHeight}
-        bind:this={canvas}
-        class="hidden md:block absolute top-0 left-0"
-      />
-
+    <div class="order-2 md:order-1 relative w-full">
       <img
         src="/images/agora-footer.png"
-        width={canvasWidth}
+        width="100%"
         height="auto"
         alt="Agora Space"
         class="hidden md:block w-full absolute bottom-0 left-0"
