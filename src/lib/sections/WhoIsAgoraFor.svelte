@@ -38,7 +38,7 @@
 
       <!-- Content -->
       <div
-        class="relative flex flex-col items-center justify-center px-4 lg:px-20 py-28 h-full text-agora-white text-center overflow-hidden"
+        class="relative flex flex-col items-center justify-center px-4 lg:px-24 py-28 h-full text-agora-white text-center overflow-hidden"
       >
         <h2
           class="mb-8 text-3xl lg:text-4xl 2xl:text-5xl font-bold tracking-tight font-display uppercase"
@@ -46,7 +46,7 @@
           Who is Agora Space for?
         </h2>
 
-        <p class="font-semibold 2xl:text-2xl">
+        <p class="font-semibold lg:text-lg xl:text-xl 2xl:text-2xl">
           Those who want to make their community more efficient and rewarding
         </p>
       </div>

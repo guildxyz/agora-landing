@@ -6,7 +6,6 @@
     DiscordLogo,
     TelegramLogo
   } from 'phosphor-svelte';
-  import { onMount } from 'svelte';
 
   export let dark = false;
 </script>
@@ -19,7 +18,7 @@
         width="100%"
         height="auto"
         alt="Agora Space"
-        class="hidden md:block w-full absolute bottom-0 left-0"
+        class="absolute bottom-0 left-0 hidden w-full md:block"
       />
 
       <img
@@ -27,14 +26,14 @@
         width="100%"
         height="auto"
         alt="Agora Space"
-        class="block md:hidden w-screen"
+        class="block w-screen md:hidden"
       />
     </div>
 
     <div
-      class="order-1 md:order-2 md:col-span-2 lg:col-span-3 w-full flex md:justify-end px-8 lg:px-0 lg:pr-24 py-10 lg:pt-20"
+      class="flex order-1 w-full px-8 py-10 md:order-2 md:col-span-2 lg:col-span-3 md:justify-end lg:px-0 lg:pr-24 lg:pt-20"
     >
-      <div class="flex flex-col md:flex-row justify-between lg:pl-28 md:space-x-20">
+      <div class="flex flex-col justify-between md:flex-row lg:pl-28 md:space-x-20">
         <!-- Columns -->
         <div class="flex flex-col">
           <h2
@@ -44,7 +43,7 @@
           >
             Join the community
           </h2>
-          <ul class="flex space-x-2 mb-12 font-medium text-lg">
+          <ul class="flex mb-12 space-x-2 text-lg font-medium">
             <li>
               <a
                 href="https://twitter.com/AgoraSpaceDAO"
@@ -165,7 +164,7 @@
           >&copy; 2021 Agora Space</span
         >
 
-        <div class="hidden xl:flex flex-col">
+        <div class="flex-col hidden xl:flex">
           <h2
             class={`mb-4 font-bold tracking-tight text-2xl 2xl:text-3xl font-display ${
               dark ? 'text-agora-white' : 'text-agora-pink-medium'

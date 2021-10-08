@@ -131,7 +131,7 @@
         >
           Agora Space Dao
         </h2>
-        <p class="font-semibold 2xl:text-2xl">
+        <p class="font-semibold lg:text-lg xl:text-xl 2xl:text-2xl">
           Our tools are collectively governed by a group of the most experienced Web3 builders,
           token community managers and DAOs.
         </p>
