@@ -94,6 +94,7 @@
       bind:this={videoContainer}
     >
       <video
+        poster="/images/pegasus.png"
         src={videoSrc}
         playsinline
         muted
