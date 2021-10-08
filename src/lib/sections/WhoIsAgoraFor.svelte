@@ -3,11 +3,14 @@
 
   let windowWidth;
   let videoSrc;
+  let imgSrc;
 
   onMount(() => {
     if (windowWidth > 768) {
+      imgSrc = '/images/who-is-agora-space-for.png';
       videoSrc = '/animations/who-is-agora-space-for.webm';
     } else {
+      imgSrc = '/images/mobile-who-is-agora-space-for.png';
       videoSrc = '/animations/mobile-who-is-agora-space-for.webm';
     }
   });
@@ -58,6 +61,7 @@
     >
       <video
         src={videoSrc}
+        poster={imgSrc}
         muted
         autoplay
         playsinline
@@ -65,7 +69,9 @@
         width="100%"
         height="80vh"
         class="max-w-1/2 h-full max-h-[80vh]"
-      />
+      >
+        <img src={imgSrc} alt="Who is Agora Space for" />
+      </video>
     </div>
   </div>
 </section>
