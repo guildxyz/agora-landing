@@ -113,6 +113,14 @@
     <div
       class="order-1 lg:order-2 flex flex-col items-center justify-center space-y-4 relative lg:col-span-2 lg:min-h-full bg-agora-purple text-agora-white overflow-hidden"
     >
+      <!-- TEST -->
+      <video muted playsinline autoplay loop>
+        <source
+          src="/animations/mov/agora-space-dao-compressed.mov"
+          type="video/mp4; codecs='hvc1'"
+        />
+        <source src="/animations/agora-space-dao.webm" type="video/webm" />
+      </video>
       <!-- Background circle left -->
       <div
         class="absolute bottom-0 left-0 w-[50vw] h-[50vw] md:w-[25vw] md:h-[25vw] transform -translate-x-1/2 translate-y-1/2 bg-circle-pattern bg-no-repeat bg-cover"
