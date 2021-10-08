@@ -28,6 +28,7 @@
       width="100%"
       height="auto"
       src={video}
+      poster={image}
       on:mouseenter={onMouseEnter}
       on:mouseleave={onMouseLeave}
       class="w-full h-full object-contain"
