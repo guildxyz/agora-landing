@@ -54,11 +54,7 @@
               showStartVideo ? 'opacity-1' : 'opacity-0'
             } transition-opacity duration-75 delay-75`}
           >
-            <img
-              src="/images/what-is-agora-space-bg.png"
-              alt="What is Agora Space?"
-              class="w-full"
-            />
+            <img src="/images/what-is-agora-space.png" alt="What is Agora Space?" class="w-full" />
           </video>
           <!-- svelte-ignore a11y-media-has-caption -->
           <video
