@@ -47,6 +47,7 @@
             preload="auto"
             width="100%"
             height="auto"
+            poster="/images/what-is-agora-space.png"
             on:ended={handleStartEnd}
             bind:this={firstVideo}
             class={`absolute bottom-0 left-0 ${
@@ -73,11 +74,7 @@
               showStartVideo ? 'opacity-0' : 'opacity-1'
             } transition-opacity duration-75`}
           >
-            <img
-              src="/images/what-is-agora-space-bg.png"
-              alt="What is Agora Space?"
-              class="w-full"
-            />
+            <img src="/images/what-is-agora-space.png" alt="What is Agora Space?" class="w-full" />
           </video>
         </div>
       </div>
