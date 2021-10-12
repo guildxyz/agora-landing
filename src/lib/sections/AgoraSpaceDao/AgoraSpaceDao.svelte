@@ -10,6 +10,7 @@
   let firstVideoSrc;
   let firstVideo;
   let loopingVideoSrc;
+  let loopingVideoSrcSafari;
   let loopingVideo;
   let shouldPlay = true;
 
@@ -35,9 +36,11 @@
     if (windowWidth > 768) {
       firstVideoSrc = '/animations/agora-space-dao-in.webm';
       loopingVideoSrc = '/animations/agora-space-dao.webm';
+      loopingVideoSrcSafari = '/animations/safari/agora-space-dao.mov';
     } else {
       firstVideoSrc = '/animations/mobile-agora-space-dao-in.webm';
       loopingVideoSrc = '/animations/mobile-agora-space-dao.webm';
+      loopingVideoSrcSafari = '/animations/safari/agora-space-dao.mov';
     }
 
     initThreeJS(canvas);
@@ -87,7 +90,6 @@
             } transition-opacity duration-75 delay-75`}
           />
           <video
-            src={loopingVideoSrc}
             muted
             playsinline
             width="100%"
@@ -97,7 +99,10 @@
             class={`absolute bottom-0 left-0 ${
               showStartVideo ? 'opacity-0' : 'opacity-1'
             } transition-opacity duration-75`}
-          />
+          >
+            <source src={loopingVideoSrcSafari} type="video/mp4; codecs=hvc1" />
+            <source src={loopingVideoSrc} type="video/webm" />
+          </video>
         </div>
       </div>
 
@@ -113,11 +118,6 @@
     <div
       class="order-1 lg:order-2 flex flex-col items-center justify-center space-y-4 relative lg:col-span-2 lg:min-h-full bg-agora-purple text-agora-white overflow-hidden"
     >
-      <!-- TEST -->
-      <video muted playsinline autoplay loop>
-        <source src="/animations/safari/agora-space-dao.mov" type="video/mp4; codecs=hvc1" />
-        <source src="/animations/agora-space-dao.webm" type="video/webm" />
-      </video>
       <!-- Background circle left -->
       <div
         class="absolute bottom-0 left-0 w-[50vw] h-[50vw] md:w-[25vw] md:h-[25vw] transform -translate-x-1/2 translate-y-1/2 bg-circle-pattern bg-no-repeat bg-cover"
