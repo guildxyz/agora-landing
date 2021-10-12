@@ -6,6 +6,7 @@
   let scrollY;
   let videoContainer;
   let videoSrc;
+  let videoSrcSafari;
   let video;
   let shouldPlay = true;
 
@@ -19,8 +20,10 @@
 
   onMount(() => {
     if (windowWidth > 768) {
+      videoSrcSafari = '/animations/safari/key-technologies.mp4';
       videoSrc = '/animations/key-technologies.webm';
     } else {
+      videoSrcSafari = '/animations/safari/key-technologies.mp4';
       videoSrc = '/animations/mobile-key-technologies.webm';
     }
   });
@@ -95,7 +98,6 @@
     >
       <video
         poster="/images/pegasus.png"
-        src={videoSrc}
         playsinline
         muted
         preload="auto"
@@ -103,6 +105,8 @@
         height="auto"
         bind:this={video}
       >
+        <source src={videoSrcSafari} type="video/mp4; codecs='hvc1'" />
+        <source src={videoSrc} type="video/webm" />
         <img src="/images/pegasus.png" alt="Pegasus" />
       </video>
     </div>

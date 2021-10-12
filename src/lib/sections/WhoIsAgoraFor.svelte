@@ -3,15 +3,18 @@
 
   let windowWidth;
   let videoSrc;
+  let videoSrcSafari;
   let imgSrc;
 
   onMount(() => {
     if (windowWidth > 768) {
       imgSrc = '/images/who-is-agora-space-for.png';
       videoSrc = '/animations/who-is-agora-space-for.webm';
+      videoSrcSafari = '/animations/safari/who-is-agora-space-for.mp4';
     } else {
       imgSrc = '/images/mobile-who-is-agora-space-for.png';
       videoSrc = '/animations/mobile-who-is-agora-space-for.webm';
+      videoSrcSafari = '/animations/safari/mobile-who-is-agora-space-for.mp4';
     }
   });
 </script>
@@ -60,7 +63,6 @@
       class="flex flex-col items-center justify-center space-y-4 relative lg:col-span-3 bg-agora-white overflow-hidden"
     >
       <video
-        src={videoSrc}
         poster={imgSrc}
         muted
         autoplay
@@ -70,6 +72,8 @@
         height="80vh"
         class="max-w-1/2 h-full max-h-[80vh]"
       >
+        <source src={videoSrcSafari} type="video/mp4; codecs='hvc1'" />
+        <source src={videoSrc} type="video/webm" />
         <img src={imgSrc} alt="Who is Agora Space for" />
       </video>
     </div>

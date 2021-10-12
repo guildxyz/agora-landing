@@ -1,6 +1,7 @@
 <script>
   export let image;
   export let video;
+  export let videoSafari = null;
   export let alt;
   export let quoteStart;
   export let quote;
@@ -27,12 +28,15 @@
       playsinline
       width="100%"
       height="auto"
-      src={video}
       poster={image}
       on:mouseenter={onMouseEnter}
       on:mouseleave={onMouseLeave}
       class="object-contain w-full h-full"
     >
+      {#if videoSafari}
+        <source src={videoSafari} type="video/mp4; codecs='hvc1'" />
+      {/if}
+      <source src={video} type="video/webm" />
       <img src={image} {alt} class="object-contain w-full h-full" />
     </video>
   </div>

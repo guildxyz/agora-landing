@@ -8,7 +8,9 @@
   let firstVideo;
   let loopingVideo;
   let firstVideoSrc;
+  let firstVideoSrcSafari;
   let loopingVideoSrc;
+  let loopingVideoSrcSafari;
 
   const handleStartEnd = () => {
     showStartVideo = false;
@@ -22,10 +24,14 @@
   onMount(() => {
     if (windowWidth > 768) {
       firstVideoSrc = '/animations/what-is-agora-space-start.webm';
+      firstVideoSrcSafari = '/animations/safari/what-is-agora-space-start.mp4';
       loopingVideoSrc = '/animations/what-is-agora-space.webm';
+      loopingVideoSrc = '/animations/safari/what-is-agora-space.mp4';
     } else {
       firstVideoSrc = '/animations/mobile-what-is-agora-space-start.webm';
+      firstVideoSrcSafari = '/animations/safari/what-is-agora-space-start.mp4';
       loopingVideoSrc = '/animations/mobile-what-is-agora-space.webm';
+      loopingVideoSrc = '/animations/safari/what-is-agora-space.mp4';
     }
   });
 </script>
@@ -41,7 +47,6 @@
         <div class="relative h-full">
           <!-- svelte-ignore a11y-media-has-caption -->
           <video
-            src={firstVideoSrc}
             muted
             playsinline
             preload="auto"
@@ -54,11 +59,12 @@
               showStartVideo ? 'opacity-1' : 'opacity-0'
             } transition-opacity duration-75 delay-75`}
           >
+            <source src={firstVideoSrcSafari} type="video/mp4; codecs='hvc1'" />
+            <source src={firstVideoSrc} type="video/webm" />
             <img src="/images/what-is-agora-space.png" alt="What is Agora Space?" class="w-full" />
           </video>
           <!-- svelte-ignore a11y-media-has-caption -->
           <video
-            src={loopingVideoSrc}
             muted
             playsinline
             preload="auto"
@@ -70,6 +76,8 @@
               showStartVideo ? 'opacity-0' : 'opacity-1'
             } transition-opacity duration-75`}
           >
+            <source src={loopingVideoSrcSafari} type="video/mp4; codecs='hvc1'" />
+            <source src={loopingVideoSrc} type="video/webm" />
             <img src="/images/what-is-agora-space.png" alt="What is Agora Space?" class="w-full" />
           </video>
         </div>

@@ -33,6 +33,7 @@
         <Quote
           image="/images/thinkers-aristotle.png"
           video="/animations/thinkers-aristotle.webm"
+          videoSafari="/animations/safari/thinkers-aristotle.mp4"
           alt="Aristotle portrait"
           quoteStart="Trustless financial contracts"
           quote="are essential for a DAO2DAO future."
@@ -55,6 +56,7 @@
         <Quote
           image="/images/thinkers-epikuros.png"
           video="/animations/thinkers-epikuros.webm"
+          videoSafari="/animations/safari/thinkers-epikuros.mp4"
           alt="Epikuros portrait"
           quoteStart="Gasless web3 applications"
           quote="unleash the burden of onboarding millions to DAOs"
