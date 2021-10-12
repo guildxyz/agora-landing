@@ -115,7 +115,7 @@
     >
       <!-- TEST -->
       <video muted playsinline autoplay loop>
-        <source src="/animations/safari/agora-space-dao.mov" type="video/mp4; codecs='hvc1'" />
+        <source src="/animations/safari/agora-space-dao.mov" type="video/mp4; codecs=hvc1" />
         <source src="/animations/agora-space-dao.webm" type="video/webm" />
       </video>
       <!-- Background circle left -->

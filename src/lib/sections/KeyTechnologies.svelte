@@ -105,7 +105,7 @@
         height="auto"
         bind:this={video}
       >
-        <source src={videoSrcSafari} type="video/mp4; codecs='hvc1'" />
+        <source src={videoSrcSafari} type="video/mp4; codecs=hvc1" />
         <source src={videoSrc} type="video/webm" />
         <img src="/images/pegasus.png" alt="Pegasus" />
       </video>

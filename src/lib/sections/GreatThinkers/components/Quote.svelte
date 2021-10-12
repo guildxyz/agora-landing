@@ -34,7 +34,7 @@
       class="object-contain w-full h-full"
     >
       {#if videoSafari}
-        <source src={videoSafari} type="video/mp4; codecs='hvc1'" />
+        <source src={videoSafari} type="video/mp4; codecs=hvc1" />
       {/if}
       <source src={video} type="video/webm" />
       <img src={image} {alt} class="object-contain w-full h-full" />
