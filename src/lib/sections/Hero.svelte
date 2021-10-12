@@ -112,14 +112,10 @@
           bind:clientWidth={canvasWidth}
           bind:clientHeight={canvasHeight}
         >
-          <video
-            id="platon-video"
-            src="/animations/platon.webm"
-            playsinline
-            muted
-            preload="auto"
-            width="100%"
-          />
+          <video id="platon-video" playsinline muted preload="auto" width="100%">
+            <source src="/animations/safari/platon.mov" type="video/mp4; codecs=hvc1" />
+            <source src="/animations/platon.webm" type="video/webm" />
+          </video>
         </div>
         <img
           src="/images/hero.png"
