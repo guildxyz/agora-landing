@@ -104,10 +104,10 @@
           >
             <div class="hidden lg:block" />
             <TeamMember
-              photo="/images/team/kovjonas.png"
-              name="KovJonas"
+              photo="/images/team/johnny.png"
+              name="Johnny"
               label="Frontend Dev"
-              github="https://github.com/KovJonas"
+              github="https://github.com/BrickheadJohnny"
             />
             <TeamMember photo="/images/team/sito.png" name="Sito" label="Designer" />
           </div>
