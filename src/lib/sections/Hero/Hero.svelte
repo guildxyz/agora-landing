@@ -153,24 +153,17 @@
 
         <!-- Buttons -->
         <div class="hidden md:flex flex-col space-y-2 mb-20">
+          <span class="max-w-max bg-gray-200 text-gray-600 text-sm font-medium px-2 py-1 rounded-lg"
+            >View our first tool</span
+          >
           <Button
-            href="https://app.agora.space"
+            href="https://alpha.guild.xyz"
             target="_blank"
             rel="noopener"
             class="w-max bg-agora-blue-medium text-agora-white"
           >
-            Join a community
+            Guild.xyz
             <SignIn slot="icon" weight="bold" size="1.2em" />
-          </Button>
-
-          <Button
-            href="https://app.agora.space/register"
-            target="_blank"
-            rel="noopener"
-            class="w-max bg-agora-pink-medium text-agora-white"
-          >
-            Build your Agora
-            <Users slot="icon" weight="bold" size="1.2em" />
           </Button>
         </div>
       </div>
@@ -190,23 +183,13 @@
           class="absolute left-0 bottom-8 flex flex-col justify-end items-center space-y-4 w-full h-full"
         >
           <Button
-            href="https://app.agora.space"
+            href="https://alpha.guild.xyz"
             target="_blank"
             rel="noopener"
             class="w-max bg-agora-blue-light text-agora-white shadow-md"
           >
-            Join a community
+            Guild.xyz
             <SignIn slot="icon" weight="bold" size="1.2em" />
-          </Button>
-
-          <Button
-            href="https://app.agora.space/register"
-            target="_blank"
-            rel="noopener"
-            class="w-max bg-agora-purple text-agora-white shadow-md"
-          >
-            Build your Agora
-            <Users slot="icon" weight="bold" size="1.2em" />
           </Button>
         </div>
       </div>
