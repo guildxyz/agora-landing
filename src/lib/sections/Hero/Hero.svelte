@@ -164,7 +164,7 @@
             class="w-max bg-agora-blue-medium text-agora-white"
           >
             Guild.xyz
-            <SignIn slot="icon" weight="bold" size="1.2em" />
+            <img slot="icon-left" src="/svg/guild-logo.svg" alt="Guild.xyz" class="w-4 h-4" />
           </Button>
         </div>
       </div>
@@ -190,7 +190,7 @@
             class="w-max bg-agora-blue-light text-agora-white shadow-md"
           >
             Guild.xyz
-            <SignIn slot="icon" weight="bold" size="1.2em" />
+            <img slot="icon-left" src="/svg/guild-logo.svg" alt="Guild.xyz" class="w-4 h-4" />
           </Button>
         </div>
       </div>
