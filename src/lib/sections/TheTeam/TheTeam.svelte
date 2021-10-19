@@ -54,6 +54,7 @@
               name="Shronk"
               label="Backend Dev"
               github="https://github.com/schronck"
+              twitter="https://twitter.com/5hr0nk"
             />
             <TeamMember
               photo="/images/team/devid.png"

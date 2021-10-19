@@ -145,32 +145,26 @@
           </h2>
 
           <p
-            class="mb-8 lg:mb-10 font-semibold lg:text-lg 2xl:text-xl leading-tight md:leading-normal text-gray-600"
+            class="mb-6 lg:mb-8 font-semibold lg:text-lg 2xl:text-xl leading-tight md:leading-normal text-gray-600"
           >
             Building essentials for future internet<br /> communities.
+          </p>
+
+          <p class="mb-2 font-semibold 2xl:text-lg leading-tight md:leading-normal text-gray-600">
+            View our first tool:
           </p>
         </div>
 
         <!-- Buttons -->
         <div class="hidden md:flex flex-col space-y-2 mb-20">
           <Button
-            href="https://app.agora.space"
+            href="https://alpha.guild.xyz"
             target="_blank"
             rel="noopener"
             class="w-max bg-agora-blue-medium text-agora-white"
           >
-            Join a community
-            <SignIn slot="icon" weight="bold" size="1.2em" />
-          </Button>
-
-          <Button
-            href="https://app.agora.space/register"
-            target="_blank"
-            rel="noopener"
-            class="w-max bg-agora-pink-medium text-agora-white"
-          >
-            Build your Agora
-            <Users slot="icon" weight="bold" size="1.2em" />
+            Guild.xyz
+            <img slot="icon-left" src="/svg/guild-logo.svg" alt="Guild.xyz" class="w-4 h-4" />
           </Button>
         </div>
       </div>
@@ -187,26 +181,16 @@
 
         <!-- Buttons -->
         <div
-          class="absolute left-0 bottom-8 flex flex-col justify-end items-center space-y-4 w-full h-full"
+          class="absolute left-0 bottom-8 flex flex-col justify-end items-center space-y-2 w-full h-full"
         >
           <Button
-            href="https://app.agora.space"
+            href="https://alpha.guild.xyz"
             target="_blank"
             rel="noopener"
             class="w-max bg-agora-blue-light text-agora-white shadow-md"
           >
-            Join a community
-            <SignIn slot="icon" weight="bold" size="1.2em" />
-          </Button>
-
-          <Button
-            href="https://app.agora.space/register"
-            target="_blank"
-            rel="noopener"
-            class="w-max bg-agora-purple text-agora-white shadow-md"
-          >
-            Build your Agora
-            <Users slot="icon" weight="bold" size="1.2em" />
+            Guild.xyz
+            <img slot="icon-left" src="/svg/guild-logo.svg" alt="Guild.xyz" class="w-4 h-4" />
           </Button>
         </div>
       </div>

@@ -28,6 +28,7 @@
 </script>
 
 <svelte:component this={component} {href} {disabled} class={classes} {...$$restProps} on:click>
+  <slot name="icon-left" />
   {#if $$slots.default}
     <span><slot /></span>
   {/if}
