@@ -145,17 +145,18 @@
           </h2>
 
           <p
-            class="mb-8 lg:mb-10 font-semibold lg:text-lg 2xl:text-xl leading-tight md:leading-normal text-gray-600"
+            class="mb-6 lg:mb-8 font-semibold lg:text-lg 2xl:text-xl leading-tight md:leading-normal text-gray-600"
           >
             Building essentials for future internet<br /> communities.
+          </p>
+
+          <p class="mb-2 font-semibold 2xl:text-lg leading-tight md:leading-normal text-gray-600">
+            View our first tool:
           </p>
         </div>
 
         <!-- Buttons -->
         <div class="hidden md:flex flex-col space-y-2 mb-20">
-          <span class="max-w-max bg-gray-200 text-gray-600 text-sm font-medium px-2 py-1 rounded-lg"
-            >View our first tool</span
-          >
           <Button
             href="https://alpha.guild.xyz"
             target="_blank"
@@ -180,7 +181,7 @@
 
         <!-- Buttons -->
         <div
-          class="absolute left-0 bottom-8 flex flex-col justify-end items-center space-y-4 w-full h-full"
+          class="absolute left-0 bottom-8 flex flex-col justify-end items-center space-y-2 w-full h-full"
         >
           <Button
             href="https://alpha.guild.xyz"
