@@ -23,6 +23,7 @@
       videoSrcSafari = '/animations/safari/key-technologies.mp4';
       videoSrc = '/animations/key-technologies.webm';
     } else {
+      // TODO: mobile-key-technologies.mp4
       videoSrcSafari = '/animations/safari/key-technologies.mp4';
       videoSrc = '/animations/mobile-key-technologies.webm';
     }

@@ -76,7 +76,7 @@
               showStartVideo ? 'opacity-0' : 'opacity-1'
             } transition-opacity duration-75`}
           >
-            <source src={loopingVideoSrcSafari} type="video/mp4; codecs='hvc1'" />
+            <source src={loopingVideoSrcSafari} type="video/mp4; codecs=hvc1" />
             <source src={loopingVideoSrc} type="video/webm" />
             <img src="/images/what-is-agora-space.png" alt="What is Agora Space?" class="w-full" />
           </video>

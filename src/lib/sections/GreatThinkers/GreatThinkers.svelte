@@ -42,9 +42,11 @@
       </svelte:component>
 
       <svelte:component this={quoteWrapper}>
+        <!-- TODO: mp4 video -->
         <Quote
           image="/images/thinkers-platon.png"
           video="/animations/thinkers-platon.webm"
+          videoSafari="/animations/safari/thinkers-platon.mp4"
           alt="Plato portrait"
           quoteStart="Token-gated communities"
           quote="create the perfect foundation for Sybil-Resistant decision-making and rewarding mechanisms."
