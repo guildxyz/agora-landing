@@ -98,7 +98,7 @@
     >
       <!-- Platon - large -->
       <div
-        class="hidden md:block absolute bottom-0 w-full xl:w-[120%] 2xl:w-[130%] h-full max-h-[95%]"
+        class="hidden md:block absolute bottom-0 w-full xl:w-[120%] 2xl:w-[130%]"
         style={`right: ${offset};`}
       >
         <canvas
@@ -141,7 +141,7 @@
             >
               {#key headline}
                 <span
-                  class="absolute top-0 left-0 flex flex-col justify-center w-full transition-all md:max-w-md xl:max-w-full h-1/2 text-agora-pink-dark"
+                  class="absolute top-0 left-0 flex flex-col justify-end w-full transition-all md:max-w-md xl:max-w-full h-1/2 text-agora-pink-dark"
                   in:cubeIn={{ rotateFrom: 90, duration: 600 }}
                   out:cubeOut={{ rotateTo: -90, duration: 600 }}>{headline}</span
                 >

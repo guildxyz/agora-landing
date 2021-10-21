@@ -24,10 +24,10 @@
 
 <h1 class="sr-only">Agora Space</h1>
 <Hero />
-<WhatIsAgora />
+<!-- <WhatIsAgora />
 <GreatThinkers />
 <WhoIsAgoraFor />
 <KeyTechnologies />
 <AgoraSpaceDao />
 <Cta />
-<Footer />
+<Footer /> -->
