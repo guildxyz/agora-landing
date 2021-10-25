@@ -1,6 +1,7 @@
 <script>
   import Footer from '$lib/Footer.svelte';
   import AgoraSpace from '$lib/sections/AgoraSpace.svelte';
+  import Guild from '$lib/sections/Guild.svelte';
 </script>
 
 <svelte:head>
@@ -18,6 +19,7 @@
 
 <h1 class="sr-only">Tools - Agora Space</h1>
 <AgoraSpace />
+<Guild />
 <!-- <TokenGatedAccess />
 <TrustlessFinancialContract />
 <Gamification />

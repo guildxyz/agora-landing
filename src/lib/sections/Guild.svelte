@@ -4,35 +4,16 @@
   import Button from '$lib/Button';
 </script>
 
-<section
-  id="agora-space"
-  class="relative pt-16 lg:pt-28 bg-agora-purple text-agora-white overflow-hidden"
->
-  <div class="absolute left-0 right-0 top-0 z-50">
-    <Header whiteLogo />
-  </div>
-
-  <div class="container max-w-screen-xl relative py-20 px-8 grid lg:grid-cols-5 gap-16 lg:gap-0">
-    <!-- Background circles -->
-    <div
-      class="absolute bottom-0 left-0 w-[50vw] h-[50vw] md:w-[25vw] md:h-[25vw] transform -translate-x-1/2 translate-y-1/2 bg-circle-pattern bg-no-repeat bg-cover"
-    />
-
-    <!-- Image -->
-    <div
-      class="order-2 lg:order-1 lg:col-span-3 flex items-start justify-center lg:justify-end lg:pr-20"
-    >
-      <img src="/images/community-explorer.png" alt="Agora Space" class="max-w-full" />
-    </div>
-
+<section id="guild" class="bg-agora-gray text-agora-white">
+  <div class="container max-w-screen-xl py-20 px-8 grid lg:grid-cols-5 gap-16 lg:gap-0">
     <!-- Text -->
     <div
-      class="order-1 lg:order-2 lg:col-span-2 group relative flex flex-col items-start justify-center text-center lg:text-left"
+      class="lg:col-span-2 group relative flex flex-col items-start justify-center text-center lg:text-left"
     >
       <h2
         class="mb-8 w-full text-3xl lg:text-4xl 2xl:text-5xl font-bold tracking-tight font-display"
       >
-        Agora Space
+        Guild
       </h2>
 
       <p class="mb-8 lg:mb-16 2xl:text-xl">
@@ -50,6 +31,11 @@
         Integrate your token
         <SignIn slot="icon" weight="bold" size="1.2em" />
       </Button>
+    </div>
+
+    <!-- Image -->
+    <div class="lg:col-span-3 flex items-start justify-center lg:justify-end lg:pl-20">
+      <img src="/images/community-explorer.png" alt="Agora Space" class="max-w-full" />
     </div>
   </div>
 </section>
