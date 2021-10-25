@@ -9,7 +9,12 @@
     <Header whiteLogo />
   </div>
 
-  <div class="container py-20 px-8 grid lg:grid-cols-5 gap-16 lg:gap-0">
+  <div class="container relative py-20 px-8 grid lg:grid-cols-5 gap-16 lg:gap-0">
+    <!-- Background circles -->
+    <div
+      class="absolute bottom-0 left-0 w-[50vw] h-[50vw] md:w-[25vw] md:h-[25vw] transform -translate-x-1/2 translate-y-1/2 bg-circle-pattern bg-no-repeat bg-cover"
+    />
+
     <!-- Image -->
     <div
       class="order-2 lg:order-1 lg:col-span-3 flex items-start justify-center lg:justify-end lg:pr-20"
