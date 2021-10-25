@@ -29,9 +29,6 @@
     </div>
 
     <nav class="p-10 flex flex-col items-start justify-start h-full text-xl font-bold">
-      <a href="/explorer" class="mb-6 hover:underline focus:outline-none focus:underline"
-        >Explorer</a
-      >
       <a href="/tools" class="mb-6 hover:underline focus:outline-none focus:underline">Tools</a>
       <a href="/about" class="mb-6 hover:underline focus:outline-none focus:underline">About</a>
       <a href="/" class="mt-auto mb-20 hover:underline focus:outline-none focus:underline">Home</a>
