@@ -22,7 +22,9 @@
   };
 
   onMount(() => {
-    isSafari = navigator?.userAgent?.includes('Safari');
+    isSafari =
+      navigator?.userAgent?.indexOf('Safari') !== -1 &&
+      navigator?.userAgent?.indexOf('Chrome') === -1;
   });
 </script>
 
