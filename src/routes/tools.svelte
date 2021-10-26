@@ -18,7 +18,7 @@
 </svelte:head>
 
 <h1 class="sr-only">Tools - Agora Space</h1>
-<AgoraSpace />
+<!-- <AgoraSpace /> -->
 <Guild />
 <!-- <TokenGatedAccess />
 <TrustlessFinancialContract />

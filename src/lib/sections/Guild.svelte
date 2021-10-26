@@ -4,8 +4,12 @@
   import Button from '$lib/Button';
 </script>
 
-<section id="guild" class="bg-agora-gray text-agora-white">
-  <div class="container max-w-screen-xl py-20 px-8 grid lg:grid-cols-5 gap-16 lg:gap-0">
+<section id="guild" class="relative pt-16 lg:pt-28 bg-agora-gray text-agora-white">
+  <div class="absolute left-0 right-0 top-0 z-50">
+    <Header whiteLogo />
+  </div>
+
+  <div class="container xl:max-w-screen-xl py-20 px-8 grid lg:grid-cols-5 gap-16 lg:gap-0">
     <!-- Text -->
     <div
       class="lg:col-span-2 group relative flex flex-col items-start justify-center text-center lg:text-left"
