@@ -1,7 +1,6 @@
 <script>
   export let image;
   export let video;
-  export let videoSafari = null;
   export let alt;
   export let quoteStart;
   export let quote;
@@ -10,6 +9,8 @@
   export { _class as class };
 
   let videoElement;
+
+  $: isSafari = navigator?.userAgent?.includes('Safari');
 
   const onMouseEnter = () => {
     videoElement?.play();
@@ -22,21 +23,24 @@
 
 <div class={`mx-auto max-w-sm h-full flex flex-col items-center text-md ${_class}`}>
   <div class="relative mb-8 h-52 2xl:h-72">
-    <video
-      bind:this={videoElement}
-      muted
-      playsinline
-      width="100%"
-      height="auto"
-      poster={image}
-      on:mouseenter={onMouseEnter}
-      on:mouseleave={onMouseLeave}
-      class="object-contain w-full h-full"
-    >
-      <source src={videoSafari} type="video/mp4; codecs=hvc1" />
-      <source src={video} type="video/webm" />
+    {#if isSafari}
       <img src={image} {alt} class="object-contain w-full h-full" />
-    </video>
+    {:else}
+      <video
+        bind:this={videoElement}
+        muted
+        playsinline
+        width="100%"
+        height="auto"
+        poster={image}
+        on:mouseenter={onMouseEnter}
+        on:mouseleave={onMouseLeave}
+        class="object-contain w-full h-full"
+      >
+        <source src={video} type="video/webm" />
+        <img src={image} {alt} class="object-contain w-full h-full" />
+      </video>
+    {/if}
   </div>
   <p class="mx-3 mb-3 text-agora-white lg:font-semibold 2xl:text-lg">
     “<strong>{quoteStart}</strong><br />

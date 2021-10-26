@@ -33,7 +33,6 @@
         <Quote
           image="/images/thinkers-aristotle.png"
           video="/animations/thinkers-aristotle.webm"
-          videoSafari="/animations/safari/thinkers-aristotle.mp4"
           alt="Aristotle portrait"
           quoteStart="Trustless financial contracts"
           quote="are essential for a DAO2DAO future."
@@ -46,7 +45,6 @@
         <Quote
           image="/images/thinkers-platon.png"
           video="/animations/thinkers-platon.webm"
-          videoSafari="/animations/safari/thinkers-platon.mp4"
           alt="Plato portrait"
           quoteStart="Token-gated communities"
           quote="create the perfect foundation for Sybil-Resistant decision-making and rewarding mechanisms."
@@ -58,7 +56,6 @@
         <Quote
           image="/images/thinkers-epikuros.png"
           video="/animations/thinkers-epikuros.webm"
-          videoSafari="/animations/safari/thinkers-epikuros.mp4"
           alt="Epikuros portrait"
           quoteStart="Gasless web3 applications"
           quote="unleash the burden of onboarding millions to DAOs"
