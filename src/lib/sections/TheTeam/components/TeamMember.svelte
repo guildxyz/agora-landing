@@ -1,6 +1,7 @@
 <script>
   import { TwitterLogo, GithubLogo } from 'phosphor-svelte';
 
+  export let advisor = false;
   export let photo;
   export let name;
   export let label;
@@ -31,11 +32,17 @@
       {label}
     </span>
     <div
-      class="absolute inset-y-0 right-1 flex flex-col space-y-1 justify-center text-agora-blue-medium"
+      class={`absolute inset-y-0 right-1 flex flex-col space-y-1 justify-center ${
+        advisor ? 'text-agora-purple' : 'text-agora-blue-medium'
+      }`}
     >
       {#if twitter || github}
         <div
-          class="absolute inset-y-0 -right-4 group-hover:right-0 group-focus-within:right-0 w-10 bg-gradient-to-l from-agora-blue-medium  via-agora-blue-medium opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-all duration-500"
+          class={`absolute inset-y-0 -right-4 group-hover:right-0 group-focus-within:right-0 w-10 bg-gradient-to-l ${
+            advisor
+              ? 'from-agora-purple  via-agora-purple'
+              : 'from-agora-blue-medium  via-agora-blue-medium'
+          } opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-all duration-500`}
         />
       {/if}
       {#if twitter}
