@@ -1,4 +1,6 @@
 <script>
+  import { onMount } from 'svelte';
+
   export let image;
   export let video;
   export let alt;
@@ -8,9 +10,8 @@
   let _class = null;
   export { _class as class };
 
+  let isSafari = false;
   let videoElement;
-
-  $: isSafari = navigator?.userAgent?.includes('Safari');
 
   const onMouseEnter = () => {
     videoElement?.play();
@@ -19,6 +20,10 @@
   const onMouseLeave = () => {
     videoElement?.stop();
   };
+
+  onMount(() => {
+    isSafari = navigator?.userAgent?.includes('Safari');
+  });
 </script>
 
 <div class={`mx-auto max-w-sm h-full flex flex-col items-center text-md ${_class}`}>
