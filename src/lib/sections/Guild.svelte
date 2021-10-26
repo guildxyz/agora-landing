@@ -35,7 +35,7 @@
 
     <!-- Image -->
     <div class="lg:col-span-3 flex items-start justify-center lg:justify-end lg:pl-20">
-      <img src="/images/community-explorer.png" alt="Agora Space" class="max-w-full" />
+      <img src="/images/guild.png" alt="Agora Space" class="max-w-full shadow-lg" />
     </div>
   </div>
 </section>
