@@ -17,60 +17,20 @@
         >
           <TeamMember
             advisor
+            about="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit risus nec ex lacinia interdum. Praesent accumsan."
             photo="/images/team/raz.png"
             name="R A Z"
             label="Strategic advisor"
             twitter="https://twitter.com/L1sp3r"
-            links={[
-              {
-                text: 'Supernova Fund',
-                url: 'https://supernova.fund'
-              }
-            ]}
           />
-          <TeamMember
-            advisor
-            photo="/images/team/petermm.png"
-            name="Peter MM"
-            label="Advisor"
-            links={[
-              {
-                text: 'Supernova Fund',
-                url: 'https://supernova.fund'
-              },
-              {
-                text: 'Prev.: J.P. Morgan'
-              }
-            ]}
-          />
-          <TeamMember
-            advisor
-            photo="/images/team/d3v.png"
-            name="D3v"
-            label="Security advisor"
-            links={[
-              {
-                text: 'Former SSNS NCSC',
-                url: 'https://mi.nemzetilabor.hu/partners/special-service-national-security'
-              }
-            ]}
-          />
+          <TeamMember advisor photo="/images/team/petermm.png" name="Peter MM" label="Advisor" />
+          <TeamMember advisor photo="/images/team/d3v.png" name="D3v" label="Security advisor" />
           <TeamMember
             advisor
             photo="/images/team/nima.png"
             name="NiMA"
             label="Advisor"
             twitter="https://twitter.com/insidenima"
-            links={[
-              {
-                text: 'Seedclub',
-                url: 'https://seedclub.xyz'
-              },
-              {
-                text: 'Mintbase',
-                url: 'https://www.mintbase.io'
-              }
-            ]}
           />
         </div>
       </div>
