@@ -10,9 +10,9 @@
   let firstVideoSrc;
   let firstVideo;
   let loopingVideoSrc;
-  let loopingVideoSrcSafari;
   let loopingVideo;
   let shouldPlay = true;
+  let isSafari = false;
 
   const handleStartEnd = () => {
     showStartVideo = false;
@@ -33,17 +33,19 @@
   $: canvasWidth && canvasHeight && resizeThreeJS(canvasWidth, canvasHeight);
 
   onMount(() => {
+    isSafari =
+      navigator?.userAgent?.indexOf('Safari') !== -1 &&
+      navigator?.userAgent?.indexOf('Chrome') === -1;
+
     if (windowWidth > 768) {
       firstVideoSrc = '/animations/agora-space-dao-in.webm';
       loopingVideoSrc = '/animations/agora-space-dao.webm';
-      loopingVideoSrcSafari = '/animations/safari/agora-space-dao.mov';
     } else {
       firstVideoSrc = '/animations/mobile-agora-space-dao-in.webm';
       loopingVideoSrc = '/animations/mobile-agora-space-dao.webm';
-      loopingVideoSrcSafari = '/animations/safari/agora-space-dao.mov';
     }
 
-    initThreeJS(canvas);
+    initThreeJS(canvas, isSafari);
   });
 </script>
 
@@ -75,34 +77,51 @@
         bind:this={videoContainer}
       >
         <div class="relative w-full" style={`height: ${canvasHeight}px`}>
-          <video
-            id="agora-space-dao-video"
-            src={firstVideoSrc}
-            muted
-            playsinline
-            width="100%"
-            height="auto"
-            on:ended={handleStartEnd}
-            bind:this={firstVideo}
-            on:play={startAnimation}
-            class={`absolute bottom-0 left-0 ${
-              showStartVideo ? 'opacity-1' : 'opacity-0'
-            } transition-opacity duration-75 delay-75`}
-          />
-          <video
-            muted
-            playsinline
-            width="100%"
-            height="auto"
-            loop
-            bind:this={loopingVideo}
-            class={`absolute bottom-0 left-0 ${
-              showStartVideo ? 'opacity-0' : 'opacity-1'
-            } transition-opacity duration-75`}
-          >
-            <source src={loopingVideoSrcSafari} type="video/mp4; codecs=hvc1" />
-            <source src={loopingVideoSrc} type="video/webm" />
-          </video>
+          {#if isSafari}
+            <img
+              src="/images/agora-space-dao.png"
+              alt="Agora Space DAO"
+              class="absolute bottom-0 left-0 px-16"
+            />
+          {:else}
+            <video
+              id="agora-space-dao-video"
+              src={firstVideoSrc}
+              muted
+              playsinline
+              width="100%"
+              height="auto"
+              on:ended={handleStartEnd}
+              bind:this={firstVideo}
+              on:play={startAnimation}
+              class={`absolute bottom-0 left-0 ${
+                showStartVideo ? 'opacity-1' : 'opacity-0'
+              } transition-opacity duration-75 delay-75`}
+            >
+              <source src={firstVideoSrc} type="video/webm" />
+              <img
+                src="/images/agora-space-dao.png"
+                alt="Agora Space DAO"
+                class="object-contain w-full h-full"
+              />
+            </video>
+          {/if}
+
+          {#if !isSafari}
+            <video
+              muted
+              playsinline
+              width="100%"
+              height="auto"
+              loop
+              bind:this={loopingVideo}
+              class={`absolute bottom-0 left-0 ${
+                showStartVideo ? 'opacity-0' : 'opacity-1'
+              } transition-opacity duration-75`}
+            >
+              <source src={loopingVideoSrc} type="video/webm" />
+            </video>
+          {/if}
         </div>
       </div>
 

@@ -12,6 +12,7 @@ let renderer,
   smallBubbleGeometry,
   video;
 
+let isSafariBrowser = false;
 let ANIMATE = false;
 
 export const startAnimation = () => (ANIMATE = true);
@@ -72,6 +73,9 @@ const animate = () => {
     bigBubble.position.y += (video.currentTime / 12) * 0.64;
   }
 
+  // If we don't need to animate (Safari PLS), then just put the bubble in the right position
+  if (isSafariBrowser) bigBubble.position.y = 0.5;
+
   // Updating the main axis rotation
   centerAxis.rotation.y = clock.getElapsedTime() * 0.2;
 
@@ -86,7 +90,8 @@ export const resizeThreeJS = (w, h) => {
   }
 };
 
-export const initThreeJS = (element) => {
+export const initThreeJS = (element, isSafari) => {
+  isSafariBrowser = isSafari;
   const rect = element.getBoundingClientRect();
 
   // Camera
