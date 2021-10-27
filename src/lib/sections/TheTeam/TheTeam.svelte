@@ -54,6 +54,7 @@
               name="Shronk"
               label="Backend Dev"
               github="https://github.com/schronck"
+              twitter="https://twitter.com/5hr0nk"
             />
             <TeamMember
               photo="/images/team/devid.png"
@@ -104,10 +105,10 @@
           >
             <div class="hidden lg:block" />
             <TeamMember
-              photo="/images/team/kovjonas.png"
-              name="KovJonas"
+              photo="/images/team/johnny.png"
+              name="Johnny"
               label="Frontend Dev"
-              github="https://github.com/KovJonas"
+              github="https://github.com/BrickheadJohnny"
             />
             <TeamMember photo="/images/team/sito.png" name="Sito" label="Designer" />
           </div>
