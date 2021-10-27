@@ -9,7 +9,6 @@
   let video;
   let videoWidth;
   let videoHeight;
-  let videoPlaceholder;
   let videoCanvas;
   let shouldPlay = true;
   let isSafari = false;
@@ -44,7 +43,12 @@
   });
 </script>
 
-<svelte:window bind:innerHeight={windowHeight} bind:scrollY on:scroll={scrollHandler} />
+<svelte:window
+  bind:innerWidth={windowWidth}
+  bind:innerHeight={windowHeight}
+  bind:scrollY
+  on:scroll={scrollHandler}
+/>
 
 <section id="key-technologies" class="relative bg-agora-blue-medium text-agora-white">
   <div class="container relative pt-24 lg:pb-24 text-center">
@@ -74,7 +78,7 @@
           class="opacity-0"
         >
           <source src={videoSrc} type="video/webm" />
-          <img src="/images/pegasus.png" alt="Pegasus" bind:this={videoPlaceholder} />
+          <img src="/images/pegasus.png" alt="Pegasus" />
         </video>
       {/if}
     </div>
