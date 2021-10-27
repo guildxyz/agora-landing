@@ -7,8 +7,14 @@
   let videoContainer;
   let videoSrc;
   let video;
+  let videoWidth;
+  let videoHeight;
+  let videoPlaceholder;
+  let videoCanvas;
   let shouldPlay = true;
   let isSafari = false;
+
+  $: ctx = videoCanvas?.getContext('2d');
 
   const scrollHandler = () => {
     const rect = videoContainer.getBoundingClientRect();
@@ -16,6 +22,11 @@
       video.play();
       shouldPlay = false;
     }
+  };
+
+  const update = () => {
+    ctx?.drawImage(video, 0, 0, videoWidth, videoHeight);
+    requestAnimationFrame(update);
   };
 
   onMount(() => {
@@ -28,6 +39,8 @@
     } else {
       videoSrc = '/animations/mobile-key-technologies.webm';
     }
+
+    update();
   });
 </script>
 
@@ -42,6 +55,12 @@
       {#if isSafari}
         <img src="/images/pegasus.png" alt="Pegasus" />
       {:else}
+        <canvas
+          width={videoWidth}
+          height={videoWidth}
+          class="absolute bottom-0 right-0 bg-black"
+          bind:this={videoCanvas}
+        />
         <video
           poster="/images/pegasus.png"
           playsinline
@@ -50,9 +69,12 @@
           width="100%"
           height="auto"
           bind:this={video}
+          bind:clientWidth={videoWidth}
+          bind:clientHeight={videoHeight}
+          class="opacity-0"
         >
           <source src={videoSrc} type="video/webm" />
-          <img src="/images/pegasus.png" alt="Pegasus" />
+          <img src="/images/pegasus.png" alt="Pegasus" bind:this={videoPlaceholder} />
         </video>
       {/if}
     </div>
