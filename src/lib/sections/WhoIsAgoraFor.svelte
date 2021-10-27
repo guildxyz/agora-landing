@@ -68,6 +68,7 @@
         width="100%"
         height="80vh"
         class="max-w-1/2 h-full max-h-[80vh]"
+        src={videoSrc}
       >
         <source src={videoSrc} type="video/webm" />
         <img src={imgSrc} alt="Who is Agora Space for" />
