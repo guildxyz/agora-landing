@@ -36,7 +36,7 @@
 <section id="key-technologies" class="relative bg-agora-blue-medium text-agora-white">
   <div class="container relative pt-24 lg:pb-24 text-center">
     <div
-      class="relative mx-auto lg:mx-0 max-w-lg lg:max-w-screen-md lg:text-left lg:grid lg:grid-cols-2 lg:gap-16"
+      class="relative mx-auto lg:mx-0 max-w-lg lg:max-w-screen-md lg:text-left lg:grid lg:grid-cols-2 lg:gap-16 z-10"
     >
       <h2
         class="mb-8 text-3xl lg:text-4xl 2xl:text-5xl font-bold tracking-tight font-display uppercase text-agora-pink-light lg:col-span-2"

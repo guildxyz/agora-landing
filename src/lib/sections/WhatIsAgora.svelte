@@ -9,6 +9,7 @@
   let loopingVideo;
   let firstVideoSrc;
   let loopingVideoSrc;
+  let videoHeight;
 
   const handleStartEnd = () => {
     showStartVideo = false;
@@ -38,7 +39,7 @@
       <div
         class="order-2 lg:order-1 flex lg:self-end flex-col justify-end h-full w-full max-w-3xl pt-16 lg:pt-20"
       >
-        <div class="relative">
+        <div class="relative" style={`height: ${videoHeight}px`}>
           <!-- svelte-ignore a11y-media-has-caption -->
           <video
             muted
@@ -49,6 +50,7 @@
             poster="/images/what-is-agora-space.png"
             on:ended={handleStartEnd}
             bind:this={firstVideo}
+            bind:clientHeight={videoHeight}
             class={`absolute bottom-0 left-0 ${
               showStartVideo ? 'opacity-1' : 'opacity-0'
             } transition-opacity duration-75 delay-75`}
@@ -65,7 +67,9 @@
             height="auto"
             loop
             bind:this={loopingVideo}
-            class="absolute bottom-0 left-0 opacity-0"
+            class={`absolute bottom-0 left-0 ${
+              showStartVideo ? 'opacity-0' : 'opacity-1'
+            } transition-opacity duration-75`}
           >
             <source src={loopingVideoSrc} type="video/webm" />
             <img src="/images/what-is-agora-space.png" alt="What is Agora Space?" class="w-full" />
