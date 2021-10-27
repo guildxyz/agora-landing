@@ -6,15 +6,9 @@
   let windowHeight;
   let scrollY;
   let firstVideo;
-  let videoWidth;
-  let videoHeight;
-  let videoCanvas;
   let loopingVideo;
   let firstVideoSrc;
   let loopingVideoSrc;
-  let isSafari = false;
-
-  $: ctx = videoCanvas?.getContext('2d');
 
   const handleStartEnd = () => {
     showStartVideo = false;
@@ -25,16 +19,7 @@
     firstVideo.play();
   }
 
-  const update = () => {
-    ctx?.drawImage(showStartVideo ? firstVideo : loopingVideo, 0, 0, videoWidth, videoHeight);
-    requestAnimationFrame(update);
-  };
-
   onMount(() => {
-    isSafari =
-      navigator?.userAgent?.indexOf('Safari') !== -1 &&
-      navigator?.userAgent?.indexOf('Chrome') === -1;
-
     if (windowWidth > 768) {
       firstVideoSrc = '/animations/what-is-agora-space-start.webm';
       loopingVideoSrc = '/animations/what-is-agora-space.webm';
@@ -42,8 +27,6 @@
       firstVideoSrc = '/animations/mobile-what-is-agora-space-start.webm';
       loopingVideoSrc = '/animations/mobile-what-is-agora-space.webm';
     }
-
-    update();
   });
 </script>
 
@@ -55,58 +38,38 @@
       <div
         class="order-2 lg:order-1 flex lg:self-end flex-col justify-end h-full w-full max-w-3xl pt-16 lg:pt-20"
       >
-        <div class="relative" style={`width: ${videoWidth}px; height: ${videoHeight}px;`}>
+        <div class="relative">
           <!-- svelte-ignore a11y-media-has-caption -->
-          {#if isSafari}
+          <video
+            muted
+            playsinline
+            preload="auto"
+            width="100%"
+            height="auto"
+            poster="/images/what-is-agora-space.png"
+            on:ended={handleStartEnd}
+            bind:this={firstVideo}
+            class={`absolute bottom-0 left-0 ${
+              showStartVideo ? 'opacity-1' : 'opacity-0'
+            } transition-opacity duration-75 delay-75`}
+          >
+            <source src={firstVideoSrc} type="video/webm" />
             <img src="/images/what-is-agora-space.png" alt="What is Agora Space?" class="w-full" />
-          {:else}
-            <canvas
-              width={videoWidth}
-              height={videoHeight}
-              class="absolute bottom-0 left-0 bg-transparent"
-              bind:this={videoCanvas}
-            />
-            <video
-              muted
-              playsinline
-              preload="auto"
-              width="100%"
-              height="auto"
-              poster="/images/what-is-agora-space.png"
-              on:ended={handleStartEnd}
-              bind:this={firstVideo}
-              bind:clientWidth={videoWidth}
-              bind:clientHeight={videoHeight}
-              class="absolute bottom-0 left-0 opacity-0"
-            >
-              <source src={firstVideoSrc} type="video/webm" />
-              <img
-                src="/images/what-is-agora-space.png"
-                alt="What is Agora Space?"
-                class="w-full"
-              />
-            </video>
-          {/if}
+          </video>
           <!-- svelte-ignore a11y-media-has-caption -->
-          {#if !isSafari}
-            <video
-              muted
-              playsinline
-              preload="auto"
-              width="100%"
-              height="auto"
-              loop
-              bind:this={loopingVideo}
-              class="absolute bottom-0 left-0 opacity-0"
-            >
-              <source src={loopingVideoSrc} type="video/webm" />
-              <img
-                src="/images/what-is-agora-space.png"
-                alt="What is Agora Space?"
-                class="w-full"
-              />
-            </video>
-          {/if}
+          <video
+            muted
+            playsinline
+            preload="auto"
+            width="100%"
+            height="auto"
+            loop
+            bind:this={loopingVideo}
+            class="absolute bottom-0 left-0 opacity-0"
+          >
+            <source src={loopingVideoSrc} type="video/webm" />
+            <img src="/images/what-is-agora-space.png" alt="What is Agora Space?" class="w-full" />
+          </video>
         </div>
       </div>
 
