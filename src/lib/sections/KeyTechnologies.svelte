@@ -53,37 +53,6 @@
 <section id="key-technologies" class="relative bg-agora-blue-medium text-agora-white">
   <div class="container relative pt-24 lg:pb-24 text-center">
     <div
-      class="lg:absolute lg:bottom-0 lg:-right-20 xl:right-0 w-full lg:w-2/5"
-      bind:this={videoContainer}
-    >
-      {#if isSafari}
-        <img src="/images/pegasus.png" alt="Pegasus" />
-      {:else}
-        <canvas
-          width={videoWidth}
-          height={videoHeight}
-          class="absolute bottom-0 right-0 bg-transparent"
-          bind:this={videoCanvas}
-        />
-        <video
-          poster="/images/pegasus.png"
-          playsinline
-          muted
-          preload="auto"
-          width="100%"
-          height="auto"
-          bind:this={video}
-          bind:clientWidth={videoWidth}
-          bind:clientHeight={videoHeight}
-          class="opacity-0"
-        >
-          <source src={videoSrc} type="video/webm" />
-          <img src="/images/pegasus.png" alt="Pegasus" />
-        </video>
-      {/if}
-    </div>
-
-    <div
       class="relative mx-auto lg:mx-0 max-w-lg lg:max-w-screen-md lg:text-left lg:grid lg:grid-cols-2 lg:gap-16"
     >
       <h2
@@ -140,6 +109,37 @@
           We integrate every major EVM-compatible blockchains and L2s besides Solana and Near.
         </p>
       </div>
+    </div>
+
+    <div
+      class="lg:absolute lg:bottom-0 lg:-right-20 xl:right-0 w-full lg:w-2/5"
+      bind:this={videoContainer}
+    >
+      {#if isSafari}
+        <img src="/images/pegasus.png" alt="Pegasus" />
+      {:else}
+        <canvas
+          width={videoWidth}
+          height={videoHeight}
+          class="absolute bottom-0 right-0 bg-transparent"
+          bind:this={videoCanvas}
+        />
+        <video
+          poster="/images/pegasus.png"
+          playsinline
+          muted
+          preload="auto"
+          width="100%"
+          height="auto"
+          bind:this={video}
+          bind:clientWidth={videoWidth}
+          bind:clientHeight={videoHeight}
+          class="opacity-0"
+        >
+          <source src={videoSrc} type="video/webm" />
+          <img src="/images/pegasus.png" alt="Pegasus" />
+        </video>
+      {/if}
     </div>
   </div>
 </section>
