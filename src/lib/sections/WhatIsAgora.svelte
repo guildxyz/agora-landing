@@ -6,10 +6,15 @@
   let windowHeight;
   let scrollY;
   let firstVideo;
+  let videoWidth;
+  let videoHeight;
+  let videoCanvas;
   let loopingVideo;
   let firstVideoSrc;
   let loopingVideoSrc;
   let isSafari = false;
+
+  $: ctx = videoCanvas?.getContext('2d');
 
   const handleStartEnd = () => {
     showStartVideo = false;
@@ -19,6 +24,11 @@
   $: if (scrollY >= windowHeight / 2 && firstVideo && loopingVideo) {
     firstVideo.play();
   }
+
+  const update = () => {
+    ctx?.drawImage(showStartVideo ? firstVideo : loopingVideo, 0, 0, videoWidth, videoHeight);
+    requestAnimationFrame(update);
+  };
 
   onMount(() => {
     isSafari =
@@ -32,6 +42,8 @@
       firstVideoSrc = '/animations/mobile-what-is-agora-space-start.webm';
       loopingVideoSrc = '/animations/mobile-what-is-agora-space.webm';
     }
+
+    update();
   });
 </script>
 
@@ -48,6 +60,12 @@
           {#if isSafari}
             <img src="/images/what-is-agora-space.png" alt="What is Agora Space?" class="w-full" />
           {:else}
+            <canvas
+              width={videoWidth}
+              height={videoHeight}
+              class="absolute bottom-0 left-0 bg-transparent"
+              bind:this={videoCanvas}
+            />
             <video
               muted
               playsinline
@@ -57,9 +75,9 @@
               poster="/images/what-is-agora-space.png"
               on:ended={handleStartEnd}
               bind:this={firstVideo}
-              class={`absolute bottom-0 left-0 ${
-                showStartVideo ? 'opacity-1' : 'opacity-0'
-              } transition-opacity duration-75 delay-75`}
+              bind:clientWidth={videoWidth}
+              bind:clientHeight={videoHeight}
+              class="absolute bottom-0 left-0 opacity-0"
             >
               <source src={firstVideoSrc} type="video/webm" />
               <img
@@ -79,9 +97,7 @@
               height="auto"
               loop
               bind:this={loopingVideo}
-              class={`absolute bottom-0 left-0 ${
-                showStartVideo ? 'opacity-0' : 'opacity-1'
-              } transition-opacity duration-75`}
+              class="absolute bottom-0 left-0 opacity-0"
             >
               <source src={loopingVideoSrc} type="video/webm" />
               <img

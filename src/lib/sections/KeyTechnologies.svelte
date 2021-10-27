@@ -61,8 +61,8 @@
       {:else}
         <canvas
           width={videoWidth}
-          height={videoWidth}
-          class="absolute bottom-0 right-0 bg-black"
+          height={videoHeight}
+          class="absolute bottom-0 right-0 bg-transparent"
           bind:this={videoCanvas}
         />
         <video
