@@ -4,8 +4,13 @@
   let windowWidth;
   let videoSrc;
   let imgSrc;
+  let isSafari = false;
 
   onMount(() => {
+    isSafari =
+      navigator?.userAgent?.indexOf('Safari') !== -1 &&
+      navigator?.userAgent?.indexOf('Chrome') === -1;
+
     if (windowWidth > 768) {
       imgSrc = '/images/who-is-agora-space-for.png';
       videoSrc = '/animations/who-is-agora-space-for.webm';
@@ -59,20 +64,30 @@
     <div
       class="flex flex-col items-center justify-center space-y-4 relative lg:col-span-3 bg-agora-white overflow-hidden"
     >
-      <video
-        poster={imgSrc}
-        muted
-        autoplay
-        playsinline
-        loop
-        width="100%"
-        height="80vh"
-        class="max-w-1/2 h-full max-h-[80vh]"
-        src={videoSrc}
-      >
-        <source src={videoSrc} type="video/webm" />
-        <img src={imgSrc} alt="Who is Agora Space for" />
-      </video>
+      {#if isSafari}
+        <img
+          src={imgSrc}
+          alt="Who is Agora Space for"
+          width="100%"
+          height="80vh"
+          class="max-w-1/2 h-full max-h-[80vh]"
+        />
+      {:else}
+        <video
+          poster={imgSrc}
+          muted
+          autoplay
+          playsinline
+          loop
+          width="100%"
+          height="80vh"
+          class="max-w-1/2 h-full max-h-[80vh]"
+          src={videoSrc}
+        >
+          <source src={videoSrc} type="video/webm" />
+          <img src={imgSrc} alt="Who is Agora Space for" />
+        </video>
+      {/if}
     </div>
   </div>
 </section>

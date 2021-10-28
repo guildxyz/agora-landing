@@ -95,7 +95,7 @@
               bind:this={firstVideo}
               on:play={startAnimation}
               class={`absolute bottom-0 left-0 ${
-                showStartVideo ? 'opacity-1' : 'opacity-0'
+                showStartVideo ? 'opacity-100' : 'opacity-0'
               } transition-opacity duration-75 delay-75`}
             >
               <source src={firstVideoSrc} type="video/webm" />
@@ -115,8 +115,8 @@
               height="auto"
               loop
               bind:this={loopingVideo}
-              class={`absolute bottom-0 left-0 ${
-                showStartVideo ? 'opacity-0' : 'opacity-1'
+              class={`absolute bottom-0 left-0 max-h-full ${
+                showStartVideo ? 'opacity-0' : 'opacity-100'
               } transition-opacity duration-75`}
             >
               <source src={loopingVideoSrc} type="video/webm" />
