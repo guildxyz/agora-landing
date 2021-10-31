@@ -17,7 +17,6 @@
         >
           <TeamMember
             advisor
-            about="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit risus nec ex lacinia interdum. Praesent accumsan."
             photo="/images/team/raz.png"
             name="R A Z"
             label="Strategic advisor"
