@@ -17,7 +17,7 @@
       <h2
         class="mb-8 w-full text-3xl lg:text-4xl 2xl:text-5xl font-bold tracking-tight font-display"
       >
-        Guild
+        Guild.xyz
       </h2>
 
       <p class="mb-8 lg:mb-16 2xl:text-xl">
