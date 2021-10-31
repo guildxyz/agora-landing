@@ -21,19 +21,19 @@
       </h2>
 
       <p class="mb-8 lg:mb-16 2xl:text-xl">
-        Browse all existing social tokens in our explorer from Aragon, Rally, Stake Social,
-        Colony.io Issue your token on your favourite platforms and DAO frameworks then add utility
-        to them with Agora Space’s tools.
+        Authorization layer for Web 3 and a no-code tool for token-gated access. <br />
+        Create gated access into any platform with advanced logic of entry requirements: NFTs, NFT attributes,
+        tokens, whitelists, Snapshot strategies.
       </p>
 
       <Button
-        href="https://app.agora.space"
+        href="https://alpha.guild.xyz"
         target="_blank"
         rel="noopener"
         class="mx-auto lg:mx-0 w-max bg-agora-pink-medium text-agora-white"
       >
-        Integrate your token
-        <SignIn slot="icon" weight="bold" size="1.2em" />
+        Use Guild
+        <img slot="icon-left" src="/svg/guild-logo.svg" alt="Guild.xyz" class="w-4 h-4" />
       </Button>
     </div>
 
