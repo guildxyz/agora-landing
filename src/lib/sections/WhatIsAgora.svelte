@@ -60,7 +60,7 @@
               preload="auto"
               width="100%"
               height="auto"
-              poster="/images/what-is-agora-space.png"
+              poster="/images/what-is-agora-space-poster.png"
               on:ended={handleStartEnd}
               bind:this={firstVideo}
               bind:clientHeight={videoHeight}
