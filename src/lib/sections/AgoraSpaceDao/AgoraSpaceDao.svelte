@@ -94,7 +94,7 @@
               on:ended={handleStartEnd}
               bind:this={firstVideo}
               on:play={startAnimation}
-              class={`absolute bottom-0 left-0 ${
+              class={`absolute bottom-0 left-0 max-h-full ${
                 showStartVideo ? 'opacity-100' : 'opacity-0'
               } transition-opacity duration-75 delay-75`}
             >

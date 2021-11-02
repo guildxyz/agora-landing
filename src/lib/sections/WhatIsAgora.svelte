@@ -44,7 +44,7 @@
       <div
         class="order-2 lg:order-1 flex lg:self-end flex-col justify-end h-full w-full max-w-3xl pt-16 lg:pt-20"
       >
-        <div class="relative" style={`height: ${videoHeight}px`}>
+        <div class="relative" style={`height: ${videoHeight ? `${videoHeight}px` : 'auto'}`}>
           <!-- svelte-ignore a11y-media-has-caption -->
           {#if isSafari}
             <img
