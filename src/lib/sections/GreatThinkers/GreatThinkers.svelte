@@ -32,7 +32,7 @@
       <svelte:component this={quoteWrapper}>
         <Quote
           image="/images/thinkers-aristotle.png"
-          video="/animations/thinkers-aristotle.webm"
+          video="/animations/mobile-thinkers-aristotle.webm"
           alt="Aristotle portrait"
           quoteStart="Trustless financial contracts"
           quote="are essential for a DAO2DAO future."
@@ -44,7 +44,7 @@
         <!-- TODO: mp4 video -->
         <Quote
           image="/images/thinkers-platon.png"
-          video="/animations/thinkers-platon.webm"
+          video="/animations/mobile-thinkers-platon.webm"
           alt="Plato portrait"
           quoteStart="Token-gated communities"
           quote="create the perfect foundation for Sybil-Resistant decision-making and rewarding mechanisms."
@@ -55,7 +55,7 @@
       <svelte:component this={quoteWrapper}>
         <Quote
           image="/images/thinkers-epikuros.png"
-          video="/animations/thinkers-epikuros.webm"
+          video="/animations/mobile-thinkers-epikuros.webm"
           alt="Epikuros portrait"
           quoteStart="Gasless web3 applications"
           quote="unleash the burden of onboarding millions to DAOs"
