@@ -1,9 +1,7 @@
 <script>
-  import TokenGatedAccess from '$lib/sections/TokenGatedAccess.svelte';
-  import TrustlessFinancialContract from '$lib/sections/TrustlessFinancialContract.svelte';
-  import Gamification from '$lib/sections/Gamification.svelte';
   import Footer from '$lib/Footer.svelte';
-  import DecisionMakingTools from '$lib/sections/DecisionMakingTools.svelte';
+  import AgoraSpace from '$lib/sections/AgoraSpace.svelte';
+  import Guild from '$lib/sections/Guild.svelte';
 </script>
 
 <svelte:head>
@@ -20,8 +18,10 @@
 </svelte:head>
 
 <h1 class="sr-only">Tools - Agora Space</h1>
-<TokenGatedAccess />
+<!-- <AgoraSpace /> -->
+<Guild />
+<!-- <TokenGatedAccess />
 <TrustlessFinancialContract />
 <Gamification />
-<DecisionMakingTools />
-<Footer dark />
+<DecisionMakingTools /> -->
+<Footer />

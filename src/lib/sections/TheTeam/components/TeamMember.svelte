@@ -1,17 +1,33 @@
 <script>
   import { TwitterLogo, GithubLogo } from 'phosphor-svelte';
 
+  export let advisor = false;
   export let photo;
   export let name;
   export let label;
   export let twitter = null;
   export let github = null;
-  export let links = []; // format: [{ text: string, url?: string }, ...]
+  export let about = null;
 </script>
 
 <div class="group flex flex-col">
-  <div class="flex flex-col items-end mb-2 h-50 max-h-50 lg:h-64">
-    <img src={photo} alt={name} class="w-full h-full object-contain object-bottom" />
+  <div class="flex flex-col items-end mb-2 h-52 max-h-52 lg:h-64">
+    {#if about}
+      <div class="group relative w-full h-52 lg:h-64 overflow-hidden">
+        <img
+          src={photo}
+          alt={name}
+          class="absolute left-0 bottom-0 w-full h-full object-contain object-bottom group-hover:-left-full group-hover:opacity-0 group-focus-within:-left-full group-focus-within:opacity-0 transition-all duration-500"
+        />
+        <div
+          class="absolute -right-full bottom-0 w-full h-full text-agora-white group-hover:right-0 opacity-0 group-hover:opacity-100 group-focus-within:right-0 group-focus-within:opacity-100 transition-all duration-500"
+        >
+          <p>{about}</p>
+        </div>
+      </div>
+    {:else}
+      <img src={photo} alt={name} class="w-full h-full object-contain object-bottom" />
+    {/if}
   </div>
   <div class="relative flex flex-col">
     <span
@@ -31,11 +47,17 @@
       {label}
     </span>
     <div
-      class="absolute inset-y-0 right-1 flex flex-col space-y-1 justify-center text-agora-blue-medium"
+      class={`absolute inset-y-0 right-1 flex flex-col space-y-1 justify-center ${
+        advisor ? 'text-agora-purple' : 'text-agora-blue-medium'
+      }`}
     >
       {#if twitter || github}
         <div
-          class="absolute inset-y-0 -right-4 group-hover:right-0 group-focus-within:right-0 w-10 bg-gradient-to-l from-agora-blue-medium  via-agora-blue-medium opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-all duration-500"
+          class={`absolute inset-y-0 -right-4 group-hover:right-0 group-focus-within:right-0 w-10 bg-gradient-to-l ${
+            advisor
+              ? 'from-agora-purple  via-agora-purple'
+              : 'from-agora-blue-medium  via-agora-blue-medium'
+          } opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-all duration-500`}
         />
       {/if}
       {#if twitter}
@@ -62,20 +84,4 @@
       {/if}
     </div>
   </div>
-
-  {#if links.length > 0}
-    <div class="mt-2 flex flex-col space-y-1 text-agora-pink-light font-semibold">
-      {#each links as link}
-        <span class="flex items-center justify-center space-x-2 text-center">
-          {#if link.url}
-            <a href={link.url} target="_blank">
-              {link.text}
-            </a>
-          {:else}
-            {link.text}
-          {/if}
-        </span>
-      {/each}
-    </div>
-  {/if}
 </div>

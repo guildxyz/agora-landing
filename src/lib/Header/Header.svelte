@@ -15,7 +15,6 @@
   <nav
     class="relative hidden lg:flex justify-end space-x-10 xl:space-x-12 text-agora-white font-semibold text-lg xl:text-xl font-display"
   >
-    <a href="/explorer" class="hover:underline focus:outline-none focus:underline">Explorer</a>
     <a href="/tools" class="hover:underline focus:outline-none focus:underline">Tools</a>
     <a href="/about" class="hover:underline focus:outline-none focus:underline">About</a>
   </nav>
