@@ -69,8 +69,8 @@ const animate = () => {
 
   // Intro animation
   if (ANIMATE && bigBubble.position.y < 0.64 && video) {
-    // bigBubble.position.y += 0.028;
     bigBubble.position.y += (video.currentTime / 12) * 0.64;
+    if (bigBubble.position.y >= 0.64) ANIMATE = false;
   }
 
   // If we don't need to animate (Safari PLS), then just put the bubble in the right position
@@ -111,7 +111,7 @@ export const initThreeJS = (element, isSafari) => {
   centerAxis = new THREE.Object3D();
   centerAxis.position.y = -0.6;
 
-  bigBubbleGeometry = new THREE.IcosahedronGeometry(1.2, 64);
+  bigBubbleGeometry = new THREE.IcosahedronGeometry(1.2, 24);
   bigBubbleMaterial = new THREE.MeshMatcapMaterial({
     matcap: matCapTexture
   });

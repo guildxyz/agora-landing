@@ -38,11 +38,12 @@
         height="auto"
         poster={image}
         on:mouseenter={onMouseEnter}
-        class="object-contain w-full h-full"
+        class="hidden md:block object-contain w-full h-full"
       >
         <source src={video} type="video/webm" />
         <img src={image} {alt} class="object-contain w-full h-full" />
       </video>
+      <img src={image} {alt} class="md:hidden object-contain w-full h-full" />
     {/if}
   </div>
   <p class="mx-3 mb-3 text-agora-white lg:font-semibold 2xl:text-lg">
