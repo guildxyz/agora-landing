@@ -37,6 +37,7 @@
         bind:this={videoElement}
         muted
         playsinline
+        preload="auto"
         width="100%"
         height="auto"
         poster={image}

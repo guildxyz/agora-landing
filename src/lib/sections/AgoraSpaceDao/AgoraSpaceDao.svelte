@@ -89,6 +89,7 @@
               src={firstVideoSrc}
               muted
               playsinline
+              preload="auto"
               width="100%"
               height="auto"
               on:ended={handleStartEnd}

@@ -65,6 +65,7 @@
         autoplay
         playsinline
         loop
+        preload="auto"
         width="auto"
         height="80vh"
         class="max-w-1/2"
