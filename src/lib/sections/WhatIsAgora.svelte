@@ -9,7 +9,6 @@
   let loopingVideo;
   let firstVideoSrc;
   let loopingVideoSrc;
-  let videoHeight;
   let shouldPlay = true;
   let isSafari = false;
 
@@ -52,7 +51,7 @@
       <div
         class="order-2 lg:order-1 flex lg:self-end flex-col justify-end h-full w-full max-w-3xl pt-16 lg:pt-20"
       >
-        <div class="relative" style={`height: ${videoHeight ? `${videoHeight}px` : 'auto'}`}>
+        <div class="relative">
           <!-- svelte-ignore a11y-media-has-caption -->
           {#if isSafari}
             <img
@@ -71,8 +70,7 @@
               poster="/images/what-is-agora-space-poster.png"
               on:ended={handleStartEnd}
               bind:this={firstVideo}
-              bind:clientHeight={videoHeight}
-              class={`absolute -bottom-px left-0 ${
+              class={`relative -bottom-px ${
                 showStartVideo ? 'opacity-100' : 'opacity-0'
               } transition-opacity duration-75 delay-75`}
             >
