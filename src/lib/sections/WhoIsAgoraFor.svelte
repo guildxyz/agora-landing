@@ -68,9 +68,9 @@
         <img
           src={imgSrc}
           alt="Who is Agora Space for"
-          width="100%"
+          width="auto"
           height="80vh"
-          class="max-w-1/2 h-full max-h-[80vh]"
+          class="max-w-1/2"
         />
       {:else}
         <video
@@ -79,9 +79,9 @@
           autoplay
           playsinline
           loop
-          width="100%"
+          width="auto"
           height="80vh"
-          class="max-w-1/2 h-full max-h-[80vh]"
+          class="max-w-1/2"
           src={videoSrc}
         >
           <source src={videoSrc} type="video/webm" />
