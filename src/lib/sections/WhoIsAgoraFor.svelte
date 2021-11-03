@@ -4,14 +4,21 @@
   let windowWidth;
   let videoSrc;
   let imgSrc;
+  let isSafari = false;
+  let videoSrcSafari;
 
   onMount(() => {
+    isSafari =
+      navigator?.userAgent?.indexOf('Safari') !== -1 &&
+      navigator?.userAgent?.indexOf('Chrome') === -1;
+
     if (windowWidth > 768) {
       imgSrc = '/images/who-is-agora-space-for.png';
       videoSrc = '/animations/who-is-agora-space-for.webm';
     } else {
       imgSrc = '/images/mobile-who-is-agora-space-for.png';
       videoSrc = '/animations/mobile-who-is-agora-space-for.webm';
+      videoSrcSafari = '/animations/safari/mobile-who-is-agora-space-for.mp4';
     }
   });
 </script>
@@ -69,9 +76,8 @@
         width="auto"
         height="80vh"
         class="max-w-1/2"
-        src={videoSrc}
+        src={isSafari && videoSrcSafari ? videoSrcSafari : videoSrc}
       >
-        <source src={videoSrc} type="video/webm" />
         <img
           src={imgSrc}
           alt="Who is Agora Space for"
