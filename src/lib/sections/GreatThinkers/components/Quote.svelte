@@ -17,10 +17,6 @@
     videoElement?.play();
   };
 
-  const onMouseLeave = () => {
-    videoElement?.stop();
-  };
-
   onMount(() => {
     isSafari =
       navigator?.userAgent?.indexOf('Safari') !== -1 &&
@@ -42,7 +38,6 @@
         height="auto"
         poster={image}
         on:mouseenter={onMouseEnter}
-        on:mouseleave={onMouseLeave}
         class="object-contain w-full h-full"
       >
         <source src={video} type="video/webm" />

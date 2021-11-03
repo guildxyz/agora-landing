@@ -10,6 +10,7 @@
   let firstVideoSrc;
   let loopingVideoSrc;
   let videoHeight;
+  let shouldPlay = true;
   let isSafari = false;
 
   const handleStartEnd = () => {
@@ -17,8 +18,15 @@
     loopingVideo.play();
   };
 
-  $: if (scrollY >= windowHeight / 2 && firstVideo && loopingVideo) {
+  $: if (
+    shouldPlay &&
+    showStartVideo &&
+    scrollY >= windowHeight / 2 &&
+    firstVideo &&
+    loopingVideo
+  ) {
     firstVideo.play();
+    shouldPlay = false;
   }
 
   onMount(() => {

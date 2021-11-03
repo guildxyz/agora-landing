@@ -11,8 +11,9 @@
   let isSafari = false;
 
   const scrollHandler = () => {
+    if (!shouldPlay) return;
     const rect = videoContainer.getBoundingClientRect();
-    if (rect.bottom < windowHeight && shouldPlay) {
+    if (rect.bottom < windowHeight) {
       video.play();
       shouldPlay = false;
     }

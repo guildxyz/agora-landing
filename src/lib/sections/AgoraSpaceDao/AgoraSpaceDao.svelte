@@ -20,8 +20,9 @@
   };
 
   const scrollHandler = () => {
+    if (!shouldPlay) return;
     const rect = videoContainer.getBoundingClientRect();
-    if (rect.bottom < windowHeight + rect.bottom / 4 && shouldPlay) {
+    if (rect.bottom < windowHeight + rect.bottom / 4) {
       firstVideo.play();
       shouldPlay = false;
     }

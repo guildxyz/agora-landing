@@ -120,14 +120,18 @@ export const initThreeJS = (element, isSafari) => {
   bigBubble = new THREE.Mesh(bigBubbleGeometry, bigBubbleMaterial);
   bigBubble.position.y = -2;
 
-  smallBubbleGeometry = new THREE.IcosahedronGeometry(0.6, 32);
+  // smallBubbleGeometry = new THREE.IcosahedronGeometry(0.6, 32);
+  smallBubbleGeometry = new THREE.SphereGeometry(0.6, 32);
 
   // Setting up the positions
   smallBubblesData.forEach((bubble) => {
-    const currentMaterial = new THREE.MeshMatcapMaterial({
+    // const currentMaterial = new THREE.MeshMatcapMaterial({
+    //   color: bubble.color
+    // });
+    // currentMaterial.onBeforeCompile = (shader) => createBubbleMaterial(shader, customUniforms);
+    const currentMaterial = new THREE.MeshBasicMaterial({
       color: bubble.color
     });
-    currentMaterial.onBeforeCompile = (shader) => createBubbleMaterial(shader, customUniforms);
     bubble.object = new THREE.Mesh(smallBubbleGeometry, currentMaterial);
     bubble.object.position.set(bubble.position.x, bubble.position.y, bubble.position.z);
     bubble.object.scale.set(0.5, 0.5, 0.5);
