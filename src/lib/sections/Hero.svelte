@@ -2,9 +2,8 @@
   import Header from '$lib/Header';
   import { SignIn, Users } from 'phosphor-svelte';
   import Button from '$lib/Button';
-  import { initThreeJS, resizeThreeJS } from './threejs/hero';
-  import { onMount, onDestroy } from 'svelte';
-
+  import { initThreeJS, resizeThreeJS } from '$lib/threejs/hero';
+  import { onDestroy, onMount } from 'svelte';
   let hideHeroImg = false;
   let windowSize = 1920;
   let canvas;
@@ -12,14 +11,17 @@
   let canvasHeight;
   let opacity = 0;
 
-  $: offset = windowSize > 1280 ? '-62%' : windowSize > 1024 ? '-48%' : '-48%';
+  $: offset =
+    windowSize > 1536 ? '-62%' : windowSize > 1280 ? '-58%' : windowSize > 1024 ? '-48%' : '-48%';
   $: canvasWidth && canvasHeight && resizeThreeJS(canvasWidth, canvasHeight);
 
   onMount(() => {
-    initThreeJS(canvas, () => {
-      opacity = 100;
-      hideHeroImg = true;
-    });
+    initThreeJS(canvas, () =>
+      setTimeout(() => {
+        opacity = 100;
+        hideHeroImg = true;
+      }, 1000)
+    );
   });
 
   // Heading animation
@@ -74,68 +76,72 @@
 
 <svelte:window bind:innerWidth={windowSize} />
 
-<section id="hero" class="relative xl:h-screen h-webkit-fill-available">
+<section id="hero" class="relative xl:h-screen">
   <!-- Hero background -->
-  <div class="absolute hidden md:flex lg:flex-row w-full h-full">
-    <div class="flex-grow bg-agora-white" />
+  <div class="absolute hidden w-full h-full md:flex lg:flex-row">
+    <div class="flex-grow bg-agora-gray" />
     <div
-      class="flex-grow bg-agora-blue-medium bg-circle-pattern bg-no-repeat bg-hero-right-bottom"
+      class="flex-grow bg-no-repeat bg-agora-blue-medium bg-circle-pattern bg-hero-right-bottom"
     />
   </div>
 
-  <div class="absolute left-0 right-0 top-0 z-50">
-    <Header />
+  <div class="absolute top-0 left-0 right-0 z-50">
+    <Header whiteLogo />
   </div>
 
   <div
-    class="relative md:container px-6 lg:px-8 grid md:grid-cols-9 lg:grid-cols-7 md:h-1/2 lg:h-2/3 xl:h-full"
+    class="relative grid px-6 md:container md:grid-cols-9 lg:grid-cols-7 md:h-1/2 lg:h-2/3 xl:h-full"
   >
     <!-- Hero - left side -->
     <section
-      class="flex flex-col relative md:col-span-7 lg:col-span-5 -mx-6 md:mx-0 pt-4 lg:pt-10 xl:pt-20 px-4 lg:px-0 bg-agora-white"
+      class="relative flex flex-col px-4 pt-4 -mx-6 sm:px-0 md:col-span-7 lg:col-span-5 md:mx-0 lg:pt-10 xl:pt-20 lg:px-0 bg-agora-gray"
     >
       <!-- Platon - large -->
       <div
-        class="hidden md:block w-full xl:w-[120%] 2xl:w-[130%] h-auto max-h-[95%]"
-        style={`position: absolute; bottom:0; right: ${offset};`}
+        class="hidden md:block absolute bottom-0 w-full xl:w-[120%] 2xl:w-[130%]"
+        style={`right: ${offset};`}
       >
-        <div class="relative">
-          <canvas
-            bind:this={canvas}
-            width={canvasWidth}
-            height={canvasHeight}
-            class={`absolute inset-0 w-full h-full transition-opacity opacity-${opacity} duration-500`}
-          />
-          <div bind:clientWidth={canvasWidth} bind:clientHeight={canvasHeight}>
-            <img
-              src="/images/hero-cropped.png"
-              alt="Platon"
-              class={`relative select-none w-full`}
-            />
-          </div>
-          <img
-            src="/images/hero.png"
-            alt="Platon"
-            class={`absolute left-0 bottom-0 select-none w-full transition-all duration-500 ${
-              hideHeroImg ? 'invisible opacity-0' : 'visible opacity-100'
-            }`}
-          />
+        <canvas
+          bind:this={canvas}
+          width={canvasWidth}
+          height={canvasHeight}
+          class={`absolute left-0 right-0 bottom-0 w-full h-full object-contain transition-opacity opacity-${opacity} duration-500`}
+        />
+        <div
+          class="invisible w-full"
+          bind:clientWidth={canvasWidth}
+          bind:clientHeight={canvasHeight}
+        >
+          <video id="platon-video" playsinline muted preload="auto" width="100%">
+            <source src="/animations/safari/platon.mov" type="video/mp4; codecs=hvc1" />
+            <source src="/animations/platon.webm" type="video/webm" />
+          </video>
         </div>
+        <img
+          src="/images/hero.png"
+          alt="Platon"
+          width={canvasWidth * 0.8}
+          height={canvasHeight * 0.8}
+          class={`absolute bottom-0 select-none transition-all duration-500 ${
+            hideHeroImg ? 'invisible opacity-0' : 'visible opacity-100'
+          }`}
+          style={`left: ${canvasWidth * 0.1}px;`}
+        />
       </div>
 
       <!-- Title / text -->
-      <div class="w-full h-full flex flex-col justify-center">
-        <div class="relative mt-24 xl:mt-0 pb-32 md:pb-0 text-center md:text-left">
+      <div class="flex flex-col justify-center w-full h-full">
+        <div class="relative pb-32 mt-24 text-center xl:mt-0 md:pb-0 md:text-left text-agora-white">
           <h2
-            class="mb-4 xl:mb-8 font-bold tracking-tight text-3xl xl:text-5xl 2xl:text-6xl font-display"
+            class="mb-4 text-3xl font-bold tracking-tight xl:mb-8 lg:text-4xl xl:text-5xl 2xl:text-6xl font-display"
           >
             <span
-              class="block w-full relative pt-20 md:pt-10 xl:pt-14"
+              class="relative block w-full pt-20 md:pt-10 xl:pt-14"
               style="perspective: 1600px;"
             >
               {#key headline}
                 <span
-                  class="absolute left-0 top-0 flex flex-col justify-center w-full md:max-w-md xl:max-w-full h-1/2 text-agora-blue-medium transition-all"
+                  class="absolute top-0 left-0 flex flex-col justify-end w-full transition-all md:max-w-md xl:max-w-full h-1/2 text-agora-pink-dark"
                   in:cubeIn={{ rotateFrom: 90, duration: 600 }}
                   out:cubeOut={{ rotateTo: -90, duration: 600 }}>{headline}</span
                 >
@@ -145,18 +151,18 @@
           </h2>
 
           <p
-            class="mb-6 lg:mb-8 font-semibold lg:text-lg 2xl:text-xl leading-tight md:leading-normal text-gray-600"
+            class="mb-8 font-semibold leading-tight lg:mb-10 2xl:mb-15 lg:text-lg xl:text-xl 2xl:text-2xl md:leading-normal"
           >
-            Building essentials for future internet<br /> communities.
+            Building essentials for internet<br /> communities.
           </p>
 
-          <p class="mb-2 font-semibold 2xl:text-lg leading-tight md:leading-normal text-gray-600">
+          <p class="mb-2 font-semibold 2xl:text-lg leading-tight md:leading-normal">
             View our first tool:
           </p>
         </div>
 
         <!-- Buttons -->
-        <div class="hidden md:flex flex-col space-y-2 mb-20">
+        <div class="flex-col hidden mb-20 space-y-3 md:flex 2xl:space-y-4 2xl:mb-10">
           <Button
             href="https://alpha.guild.xyz"
             target="_blank"
@@ -171,12 +177,12 @@
 
       <!-- Mobile - purple section -->
       <div
-        class="md:hidden relative -mx-4 bg-agora-blue-medium bg-circle-pattern bg-no-repeat bg-hero-right-bottom"
+        class="relative -mx-4 bg-no-repeat md:hidden bg-agora-blue-medium bg-circle-pattern bg-hero-right-bottom"
       >
         <img
           src="/images/hero-mobile.png"
           alt="Platon"
-          class="-mt-28 select-none w-full object-cover object-bottom"
+          class="object-cover object-bottom w-full select-none -mt-28"
         />
 
         <!-- Buttons -->
@@ -187,7 +193,7 @@
             href="https://alpha.guild.xyz"
             target="_blank"
             rel="noopener"
-            class="w-max bg-agora-blue-light text-agora-white shadow-md"
+            class="shadow-md w-max bg-agora-blue-light text-agora-white"
           >
             Guild.xyz
             <img slot="icon-left" src="/svg/guild-logo.svg" alt="Guild.xyz" class="w-4 h-4" />

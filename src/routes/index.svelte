@@ -1,9 +1,10 @@
 <script>
-  import Hero from '$lib/sections/Hero';
+  import Hero from '$lib/sections/Hero.svelte';
   import WhatIsAgora from '$lib/sections/WhatIsAgora.svelte';
   import GreatThinkers from '$lib/sections/GreatThinkers';
   import WhoIsAgoraFor from '$lib/sections/WhoIsAgoraFor.svelte';
   import KeyTechnologies from '$lib/sections/KeyTechnologies.svelte';
+  import AgoraSpaceDao from '$lib/sections/AgoraSpaceDao';
   import Cta from '$lib/sections/Cta';
   import Footer from '$lib/Footer.svelte';
 </script>
@@ -27,5 +28,6 @@
 <GreatThinkers />
 <WhoIsAgoraFor />
 <KeyTechnologies />
+<AgoraSpaceDao />
 <Cta />
 <Footer />

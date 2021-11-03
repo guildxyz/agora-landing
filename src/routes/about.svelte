@@ -24,4 +24,4 @@
 <TheTeam />
 <Advisors />
 <StayUpToDate />
-<Footer purple />
+<Footer dark />
