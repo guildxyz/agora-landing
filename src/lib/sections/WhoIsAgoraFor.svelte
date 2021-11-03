@@ -75,7 +75,7 @@
         preload="auto"
         width="auto"
         height="80vh"
-        class="max-w-1/2"
+        class="max-w-1/2 transform scale-105"
         src={isSafari && videoSrcSafari ? videoSrcSafari : videoSrc}
       >
         <img

@@ -72,7 +72,7 @@
               on:ended={handleStartEnd}
               bind:this={firstVideo}
               bind:clientHeight={videoHeight}
-              class={`absolute bottom-0 left-0 ${
+              class={`absolute -bottom-px left-0 ${
                 showStartVideo ? 'opacity-100' : 'opacity-0'
               } transition-opacity duration-75 delay-75`}
             >
@@ -94,7 +94,7 @@
               height="auto"
               loop
               bind:this={loopingVideo}
-              class={`absolute bottom-0 left-0 ${
+              class={`absolute -bottom-px left-0 ${
                 showStartVideo ? 'opacity-0' : 'opacity-100'
               } transition-opacity duration-75`}
             >
