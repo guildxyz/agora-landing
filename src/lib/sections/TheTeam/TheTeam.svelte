@@ -54,6 +54,7 @@
               name="Shronk"
               label="Backend Dev"
               github="https://github.com/schronck"
+              twitter="https://twitter.com/5hr0nk"
             />
             <TeamMember
               photo="/images/team/devid.png"
@@ -104,88 +105,12 @@
           >
             <div class="hidden lg:block" />
             <TeamMember
-              photo="/images/team/kovjonas.png"
-              name="KovJonas"
+              photo="/images/team/johnny.png"
+              name="Johnny"
               label="Frontend Dev"
-              github="https://github.com/KovJonas"
+              github="https://github.com/BrickheadJohnny"
             />
             <TeamMember photo="/images/team/sito.png" name="Sito" label="Designer" />
-          </div>
-        </svelte:component>
-      </svelte:component>
-    </div>
-
-    <div class="container space-y-16">
-      <h2
-        class="mt-32 text-agora-pink-light text-3xl lg:text-4xl 2xl:text-5xl font-bold tracking-tight font-display uppercase text-center"
-      >
-        Advisors
-      </h2>
-      <!-- Advisors -->
-      <svelte:component
-        this={sectionWrapper}
-        modules={[Pagination]}
-        class="relative pb-12 lg:pb-0"
-        pagination={{ clickable: true }}
-      >
-        <!-- Block 1 -->
-        <svelte:component this={membersWrapper} class="flex justify-center">
-          <div
-            class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-16 xl:gap-32 max-w-xs lg:max-w-none"
-          >
-            <TeamMember
-              photo="/images/team/raz.png"
-              name="R A Z"
-              label="Strategic advisor"
-              twitter="https://twitter.com/L1sp3r"
-              links={[
-                {
-                  text: 'Supernova Fund',
-                  url: 'https://supernova.fund'
-                }
-              ]}
-            />
-            <TeamMember
-              photo="/images/team/petermm.png"
-              name="Peter MM"
-              label="Advisor"
-              links={[
-                {
-                  text: 'Supernova Fund',
-                  url: 'https://supernova.fund'
-                },
-                {
-                  text: 'Prev.: J.P. Morgan'
-                }
-              ]}
-            />
-            <TeamMember
-              photo="/images/team/d3v.png"
-              name="D3v"
-              label="Security advisor"
-              links={[
-                {
-                  text: 'Former SSNS NCSC',
-                  url: 'https://mi.nemzetilabor.hu/partners/special-service-national-security'
-                }
-              ]}
-            />
-            <TeamMember
-              photo="/images/team/nima.png"
-              name="NiMA"
-              label="Advisor"
-              twitter="https://twitter.com/insidenima"
-              links={[
-                {
-                  text: 'Seedclub',
-                  url: 'https://seedclub.xyz'
-                },
-                {
-                  text: 'Mintbase',
-                  url: 'https://www.mintbase.io'
-                }
-              ]}
-            />
           </div>
         </svelte:component>
       </svelte:component>

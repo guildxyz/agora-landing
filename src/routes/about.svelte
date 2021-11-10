@@ -1,6 +1,7 @@
 <script>
   import HowDoesItWork from '$lib/sections/HowDoesItWork.svelte';
   import TheTeam from '$lib/sections/TheTeam';
+  import Advisors from '$lib/sections/Advisors.svelte';
   import StayUpToDate from '$lib/sections/StayUpToDate.svelte';
   import Footer from '$lib/Footer.svelte';
 </script>
@@ -21,5 +22,6 @@
 <h1 class="sr-only">About - Agora Space</h1>
 <HowDoesItWork />
 <TheTeam />
+<Advisors />
 <StayUpToDate />
-<Footer purple />
+<Footer dark />

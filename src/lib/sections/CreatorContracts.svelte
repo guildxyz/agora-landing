@@ -1,7 +1,7 @@
 <!-- We don't use this component currently, but I left it here just in case we need it again, or if we'll need to make a similar section in the future -->
 
 <section id="performance-based-creator-contracts" class="relative bg-agora-gray text-agora-white">
-  <div class="container py-20 px-8 grid lg:grid-cols-2 gap-16 lg:gap-0">
+  <div class="container py-20 grid lg:grid-cols-2 gap-16 lg:gap-0">
     <!-- Text -->
     <div
       class="group relative lg:-top-8 flex flex-col items-start justify-center text-center lg:text-left"
