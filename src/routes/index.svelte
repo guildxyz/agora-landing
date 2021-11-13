@@ -29,5 +29,4 @@
 <WhoIsAgoraFor />
 <KeyTechnologies />
 <AgoraSpaceDao />
-<Cta />
 <Footer />
