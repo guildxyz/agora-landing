@@ -41,12 +41,6 @@ const smallBubblesData = [
     position: new THREE.Vector3(-1, 1.2, 1),
     object: null,
     image: '/images/logos/colony.svg'
-  },
-  {
-    color: 0x304ffe,
-    position: new THREE.Vector3(1, 1, 1),
-    object: null,
-    image: '/images/logos/dxdao.svg'
   }
 ];
 
