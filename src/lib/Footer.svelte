@@ -175,27 +175,9 @@
           <ul class={`mb-12 font-medium xl:text-lg ${dark ? 'text-agora-white' : 'text-gray-600'}`}>
             <li>
               <a
-                href="https://app.agora.space/"
-                target="_blank"
-                rel="noopener"
-                class="block py-2 lg:py-0 max-w-max focus:outline-none focus-visible:border-b-2 focus-visible:border-gray-300"
-                >Community explorer</a
-              >
-            </li>
-            <li>
-              <a
                 href="/tools"
                 class="block py-2 lg:py-0 max-w-max focus:outline-none focus-visible:border-b-2 focus-visible:border-gray-300"
                 >Role management bot</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://app.agora.space/register"
-                target="_blank"
-                rel="noopener"
-                class="block py-2 lg:py-0 max-w-max focus:outline-none focus-visible:border-b-2 focus-visible:border-gray-300"
-                >Social Token Admin</a
               >
             </li>
           </ul>
