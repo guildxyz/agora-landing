@@ -46,7 +46,7 @@
           <ul class="flex mb-12 space-x-2 text-lg font-medium">
             <li>
               <a
-                href="https://twitter.com/AgoraSpaceDAO"
+                href="https://twitter.com/agora_xyz"
                 target="_blank"
                 rel="noopener"
                 class={`flex items-center justify-center w-8 h-8 rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-300 ${
@@ -59,7 +59,7 @@
             </li>
             <li>
               <a
-                href="https://github.com/AgoraSpaceDAO"
+                href="https://github.com/agoraxyz"
                 target="_blank"
                 rel="noopener"
                 class={`flex items-center justify-center w-8 h-8 rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-300 ${
