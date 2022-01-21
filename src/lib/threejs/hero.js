@@ -103,6 +103,8 @@ export const initThreeJS = (element, callback) => {
 
   // Platon
   video = document.getElementById('platon-video');
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore
   platonVideoTexture = new VideoTexture(video);
   platonVideoTexture.format = RGBAFormat;
 
