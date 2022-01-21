@@ -80,7 +80,7 @@
         <div class="relative w-full" style={`height: ${canvasHeight}px`}>
           {#if isSafari}
             <img
-              src="/images/agora-space-dao.png"
+              src="/images/agora-space-dao.webp"
               alt="Agora Space DAO"
               class="absolute bottom-0 left-0 px-16"
             />
@@ -102,7 +102,7 @@
             >
               <source src={firstVideoSrc} type="video/webm" />
               <img
-                src="/images/agora-space-dao.png"
+                src="/images/agora-space-dao.webp"
                 alt="Agora Space DAO"
                 class="object-contain w-full h-full"
               />

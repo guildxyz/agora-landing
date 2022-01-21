@@ -25,7 +25,7 @@ module.exports = {
         }
       },
       backgroundImage: {
-        'circle-pattern': "url('/images/circle-pattern.png')",
+        'circle-pattern': "url('/images/circle-pattern.webp')",
       }
     },
     container: {

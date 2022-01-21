@@ -22,7 +22,7 @@
     <div
       class="flex flex-col items-center justify-start space-y-8 relative lg:col-span-3 px-8 lg:pr-20 xl:pr-40 pt-24 lg:pt-40 pb-10 h-full bg-agora-gray text-agora-white text-center"
     >
-      <img src="/images/how-does-it-work.png" alt="How does it work?" class="max-w-full" />
+      <img src="/images/how-does-it-work.webp" alt="How does it work?" class="max-w-full" />
     </div>
 
     <!-- Right Side -->

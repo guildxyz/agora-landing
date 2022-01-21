@@ -17,14 +17,14 @@
   >
     <CtaImg
       title="Join a community"
-      image="/images/community-explorer.png"
+      image="/images/community-explorer.webp"
       url="https://app.agora.space/"
       openNewPage
     />
 
     <CtaImg
       title="Build your Agora"
-      image="/images/social-token-admin.png"
+      image="/images/social-token-admin.webp"
       url="https://app.agora.space/register"
       openNewPage
     />

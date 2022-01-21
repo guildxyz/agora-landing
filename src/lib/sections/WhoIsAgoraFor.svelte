@@ -13,10 +13,10 @@
       navigator?.userAgent?.indexOf('Chrome') === -1;
 
     if (windowWidth > 768) {
-      imgSrc = '/images/who-is-agora-space-for.png';
+      imgSrc = '/images/who-is-agora-space-for.webp';
       videoSrc = '/animations/who-is-agora-space-for.webm';
     } else {
-      imgSrc = '/images/mobile-who-is-agora-space-for.png';
+      imgSrc = '/images/mobile-who-is-agora-space-for.webp';
       videoSrc = '/animations/mobile-who-is-agora-space-for.webm';
       videoSrcSafari = '/animations/safari/mobile-who-is-agora-space-for.mp4';
     }

@@ -55,7 +55,7 @@
           <!-- svelte-ignore a11y-media-has-caption -->
           {#if isSafari}
             <img
-              src="/images/what-is-agora-space.png"
+              src="/images/what-is-agora-space.webp"
               alt="What is Agora Space?"
               width="100%"
               height="auto"
@@ -67,7 +67,7 @@
               preload="auto"
               width="100%"
               height="auto"
-              poster="/images/what-is-agora-space-poster.png"
+              poster="/images/what-is-agora-space-poster.webp"
               on:ended={handleStartEnd}
               bind:this={firstVideo}
               class={`relative -bottom-px ${
@@ -76,7 +76,7 @@
             >
               <source src={firstVideoSrc} type="video/webm" />
               <img
-                src="/images/what-is-agora-space.png"
+                src="/images/what-is-agora-space.webp"
                 alt="What is Agora Space?"
                 class="w-full"
               />
@@ -98,7 +98,7 @@
             >
               <source src={loopingVideoSrc} type="video/webm" />
               <img
-                src="/images/what-is-agora-space.png"
+                src="/images/what-is-agora-space.webp"
                 alt="What is Agora Space?"
                 class="w-full"
               />

@@ -14,7 +14,7 @@
   <div class="relative container grid md:grid-cols-3 lg:grid-cols-4">
     <div class="order-2 md:order-1 relative w-full">
       <img
-        src="/images/agora-footer.png"
+        src="/images/agora-footer.webp"
         width="100%"
         height="auto"
         alt="Agora Space"
@@ -22,7 +22,7 @@
       />
 
       <img
-        src="/images/agora-footer-mobile.png"
+        src="/images/agora-footer-mobile.webp"
         width="100%"
         height="auto"
         alt="Agora Space"

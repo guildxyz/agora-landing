@@ -7,7 +7,7 @@
   class="min-h-screen flex flex-col items-center justify-center px-20 lg:px-36 xl:px-44 bg-agora-gray text-agora-white"
 >
   <div class="relative w-full md:w-auto max-w-5xl">
-    <img class="hidden md:block" src="/images/404.png" alt="404 - Page not found!" />
+    <img class="hidden md:block" src="/images/404.webp" alt="404 - Page not found!" />
     <div
       class="md:absolute top-0 left-0 flex flex-col mx-auto xl:mx-0 max-w-sm h-full text-center md:text-left"
     >

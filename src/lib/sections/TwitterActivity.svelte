@@ -5,7 +5,7 @@
     <!-- Image -->
     <div class="order-2 lg:order-1 flex items-center justify-center lg:pr-20">
       <img
-        src="/images/twitter-activity.png"
+        src="/images/twitter-activity.webp"
         alt="Gamification Of Twitter Activity"
         class="max-w-full"
       />

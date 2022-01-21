@@ -22,7 +22,7 @@
     <div
       class="order-2 lg:order-1 lg:col-span-3 flex items-start justify-center lg:justify-end lg:pr-20"
     >
-      <img src="/images/community-explorer.png" alt="Agora Space" class="max-w-full" />
+      <img src="/images/community-explorer.webp" alt="Agora Space" class="max-w-full" />
     </div>
 
     <!-- Text -->

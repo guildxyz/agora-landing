@@ -118,7 +118,7 @@
           </video>
         </div>
         <img
-          src="/images/hero.png"
+          src="/images/hero.webp"
           alt="Platon"
           width={canvasWidth * 0.8}
           height={canvasHeight * 0.8}
@@ -180,7 +180,7 @@
         class="relative -mx-4 bg-no-repeat md:hidden bg-agora-blue-medium bg-circle-pattern bg-hero-right-bottom"
       >
         <img
-          src="/images/hero-mobile.png"
+          src="/images/hero-mobile.webp"
           alt="Platon"
           class="object-cover object-bottom w-full select-none -mt-28"
         />

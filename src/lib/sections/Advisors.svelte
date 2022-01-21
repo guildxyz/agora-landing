@@ -17,16 +17,16 @@
         >
           <TeamMember
             advisor
-            photo="/images/team/raz.png"
+            photo="/images/team/raz.webp"
             name="R A Z"
             label="Strategic advisor"
             twitter="https://twitter.com/L1sp3r"
           />
-          <TeamMember advisor photo="/images/team/petermm.png" name="Peter MM" label="Advisor" />
-          <TeamMember advisor photo="/images/team/d3v.png" name="D3v" label="Security advisor" />
+          <TeamMember advisor photo="/images/team/petermm.webp" name="Peter MM" label="Advisor" />
+          <TeamMember advisor photo="/images/team/d3v.webp" name="D3v" label="Security advisor" />
           <TeamMember
             advisor
-            photo="/images/team/nima.png"
+            photo="/images/team/nima.webp"
             name="NiMA"
             label="Advisor"
             twitter="https://twitter.com/insidenima"

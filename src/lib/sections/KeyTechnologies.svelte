@@ -105,10 +105,10 @@
       bind:this={videoContainer}
     >
       {#if isSafari}
-        <img src="/images/pegasus.png" alt="Pegasus" width="100%" height="auto" />
+        <img src="/images/pegasus.webp" alt="Pegasus" width="100%" height="auto" />
       {:else}
         <video
-          poster="/images/pegasus.png"
+          poster="/images/pegasus.webp"
           playsinline
           muted
           preload="auto"
@@ -117,7 +117,7 @@
           bind:this={video}
         >
           <source src={videoSrc} type="video/webm" />
-          <img src="/images/pegasus.png" alt="Pegasus" />
+          <img src="/images/pegasus.webp" alt="Pegasus" />
         </video>
       {/if}
     </div>

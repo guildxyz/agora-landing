@@ -3,7 +3,7 @@
     <!-- Image -->
     <div class="order-2 lg:order-1 flex items-center justify-center lg:pr-20">
       <img
-        src="/images/trustless-financial-contracts.png"
+        src="/images/trustless-financial-contracts.webp"
         alt="Gamification Of Twitter Activity"
         class="max-w-full"
       />
