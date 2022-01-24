@@ -121,7 +121,7 @@
             />
             <TeamMember
               photo="/images/team/sito.webp"
-              photoPng="/images/team/png/sito.png"
+              photoPng="/images/png/team/sito.png"
               name="Sito"
               label="Designer"
             />
