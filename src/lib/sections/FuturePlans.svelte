@@ -80,7 +80,11 @@
         </p>
       </section>
 
-      <img src="/images/future-plans.webp" alt="Future plans" class="w-full max-w-xs lg:hidden" />
+      <picture class="w-full max-w-xs lg:hidden">
+        <source srcset="/images/future-plans.webp" type="image/webp" />
+        <source srcset="/images/png/future-plans.png" type="image/png" />
+        <img src="/images/png/future-plans.png" alt="Future plans" />
+      </picture>
 
       <section class="space-y-4">
         <h3 class="text-agora-pink-light text-xl lg:text-2xl 2xl:text-3xl font-bold font-display">
@@ -108,7 +112,11 @@
     <div
       class="hidden lg:flex flex-col mx-auto items-center justify-center lg:col-span-2 relative p-20 max-w-2xl bg-agora-purple"
     >
-      <img src="/images/future-plans.webp" alt="Future plans" class="object-contain" />
+      <picture class="object-contain">
+        <source srcset="/images/future-plans.webp" type="image/webp" />
+        <source srcset="/images/png/future-plans.png" type="image/png" />
+        <img src="/images/png/future-plans.png" alt="Future plans" />
+      </picture>
     </div>
   </div>
 </section>

@@ -32,6 +32,7 @@
       <svelte:component this={quoteWrapper}>
         <Quote
           image="/images/thinkers-aristotle.webp"
+          imagePng="/images/png/thinkers-aristotle.png"
           video="/animations/mobile-thinkers-aristotle.webm"
           alt="Aristotle portrait"
           quoteStart="Trustless financial contracts"
@@ -44,6 +45,7 @@
         <!-- TODO: mp4 video -->
         <Quote
           image="/images/thinkers-platon.webp"
+          imagePng="/images/png/thinkers-platon.png"
           video="/animations/mobile-thinkers-platon.webm"
           alt="Plato portrait"
           quoteStart="Token-gated communities"
@@ -55,6 +57,7 @@
       <svelte:component this={quoteWrapper}>
         <Quote
           image="/images/thinkers-epikuros.webp"
+          imagePng="/images/png/thinkers-epikuros.png"
           video="/animations/mobile-thinkers-epikuros.webm"
           alt="Epikuros portrait"
           quoteStart="Gasless web3 applications"

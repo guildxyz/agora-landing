@@ -1,7 +1,8 @@
 <script>
   import { onMount } from 'svelte';
 
-  export let image;
+  export let image; // WEBP image
+  export let imagePng; // PNG fallback image
   export let video;
   export let alt;
   export let quoteStart;
@@ -27,7 +28,11 @@
 <div class={`mx-auto max-w-sm h-full flex flex-col items-center text-md ${_class}`}>
   <div class="relative mb-8 h-52 2xl:h-72">
     {#if isSafari}
-      <img src={image} {alt} class="object-contain w-full h-full" />
+      <picture class="object-contain w-full h-full">
+        <source srcset={image} type="image/webp" />
+        <source srcset={imagePng} type="image/png" />
+        <img src={imagePng} {alt} />
+      </picture>
     {:else}
       <video
         bind:this={videoElement}
@@ -41,9 +46,13 @@
         class="hidden md:block object-contain w-full h-full"
       >
         <source src={video} type="video/webm" />
-        <img src={image} {alt} class="object-contain w-full h-full" />
+        <img src={imagePng} {alt} class="object-contain w-full h-full" />
       </video>
-      <img src={image} {alt} class="md:hidden object-contain w-full h-full" />
+      <picture class="md:hidden object-contain w-full h-full">
+        <source srcset={image} type="image/webp" />
+        <source srcset={imagePng} type="image/png" />
+        <img src={imagePng} {alt} />
+      </picture>
     {/if}
   </div>
   <p class="mx-3 mb-3 text-agora-white lg:font-semibold 2xl:text-lg">

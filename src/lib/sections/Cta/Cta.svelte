@@ -18,6 +18,7 @@
     <CtaImg
       title="Join a community"
       image="/images/community-explorer.webp"
+      imagePng="/images/png/community-explorer.png"
       url="https://app.agora.space/"
       openNewPage
     />
@@ -25,6 +26,7 @@
     <CtaImg
       title="Build your Agora"
       image="/images/social-token-admin.webp"
+      imagePng="/images/png/social-token-admin.png"
       url="https://app.agora.space/register"
       openNewPage
     />

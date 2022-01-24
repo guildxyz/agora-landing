@@ -4,7 +4,8 @@
   import { ArrowRight } from 'phosphor-svelte';
 
   export let title;
-  export let image;
+  export let image; // WEBP image
+  export let imagePng; // PNG fallback image
   export let url;
   export let openNewPage = false;
   export let comingSoon = false;
@@ -71,7 +72,11 @@
       }}
     >
       <span class="sr-only">{title}</span>
-      <img src={image} alt={title} class="w-full" />
+      <picture class="w-full">
+        <source srcset={image} type="image/webp" />
+        <source srcset={imagePng} type="image/png" />
+        <img src={imagePng} alt={title} />
+      </picture>
     </a>
 
     <a

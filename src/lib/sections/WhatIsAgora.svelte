@@ -54,12 +54,16 @@
         <div class="relative">
           <!-- svelte-ignore a11y-media-has-caption -->
           {#if isSafari}
-            <img
-              src="/images/what-is-agora-space.webp"
-              alt="What is Agora Space?"
-              width="100%"
-              height="auto"
-            />
+            <picture>
+              <source srcset="/images/what-is-agora-space.webp" type="image/webp" />
+              <source srcset="/images/png/what-is-agora-space.png" type="image/png" />
+              <img
+                src="/images/png/what-is-agora-space.png"
+                alt="What is Agora Space?"
+                width="100%"
+                height="auto"
+              />
+            </picture>
           {:else}
             <video
               muted
@@ -76,7 +80,7 @@
             >
               <source src={firstVideoSrc} type="video/webm" />
               <img
-                src="/images/what-is-agora-space.webp"
+                src="/images/png/what-is-agora-space.png"
                 alt="What is Agora Space?"
                 class="w-full"
               />
@@ -98,7 +102,7 @@
             >
               <source src={loopingVideoSrc} type="video/webm" />
               <img
-                src="/images/what-is-agora-space.webp"
+                src="/images/png/what-is-agora-space.png"
                 alt="What is Agora Space?"
                 class="w-full"
               />

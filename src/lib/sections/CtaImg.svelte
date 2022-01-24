@@ -4,7 +4,8 @@
   import { ArrowRight } from 'phosphor-svelte';
 
   export let title;
-  export let image;
+  export let image; // WEBP image
+  export let imagePng; // PNG fallback image
   export let url;
 
   let parent;
@@ -33,7 +34,11 @@
       }}
     >
       <span class="sr-only">{title}</span>
-      <img src={image} alt="text-3xl lg:text-4xlunity" class="w-full" />
+      <picture class="w-full">
+        <source srcset={image} type="image/webp" />
+        <source srcset={imagePng} type="image/png" />
+        <img src={imagePng} alt={title} />
+      </picture>
     </a>
 
     <a

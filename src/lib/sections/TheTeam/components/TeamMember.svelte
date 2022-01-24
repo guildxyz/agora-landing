@@ -2,7 +2,8 @@
   import { TwitterLogo, GithubLogo } from 'phosphor-svelte';
 
   export let advisor = false;
-  export let photo;
+  export let photo; // WEBP image
+  export let photoPng; // PNG fallback image
   export let name;
   export let label;
   export let twitter = null;
@@ -14,11 +15,13 @@
   <div class="flex flex-col items-end mb-2 h-52 max-h-52 lg:h-64">
     {#if about}
       <div class="group relative w-full h-52 lg:h-64 overflow-hidden">
-        <img
-          src={photo}
-          alt={name}
+        <picture
           class="absolute left-0 bottom-0 w-full h-full object-contain object-bottom group-hover:-left-full group-hover:opacity-0 group-focus-within:-left-full group-focus-within:opacity-0 transition-all duration-500"
-        />
+        >
+          <source srcset={photo} type="image/webp" />
+          <source srcset={photoPng} type="image/png" />
+          <img src={photoPng} alt={name} class="max-h-full" />
+        </picture>
         <div
           class="absolute -right-full bottom-0 w-full h-full text-agora-white group-hover:right-0 opacity-0 group-hover:opacity-100 group-focus-within:right-0 group-focus-within:opacity-100 transition-all duration-500"
         >
@@ -26,7 +29,11 @@
         </div>
       </div>
     {:else}
-      <img src={photo} alt={name} class="w-full h-full object-contain object-bottom" />
+      <picture class="w-full h-full object-contain object-bottom">
+        <source srcset={photo} type="image/webp" />
+        <source srcset={photoPng} type="image/png" />
+        <img src={photoPng} alt={name} class="max-h-full" />
+      </picture>
     {/if}
   </div>
   <div class="relative flex flex-col">

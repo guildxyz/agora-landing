@@ -27,11 +27,11 @@
 
     <!-- Image -->
     <div class="flex items-center justify-center lg:pl-20">
-      <img
-        src="/images/creator-contracts.webp"
-        alt="Performance-based creator contracts"
-        class="max-w-full"
-      />
+      <picture class="max-w-full">
+        <source srcset="/images/creator-contracts.webp" type="image/webp" />
+        <source srcset="/images/png/creator-contracts.png" type="image/png" />
+        <img src="/images/png/creator-contracts.png" alt="Performance-based creator contracts" />
+      </picture>
     </div>
   </div>
 </section>

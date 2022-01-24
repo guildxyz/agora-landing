@@ -4,11 +4,11 @@
   <div class="container py-20 grid lg:grid-cols-2 gap-16 lg:gap-0">
     <!-- Image -->
     <div class="order-2 lg:order-1 flex items-center justify-center lg:pr-20">
-      <img
-        src="/images/twitter-activity.webp"
-        alt="Gamification Of Twitter Activity"
-        class="max-w-full"
-      />
+      <picture class="max-w-full">
+        <source srcset="/images/twitter-activity.webp" type="image/webp" />
+        <source srcset="/images/png/twitter-activity.png" type="image/png" />
+        <img src="/images/png/twitter-activity.png" alt="Gamification Of Twitter Activity" />
+      </picture>
     </div>
 
     <!-- Text -->

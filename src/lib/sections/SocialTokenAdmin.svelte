@@ -24,7 +24,11 @@
     <!-- Image -->
     <div class="lg:col-span-8 flex items-center justify-center lg:pl-20">
       <a href="https://app.agora.space/register" target="_blank" rel="noopener">
-        <img src="/images/social-token-admin.webp" alt="Social token admin" class="max-w-full" />
+        <picture class="max-w-full">
+          <source srcset="/images/social-token-admin.webp" type="image/webp" />
+          <source srcset="/images/png/social-token-admin.png" type="image/png" />
+          <img src="/images/png/social-token-admin.png" alt="Social token admin" />
+        </picture>
       </a>
     </div>
   </div>

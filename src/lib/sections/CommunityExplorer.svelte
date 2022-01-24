@@ -17,7 +17,11 @@
     <!-- Image -->
     <div class="order-2 lg:order-1 lg:col-span-8 flex items-center justify-center lg:pr-20">
       <a href="https://app.agora.space" target="_blank" rel="noopener">
-        <img src="/images/community-explorer.webp" alt="Community explorer" class="max-w-full" />
+        <picture class="max-w-full">
+          <source srcset="/images/community-explorer.webp" type="image/webp" />
+          <source srcset="/images/png/community-explorer.png" type="image/png" />
+          <img src="/images/png/community-explorer.png" alt="Community explorer" />
+        </picture>
       </a>
     </div>
 

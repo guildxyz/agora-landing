@@ -105,7 +105,11 @@
       bind:this={videoContainer}
     >
       {#if isSafari}
-        <img src="/images/pegasus.webp" alt="Pegasus" width="100%" height="auto" />
+        <picture>
+          <source srcset="/images/pegasus.webp" type="image/webp" />
+          <source srcset="/images/png/pegasus.png" type="image/png" />
+          <img src="/images/png/pegasus.png" alt="Pegasus" width="100%" height="auto" />
+        </picture>
       {:else}
         <video
           poster="/images/pegasus.webp"
@@ -117,7 +121,7 @@
           bind:this={video}
         >
           <source src={videoSrc} type="video/webm" />
-          <img src="/images/pegasus.webp" alt="Pegasus" />
+          <img src="/images/png/pegasus.png" alt="Pegasus" width="100%" height="auto" />
         </video>
       {/if}
     </div>

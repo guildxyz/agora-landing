@@ -38,12 +38,14 @@
           >
             <TeamMember
               photo="/images/team/brunya.webp"
+              photoPng="/images/png/team/brunya.png"
               name="Brunya"
               label="Operation"
               github="https://github.com/Brunya"
             />
             <TeamMember
               photo="/images/team/dovalid.webp"
+              photoPng="/images/png/team/dovalid.png"
               name="Dovalid"
               label="Frontend Dev"
               github="https://github.com/dovalid"
@@ -51,6 +53,7 @@
             />
             <TeamMember
               photo="/images/team/shronk.webp"
+              photoPng="/images/png/team/shronk.png"
               name="Shronk"
               label="Backend Dev"
               github="https://github.com/schronck"
@@ -58,6 +61,7 @@
             />
             <TeamMember
               photo="/images/team/devid.webp"
+              photoPng="/images/png/team/devid.png"
               name="Devid"
               label="Backend Dev"
               github="https://github.com/DevidAbt"
@@ -72,6 +76,7 @@
           >
             <TeamMember
               photo="/images/team/ejay.webp"
+              photoPng="/images/png/team/ejay.png"
               name="Ejay"
               label="Backend Dev"
               github="https://github.com/dezsim"
@@ -79,18 +84,21 @@
             />
             <TeamMember
               photo="/images/team/tomi_ohl.webp"
+              photoPng="/images/png/team/tomi_ohl.png"
               name="Tomi_Ohl"
               label="Smart contract Dev"
               github="https://github.com/TomiOhl"
             />
             <TeamMember
               photo="/images/team/macy.webp"
+              photoPng="/images/png/team/macy.png"
               name="Réka"
               label="Communication"
               twitter="https://twitter.com/reka_eth"
             />
             <TeamMember
               photo="/images/team/balazs.webp"
+              photoPng="/images/png/team/balazs.png"
               name="Balazs"
               label="Frontend Dev"
               github="https://github.com/cs-balazs"
@@ -106,11 +114,17 @@
             <div class="hidden lg:block" />
             <TeamMember
               photo="/images/team/johnny.webp"
+              photoPng="/images/png/team/johnny.png"
               name="Johnny"
               label="Frontend Dev"
               github="https://github.com/BrickheadJohnny"
             />
-            <TeamMember photo="/images/team/sito.webp" name="Sito" label="Designer" />
+            <TeamMember
+              photo="/images/team/sito.webp"
+              photoPng="/images/team/png/sito.png"
+              name="Sito"
+              label="Designer"
+            />
           </div>
         </svelte:component>
       </svelte:component>
