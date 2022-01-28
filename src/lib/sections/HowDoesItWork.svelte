@@ -10,17 +10,17 @@
   </div>
 
   <!-- Background -->
-  <div class="absolute hidden lg:flex w-full h-full">
-    <div class="bg-agora-gray w-1/2" />
-    <div class="bg-agora-pink-dark w-1/2" />
+  <div class="absolute hidden h-full w-full lg:flex">
+    <div class="w-1/2 bg-agora-gray" />
+    <div class="w-1/2 bg-agora-pink-dark" />
   </div>
 
   <div
-    class="relative lg:container flex flex-col lg:grid lg:grid-cols-6 xl:grid-cols-5 h-full overflow-hidden"
+    class="relative flex h-full flex-col overflow-hidden lg:container lg:grid lg:grid-cols-6 xl:grid-cols-5"
   >
     <!-- Left side -->
     <div
-      class="flex flex-col items-center justify-start space-y-8 relative lg:col-span-3 px-8 lg:pr-20 xl:pr-40 pt-24 lg:pt-40 pb-10 h-full bg-agora-gray text-agora-white text-center"
+      class="relative flex h-full flex-col items-center justify-start space-y-8 bg-agora-gray px-8 pt-24 pb-10 text-center text-agora-white lg:col-span-3 lg:pr-20 lg:pt-40 xl:pr-40"
     >
       <picture class="max-w-full">
         <source srcset="/images/how-does-it-work.webp" type="image/webp" />
@@ -31,10 +31,10 @@
 
     <!-- Right Side -->
     <div
-      class="flex flex-col items-start justify-center space-y-4 lg:col-span-3 xl:col-span-2 relative px-8 lg:px-20 pt-10 lg:pt-40 pb-10 lg:pb-20 bg-agora-pink-dark text-agora-white text-center md:text-left"
+      class="relative flex flex-col items-start justify-center space-y-4 bg-agora-pink-dark px-8 pt-10 pb-10 text-center text-agora-white md:text-left lg:col-span-3 lg:px-20 lg:pt-40 lg:pb-20 xl:col-span-2"
     >
       <h2
-        class="mb-8 w-full text-3xl lg:text-4xl 2xl:text-5xl font-bold tracking-tight font-display uppercase"
+        class="mb-8 w-full font-display text-3xl font-bold uppercase tracking-tight lg:text-4xl 2xl:text-5xl"
       >
         How does it work?
       </h2>

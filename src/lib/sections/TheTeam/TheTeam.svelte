@@ -19,7 +19,7 @@
   <div class="flex flex-col px-8 py-10 lg:py-20">
     <div class="container space-y-16">
       <h2
-        class="text-agora-pink-light text-3xl lg:text-4xl 2xl:text-5xl font-bold tracking-tight font-display uppercase text-center"
+        class="text-center font-display text-3xl font-bold uppercase tracking-tight text-agora-pink-light lg:text-4xl 2xl:text-5xl"
       >
         The team
       </h2>
@@ -28,13 +28,13 @@
       <svelte:component
         this={sectionWrapper}
         modules={[Pagination]}
-        class="relative flex flex-col lg:space-y-16 pb-12 lg:pb-0"
+        class="relative flex flex-col pb-12 lg:space-y-16 lg:pb-0"
         pagination={{ clickable: true }}
       >
         <!-- Block 1 -->
         <svelte:component this={membersWrapper} class="flex justify-center px-1 md:px-0">
           <div
-            class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-16 xl:gap-32 max-w-xs lg:max-w-none"
+            class="grid max-w-xs grid-cols-2 gap-8 lg:max-w-none lg:grid-cols-4 lg:gap-16 xl:gap-32"
           >
             <TeamMember
               photo="/images/team/brunya.webp"
@@ -72,7 +72,7 @@
         <!-- Block 2 -->
         <svelte:component this={membersWrapper} class="flex justify-center  px-1 md:px-0">
           <div
-            class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-16 xl:gap-32 max-w-xs lg:max-w-none"
+            class="grid max-w-xs grid-cols-2 gap-8 lg:max-w-none lg:grid-cols-4 lg:gap-16 xl:gap-32"
           >
             <TeamMember
               photo="/images/team/ejay.webp"
@@ -109,7 +109,7 @@
         <!-- Block 3 -->
         <svelte:component this={membersWrapper} class="flex justify-center  px-1 md:px-0">
           <div
-            class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-16 xl:gap-32 max-w-xs lg:max-w-none"
+            class="grid max-w-xs grid-cols-2 gap-8 lg:max-w-none lg:grid-cols-4 lg:gap-16 xl:gap-32"
           >
             <div class="hidden lg:block" />
             <TeamMember

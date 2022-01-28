@@ -40,18 +40,18 @@
 />
 
 <section id="key-technologies" class="relative bg-agora-blue-medium text-agora-white">
-  <div class="container relative pt-24 lg:pb-24 text-center">
+  <div class="container relative pt-24 text-center lg:pb-24">
     <div
-      class="relative mx-auto lg:mx-0 max-w-lg lg:max-w-screen-md lg:text-left lg:grid lg:grid-cols-2 lg:gap-16 z-10"
+      class="relative z-10 mx-auto max-w-lg lg:mx-0 lg:grid lg:max-w-screen-md lg:grid-cols-2 lg:gap-16 lg:text-left"
     >
       <h2
-        class="mb-8 text-3xl lg:text-4xl 2xl:text-5xl font-bold tracking-tight font-display uppercase text-agora-pink-light lg:col-span-2"
+        class="mb-8 font-display text-3xl font-bold uppercase tracking-tight text-agora-pink-light lg:col-span-2 lg:text-4xl 2xl:text-5xl"
       >
         Key technologies
       </h2>
       <div>
         <h3
-          class="mb-2 lg:mb-3 text-xl lg:text-2xl font-bold tracking-tight font-display uppercase"
+          class="mb-2 font-display text-xl font-bold uppercase tracking-tight lg:mb-3 lg:text-2xl"
         >
           Social Oracle Layer
         </h3>
@@ -61,7 +61,7 @@
         </p>
 
         <h3
-          class="mb-2 lg:mb-3 text-xl lg:text-2xl font-bold tracking-tight font-display uppercase"
+          class="mb-2 font-display text-xl font-bold uppercase tracking-tight lg:mb-3 lg:text-2xl"
         >
           On-chain Privacy
         </h3>
@@ -74,14 +74,14 @@
 
       <div>
         <h3
-          class="mb-2 lg:mb-3 text-xl lg:text-2xl font-bold tracking-tight font-display uppercase"
+          class="mb-2 font-display text-xl font-bold uppercase tracking-tight lg:mb-3 lg:text-2xl"
         >
           Permissionless Tools
         </h3>
         <p class="mb-8 lg:font-semibold 2xl:text-lg">Fully open-source, hosted on IPFS.</p>
 
         <h3
-          class="mb-2 lg:mb-3 text-xl lg:text-2xl font-bold tracking-tight font-display uppercase"
+          class="mb-2 font-display text-xl font-bold uppercase tracking-tight lg:mb-3 lg:text-2xl"
         >
           Customizable
         </h3>
@@ -90,7 +90,7 @@
         </p>
 
         <h3
-          class="mb-2 lg:mb-3 text-xl lg:text-2xl font-bold tracking-tight font-display uppercase"
+          class="mb-2 font-display text-xl font-bold uppercase tracking-tight lg:mb-3 lg:text-2xl"
         >
           Multi-chain
         </h3>
@@ -101,7 +101,7 @@
     </div>
 
     <div
-      class="lg:absolute lg:bottom-0 lg:-right-20 xl:right-0 w-full lg:w-2/5"
+      class="w-full lg:absolute lg:bottom-0 lg:-right-20 lg:w-2/5 xl:right-0"
       bind:this={videoContainer}
     >
       {#if isSafari}

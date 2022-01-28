@@ -3,19 +3,19 @@
   import { ArrowRight } from 'phosphor-svelte';
 </script>
 
-<section id="what-is-agora-space" class="relative bg-agora-white overflow-hidden">
+<section id="what-is-agora-space" class="relative overflow-hidden bg-agora-white">
   <div class="container grid lg:grid-cols-12">
     <!-- Text -->
     <div
-      class="lg:col-span-5 flex flex-col items-center justify-center space-y-8 lg:px-20 py-20 text-center"
+      class="flex flex-col items-center justify-center space-y-8 py-20 text-center lg:col-span-5 lg:px-20"
     >
       <h2
-        class="text-agora-purple text-3xl lg:text-4xl font-bold tracking-tight font-display uppercase"
+        class="font-display text-3xl font-bold uppercase tracking-tight text-agora-purple lg:text-4xl"
       >
         Stay up to date
       </h2>
 
-      <p class="font-semibold text-lg xl:text-xl">
+      <p class="text-lg font-semibold xl:text-xl">
         Join the Agora Space Discord server to see all the interesting news.
       </p>
 
@@ -30,11 +30,11 @@
     </div>
 
     <!-- Photo -->
-    <div class="lg:col-span-7 relative -mx-8 h-[40vh] lg:h-full">
+    <div class="relative -mx-8 h-[40vh] lg:col-span-7 lg:h-full">
       <div
-        class="absolute bottom-0 -right-1/2 md:right-0 w-[150vw] sm:w-[125vw] md:w-full xl:w-2/3"
+        class="absolute bottom-0 -right-1/2 w-[150vw] sm:w-[125vw] md:right-0 md:w-full xl:w-2/3"
       >
-        <picture class="w-full h-full object-contain transform -translate-x-1/4 md:translate-x-0">
+        <picture class="h-full w-full -translate-x-1/4 transform object-contain md:translate-x-0">
           <source srcset="/images/stay-up-to-date.webp" type="image/webp" />
           <source srcset="/images/png/stay-up-to-date.png" type="image/png" />
           <img src="/images/png/stay-up-to-date.png" alt="Stay up to date" />

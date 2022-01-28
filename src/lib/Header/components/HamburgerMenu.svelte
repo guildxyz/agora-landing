@@ -20,18 +20,18 @@
 {#if show}
   <div
     transition:fly={{ x: 100, duration: 200 }}
-    class="fixed top-0 right-0 w-1/2 h-full bg-agora-gray text-agora-white font-display font-semibold"
+    class="fixed top-0 right-0 h-full w-1/2 bg-agora-gray font-display font-semibold text-agora-white"
   >
-    <div class="flex justify-end pt-1 pr-2 w-full">
+    <div class="flex w-full justify-end pt-1 pr-2">
       <Button on:click={() => (show = false)}>
         <X slot="icon" size="1.5em" weight="bold" />
       </Button>
     </div>
 
-    <nav class="p-10 flex flex-col items-start justify-start h-full text-xl font-bold">
-      <a href="/tools" class="mb-6 hover:underline focus:outline-none focus:underline">Tools</a>
-      <a href="/about" class="mb-6 hover:underline focus:outline-none focus:underline">About</a>
-      <a href="/" class="mt-auto mb-20 hover:underline focus:outline-none focus:underline">Home</a>
+    <nav class="flex h-full flex-col items-start justify-start p-10 text-xl font-bold">
+      <a href="/tools" class="mb-6 hover:underline focus:underline focus:outline-none">Tools</a>
+      <a href="/about" class="mb-6 hover:underline focus:underline focus:outline-none">About</a>
+      <a href="/" class="mt-auto mb-20 hover:underline focus:underline focus:outline-none">Home</a>
     </nav>
   </div>
 {/if}

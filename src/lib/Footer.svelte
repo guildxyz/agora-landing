@@ -11,8 +11,8 @@
 </script>
 
 <footer class={`${dark ? 'bg-agora-gray' : 'bg-agora-white'}`}>
-  <div class="relative container grid md:grid-cols-3 lg:grid-cols-4">
-    <div class="order-2 md:order-1 relative w-full">
+  <div class="container relative grid md:grid-cols-3 lg:grid-cols-4">
+    <div class="relative order-2 w-full md:order-1">
       <picture class="absolute bottom-0 left-0 hidden w-full md:block">
         <source srcset="/images/agora-footer.webp" type="image/webp" />
         <source srcset="/images/png/agora-footer.png" type="image/png" />
@@ -32,9 +32,9 @@
     </div>
 
     <div
-      class="flex order-1 w-full px-8 py-10 md:order-2 md:col-span-2 lg:col-span-3 md:justify-end lg:px-0 lg:pr-24 lg:pt-20"
+      class="order-1 flex w-full px-8 py-10 md:order-2 md:col-span-2 md:justify-end lg:col-span-3 lg:px-0 lg:pr-24 lg:pt-20"
     >
-      <div class="flex flex-col justify-between md:flex-row lg:pl-28 md:space-x-20">
+      <div class="flex flex-col justify-between md:flex-row md:space-x-20 lg:pl-28">
         <!-- Columns -->
         <div class="flex flex-col">
           <h2
@@ -44,7 +44,7 @@
           >
             Join the community
           </h2>
-          <ul class="flex mb-12 space-x-2 text-lg font-medium">
+          <ul class="mb-12 flex space-x-2 text-lg font-medium">
             <li>
               <a
                 href="https://twitter.com/agora_xyz"
@@ -129,7 +129,7 @@
             <li>
               <a
                 href="/about"
-                class="block py-2 lg:py-0 max-w-max focus:outline-none focus-visible:border-b-2 focus-visible:border-gray-300"
+                class="block max-w-max py-2 focus:outline-none focus-visible:border-b-2 focus-visible:border-gray-300 lg:py-0"
                 >About</a
               >
             </li>
@@ -138,7 +138,7 @@
                 href="https://app.gitbook.com/@agora-space/s/agoraspace/"
                 target="_blank"
                 rel="noopener"
-                class="block py-2 lg:py-0 max-w-max focus:outline-none focus-visible:border-b-2 focus-visible:border-gray-300"
+                class="block max-w-max py-2 focus:outline-none focus-visible:border-b-2 focus-visible:border-gray-300 lg:py-0"
                 >Gitbook</a
               >
             </li>
@@ -146,7 +146,7 @@
               <a
                 href="/agora-space-brand-kit.zip"
                 target="_blank"
-                class="block py-2 lg:py-0 max-w-max focus:outline-none focus-visible:border-b-2 focus-visible:border-gray-300"
+                class="block max-w-max py-2 focus:outline-none focus-visible:border-b-2 focus-visible:border-gray-300 lg:py-0"
                 >Brand kit</a
               >
             </li>
@@ -155,7 +155,7 @@
                 href="https://discord.gg/T3Pb7VkUBz"
                 target="_blank"
                 rel="noopener"
-                class="block py-2 lg:py-0 max-w-max focus:outline-none focus-visible:border-b-2 focus-visible:border-gray-300"
+                class="block max-w-max py-2 focus:outline-none focus-visible:border-b-2 focus-visible:border-gray-300 lg:py-0"
                 >Support</a
               >
             </li>
@@ -165,7 +165,7 @@
           >&copy; 2021 Agora Space</span
         >
 
-        <div class="flex-col hidden xl:flex">
+        <div class="hidden flex-col xl:flex">
           <h2
             class={`mb-4 font-bold tracking-tight text-2xl 2xl:text-3xl font-display ${
               dark ? 'text-agora-white' : 'text-agora-pink-medium'
@@ -177,7 +177,7 @@
             <li>
               <a
                 href="/tools"
-                class="block py-2 lg:py-0 max-w-max focus:outline-none focus-visible:border-b-2 focus-visible:border-gray-300"
+                class="block max-w-max py-2 focus:outline-none focus-visible:border-b-2 focus-visible:border-gray-300 lg:py-0"
                 >Role management bot</a
               >
             </li>

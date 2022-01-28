@@ -57,24 +57,24 @@
   on:scroll={scrollHandler}
 />
 
-<section id="agora-space-dao" class="relative lg:h-screen bg-agora-gray">
+<section id="agora-space-dao" class="relative bg-agora-gray lg:h-screen">
   <!-- Background -->
-  <div class="absolute hidden lg:flex w-full h-full">
-    <div class="bg-agora-gray w-1/2" />
-    <div class="bg-agora-purple w-1/2" />
+  <div class="absolute hidden h-full w-full lg:flex">
+    <div class="w-1/2 bg-agora-gray" />
+    <div class="w-1/2 bg-agora-purple" />
   </div>
 
   <div
-    class="relative w-full custom-container grid lg:grid-cols-5 h-full overflow-hidden md:overflow-visible"
+    class="custom-container relative grid h-full w-full overflow-hidden md:overflow-visible lg:grid-cols-5"
   >
     <!-- Left side -->
     <div
-      class="order-2 lg:order-1 relative lg:col-span-3 h-[80vh] lg:h-auto bg-agora-gray"
+      class="relative order-2 h-[80vh] bg-agora-gray lg:order-1 lg:col-span-3 lg:h-auto"
       bind:clientWidth={canvasWidth}
       bind:clientHeight={canvasHeight}
     >
       <div
-        class="absolute left-1/2 bottom-0 w-full max-w-screen-md flex items-end transform -translate-x-1/2"
+        class="absolute left-1/2 bottom-0 flex w-full max-w-screen-md -translate-x-1/2 transform items-end"
         bind:this={videoContainer}
       >
         <div class="relative w-full" style={`height: ${canvasHeight}px`}>
@@ -137,23 +137,23 @@
 
     <!-- Right Side -->
     <div
-      class="order-1 lg:order-2 flex flex-col items-center justify-center space-y-4 relative lg:col-span-2 lg:min-h-full bg-agora-purple text-agora-white overflow-hidden"
+      class="relative order-1 flex flex-col items-center justify-center space-y-4 overflow-hidden bg-agora-purple text-agora-white lg:order-2 lg:col-span-2 lg:min-h-full"
     >
       <!-- Background circle left -->
       <div
-        class="absolute bottom-0 left-0 w-[50vw] h-[50vw] md:w-[25vw] md:h-[25vw] transform -translate-x-1/2 translate-y-1/2 bg-circle-pattern bg-no-repeat bg-cover"
+        class="absolute bottom-0 left-0 h-[50vw] w-[50vw] -translate-x-1/2 translate-y-1/2 transform bg-circle-pattern bg-cover bg-no-repeat md:h-[25vw] md:w-[25vw]"
       />
       <!-- Background circle right -->
       <div
-        class="absolute top-0 right-0 w-[50vw] h-[50vw] md:w-[25vw] md:h-[25vw] transform translate-x-1/2 -translate-y-1/2 bg-circle-pattern bg-no-repeat bg-cover"
+        class="absolute top-0 right-0 h-[50vw] w-[50vw] translate-x-1/2 -translate-y-1/2 transform bg-circle-pattern bg-cover bg-no-repeat md:h-[25vw] md:w-[25vw]"
       />
 
       <!-- Content -->
       <div
-        class="relative flex flex-col items-center justify-center px-4 lg:px-20 py-28 h-full text-agora-white text-center overflow-hidden"
+        class="relative flex h-full flex-col items-center justify-center overflow-hidden px-4 py-28 text-center text-agora-white lg:px-20"
       >
         <h2
-          class="mb-12 text-3xl lg:text-4xl 2xl:text-5xl font-bold tracking-tight font-display uppercase"
+          class="mb-12 font-display text-3xl font-bold uppercase tracking-tight lg:text-4xl 2xl:text-5xl"
         >
           Agora Space Dao
         </h2>

@@ -16,9 +16,9 @@
 <svelte:window bind:innerWidth={windowWidth} />
 
 <section id="great-thinkers-are-with-us" class="relative bg-agora-gray">
-  <div class="container space-y-4 text-center py-28 2xl:py-36 2xl:space-y-10">
+  <div class="container space-y-4 py-28 text-center 2xl:space-y-10 2xl:py-36">
     <h2
-      class="col-span-3 mb-24 text-3xl font-bold tracking-tight uppercase text-agora-pink-light lg:text-4xl 2xl:text-5xl font-display"
+      class="col-span-3 mb-24 font-display text-3xl font-bold uppercase tracking-tight text-agora-pink-light lg:text-4xl 2xl:text-5xl"
     >
       Great thinkers are with us
     </h2>
@@ -26,7 +26,7 @@
     <svelte:component
       this={sectionWrapper}
       modules={[Pagination]}
-      class="relative gap-4 pb-12 lg:pb-0 lg:grid lg:grid-cols-3 2xl:gap-11"
+      class="relative gap-4 pb-12 lg:grid lg:grid-cols-3 lg:pb-0 2xl:gap-11"
       pagination={{ clickable: true }}
     >
       <svelte:component this={quoteWrapper}>

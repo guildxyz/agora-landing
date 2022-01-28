@@ -6,14 +6,14 @@
   <div class="flex flex-col px-8 py-10 lg:py-20">
     <div class="container space-y-16">
       <h2
-        class="text-agora-pink-medium text-3xl lg:text-4xl 2xl:text-5xl font-bold tracking-tight font-display uppercase text-center"
+        class="text-center font-display text-3xl font-bold uppercase tracking-tight text-agora-pink-medium lg:text-4xl 2xl:text-5xl"
       >
         Advisors
       </h2>
 
       <div class="flex justify-center px-1 md:px-0">
         <div
-          class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-16 xl:gap-32 max-w-xs lg:max-w-none"
+          class="grid max-w-xs grid-cols-2 gap-8 lg:max-w-none lg:grid-cols-4 lg:gap-16 xl:gap-32"
         >
           <TeamMember
             advisor

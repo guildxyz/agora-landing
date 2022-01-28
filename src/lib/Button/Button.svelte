@@ -34,7 +34,7 @@
   {/if}
   {#if disabledMessage}
     <span
-      class="absolute -bottom-12 -left-2 lg:-left-3 flex items-center justify-center w-full h-10 bg-agora-gray text-sm uppercase rounded-2xl invisible group-hover:visible transform -translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300"
+      class="invisible absolute -bottom-12 -left-2 flex h-10 w-full -translate-y-4 transform items-center justify-center rounded-2xl bg-agora-gray text-sm uppercase opacity-0 transition-all duration-300 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 lg:-left-3"
       >{disabledMessage}</span
     >
   {/if}

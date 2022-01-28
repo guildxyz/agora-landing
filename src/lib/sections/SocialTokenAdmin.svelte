@@ -1,14 +1,14 @@
 <section
   id="social-token-admin"
-  class="relative bg-agora-pink-dark lg:bg-agora-gray text-agora-white"
+  class="relative bg-agora-pink-dark text-agora-white lg:bg-agora-gray"
 >
-  <div class="container py-20 grid lg:grid-cols-12 gap-16 lg:gap-0">
+  <div class="container grid gap-16 py-20 lg:grid-cols-12 lg:gap-0">
     <!-- Text -->
     <div
-      class="lg:col-span-4 flex flex-col items-start justify-center space-y-8 text-center lg:text-left"
+      class="flex flex-col items-start justify-center space-y-8 text-center lg:col-span-4 lg:text-left"
     >
       <h2
-        class="w-full text-3xl lg:text-4xl 2xl:text-5xl font-bold tracking-tight font-display uppercase"
+        class="w-full font-display text-3xl font-bold uppercase tracking-tight lg:text-4xl 2xl:text-5xl"
       >
         Social token admin
       </h2>
@@ -22,7 +22,7 @@
     </div>
 
     <!-- Image -->
-    <div class="lg:col-span-8 flex items-center justify-center lg:pl-20">
+    <div class="flex items-center justify-center lg:col-span-8 lg:pl-20">
       <a href="https://app.agora.space/register" target="_blank" rel="noopener">
         <picture class="max-w-full">
           <source srcset="/images/social-token-admin.webp" type="image/webp" />

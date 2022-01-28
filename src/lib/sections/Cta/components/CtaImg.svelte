@@ -51,12 +51,12 @@
 
 <div class="space-y-12 lg:space-y-16">
   <h2
-    class="relative text-agora-white text-2xl md:text-3xl xl:text-4xl font-bold tracking-tight font-display uppercase text-center"
+    class="relative text-center font-display text-2xl font-bold uppercase tracking-tight text-agora-white md:text-3xl xl:text-4xl"
   >
     {title}
     {#if comingSoon}
       <span
-        class="absolute -bottom-4 lg:-bottom-6 left-0 w-full h-4 text-base lg:text-lg text-agora-pink-medium text-center"
+        class="absolute -bottom-4 left-0 h-4 w-full text-center text-base text-agora-pink-medium lg:-bottom-6 lg:text-lg"
         >Coming soon</span
       >
     {/if}
@@ -91,7 +91,7 @@
       <span class="sr-only">{title}</span>
       <Button
         aria-label={title}
-        class="flex items-center justify-center px-0 w-12 lg:w-14 h-12 lg:h-14 bg-agora-pink-medium text-agora-white rounded-full transform -translate-x-1/2 -translate-y-1/2 opacity-100 lg:opacity-0 group-hover:opacity-100 transition-all"
+        class="flex h-12 w-12 -translate-x-1/2 -translate-y-1/2 transform items-center justify-center rounded-full bg-agora-pink-medium px-0 text-agora-white opacity-100 transition-all group-hover:opacity-100 lg:h-14 lg:w-14 lg:opacity-0"
       >
         <ArrowRight size="1.5em" weight="bold" />
       </Button>

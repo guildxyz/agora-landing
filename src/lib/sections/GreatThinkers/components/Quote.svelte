@@ -28,7 +28,7 @@
 <div class={`mx-auto max-w-sm h-full flex flex-col items-center text-md ${_class}`}>
   <div class="relative mb-8 h-52 2xl:h-72">
     {#if isSafari}
-      <picture class="object-contain w-full h-full">
+      <picture class="h-full w-full object-contain">
         <source srcset={image} type="image/webp" />
         <source srcset={imagePng} type="image/png" />
         <img src={imagePng} {alt} />
@@ -59,7 +59,7 @@
     “<strong>{quoteStart}</strong><br />
     {quote}”
   </p>
-  <p class="mt-auto text-lg font-bold tracking-tight text-agora-pink-light font-display">
+  <p class="mt-auto font-display text-lg font-bold tracking-tight text-agora-pink-light">
     -{name}-
   </p>
 </div>
