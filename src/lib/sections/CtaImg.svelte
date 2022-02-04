@@ -4,7 +4,8 @@
   import { ArrowRight } from 'phosphor-svelte';
 
   export let title;
-  export let image;
+  export let image; // WEBP image
+  export let imagePng; // PNG fallback image
   export let url;
 
   let parent;
@@ -19,7 +20,7 @@
 
 <div class="space-y-8">
   <h2
-    class="text-agora-white text-3xl lg:text-4xl font-bold tracking-tight font-display uppercase text-center"
+    class="text-center font-display text-3xl font-bold uppercase tracking-tight text-agora-white lg:text-4xl"
   >
     {title}
   </h2>
@@ -33,7 +34,11 @@
       }}
     >
       <span class="sr-only">{title}</span>
-      <img src={image} alt="text-3xl lg:text-4xlunity" class="w-full" />
+      <picture class="w-full">
+        <source srcset={image} type="image/webp" />
+        <source srcset={imagePng} type="image/png" />
+        <img src={imagePng} alt={title} />
+      </picture>
     </a>
 
     <a
@@ -44,7 +49,7 @@
       <span class="sr-only">{title}</span>
       <Button
         aria-label={title}
-        class="flex items-center justify-center px-0 w-12 lg:w-14 h-12 lg:h-14 bg-agora-pink-medium text-agora-white rounded-full transform -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity"
+        class="flex h-12 w-12 -translate-x-1/2 -translate-y-1/2 transform items-center justify-center rounded-full bg-agora-pink-medium px-0 text-agora-white opacity-0 transition-opacity group-hover:opacity-100 lg:h-14 lg:w-14"
       >
         <ArrowRight size="1.5em" weight="bold" />
       </Button>

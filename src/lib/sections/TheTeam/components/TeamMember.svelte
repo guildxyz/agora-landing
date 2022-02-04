@@ -2,7 +2,8 @@
   import { TwitterLogo, GithubLogo } from 'phosphor-svelte';
 
   export let advisor = false;
-  export let photo;
+  export let photo; // WEBP image
+  export let photoPng; // PNG fallback image
   export let name;
   export let label;
   export let twitter = null;
@@ -11,22 +12,28 @@
 </script>
 
 <div class="group flex flex-col">
-  <div class="flex flex-col items-end mb-2 h-52 max-h-52 lg:h-64">
+  <div class="mb-2 flex h-52 max-h-52 flex-col items-end lg:h-64">
     {#if about}
-      <div class="group relative w-full h-52 lg:h-64 overflow-hidden">
-        <img
-          src={photo}
-          alt={name}
-          class="absolute left-0 bottom-0 w-full h-full object-contain object-bottom group-hover:-left-full group-hover:opacity-0 group-focus-within:-left-full group-focus-within:opacity-0 transition-all duration-500"
-        />
+      <div class="group relative h-52 w-full overflow-hidden lg:h-64">
+        <picture
+          class="absolute left-0 bottom-0 h-full w-full object-contain object-bottom transition-all duration-500 group-focus-within:-left-full group-focus-within:opacity-0 group-hover:-left-full group-hover:opacity-0"
+        >
+          <source srcset={photo} type="image/webp" />
+          <source srcset={photoPng} type="image/png" />
+          <img src={photoPng} alt={name} class="max-h-full" />
+        </picture>
         <div
-          class="absolute -right-full bottom-0 w-full h-full text-agora-white group-hover:right-0 opacity-0 group-hover:opacity-100 group-focus-within:right-0 group-focus-within:opacity-100 transition-all duration-500"
+          class="absolute -right-full bottom-0 h-full w-full text-agora-white opacity-0 transition-all duration-500 group-focus-within:right-0 group-focus-within:opacity-100 group-hover:right-0 group-hover:opacity-100"
         >
           <p>{about}</p>
         </div>
       </div>
     {:else}
-      <img src={photo} alt={name} class="w-full h-full object-contain object-bottom" />
+      <picture class="w-full h-full object-contain object-bottom">
+        <source srcset={photo} type="image/webp" />
+        <source srcset={photoPng} type="image/png" />
+        <img src={photoPng} alt={name} class="max-h-full" />
+      </picture>
     {/if}
   </div>
   <div class="relative flex flex-col">
@@ -66,7 +73,7 @@
           target="_blank"
           rel="noopener"
           alt={`${name} - Twitter`}
-          class="relative -right-4 group-hover:right-0 group-focus-within:right-0 flex items-center justify-center w-5 h-5 bg-white rounded-sm opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-all duration-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-300"
+          class="relative -right-4 flex h-5 w-5 items-center justify-center rounded-sm bg-white opacity-0 transition-all duration-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-300 group-focus-within:right-0 group-focus-within:opacity-100 group-hover:right-0 group-hover:opacity-100"
         >
           <TwitterLogo />
         </a>
@@ -77,7 +84,7 @@
           target="_blank"
           rel="noopener"
           alt={`${name} - Github`}
-          class="relative -right-4 group-hover:right-0 group-focus-within:right-0 flex items-center justify-center w-5 h-5 bg-white rounded-sm opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-all duration-500 delay-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-300"
+          class="relative -right-4 flex h-5 w-5 items-center justify-center rounded-sm bg-white opacity-0 transition-all delay-100 duration-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-300 group-focus-within:right-0 group-focus-within:opacity-100 group-hover:right-0 group-hover:opacity-100"
         >
           <GithubLogo />
         </a>

@@ -10,30 +10,33 @@
     "format": "prettier --write --plugin-search-dir=. ."
   },
   "devDependencies": {
-    "@sveltejs/adapter-static": "^1.0.0-next.13",
-    "@sveltejs/kit": "^1.0.0-next.190",
-    "@typescript-eslint/eslint-plugin": "^4.28.5",
-    "@typescript-eslint/parser": "^4.28.5",
-    "autoprefixer": "^10.3.1",
-    "cssnano": "^5.0.7",
-    "eslint": "^7.31.0",
+    "@sveltejs/adapter-static": "next",
+    "@sveltejs/kit": "next",
+    "@types/three": "^0.136.1",
+    "@typescript-eslint/eslint-plugin": "^4.31.1",
+    "@typescript-eslint/parser": "^4.31.1",
+    "autoprefixer": "^10.4.2",
+    "cssnano": "^5.0.15",
+    "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-svelte3": "^3.2.0",
-    "postcss": "^8.3.6",
-    "postcss-load-config": "^3.1.0",
-    "prettier": "~2.3.2",
-    "prettier-plugin-svelte": "^2.3.1",
+    "eslint-plugin-svelte3": "^3.2.1",
+    "postcss": "^8.4.5",
+    "postcss-load-config": "^3.1.1",
+    "prettier": "^2.5.1",
+    "prettier-plugin-svelte": "^2.4.0",
+    "prettier-plugin-tailwindcss": "^0.1.4",
     "svelte": "^3.44.0",
-    "svelte-preprocess": "^4.7.4",
-    "svelte-sitemap": "^2.0.1",
-    "tailwindcss": "^2.2.7",
-    "tslib": "^2.3.0",
-    "typescript": "^4.3.5"
+    "svelte-check": "^2.2.6",
+    "svelte-preprocess": "^4.9.4",
+    "svelte-sitemap": "^2.3.0",
+    "tailwindcss": "^3.0.15",
+    "tslib": "^2.3.1",
+    "typescript": "^4.4.3"
   },
   "type": "module",
   "dependencies": {
-    "phosphor-svelte": "^1.0.0",
-    "swiper": "^6.8.0",
-    "three": "^0.131.1"
+    "phosphor-svelte": "^1.1.2",
+    "swiper": "^6.8.4",
+    "three": "^0.136.0"
   }
 }

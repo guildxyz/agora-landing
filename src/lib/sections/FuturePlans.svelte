@@ -1,25 +1,25 @@
 <section id="future-plans" class="relative">
   <!-- Background -->
-  <div class="absolute hidden lg:flex w-full h-full">
-    <div class="bg-agora-gray w-1/2" />
-    <div class="bg-agora-purple w-1/2" />
+  <div class="absolute hidden h-full w-full lg:flex">
+    <div class="w-1/2 bg-agora-gray" />
+    <div class="w-1/2 bg-agora-purple" />
   </div>
 
   <div
-    class="relative w-full custom-container lg:grid lg:grid-cols-5 h-full overflow-hidden md:overflow-visible"
+    class="custom-container relative h-full w-full overflow-hidden md:overflow-visible lg:grid lg:grid-cols-5"
   >
     <!-- Left side -->
     <div
-      class="flex flex-col items-center justify-center space-y-8 relative lg:col-span-3 px-8 lg:px-28 xl:px-48 py-16 lg:py-24 h-full bg-agora-gray text-agora-white text-center "
+      class="relative flex h-full flex-col items-center justify-center space-y-8 bg-agora-gray px-8 py-16 text-center text-agora-white lg:col-span-3 lg:px-28 lg:py-24 xl:px-48 "
     >
       <h2
-        class="mb-4 text-agora-pink-light text-3xl lg:text-4xl 2xl:text-5xl font-bold tracking-tight font-display uppercase"
+        class="mb-4 font-display text-3xl font-bold uppercase tracking-tight text-agora-pink-light lg:text-4xl 2xl:text-5xl"
       >
         Future plans
       </h2>
 
       <section class="space-y-4 font-semibold 2xl:text-lg">
-        <h3 class="text-agora-pink-light text-xl lg:text-2xl 2xl:text-3xl font-bold font-display">
+        <h3 class="font-display text-xl font-bold text-agora-pink-light lg:text-2xl 2xl:text-3xl">
           Integration
         </h3>
 
@@ -28,7 +28,7 @@
             href="https://www.superfluid.finance/home"
             target="_blank"
             rel="noopener"
-            class="transition underline hover:text-agora-pink-medium">Superfluid</a
+            class="underline transition hover:text-agora-pink-medium">Superfluid</a
           > to Agora Social Oracle layer for performance-based fluid payments.
         </p>
 
@@ -37,21 +37,21 @@
             href="https://eas.eth.link/"
             target="_blank"
             rel="noopener"
-            class="transition underline hover:text-agora-pink-medium">EAS</a
+            class="underline transition hover:text-agora-pink-medium">EAS</a
           >
           to Agora Space for gamification, reputation and KYC.
           <a
             href="https://tryroll.com/"
             target="_blank"
             rel="noopener"
-            class="transition underline hover:text-agora-pink-medium">TryRoll</a
+            class="underline transition hover:text-agora-pink-medium">TryRoll</a
           >
           and
           <a
             href="https://stakes.social/"
             target="_blank"
             rel="noopener"
-            class="transition underline hover:text-agora-pink-medium">Stakes.social</a
+            class="underline transition hover:text-agora-pink-medium">Stakes.social</a
           >
           for easy social token creation.
         </p>
@@ -61,29 +61,33 @@
             href="https://colony.io/"
             target="_blank"
             rel="noopener"
-            class="transition underline hover:text-agora-pink-medium">Colony.io</a
+            class="underline transition hover:text-agora-pink-medium">Colony.io</a
           >,
           <a
             href="https://aragon.org/"
             target="_blank"
             rel="noopener"
-            class="transition underline hover:text-agora-pink-medium">Aragon</a
+            class="underline transition hover:text-agora-pink-medium">Aragon</a
           >
           and
           <a
             href="https://daohaus.club/"
             target="_blank"
             rel="noopener"
-            class="transition underline hover:text-agora-pink-medium">Daohaus</a
+            class="underline transition hover:text-agora-pink-medium">Daohaus</a
           >
           summoners will be able to integrate their tokens.
         </p>
       </section>
 
-      <img src="/images/future-plans.png" alt="Future plans" class="w-full max-w-xs lg:hidden" />
+      <picture class="w-full max-w-xs lg:hidden">
+        <source srcset="/images/future-plans.webp" type="image/webp" />
+        <source srcset="/images/png/future-plans.png" type="image/png" />
+        <img src="/images/png/future-plans.png" alt="Future plans" />
+      </picture>
 
       <section class="space-y-4">
-        <h3 class="text-agora-pink-light text-xl lg:text-2xl 2xl:text-3xl font-bold font-display">
+        <h3 class="font-display text-xl font-bold text-agora-pink-light lg:text-2xl 2xl:text-3xl">
           Open-source toolkit
         </h3>
 
@@ -94,7 +98,7 @@
       </section>
 
       <section class="space-y-4">
-        <h3 class="text-agora-pink-light text-xl lg:text-2xl 2xl:text-3xl font-bold font-display">
+        <h3 class="font-display text-xl font-bold text-agora-pink-light lg:text-2xl 2xl:text-3xl">
           Market making
         </h3>
 
@@ -106,9 +110,13 @@
 
     <!-- Right Side -->
     <div
-      class="hidden lg:flex flex-col mx-auto items-center justify-center lg:col-span-2 relative p-20 max-w-2xl bg-agora-purple"
+      class="relative mx-auto hidden max-w-2xl flex-col items-center justify-center bg-agora-purple p-20 lg:col-span-2 lg:flex"
     >
-      <img src="/images/future-plans.png" alt="Future plans" class="object-contain" />
+      <picture class="object-contain">
+        <source srcset="/images/future-plans.webp" type="image/webp" />
+        <source srcset="/images/png/future-plans.png" type="image/png" />
+        <img src="/images/png/future-plans.png" alt="Future plans" />
+      </picture>
     </div>
   </div>
 </section>

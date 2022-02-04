@@ -1,8 +1,7 @@
 const colors = require('tailwindcss/colors');
 
 module.exports = {
-  mode: 'jit',
-  purge: ['./src/**/*.{html,js,svelte,ts}'],
+  content: ['./src/**/*.{html,js,svelte,ts}'],
   theme: {
     fontFamily: {
       display: ['Dystopian', 'sans-serif'],
@@ -26,10 +25,7 @@ module.exports = {
         }
       },
       backgroundImage: {
-        'circle-pattern': "url('/images/circle-pattern.png')",
-        'who-is-agora-space-for': "url('/images/who-is-agora-space-for-bg.png')",
-        'circle-dark': "url('/svg/circle-dark.svg')",
-        'circle-purple': "url('/svg/circle-purple.svg')",
+        'circle-pattern': "url('/images/circle-pattern.webp')",
       }
     },
     container: {

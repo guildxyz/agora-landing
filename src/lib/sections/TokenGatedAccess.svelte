@@ -10,20 +10,20 @@
   </div>
 
   <!-- Background -->
-  <div class="absolute hidden lg:flex w-full h-full">
-    <div class="bg-agora-purple w-1/2" />
-    <div class="bg-agora-gray w-1/2" />
+  <div class="absolute hidden h-full w-full lg:flex">
+    <div class="w-1/2 bg-agora-purple" />
+    <div class="w-1/2 bg-agora-gray" />
   </div>
 
   <div
-    class="relative lg:container flex flex-col lg:grid lg:grid-cols-6 xl:grid-cols-5 h-full overflow-hidden"
+    class="relative flex h-full flex-col overflow-hidden lg:container lg:grid lg:grid-cols-6 xl:grid-cols-5"
   >
     <!-- Left side -->
     <div
-      class="flex flex-col items-center lg:items-start justify-center space-y-8 relative lg:col-span-3 xl:col-span-2 px-8 lg:pr-20 pt-24 lg:pt-40 pb-10 h-full bg-agora-gray lg:bg-agora-purple text-agora-white text-center lg:text-left"
+      class="relative flex h-full flex-col items-center justify-center space-y-8 bg-agora-gray px-8 pt-24 pb-10 text-center text-agora-white lg:col-span-3 lg:items-start lg:bg-agora-purple lg:pr-20 lg:pt-40 lg:text-left xl:col-span-2"
     >
       <h2
-        class="w-full text-3xl lg:text-4xl 2xl:text-5xl font-bold tracking-tight font-display uppercase"
+        class="w-full font-display text-3xl font-bold uppercase tracking-tight lg:text-4xl 2xl:text-5xl"
       >
         Token-Gated Access
       </h2>
@@ -51,9 +51,13 @@
 
     <!-- Right Side -->
     <div
-      class="flex flex-col items-start justify-center space-y-4 lg:col-span-3 relative px-20 lg:pt-40 pb-10 lg:pb-20 pr-8 pl-10 lg:pl-20 xl:pl-40 bg-agora-gray text-agora-white"
+      class="relative flex flex-col items-start justify-center space-y-4 bg-agora-gray px-20 pb-10 pr-8 pl-10 text-agora-white lg:col-span-3 lg:pt-40 lg:pb-20 lg:pl-20 xl:pl-40"
     >
-      <img src="/images/token-gated-access.png" alt="Role management bot" class="max-w-full" />
+      <picture class="max-w-full">
+        <source srcset="/images/token-gated-access.webp" type="image/webp" />
+        <source srcset="/images/png/token-gated-access.png" type="image/png" />
+        <img src="/images/png/token-gated-access.png" alt="Role management bot" />
+      </picture>
     </div>
   </div>
 </section>

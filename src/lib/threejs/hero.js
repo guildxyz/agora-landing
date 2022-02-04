@@ -1,4 +1,17 @@
-import * as THREE from 'three';
+import {
+  OrthographicCamera,
+  Scene,
+  Clock,
+  TextureLoader,
+  IcosahedronGeometry,
+  MeshMatcapMaterial,
+  Mesh,
+  VideoTexture,
+  RGBAFormat,
+  PlaneGeometry,
+  MeshBasicMaterial,
+  WebGLRenderer
+} from 'three';
 import { createBubbleMaterial } from './customShader';
 
 let renderer,
@@ -61,44 +74,46 @@ export const initThreeJS = (element, callback) => {
   const rect = element.getBoundingClientRect();
 
   // Camera
-  camera = new THREE.OrthographicCamera(-1, 1, 1, -1, 0.01, 10);
+  camera = new OrthographicCamera(-1, 1, 1, -1, 0.01, 10);
   camera.position.z = 1;
 
   // Scene
-  scene = new THREE.Scene();
+  scene = new Scene();
 
   // Clock
-  clock = new THREE.Clock();
+  clock = new Clock();
 
   // Texture
-  const textureLoader = new THREE.TextureLoader();
+  const textureLoader = new TextureLoader();
   const matCapTexture = textureLoader.load('/images/bubble-matcap.png');
 
   // Object
-  bubbleGeometry = new THREE.IcosahedronGeometry(1, 64);
-  bubbleMaterial = new THREE.MeshMatcapMaterial({
+  bubbleGeometry = new IcosahedronGeometry(1, 64);
+  bubbleMaterial = new MeshMatcapMaterial({
     matcap: matCapTexture
   });
 
   // Modifying the vertex shader
   bubbleMaterial.onBeforeCompile = (shader) => createBubbleMaterial(shader, customUniforms);
 
-  bubble = new THREE.Mesh(bubbleGeometry, bubbleMaterial);
+  bubble = new Mesh(bubbleGeometry, bubbleMaterial);
   bubble.position.set(0, 0.55, -0.5);
   bubble.scale.set(0.2, 0.28, 0.2);
   scene.add(bubble);
 
   // Platon
   video = document.getElementById('platon-video');
-  platonVideoTexture = new THREE.VideoTexture(video);
-  platonVideoTexture.format = THREE.RGBAFormat;
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore
+  platonVideoTexture = new VideoTexture(video);
+  platonVideoTexture.format = RGBAFormat;
 
-  platonGeometry = new THREE.PlaneGeometry(1.64, 1.64);
-  platonMaterial = new THREE.MeshBasicMaterial({
+  platonGeometry = new PlaneGeometry(1.64, 1.64);
+  platonMaterial = new MeshBasicMaterial({
     map: platonVideoTexture,
     transparent: true
   });
-  platon = new THREE.Mesh(platonGeometry, platonMaterial);
+  platon = new Mesh(platonGeometry, platonMaterial);
   platon.position.set(0, -0.25, 0);
   scene.add(platon);
 
@@ -107,7 +122,7 @@ export const initThreeJS = (element, callback) => {
   video.currentTime = 0;
 
   // Renderer
-  renderer = new THREE.WebGLRenderer({
+  renderer = new WebGLRenderer({
     antialias: true,
     alpha: true,
     canvas: element

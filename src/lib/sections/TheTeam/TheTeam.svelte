@@ -19,7 +19,7 @@
   <div class="flex flex-col px-8 py-10 lg:py-20">
     <div class="container space-y-16">
       <h2
-        class="text-agora-pink-light text-3xl lg:text-4xl 2xl:text-5xl font-bold tracking-tight font-display uppercase text-center"
+        class="text-center font-display text-3xl font-bold uppercase tracking-tight text-agora-pink-light lg:text-4xl 2xl:text-5xl"
       >
         The team
       </h2>
@@ -28,36 +28,40 @@
       <svelte:component
         this={sectionWrapper}
         modules={[Pagination]}
-        class="relative flex flex-col lg:space-y-16 pb-12 lg:pb-0"
+        class="relative flex flex-col pb-12 lg:space-y-16 lg:pb-0"
         pagination={{ clickable: true }}
       >
         <!-- Block 1 -->
         <svelte:component this={membersWrapper} class="flex justify-center px-1 md:px-0">
           <div
-            class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-16 xl:gap-32 max-w-xs lg:max-w-none"
+            class="grid max-w-xs grid-cols-2 gap-8 lg:max-w-none lg:grid-cols-4 lg:gap-16 xl:gap-32"
           >
             <TeamMember
-              photo="/images/team/brunya.png"
+              photo="/images/team/brunya.webp"
+              photoPng="/images/png/team/brunya.png"
               name="Brunya"
               label="Operation"
               github="https://github.com/Brunya"
             />
             <TeamMember
-              photo="/images/team/dovalid.png"
+              photo="/images/team/dovalid.webp"
+              photoPng="/images/png/team/dovalid.png"
               name="Dovalid"
               label="Frontend Dev"
               github="https://github.com/dovalid"
               twitter="https://twitter.com/dovalid"
             />
             <TeamMember
-              photo="/images/team/shronk.png"
+              photo="/images/team/shronk.webp"
+              photoPng="/images/png/team/shronk.png"
               name="Shronk"
               label="Backend Dev"
               github="https://github.com/schronck"
               twitter="https://twitter.com/5hr0nk"
             />
             <TeamMember
-              photo="/images/team/devid.png"
+              photo="/images/team/devid.webp"
+              photoPng="/images/png/team/devid.png"
               name="Devid"
               label="Backend Dev"
               github="https://github.com/DevidAbt"
@@ -68,29 +72,33 @@
         <!-- Block 2 -->
         <svelte:component this={membersWrapper} class="flex justify-center  px-1 md:px-0">
           <div
-            class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-16 xl:gap-32 max-w-xs lg:max-w-none"
+            class="grid max-w-xs grid-cols-2 gap-8 lg:max-w-none lg:grid-cols-4 lg:gap-16 xl:gap-32"
           >
             <TeamMember
-              photo="/images/team/ejay.png"
+              photo="/images/team/ejay.webp"
+              photoPng="/images/png/team/ejay.png"
               name="Ejay"
               label="Backend Dev"
               github="https://github.com/dezsim"
               twitter="https://twitter.com/dezsim_"
             />
             <TeamMember
-              photo="/images/team/tomi_ohl.png"
+              photo="/images/team/tomi_ohl.webp"
+              photoPng="/images/png/team/tomi_ohl.png"
               name="Tomi_Ohl"
               label="Smart contract Dev"
               github="https://github.com/TomiOhl"
             />
             <TeamMember
-              photo="/images/team/macy.png"
+              photo="/images/team/macy.webp"
+              photoPng="/images/png/team/macy.png"
               name="Réka"
               label="Communication"
               twitter="https://twitter.com/reka_eth"
             />
             <TeamMember
-              photo="/images/team/balazs.png"
+              photo="/images/team/balazs.webp"
+              photoPng="/images/png/team/balazs.png"
               name="Balazs"
               label="Frontend Dev"
               github="https://github.com/cs-balazs"
@@ -101,16 +109,22 @@
         <!-- Block 3 -->
         <svelte:component this={membersWrapper} class="flex justify-center  px-1 md:px-0">
           <div
-            class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-16 xl:gap-32 max-w-xs lg:max-w-none"
+            class="grid max-w-xs grid-cols-2 gap-8 lg:max-w-none lg:grid-cols-4 lg:gap-16 xl:gap-32"
           >
             <div class="hidden lg:block" />
             <TeamMember
-              photo="/images/team/johnny.png"
+              photo="/images/team/johnny.webp"
+              photoPng="/images/png/team/johnny.png"
               name="Johnny"
               label="Frontend Dev"
               github="https://github.com/BrickheadJohnny"
             />
-            <TeamMember photo="/images/team/sito.png" name="Sito" label="Designer" />
+            <TeamMember
+              photo="/images/team/sito.webp"
+              photoPng="/images/png/team/sito.png"
+              name="Sito"
+              label="Designer"
+            />
           </div>
         </svelte:component>
       </svelte:component>

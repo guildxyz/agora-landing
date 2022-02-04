@@ -1,17 +1,17 @@
 <section id="gamification" class="relative bg-agora-gray">
   <div
-    class="relative lg:container flex flex-col lg:grid lg:grid-cols-6 xl:grid-cols-5 h-full overflow-hidden"
+    class="relative flex h-full flex-col overflow-hidden lg:container lg:grid lg:grid-cols-6 xl:grid-cols-5"
   >
     <!-- Left side -->
     <div
-      class="group relative flex flex-col items-center lg:items-start justify-center lg:col-span-3 xl:col-span-2 px-8 lg:pr-20 pt-24 lg:pt-0 pb-10 h-full text-agora-white text-center lg:text-left"
+      class="group relative flex h-full flex-col items-center justify-center px-8 pt-24 pb-10 text-center text-agora-white lg:col-span-3 lg:items-start lg:pr-20 lg:pt-0 lg:text-left xl:col-span-2"
     >
       <span
-        class="mb-2 w-full text-lg 2xl:text-2xl font-bold tracking-tight font-display uppercase opacity-100 lg:opacity-0 group-hover:opacity-100 transition-all duration-300 transform lg:translate-y-8 group-hover:translate-y-0"
+        class="mb-2 w-full transform font-display text-lg font-bold uppercase tracking-tight opacity-100 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100 lg:translate-y-8 lg:opacity-0 2xl:text-2xl"
         >Coming soon</span
       >
       <h2
-        class="mb-8 w-full text-3xl lg:text-4xl 2xl:text-5xl font-bold tracking-tight font-display uppercase"
+        class="mb-8 w-full font-display text-3xl font-bold uppercase tracking-tight lg:text-4xl 2xl:text-5xl"
       >
         Gamification
       </h2>
@@ -26,13 +26,13 @@
 
     <!-- Right Side -->
     <div
-      class="flex flex-col items-center justify-center space-y-4 lg:col-span-3 relative px-20 lg:pt-24 pb-10 lg:pb-20 pr-8 pl-10 lg:pl-20 xl:pl-40 text-agora-white"
+      class="relative flex flex-col items-center justify-center space-y-4 px-20 pb-10 pr-8 pl-10 text-agora-white lg:col-span-3 lg:pt-24 lg:pb-20 lg:pl-20 xl:pl-40"
     >
-      <img
-        src="/images/gamification.png"
-        alt="Role management bot"
-        class="max-w-full lg:max-h-[45vh]"
-      />
+      <picture class="max-w-full lg:max-h-[45vh]">
+        <source srcset="/images/gamification.webp" type="image/webp" />
+        <source srcset="/images/png/gamification.png" type="image/png" />
+        <img src="/images/png/gamification.png" alt="Role management bot" />
+      </picture>
     </div>
   </div>
 </section>

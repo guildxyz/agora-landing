@@ -1,18 +1,18 @@
 <!-- We don't use this component currently, but I left it here just in case we need it again, or if we'll need to make a similar section in the future -->
 
 <section id="performance-based-creator-contracts" class="relative bg-agora-gray text-agora-white">
-  <div class="container py-20 grid lg:grid-cols-2 gap-16 lg:gap-0">
+  <div class="container grid gap-16 py-20 lg:grid-cols-2 lg:gap-0">
     <!-- Text -->
     <div
-      class="group relative lg:-top-8 flex flex-col items-start justify-center text-center lg:text-left"
+      class="group relative flex flex-col items-start justify-center text-center lg:-top-8 lg:text-left"
     >
       <span
-        class="mb-2 w-full text-2xl 2xl:text-4xl font-bold tracking-tight font-display uppercase text-agora-purple opacity-100 lg:opacity-0 group-hover:opacity-100 transition-all duration-300 transform lg:translate-y-8 group-hover:translate-y-0"
+        class="mb-2 w-full transform font-display text-2xl font-bold uppercase tracking-tight text-agora-purple opacity-100 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100 lg:translate-y-8 lg:opacity-0 2xl:text-4xl"
         >Coming soon</span
       >
 
       <h2
-        class="mb-8 text-3xl lg:text-4xl 2xl:text-5xl font-bold tracking-tight font-display uppercase"
+        class="mb-8 font-display text-3xl font-bold uppercase tracking-tight lg:text-4xl 2xl:text-5xl"
       >
         Performance-based creator contracts
       </h2>
@@ -27,11 +27,11 @@
 
     <!-- Image -->
     <div class="flex items-center justify-center lg:pl-20">
-      <img
-        src="/images/creator-contracts.png"
-        alt="Performance-based creator contracts"
-        class="max-w-full"
-      />
+      <picture class="max-w-full">
+        <source srcset="/images/creator-contracts.webp" type="image/webp" />
+        <source srcset="/images/png/creator-contracts.png" type="image/png" />
+        <img src="/images/png/creator-contracts.png" alt="Performance-based creator contracts" />
+      </picture>
     </div>
   </div>
 </section>

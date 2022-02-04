@@ -1,4 +1,18 @@
-import * as THREE from 'three';
+import {
+  Vector3,
+  PerspectiveCamera,
+  Scene,
+  Clock,
+  TextureLoader,
+  Object3D,
+  IcosahedronGeometry,
+  MeshMatcapMaterial,
+  Mesh,
+  SphereGeometry,
+  MeshBasicMaterial,
+  PlaneGeometry,
+  WebGLRenderer
+} from 'three';
 import { createBubbleMaterial } from './customShader';
 
 let renderer,
@@ -20,25 +34,25 @@ export const startAnimation = () => (ANIMATE = true);
 const smallBubblesData = [
   {
     color: 0x000000,
-    position: new THREE.Vector3(1.5, 0, 0),
+    position: new Vector3(1.5, 0, 0),
     object: null,
     image: '/images/logos/witnet.svg'
   },
   {
     color: 0xc9fba6,
-    position: new THREE.Vector3(-1.5, 0.5, 0),
+    position: new Vector3(-1.5, 0.5, 0),
     object: null,
     image: '/images/logos/seedclub.svg'
   },
   {
     color: 0xf4f4f4,
-    position: new THREE.Vector3(0.25, 0.8, -1.5),
+    position: new Vector3(0.25, 0.8, -1.5),
     object: null,
     image: '/images/logos/aragon.svg'
   },
   {
     color: 0xf4f4f4,
-    position: new THREE.Vector3(-1, 1.2, 1),
+    position: new Vector3(-1, 1.2, 1),
     object: null,
     image: '/images/logos/colony.svg'
   }
@@ -89,50 +103,45 @@ export const initThreeJS = (element, isSafari) => {
   const rect = element.getBoundingClientRect();
 
   // Camera
-  camera = new THREE.PerspectiveCamera(45, rect.width / rect.height, 0.01, 10);
+  camera = new PerspectiveCamera(45, rect.width / rect.height, 0.01, 10);
   camera.position.z = 6.4;
 
   // Scene
-  scene = new THREE.Scene();
+  scene = new Scene();
 
   // Clock
-  clock = new THREE.Clock();
+  clock = new Clock();
 
   // Bubble texture
-  const textureLoader = new THREE.TextureLoader();
+  const textureLoader = new TextureLoader();
   const matCapTexture = textureLoader.load('/images/bubble-matcap.png');
 
-  centerAxis = new THREE.Object3D();
+  centerAxis = new Object3D();
   centerAxis.position.y = -0.6;
 
-  bigBubbleGeometry = new THREE.IcosahedronGeometry(1.2, 24);
-  bigBubbleMaterial = new THREE.MeshMatcapMaterial({
+  bigBubbleGeometry = new IcosahedronGeometry(1.2, 24);
+  bigBubbleMaterial = new MeshMatcapMaterial({
     matcap: matCapTexture
   });
   bigBubbleMaterial.onBeforeCompile = (shader) => createBubbleMaterial(shader, customUniforms);
 
-  bigBubble = new THREE.Mesh(bigBubbleGeometry, bigBubbleMaterial);
+  bigBubble = new Mesh(bigBubbleGeometry, bigBubbleMaterial);
   bigBubble.position.y = -2;
 
-  // smallBubbleGeometry = new THREE.IcosahedronGeometry(0.6, 32);
-  smallBubbleGeometry = new THREE.SphereGeometry(0.6, 32);
+  smallBubbleGeometry = new SphereGeometry(0.6, 32);
 
   // Setting up the positions
   smallBubblesData.forEach((bubble) => {
-    // const currentMaterial = new THREE.MeshMatcapMaterial({
-    //   color: bubble.color
-    // });
-    // currentMaterial.onBeforeCompile = (shader) => createBubbleMaterial(shader, customUniforms);
-    const currentMaterial = new THREE.MeshBasicMaterial({
+    const currentMaterial = new MeshBasicMaterial({
       color: bubble.color
     });
-    bubble.object = new THREE.Mesh(smallBubbleGeometry, currentMaterial);
+    bubble.object = new Mesh(smallBubbleGeometry, currentMaterial);
     bubble.object.position.set(bubble.position.x, bubble.position.y, bubble.position.z);
     bubble.object.scale.set(0.5, 0.5, 0.5);
 
-    const imagePlane = new THREE.Mesh(
-      new THREE.PlaneGeometry(0.5, 0.5),
-      new THREE.MeshBasicMaterial({ map: textureLoader.load(bubble.image), transparent: true })
+    const imagePlane = new Mesh(
+      new PlaneGeometry(0.5, 0.5),
+      new MeshBasicMaterial({ map: textureLoader.load(bubble.image), transparent: true })
     );
 
     bubble.object.add(imagePlane);
@@ -147,7 +156,7 @@ export const initThreeJS = (element, isSafari) => {
   video = document.getElementById('agora-space-dao-video');
 
   // Renderer
-  renderer = new THREE.WebGLRenderer({
+  renderer = new WebGLRenderer({
     antialias: true,
     alpha: true,
     canvas: element

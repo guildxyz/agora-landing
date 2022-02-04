@@ -4,18 +4,18 @@
   import Button from '$lib/Button';
 </script>
 
-<section id="guild" class="relative pt-16 lg:pt-28 bg-agora-gray text-agora-white">
+<section id="guild" class="relative bg-agora-gray pt-16 text-agora-white lg:pt-28">
   <div class="absolute left-0 right-0 top-0 z-50">
     <Header whiteLogo />
   </div>
 
-  <div class="container xl:max-w-screen-xl py-20 px-8 grid lg:grid-cols-5 gap-16 lg:gap-0">
+  <div class="container grid gap-16 py-20 px-8 lg:grid-cols-5 lg:gap-0 xl:max-w-screen-xl">
     <!-- Text -->
     <div
-      class="lg:col-span-2 group relative flex flex-col items-start justify-center text-center lg:text-left"
+      class="group relative flex flex-col items-start justify-center text-center lg:col-span-2 lg:text-left"
     >
       <h2
-        class="mb-8 w-full text-3xl lg:text-4xl 2xl:text-5xl font-bold tracking-tight font-display"
+        class="mb-8 w-full font-display text-3xl font-bold tracking-tight lg:text-4xl 2xl:text-5xl"
       >
         Guild.xyz
       </h2>
@@ -30,18 +30,22 @@
         href="https://alpha.guild.xyz"
         target="_blank"
         rel="noopener"
-        class="mx-auto lg:mx-0 w-max bg-agora-pink-medium text-agora-white"
+        class="mx-auto w-max bg-agora-pink-medium text-agora-white lg:mx-0"
       >
         Use Guild
-        <img slot="icon-left" src="/svg/guild-logo.svg" alt="Guild.xyz" class="w-4 h-4" />
+        <img slot="icon-left" src="/svg/guild-logo.svg" alt="Guild.xyz" class="h-4 w-4" />
       </Button>
     </div>
 
     <!-- Image -->
-    <div class="lg:col-span-3 flex items-start justify-center lg:justify-end lg:pl-20">
+    <div class="flex items-start justify-center lg:col-span-3 lg:justify-end lg:pl-20">
       <div class="relative">
-        <div class="absolute inset-0 filter blur-md bg-agora-pink-medium scale-105 opacity-20" />
-        <img src="/images/guild.png" alt="Agora Space" class="relative max-w-full" />
+        <div class="absolute inset-0 scale-105 bg-agora-pink-medium opacity-20 blur-md filter" />
+        <picture class="relative max-w-full">
+          <source srcset="/images/guild.webp" type="image/webp" />
+          <source srcset="/images/png/guild.png" type="image/png" />
+          <img src="/images/png/guild.png" alt="Agora Space" />
+        </picture>
       </div>
     </div>
   </div>
