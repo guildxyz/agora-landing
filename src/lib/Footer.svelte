@@ -13,13 +13,19 @@
 <footer class={`${dark ? 'bg-agora-gray' : 'bg-agora-white'}`}>
   <div class="container relative grid md:grid-cols-3 lg:grid-cols-4">
     <div class="relative order-2 w-full md:order-1">
-      <picture class="absolute bottom-0 left-0 hidden w-full md:block">
+      <picture>
         <source srcset="/images/agora-footer.webp" type="image/webp" />
         <source srcset="/images/png/agora-footer.png" type="image/png" />
-        <img src="/images/png/agora-footer.png" width="100%" height="auto" alt="Agora Space" />
+        <img
+          src="/images/png/agora-footer.png"
+          width="100%"
+          height="auto"
+          alt="Agora Space"
+          class="absolute bottom-0 left-0 hidden w-full md:block"
+        />
       </picture>
 
-      <picture class="block w-screen md:hidden">
+      <picture>
         <source srcset="/images/agora-footer-mobile.webp" type="image/webp" />
         <source srcset="/images/png/agora-footer-mobile.png" type="image/png" />
         <img
@@ -27,6 +33,7 @@
           width="100%"
           height="auto"
           alt="Agora Space"
+          class="block w-screen md:hidden"
         />
       </picture>
     </div>

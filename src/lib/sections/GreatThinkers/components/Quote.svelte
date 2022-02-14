@@ -28,10 +28,10 @@
 <div class={`mx-auto max-w-sm h-full flex flex-col items-center text-md ${_class}`}>
   <div class="relative mb-8 h-52 2xl:h-72">
     {#if isSafari}
-      <picture class="h-full w-full object-contain">
+      <picture>
         <source srcset={image} type="image/webp" />
         <source srcset={imagePng} type="image/png" />
-        <img src={imagePng} {alt} />
+        <img src={imagePng} {alt} class="h-full w-full object-contain" />
       </picture>
     {:else}
       <video
@@ -48,10 +48,10 @@
         <source src={video} type="video/webm" />
         <img src={imagePng} {alt} class="object-contain w-full h-full" />
       </video>
-      <picture class="md:hidden object-contain w-full h-full">
+      <picture>
         <source srcset={image} type="image/webp" />
         <source srcset={imagePng} type="image/png" />
-        <img src={imagePng} {alt} />
+        <img src={imagePng} {alt} class="md:hidden object-contain w-full h-full" />
       </picture>
     {/if}
   </div>

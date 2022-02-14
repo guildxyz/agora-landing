@@ -79,10 +79,14 @@
       >
         <div class="relative w-full" style={`height: ${canvasHeight}px`}>
           {#if isSafari}
-            <picture class="absolute bottom-0 left-0 px-16">
+            <picture>
               <source srcset="/images/agora-space-dao.webp" type="image/webp" />
               <source srcset="/images/png/agora-space-dao.webp" type="image/png" />
-              <img src="/images/png/agora-space-dao.webp" alt="Agora Space DAO" />
+              <img
+                src="/images/png/agora-space-dao.webp"
+                alt="Agora Space DAO"
+                class="absolute bottom-0 left-0 px-16"
+              />
             </picture>
           {:else}
             <video

@@ -22,10 +22,10 @@
     <div
       class="relative flex h-full flex-col items-center justify-start space-y-8 bg-agora-gray px-8 pt-24 pb-10 text-center text-agora-white lg:col-span-3 lg:pr-20 lg:pt-40 xl:pr-40"
     >
-      <picture class="max-w-full">
+      <picture>
         <source srcset="/images/how-does-it-work.webp" type="image/webp" />
         <source srcset="/images/png/how-does-it-work.png" type="image/png" />
-        <img src="/images/png/how-does-it-work.png" alt="How does it work?" />
+        <img src="/images/png/how-does-it-work.png" alt="How does it work?" class="max-w-full" />
       </picture>
     </div>
 

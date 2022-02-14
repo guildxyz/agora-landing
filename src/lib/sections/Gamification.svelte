@@ -28,10 +28,14 @@
     <div
       class="relative flex flex-col items-center justify-center space-y-4 px-20 pb-10 pr-8 pl-10 text-agora-white lg:col-span-3 lg:pt-24 lg:pb-20 lg:pl-20 xl:pl-40"
     >
-      <picture class="max-w-full lg:max-h-[45vh]">
+      <picture>
         <source srcset="/images/gamification.webp" type="image/webp" />
         <source srcset="/images/png/gamification.png" type="image/png" />
-        <img src="/images/png/gamification.png" alt="Role management bot" />
+        <img
+          src="/images/png/gamification.png"
+          alt="Role management bot"
+          class="max-w-full lg:max-h-[45vh]"
+        />
       </picture>
     </div>
   </div>

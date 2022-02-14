@@ -2,12 +2,13 @@
   <div class="container grid gap-16 py-20 lg:grid-cols-2 lg:gap-0">
     <!-- Image -->
     <div class="order-2 flex items-center justify-center lg:order-1 lg:pr-20">
-      <picture class="max-w-full">
+      <picture>
         <source srcset="/images/trustless-financial-contracts.webp" type="image/webp" />
         <source srcset="/images/png/trustless-financial-contracts.png" type="image/png" />
         <img
           src="/images/png/trustless-financial-contracts.png"
           alt="Gamification Of Twitter Activity"
+          class="max-w-full"
         />
       </picture>
     </div>

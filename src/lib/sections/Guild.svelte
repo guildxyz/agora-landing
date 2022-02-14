@@ -41,10 +41,10 @@
     <div class="flex items-start justify-center lg:col-span-3 lg:justify-end lg:pl-20">
       <div class="relative">
         <div class="absolute inset-0 scale-105 bg-agora-pink-medium opacity-20 blur-md filter" />
-        <picture class="relative max-w-full">
+        <picture>
           <source srcset="/images/guild.webp" type="image/webp" />
           <source srcset="/images/png/guild.png" type="image/png" />
-          <img src="/images/png/guild.png" alt="Agora Space" />
+          <img src="/images/png/guild.png" alt="Agora Space" class="relative max-w-full" />
         </picture>
       </div>
     </div>

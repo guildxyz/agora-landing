@@ -22,10 +22,10 @@
     <div
       class="order-2 flex items-start justify-center lg:order-1 lg:col-span-3 lg:justify-end lg:pr-20"
     >
-      <picture class="max-w-full">
+      <picture>
         <source srcset="/images/community-explorer.webp" type="image/webp" />
         <source srcset="/images/png/community-explorer.png" type="image/png" />
-        <img src="/images/png/community-explorer.png" alt="Agora Space" />
+        <img src="/images/png/community-explorer.png" alt="Agora Space" class="max-w-full" />
       </picture>
     </div>
 

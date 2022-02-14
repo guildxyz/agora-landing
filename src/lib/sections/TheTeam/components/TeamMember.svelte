@@ -12,15 +12,17 @@
 </script>
 
 <div class="group flex flex-col">
-  <div class="mb-2 flex h-52 max-h-52 flex-col items-end lg:h-64">
+  <div class="mb-2 flex h-52 max-h-52 flex-col items-end lg:h-64 lg:max-h-64">
     {#if about}
       <div class="group relative h-52 w-full overflow-hidden lg:h-64">
-        <picture
-          class="absolute left-0 bottom-0 h-full w-full object-contain object-bottom transition-all duration-500 group-focus-within:-left-full group-focus-within:opacity-0 group-hover:-left-full group-hover:opacity-0"
-        >
+        <picture>
           <source srcset={photo} type="image/webp" />
           <source srcset={photoPng} type="image/png" />
-          <img src={photoPng} alt={name} class="max-h-full" />
+          <img
+            src={photoPng}
+            alt={name}
+            class="absolute left-0 bottom-0 h-full w-full object-contain object-bottom transition-all duration-500 group-focus-within:-left-full group-focus-within:opacity-0 group-hover:-left-full group-hover:opacity-0"
+          />
         </picture>
         <div
           class="absolute -right-full bottom-0 h-full w-full text-agora-white opacity-0 transition-all duration-500 group-focus-within:right-0 group-focus-within:opacity-100 group-hover:right-0 group-hover:opacity-100"
@@ -29,10 +31,14 @@
         </div>
       </div>
     {:else}
-      <picture class="w-full h-full object-contain object-bottom">
+      <picture>
         <source srcset={photo} type="image/webp" />
         <source srcset={photoPng} type="image/png" />
-        <img src={photoPng} alt={name} class="max-h-full" />
+        <img
+          src={photoPng}
+          alt={name}
+          class="w-full h-full max-h-52 lg:max-h-64 object-contain object-bottom"
+        />
       </picture>
     {/if}
   </div>

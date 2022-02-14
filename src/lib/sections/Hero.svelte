@@ -117,14 +117,7 @@
             <source src="/animations/platon.webm" type="video/webm" />
           </video>
         </div>
-        <picture
-          class={`absolute bottom-0 select-none transition-all duration-500 ${
-            hideHeroImg ? 'invisible opacity-0' : 'visible opacity-100'
-          }`}
-          style={`left: ${canvasWidth * 0.1}px; width: ${canvasWidth * 0.8}; height: ${
-            canvasHeight * 0.8
-          }`}
-        >
+        <picture>
           <source srcset="/images/hero.webp" type="image/webp" />
           <source srcset="/images/png/hero.png" type="image/png" />
           <img
@@ -132,6 +125,12 @@
             alt="Platon"
             width={canvasWidth * 0.8}
             height={canvasHeight * 0.8}
+            class={`absolute bottom-0 select-none transition-all duration-500 ${
+              hideHeroImg ? 'invisible opacity-0' : 'visible opacity-100'
+            }`}
+            style={`left: ${canvasWidth * 0.1}px; width: ${canvasWidth * 0.8}; height: ${
+              canvasHeight * 0.8
+            }`}
           />
         </picture>
       </div>
@@ -186,10 +185,14 @@
       <div
         class="bg-hero-right-bottom relative -mx-4 bg-agora-blue-medium bg-circle-pattern bg-no-repeat md:hidden"
       >
-        <picture class="-mt-28 w-full select-none object-cover object-bottom">
+        <picture>
           <source srcset="/images/hero-mobile.webp" type="image/webp" />
           <source srcset="/images/png/hero-mobile.png" type="image/png" />
-          <img src="/images/png/hero-mobile.png" alt="Platon" />
+          <img
+            src="/images/png/hero-mobile.png"
+            alt="Platon"
+            class="-mt-28 w-full select-none object-cover object-bottom"
+          />
         </picture>
 
         <!-- Buttons -->

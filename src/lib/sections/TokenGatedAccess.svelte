@@ -53,10 +53,14 @@
     <div
       class="relative flex flex-col items-start justify-center space-y-4 bg-agora-gray px-20 pb-10 pr-8 pl-10 text-agora-white lg:col-span-3 lg:pt-40 lg:pb-20 lg:pl-20 xl:pl-40"
     >
-      <picture class="max-w-full">
+      <picture>
         <source srcset="/images/token-gated-access.webp" type="image/webp" />
         <source srcset="/images/png/token-gated-access.png" type="image/png" />
-        <img src="/images/png/token-gated-access.png" alt="Role management bot" />
+        <img
+          src="/images/png/token-gated-access.png"
+          alt="Role management bot"
+          class="max-w-full"
+        />
       </picture>
     </div>
   </div>

@@ -34,10 +34,14 @@
       <div
         class="absolute bottom-0 -right-1/2 w-[150vw] sm:w-[125vw] md:right-0 md:w-full xl:w-2/3"
       >
-        <picture class="h-full w-full -translate-x-1/4 transform object-contain md:translate-x-0">
+        <picture>
           <source srcset="/images/stay-up-to-date.webp" type="image/webp" />
           <source srcset="/images/png/stay-up-to-date.png" type="image/png" />
-          <img src="/images/png/stay-up-to-date.png" alt="Stay up to date" />
+          <img
+            src="/images/png/stay-up-to-date.png"
+            alt="Stay up to date"
+            class="h-full w-full -translate-x-1/4 transform object-contain md:translate-x-0"
+          />
         </picture>
       </div>
     </div>

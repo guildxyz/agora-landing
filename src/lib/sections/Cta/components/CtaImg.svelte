@@ -72,10 +72,10 @@
       }}
     >
       <span class="sr-only">{title}</span>
-      <picture class="w-full">
+      <picture>
         <source srcset={image} type="image/webp" />
         <source srcset={imagePng} type="image/png" />
-        <img src={imagePng} alt={title} />
+        <img src={imagePng} alt={title} class="w-full" />
       </picture>
     </a>
 

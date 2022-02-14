@@ -27,10 +27,14 @@
 
     <!-- Image -->
     <div class="flex items-center justify-center lg:pl-20">
-      <picture class="max-w-full">
+      <picture>
         <source srcset="/images/creator-contracts.webp" type="image/webp" />
         <source srcset="/images/png/creator-contracts.png" type="image/png" />
-        <img src="/images/png/creator-contracts.png" alt="Performance-based creator contracts" />
+        <img
+          src="/images/png/creator-contracts.png"
+          alt="Performance-based creator contracts"
+          class="max-w-full"
+        />
       </picture>
     </div>
   </div>
