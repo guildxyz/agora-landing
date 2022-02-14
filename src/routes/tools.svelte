@@ -1,6 +1,5 @@
 <script>
   import Footer from '$lib/Footer.svelte';
-  import AgoraSpace from '$lib/sections/AgoraSpace.svelte';
   import Guild from '$lib/sections/Guild.svelte';
 </script>
 

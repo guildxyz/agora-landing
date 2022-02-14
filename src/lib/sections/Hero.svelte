@@ -164,7 +164,7 @@
         <!-- Buttons -->
         <div class="flex-col hidden mb-20 space-y-3 md:flex 2xl:space-y-4 2xl:mb-10">
           <Button
-            href="https://alpha.guild.xyz"
+            href="https://guild.xyz"
             target="_blank"
             rel="noopener"
             class="w-max bg-agora-blue-medium text-agora-white"
@@ -190,7 +190,7 @@
           class="absolute left-0 bottom-8 flex flex-col justify-end items-center space-y-2 w-full h-full"
         >
           <Button
-            href="https://alpha.guild.xyz"
+            href="https://guild.xyz"
             target="_blank"
             rel="noopener"
             class="shadow-md w-max bg-agora-blue-light text-agora-white"

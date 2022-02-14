@@ -27,7 +27,7 @@
       </p>
 
       <Button
-        href="https://alpha.guild.xyz"
+        href="https://guild.xyz"
         target="_blank"
         rel="noopener"
         class="mx-auto lg:mx-0 w-max bg-agora-pink-medium text-agora-white"
