@@ -134,15 +134,6 @@
             </li>
             <li>
               <a
-                href="https://app.gitbook.com/@agora-space/s/agoraspace/"
-                target="_blank"
-                rel="noopener"
-                class="block py-2 lg:py-0 max-w-max focus:outline-none focus-visible:border-b-2 focus-visible:border-gray-300"
-                >Gitbook</a
-              >
-            </li>
-            <li>
-              <a
                 href="/agora-space-brand-kit.zip"
                 target="_blank"
                 class="block py-2 lg:py-0 max-w-max focus:outline-none focus-visible:border-b-2 focus-visible:border-gray-300"
